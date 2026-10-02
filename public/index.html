@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#000000">
+    <!--
+      This viewport works for phones with notches.
+      It's optimized for gestures by disabling global zoom.
+     -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover"
+    />
+    <!--
+      Preconnect to essential domains
+    -->
+    <link rel="preconnect" href="https://bsky.social">
+    <link rel="preconnect" href="https://go.bsky.app">
+    
+    <title>ORBIS</title>
+    <!-- ORBIS Favicon in Tab Bar -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23000'/%3E%3Cpath d='M22 74V26h10l18 26 18-26h10v48H67V43L50 67 33 43v31z' fill='%23fff'/%3E%3C/svg%3E">
+    <meta name="description" content="Explore the Decentralized Cosmos with ORBIS." />
+
+    <link rel="preload" as="font" type="font/woff2" href="/assets/assets/fonts/inter/InterVariable.woff2" crossorigin>
+
+    <style>
+      @font-face {
+        font-family: 'InterVariable';
+        src: url(/assets/assets/fonts/inter/InterVariable.woff2) format('woff2');
+        font-weight: 300 1000;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'InterVariableItalic';
+        src: url(/assets/assets/fonts/inter/InterVariable-Italic.woff2) format('woff2');
+        font-weight: 300 1000;
+        font-style: italic;
+        font-display: swap;
+      }
+      html,
+      body {
+        margin: 0px;
+        padding: 0px;
+        font-family: InterVariable, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Liberation Sans', Helvetica, Arial, sans-serif;
+        text-rendering: optimizeLegibility;
+        -webkit-overflow-scrolling: touch;
+        -webkit-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -ms-overflow-style: scrollbar;
+        font-synthesis-weight: none;
+      }
+      :root {
+        --text: black;
+        --background: white;
+        --backgroundLight: #e2e7ee;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          color-scheme: dark;
+          --text: white;
+          --background: black;
+          --backgroundLight: #232e3e;
+        }
+      }
+      html,
+      body,
+      #root {
+        display: flex;
+        flex: 1 0 auto;
+        min-height: 100%;
+        width: 100%;
+      }
+      html.theme--light,
+      html.theme--light body,
+      html.theme--light #root {
+        background-color: white;
+        --text: black;
+        --background: white;
+        --backgroundLight: #DCE2EA;
+      }
+      html.theme--dark,
+      html.theme--dark body,
+      html.theme--dark #root {
+        color-scheme: dark;
+        background-color: black;
+        --text: white;
+        --background: black;
+        --backgroundLight: #232E3E;
+      }
+      html.theme--dim,
+      html.theme--dim body,
+      html.theme--dim #root {
+        color-scheme: dark;
+        background-color: #151D28;
+        --text: white;
+        --background: #151D28;
+        --backgroundLight: #2C3A4E;
+      }
+      #splash {
+        display: flex;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        align-items: center;
+        justify-content: center;
+        background-color: #000000;
+        z-index: 999999;
+      }
+      #splash svg {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+      }
+      body {
+        width: 100%;
+        overflow-y: scroll;
+      }
+    </style>
+    <script>
+      const theme = localStorage.getItem('ALF_THEME')
+      if (theme) {
+        document.documentElement.classList.add(`theme--${theme}`)
+      }
+    </script>
+  </head>
+
+  <body>
+    <noscript>
+      <form
+        action=""
+        style="
+          background-color: #fff;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 9999;
+        "
+      >
+        <div
+          style="
+            font-size: 18px;
+            font-family: Helvetica, sans-serif;
+            line-height: 24px;
+            margin: 10%;
+            width: 80%;
+          "
+        >
+          <h1 lang="ar">ORBIS</h1>
+          <p lang="ar">استكشف الكون اللامركزي مع ORBIS.</p>
+        </div>
+      </form>
+    </noscript>
+
+    <!-- The root element for your Expo app. -->
+    <div id="splash">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="ORBIS">
+        <rect width="100" height="100" rx="22" fill="#000" />
+        <path d="M22 74V26h10l18 26 18-26h10v48H67V43L50 67 33 43v31z" fill="#fff" />
+      </svg>
+    </div>
+    <div id="root">
+    </div>
+  </body>
+</html>

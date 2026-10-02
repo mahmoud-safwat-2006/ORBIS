@@ -1,0 +1,1 @@
+These are ORBIS app icons. The original mark is [`orbis-monogram.svg`](./orbis-monogram.svg); the PNG variants use the same custom M monogram with different background colors. The transparent adaptive-icon mark is in [`orbis-monogram-foreground.svg`](./orbis-monogram-foreground.svg).

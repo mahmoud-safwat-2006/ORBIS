@@ -144,3 +144,6 @@ docs/superpowers/
 
 # Local Netlify folder
 .netlify
+
+.vercel
+.env*

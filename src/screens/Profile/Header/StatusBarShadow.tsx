@@ -1,4 +1,4 @@
-import Animated, {
+﻿import Animated, {
   type SharedValue,
   useAnimatedStyle,
 } from 'react-native-reanimated'

@@ -190,7 +190,7 @@ const MinimalHeader = memo(function MinimalHeader({
             <ProfileCard.NamePlaceholder />
           )}
           <Header.SubtitleText>
-            {sanitizeHandle(profile.handle, '@')}
+            {sanitizeHandle(profile.handle, '@')}?.replace(/\.bsky\.social$/i, "")
           </Header.SubtitleText>
         </Header.Content>
         {!profile.associated?.labeler

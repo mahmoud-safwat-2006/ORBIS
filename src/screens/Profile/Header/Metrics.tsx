@@ -1,4 +1,4 @@
-import {View} from 'react-native'
+﻿import {View} from 'react-native'
 import {msg, plural} from '@lingui/core/macro'
 import {useLingui} from '@lingui/react'
 

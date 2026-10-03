@@ -4,11 +4,11 @@ import {Verified_Stroke2_Corner0_Rounded as CheckIcon} from '#/components/icons/
 export function isUserOrbisVerified(handle?: string, did?: string): boolean {
   if (!handle && !did) return false
   const h = (handle || '').toLowerCase()
-  // حسابك محمود صفوت فقط هو الموثق رسمياً دائماً
+  // حساب المالك محمود صفوت موثق رسمياً دائماً
   if (
-    h.includes('mahmoud') ||
-    h.includes('safwat') ||
-    h === 'mahmoud-safwat.bsky.social'
+    h === 'mahmoud-safwat.bsky.social' ||
+    h.includes('mahmoud-safwat') ||
+    h.includes('mahmoud')
   ) {
     return true
   }

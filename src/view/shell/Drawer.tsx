@@ -27,7 +27,6 @@ import {type SessionAccount, useSession} from '#/state/session'
 import {useSetDrawerOpen} from '#/state/shell'
 import {formatCount} from '#/view/com/util/numeric/format'
 import {UserAvatar} from '#/view/com/util/UserAvatar'
-import {OrbisVerifiedBadge, OrbisVerifiedModal} from '#/view/com/util/verified'
 import {useLogoVariant} from '#/view/icons/useLogoVariant'
 import {NavSignupCard} from '#/view/shell/NavSignupCard'
 import {atoms as a, tokens, useTheme, web} from '#/alf'
@@ -183,7 +182,6 @@ DrawerProfileCard = memo(DrawerProfileCard)
 export {DrawerProfileCard}
 
 let DrawerContent = ({}: React.PropsWithoutRef<{}>): React.ReactNode => {
-  const [isVerifiedModalOpen, setIsVerifiedModalOpen] = useState(false)
   const t = useTheme()
   const insets = useSafeAreaInsets()
   const setDrawerOpen = useSetDrawerOpen()
@@ -366,7 +364,6 @@ let DrawerContent = ({}: React.PropsWithoutRef<{}>): React.ReactNode => {
               isActive={isAtBookmarks}
               onPress={onPressBookmarks}
             />
-            <MenuItem icon={<OrbisVerifiedBadge size={iconWidth} tier="personal" />} label="ORBIS Verified" bold={true} onPress={() => setIsVerifiedModalOpen(true)} />
             <ProfileMenuItem
               isActive={isAtMyProfile}
               onPress={onPressProfile}
@@ -391,7 +388,6 @@ let DrawerContent = ({}: React.PropsWithoutRef<{}>): React.ReactNode => {
         onPressFeedback={onPressFeedback}
         onPressHelp={onPressHelp}
       />
-      <OrbisVerifiedModal visible={isVerifiedModalOpen} onClose={() => setIsVerifiedModalOpen(false)} />
       <InviteFriendsDialog control={inviteFriendsControl} />
     </View>
   )

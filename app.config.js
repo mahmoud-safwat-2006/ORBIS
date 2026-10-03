@@ -219,8 +219,8 @@ module.exports = function (_config) {
         favicon: './assets/favicon.png',
       },
       updates: {
-        url: 'https://updates.bsky.app/manifest',
-        enabled: UPDATES_ENABLED,
+        url: 'https://u.expo.dev/079c43af-e813-4f8b-97fc-e98bfe721f96',
+        enabled: true,
         fallbackToCacheTimeout: 30000,
         codeSigningCertificate: UPDATES_ENABLED
           ? './code-signing/certificate.pem'

@@ -33,7 +33,8 @@ export function sanitizeHandle(
   prefix = '',
   forceLeftToRight = true,
 ): string {
-  const clean = (handle || "").replace(/\.bsky\.social$/i, "")`n  const lowercasedWithPrefix = `${prefix}${clean.toLocaleLowerCase()}`
+    const clean = (handle || '').replace(/\.bsky\.social$/i, '')
+  const lowercasedWithPrefix = `${prefix}${clean.toLocaleLowerCase()}`
   return isInvalidHandle(handle)
     ? i18n._(msg({message: `⚠Invalid Handle`}))
     : forceLeftToRight

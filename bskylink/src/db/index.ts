@@ -1,5 +1,6 @@
-import assert from 'assert'
 import {performance} from 'node:perf_hooks'
+
+import assert from 'assert'
 import {
   Kysely,
   type KyselyPlugin,

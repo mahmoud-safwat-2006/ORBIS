@@ -1,12 +1,13 @@
-﻿import React, {useState} from 'react'
+﻿import {useState} from 'react'
 import {
   Modal,
+  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
-  ScrollView,
 } from 'react-native'
+
 import {OrbisVerifiedBadge} from './OrbisVerifiedBadge'
 
 interface OrbisVerifiedModalProps {
@@ -39,26 +40,26 @@ export function OrbisVerifiedModal({visible, onClose}: OrbisVerifiedModalProps) 
             <View style={styles.badgeRow}>
               <Text style={styles.title}>ORBIS</Text>
               <OrbisVerifiedBadge size={26} tier="personal" />
-              <Text style={styles.titleSub}>Verified</Text>
+              <Text style={styles.titleSub}>توثيق</Text>
             </View>
-            <TouchableOpacity onPress={onClose} style={styles.closeBtn}>
+            <TouchableOpacity accessibilityRole="button" onPress={onClose} style={styles.closeBtn}>
               <Text style={styles.closeTxt}>✕</Text>
             </TouchableOpacity>
           </View>
 
           <ScrollView contentContainerStyle={styles.body} showsVerticalScrollIndicator={false}>
             <Text style={styles.heroText}>
-              Elevate your presence. Protect your identity. Unlock the next generation of social networking.
+              ميّز حسابك، واحمِ هويتك الرقمية بشارة التوثيق الرسمية في منصة أوربيس الاجتماعية.
             </Text>
 
-            {/* Features List (Competing directly with Meta) */}
+            {/* Features List */}
             <View style={styles.featuresBox}>
               <View style={styles.featureItem}>
                 <Text style={styles.featureIcon}>🛡️</Text>
                 <View style={styles.featureTextCol}>
-                  <Text style={styles.featureTitle}>Proactive Impersonation Defense</Text>
+                  <Text style={styles.featureTitle}>حماية استباقية ضد انتحال الشخصية</Text>
                   <Text style={styles.featureDesc}>
-                    Advanced AI-powered monitoring stops identity theft and fake accounts before they start.
+                    مراقبة ذكية بالذكاء الاصطناعي تمنع الحسابات المزيفة وسرقة الهوية قبل حدوثها.
                   </Text>
                 </View>
               </View>
@@ -66,9 +67,9 @@ export function OrbisVerifiedModal({visible, onClose}: OrbisVerifiedModalProps) 
               <View style={styles.featureItem}>
                 <Text style={styles.featureIcon}>⭐</Text>
                 <View style={styles.featureTextCol}>
-                  <Text style={styles.featureTitle}>Signature Verified Badge</Text>
+                  <Text style={styles.featureTitle}>شارة التوثيق المعتمدة</Text>
                   <Text style={styles.featureDesc}>
-                    Official seal of authenticity verified by ORBIS cryptographic protocols.
+                    علامة توثيق رسمية مشفرة ببروتوكولات شبكة أوربيس اللامركزية.
                   </Text>
                 </View>
               </View>
@@ -76,9 +77,9 @@ export function OrbisVerifiedModal({visible, onClose}: OrbisVerifiedModalProps) 
               <View style={styles.featureItem}>
                 <Text style={styles.featureIcon}>⚡</Text>
                 <View style={styles.featureTextCol}>
-                  <Text style={styles.featureTitle}>Priority Direct Support</Text>
+                  <Text style={styles.featureTitle}>أولوية الدعم الفني المباشر</Text>
                   <Text style={styles.featureDesc}>
-                    Skip the bots. Get immediate 24/7 dedicated human engineer support.
+                    تواصل مباشر على مدار الساعة مع فريق هندسي متخصص لحل أي مشكلة.
                   </Text>
                 </View>
               </View>
@@ -86,9 +87,9 @@ export function OrbisVerifiedModal({visible, onClose}: OrbisVerifiedModalProps) 
               <View style={styles.featureItem}>
                 <Text style={styles.featureIcon}>🚀</Text>
                 <View style={styles.featureTextCol}>
-                  <Text style={styles.featureTitle}>Increased Discovery Reach</Text>
+                  <Text style={styles.featureTitle}>زيادة انتشار وظهور المنشورات</Text>
                   <Text style={styles.featureDesc}>
-                    Boost your posts, custom feeds, and replies with priority network distribution.
+                    أولوية ظهور منشوراتك وردودك في خلاصة الاستكشاف وشبكة المتابعين.
                   </Text>
                 </View>
               </View>
@@ -96,7 +97,7 @@ export function OrbisVerifiedModal({visible, onClose}: OrbisVerifiedModalProps) 
 
             {/* Pricing Toggle */}
             <View style={styles.toggleRow}>
-              <TouchableOpacity
+              <TouchableOpacity accessibilityRole="button"
                 style={[
                   styles.toggleBtn,
                   billingCycle === 'monthly' && styles.toggleBtnActive,
@@ -107,11 +108,11 @@ export function OrbisVerifiedModal({visible, onClose}: OrbisVerifiedModalProps) 
                     styles.toggleBtnTxt,
                     billingCycle === 'monthly' && styles.toggleBtnTxtActive,
                   ]}>
-                  Monthly ($9.99/mo)
+                  شهرياً ($9.99)
                 </Text>
               </TouchableOpacity>
 
-              <TouchableOpacity
+              <TouchableOpacity accessibilityRole="button"
                 style={[
                   styles.toggleBtn,
                   billingCycle === 'annual' && styles.toggleBtnActive,
@@ -122,23 +123,23 @@ export function OrbisVerifiedModal({visible, onClose}: OrbisVerifiedModalProps) 
                     styles.toggleBtnTxt,
                     billingCycle === 'annual' && styles.toggleBtnTxtActive,
                   ]}>
-                  Annual ($95.99/yr) - Save 20%
+                  سنوياً ($95.99) - وفر 20%
                 </Text>
               </TouchableOpacity>
             </View>
 
             {/* Action CTA */}
-            <TouchableOpacity
+            <TouchableOpacity accessibilityRole="button"
               style={[styles.subscribeBtn, subscribed && styles.subscribedSuccess]}
               onPress={handleSubscribe}
               disabled={subscribed}>
               <Text style={styles.subscribeBtnTxt}>
-                {subscribed ? '✓ Subscribed to ORBIS Verified!' : `Get ORBIS Verified — ${billingCycle === 'annual' ? '$95.99 / year' : '$9.99 / month'}`}
+                {subscribed ? '✓ تم تفعيل توثيق ORBIS بنجاح!' : `اشترك في توثيق أوربيس — ${billingCycle === 'annual' ? '$95.99 / سنوياً' : '$9.99 / شهرياً'}`}
               </Text>
             </TouchableOpacity>
 
             <Text style={styles.termsNotice}>
-              Identity verification with government ID required after subscription. Powered by ORBIS Security & AT Protocol.
+              يتطلب إثبات الهوية الشخصية بعد الاشتراك. مدعوم بأمان ORBIS وبروتوكول AT.
             </Text>
           </ScrollView>
         </View>
@@ -185,7 +186,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
   titleSub: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: '700',
     color: '#0085FF',
     marginLeft: 6,
@@ -215,31 +216,34 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   featureItem: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     alignItems: 'flex-start',
     marginBottom: 16,
   },
   featureIcon: {
     fontSize: 22,
-    marginRight: 12,
+    marginLeft: 12,
     marginTop: 2,
   },
   featureTextCol: {
     flex: 1,
+    alignItems: 'flex-end',
   },
   featureTitle: {
     fontSize: 15,
     fontWeight: '700',
     color: '#FFFFFF',
     marginBottom: 2,
+    textAlign: 'right',
   },
   featureDesc: {
     fontSize: 13,
     color: '#94A3B8',
     lineHeight: 18,
+    textAlign: 'right',
   },
   toggleRow: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     backgroundColor: '#1E293B',
     borderRadius: 12,
     padding: 4,
@@ -285,3 +289,4 @@ const styles = StyleSheet.create({
     lineHeight: 16,
   },
 })
+

@@ -1,4 +1,4 @@
-import {useCallback, useMemo, useState} from 'react'
+﻿import {useCallback, useMemo, useState} from 'react'
 import {View} from 'react-native'
 import {
   Gesture,
@@ -28,7 +28,7 @@ import {Text} from '#/components/Typography'
 
 // magic number that is roughly the min height of the write reply button
 // we inset the video by this amount
-export const VIDEO_PLAYER_BOTTOM_INSET = 57
+export const VIDEO_PLAYER_BOTTOM_INSET = 0
 
 export function Scrubber({
   active,

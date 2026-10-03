@@ -1,4 +1,422 @@
 {
+  ".github/scripts/frame-slack-screenshots.mjs": {
+    "typescript/no-unsafe-argument": {
+      "count": 6
+    },
+    "typescript/no-unsafe-assignment": {
+      "count": 1
+    },
+    "typescript/no-unsafe-call": {
+      "count": 1
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 7
+    }
+  },
+  ".github/scripts/frame-slack-screenshots.test.mjs": {
+    "typescript/no-floating-promises": {
+      "count": 1
+    },
+    "typescript/no-unsafe-argument": {
+      "count": 1
+    },
+    "typescript/no-unsafe-assignment": {
+      "count": 1
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 3
+    }
+  },
+  ".github/scripts/maestro-slack.mjs": {
+    "typescript/no-unsafe-argument": {
+      "count": 5
+    },
+    "typescript/no-unsafe-assignment": {
+      "count": 23
+    },
+    "typescript/no-unsafe-call": {
+      "count": 24
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 79
+    },
+    "typescript/no-unsafe-return": {
+      "count": 10
+    }
+  },
+  ".github/scripts/maestro-slack.test.mjs": {
+    "typescript/no-floating-promises": {
+      "count": 6
+    },
+    "typescript/no-unsafe-assignment": {
+      "count": 4
+    },
+    "typescript/no-unsafe-call": {
+      "count": 1
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 14
+    }
+  },
+  ".github/scripts/summarize-maestro.mjs": {
+    "typescript/no-unsafe-argument": {
+      "count": 16
+    },
+    "typescript/no-unsafe-assignment": {
+      "count": 54
+    },
+    "typescript/no-unsafe-call": {
+      "count": 21
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 58
+    },
+    "typescript/no-unsafe-return": {
+      "count": 4
+    }
+  },
+  "__mocks__/@gorhom/bottom-sheet.tsx": {
+    "no-restricted-imports": {
+      "count": 1
+    },
+    "typescript/no-explicit-any": {
+      "count": 8
+    }
+  },
+  "__mocks__/react-native-svg.js": {
+    "no-restricted-imports": {
+      "count": 1
+    }
+  },
+  "__tests__/lib/email.test.ts": {
+    "import/default": {
+      "count": 1
+    }
+  },
+  "__tests__/lib/images.test.ts": {
+    "typescript/no-unsafe-member-access": {
+      "count": 4
+    }
+  },
+  "bskylink/src/cache/safelinkClient.ts": {
+    "typescript/no-unsafe-call": {
+      "count": 33
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 39
+    }
+  },
+  "bskylink/src/context.ts": {
+    "typescript/require-await": {
+      "count": 1
+    }
+  },
+  "bskylink/src/db/index.ts": {
+    "typescript/no-unsafe-call": {
+      "count": 20
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 30
+    },
+    "typescript/require-await": {
+      "count": 2
+    }
+  },
+  "bskylink/src/db/migrations/001-init.ts": {
+    "typescript/no-unsafe-call": {
+      "count": 11
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 11
+    }
+  },
+  "bskylink/src/db/migrations/002-safelink.ts": {
+    "typescript/no-unsafe-call": {
+      "count": 33
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 32
+    }
+  },
+  "bskylink/src/db/migrations/003-safelink-cursor-constraint.ts": {
+    "typescript/no-unsafe-call": {
+      "count": 14
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 14
+    }
+  },
+  "bskylink/src/db/migrations/provider.ts": {
+    "typescript/require-await": {
+      "count": 1
+    }
+  },
+  "bskylink/src/html/linkRedirectContents.ts": {
+    "typescript/no-unsafe-call": {
+      "count": 1
+    }
+  },
+  "bskylink/src/html/linkWarningContents.ts": {
+    "typescript/no-unsafe-call": {
+      "count": 8
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 6
+    }
+  },
+  "bskylink/src/html/linkWarningLayout.ts": {
+    "typescript/no-unsafe-call": {
+      "count": 1
+    }
+  },
+  "bskylink/src/i18n.ts": {
+    "typescript/no-unsafe-call": {
+      "count": 1
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 1
+    }
+  },
+  "bskylink/src/index.ts": {
+    "typescript/no-unsafe-call": {
+      "count": 17
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 14
+    }
+  },
+  "bskylink/src/logger.ts": {
+    "typescript/no-explicit-any": {
+      "count": 1
+    }
+  },
+  "bskylink/src/metrics.test.ts": {
+    "typescript/no-explicit-any": {
+      "count": 5
+    },
+    "typescript/no-floating-promises": {
+      "count": 9
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 8
+    },
+    "typescript/require-await": {
+      "count": 6
+    }
+  },
+  "bskylink/src/metrics.ts": {
+    "typescript/no-explicit-any": {
+      "count": 3
+    },
+    "typescript/no-floating-promises": {
+      "count": 1
+    }
+  },
+  "bskylink/src/prometheus.ts": {
+    "typescript/no-redundant-type-constituents": {
+      "count": 1
+    },
+    "typescript/no-unsafe-call": {
+      "count": 11
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 6
+    }
+  },
+  "bskylink/src/routes/createShortLink.ts": {
+    "typescript/no-misused-promises": {
+      "count": 1
+    },
+    "typescript/no-unsafe-call": {
+      "count": 23
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 32
+    }
+  },
+  "bskylink/src/routes/health.ts": {
+    "typescript/no-misused-promises": {
+      "count": 1
+    },
+    "typescript/no-unsafe-call": {
+      "count": 6
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 5
+    }
+  },
+  "bskylink/src/routes/redirect.ts": {
+    "typescript/no-misused-promises": {
+      "count": 1
+    },
+    "typescript/no-unsafe-call": {
+      "count": 16
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 17
+    }
+  },
+  "bskylink/src/routes/root.ts": {
+    "typescript/no-misused-promises": {
+      "count": 1
+    },
+    "typescript/no-unsafe-call": {
+      "count": 4
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 4
+    },
+    "typescript/require-await": {
+      "count": 1
+    }
+  },
+  "bskylink/src/routes/shortLink.ts": {
+    "typescript/no-misused-promises": {
+      "count": 1
+    },
+    "typescript/no-unsafe-call": {
+      "count": 19
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 21
+    }
+  },
+  "bskylink/src/routes/siteAssociation.ts": {
+    "typescript/no-unsafe-call": {
+      "count": 2
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 2
+    }
+  },
+  "bskylink/src/routes/util.ts": {
+    "typescript/await-thenable": {
+      "count": 2
+    },
+    "typescript/no-misused-promises": {
+      "count": 1
+    },
+    "typescript/no-unsafe-call": {
+      "count": 5
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 6
+    }
+  },
+  "bskylink/src/shutdown.test.ts": {
+    "typescript/no-floating-promises": {
+      "count": 3
+    },
+    "typescript/no-misused-promises": {
+      "count": 1
+    },
+    "typescript/no-unsafe-call": {
+      "count": 4
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 3
+    }
+  },
+  "bskylink/tests/index.ts": {
+    "typescript/no-floating-promises": {
+      "count": 14
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 2
+    },
+    "typescript/require-await": {
+      "count": 2
+    }
+  },
+  "clean_legal_write.js": {
+    "import/no-nodejs-modules": {
+      "count": 1
+    }
+  },
+  "clean_ui_elements.js": {
+    "import/no-nodejs-modules": {
+      "count": 1
+    }
+  },
+  "dev-env/mock-server.ts": {
+    "typescript/no-unsafe-call": {
+      "count": 17
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 29
+    }
+  },
+  "dev-env/test-pds.ts": {
+    "typescript/no-unsafe-call": {
+      "count": 35
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 51
+    }
+  },
+  "fix_about_and_status.js": {
+    "import/no-nodejs-modules": {
+      "count": 1
+    }
+  },
+  "fix_i18n_web.js": {
+    "import/no-nodejs-modules": {
+      "count": 1
+    }
+  },
+  "fix_interests.js": {
+    "import/no-nodejs-modules": {
+      "count": 1
+    }
+  },
+  "fix_legal_styles.js": {
+    "import/no-nodejs-modules": {
+      "count": 1
+    }
+  },
+  "fix_lingui.js": {
+    "import/no-nodejs-modules": {
+      "count": 1
+    }
+  },
+  "fix_login_forms.js": {
+    "import/no-nodejs-modules": {
+      "count": 1
+    }
+  },
+  "fix_overlap.js": {
+    "import/no-nodejs-modules": {
+      "count": 1
+    }
+  },
+  "fix_profile_error.js": {
+    "import/no-nodejs-modules": {
+      "count": 1
+    }
+  },
+  "format_legal_docs.js": {
+    "import/no-nodejs-modules": {
+      "count": 1
+    }
+  },
+  "hook_t.js": {
+    "import/no-nodejs-modules": {
+      "count": 1
+    }
+  },
+  "inject_interceptor.js": {
+    "import/no-nodejs-modules": {
+      "count": 1
+    }
+  },
+  "metro.config.ts": {
+    "typescript/no-explicit-any": {
+      "count": 1
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 1
+    }
+  },
   "modules/bottom-sheet/src/BottomSheetNativeComponent.tsx": {
     "typescript/no-explicit-any": {
       "count": 2
@@ -57,6 +475,295 @@
   },
   "modules/expo-bluesky-swiss-army/src/VisibilityView/index.tsx": {
     "typescript/require-await": {
+      "count": 1
+    }
+  },
+  "plugins/notificationsExtension/withAppEntitlements.js": {
+    "typescript/require-await": {
+      "count": 1
+    }
+  },
+  "plugins/notificationsExtension/withExtensionEntitlements.js": {
+    "import/no-nodejs-modules": {
+      "count": 2
+    }
+  },
+  "plugins/notificationsExtension/withExtensionInfoPlist.js": {
+    "import/no-nodejs-modules": {
+      "count": 2
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 8
+    }
+  },
+  "plugins/notificationsExtension/withExtensionViewController.js": {
+    "import/no-nodejs-modules": {
+      "count": 2
+    }
+  },
+  "plugins/notificationsExtension/withSounds.js": {
+    "import/no-nodejs-modules": {
+      "count": 2
+    }
+  },
+  "plugins/notificationsExtension/withXcodeTarget.js": {
+    "typescript/no-unsafe-call": {
+      "count": 10
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 30
+    }
+  },
+  "plugins/shareExtension/withAppEntitlements.js": {
+    "typescript/require-await": {
+      "count": 1
+    }
+  },
+  "plugins/shareExtension/withExtensionEntitlements.js": {
+    "import/no-nodejs-modules": {
+      "count": 2
+    }
+  },
+  "plugins/shareExtension/withExtensionInfoPlist.js": {
+    "import/no-nodejs-modules": {
+      "count": 2
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 8
+    }
+  },
+  "plugins/shareExtension/withExtensionViewController.js": {
+    "import/no-nodejs-modules": {
+      "count": 2
+    }
+  },
+  "plugins/shareExtension/withXcodeTarget.js": {
+    "typescript/no-unsafe-call": {
+      "count": 9
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 28
+    }
+  },
+  "plugins/starterPackAppClipExtension/withAppEntitlements.js": {
+    "typescript/require-await": {
+      "count": 1
+    }
+  },
+  "plugins/starterPackAppClipExtension/withClipEntitlements.js": {
+    "import/no-nodejs-modules": {
+      "count": 2
+    }
+  },
+  "plugins/starterPackAppClipExtension/withClipInfoPlist.js": {
+    "import/no-nodejs-modules": {
+      "count": 2
+    }
+  },
+  "plugins/starterPackAppClipExtension/withFiles.js": {
+    "import/no-nodejs-modules": {
+      "count": 2
+    }
+  },
+  "plugins/starterPackAppClipExtension/withXcodeTarget.js": {
+    "typescript/no-unsafe-call": {
+      "count": 11
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 40
+    }
+  },
+  "plugins/withAndroidManifestFCMIconPlugin.js": {
+    "typescript/no-unsafe-call": {
+      "count": 2
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 4
+    }
+  },
+  "restore_dir.js": {
+    "import/no-nodejs-modules": {
+      "count": 1
+    }
+  },
+  "save_utf8.js": {
+    "import/no-nodejs-modules": {
+      "count": 1
+    }
+  },
+  "scripts/bundleUpdate.js": {
+    "import/no-nodejs-modules": {
+      "count": 3
+    },
+    "typescript/no-floating-promises": {
+      "count": 1
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 6
+    }
+  },
+  "scripts/check-asset-notices.mjs": {
+    "typescript/no-unsafe-argument": {
+      "count": 2
+    },
+    "typescript/no-unsafe-assignment": {
+      "count": 2
+    },
+    "typescript/no-unsafe-call": {
+      "count": 10
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 10
+    },
+    "typescript/no-unsafe-return": {
+      "count": 1
+    }
+  },
+  "scripts/check-sentry-browser-version.mjs": {
+    "typescript/no-unsafe-argument": {
+      "count": 1
+    },
+    "typescript/no-unsafe-assignment": {
+      "count": 2
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 2
+    },
+    "typescript/no-unsafe-return": {
+      "count": 1
+    }
+  },
+  "scripts/migrate-patches.mjs": {
+    "no-empty": {
+      "count": 2
+    },
+    "typescript/no-unsafe-argument": {
+      "count": 3
+    },
+    "typescript/no-unsafe-assignment": {
+      "count": 7
+    },
+    "typescript/no-unsafe-call": {
+      "count": 11
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 15
+    },
+    "typescript/no-unsafe-return": {
+      "count": 1
+    }
+  },
+  "scripts/post-embed-build.js": {
+    "import/no-nodejs-modules": {
+      "count": 2
+    }
+  },
+  "scripts/post-web-build.js": {
+    "import/no-nodejs-modules": {
+      "count": 3
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 1
+    }
+  },
+  "scripts/release/check-github.mjs": {
+    "typescript/no-unsafe-argument": {
+      "count": 3
+    },
+    "typescript/no-unsafe-assignment": {
+      "count": 30
+    },
+    "typescript/no-unsafe-call": {
+      "count": 15
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 67
+    },
+    "typescript/no-unsafe-return": {
+      "count": 5
+    }
+  },
+  "scripts/release/cli.mjs": {
+    "typescript/no-unsafe-argument": {
+      "count": 3
+    },
+    "typescript/no-unsafe-assignment": {
+      "count": 10
+    },
+    "typescript/no-unsafe-call": {
+      "count": 2
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 3
+    }
+  },
+  "scripts/release/model.mjs": {
+    "typescript/no-unsafe-argument": {
+      "count": 9
+    },
+    "typescript/no-unsafe-assignment": {
+      "count": 30
+    },
+    "typescript/no-unsafe-call": {
+      "count": 29
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 54
+    },
+    "typescript/no-unsafe-return": {
+      "count": 5
+    }
+  },
+  "scripts/release/plan.mjs": {
+    "typescript/no-unsafe-argument": {
+      "count": 3
+    },
+    "typescript/no-unsafe-assignment": {
+      "count": 32
+    },
+    "typescript/no-unsafe-call": {
+      "count": 5
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 37
+    },
+    "typescript/no-unsafe-return": {
+      "count": 3
+    }
+  },
+  "scripts/release/prepare.mjs": {
+    "typescript/no-unsafe-argument": {
+      "count": 1
+    },
+    "typescript/no-unsafe-assignment": {
+      "count": 19
+    },
+    "typescript/no-unsafe-call": {
+      "count": 14
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 53
+    }
+  },
+  "scripts/release/validate.cjs": {
+    "typescript/no-require-imports": {
+      "count": 5
+    },
+    "typescript/no-unsafe-assignment": {
+      "count": 1
+    },
+    "typescript/no-unsafe-call": {
+      "count": 1
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 3
+    },
+    "typescript/unbound-method": {
+      "count": 1
+    }
+  },
+  "setup_arabic_messages.js": {
+    "import/no-nodejs-modules": {
       "count": 1
     }
   },
@@ -623,6 +1330,11 @@
       "count": 2
     }
   },
+  "src/lib/interests.ts": {
+    "no-unused-vars": {
+      "count": 1
+    }
+  },
   "src/lib/international-telephone-codes.ts": {
     "typescript/no-explicit-any": {
       "count": 1
@@ -711,6 +1423,22 @@
       "count": 1
     }
   },
+  "src/locale/i18n.web.ts": {
+    "typescript/no-explicit-any": {
+      "count": 7
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 4
+    }
+  },
+  "src/locale/locales/ar/arabicMessages.ts": {
+    "typescript/no-unsafe-call": {
+      "count": 1
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 2
+    }
+  },
   "src/logger/types.ts": {
     "typescript/no-redundant-type-constituents": {
       "count": 1
@@ -742,6 +1470,16 @@
   "src/screens/Log.tsx": {
     "typescript/no-unsafe-enum-comparison": {
       "count": 2
+    }
+  },
+  "src/screens/Login/ForgotPasswordForm.tsx": {
+    "no-unused-vars": {
+      "count": 3
+    }
+  },
+  "src/screens/Login/LoginForm.tsx": {
+    "no-unused-vars": {
+      "count": 6
     }
   },
   "src/screens/ModerationInteractionSettings/index.tsx": {
@@ -850,6 +1588,9 @@
     }
   },
   "src/screens/Settings/AboutSettings.tsx": {
+    "no-unused-vars": {
+      "count": 2
+    },
     "typescript/no-floating-promises": {
       "count": 1
     }
@@ -887,6 +1628,11 @@
     },
     "typescript/require-await": {
       "count": 1
+    }
+  },
+  "src/screens/Settings/Settings.tsx": {
+    "no-unused-vars": {
+      "count": 3
     }
   },
   "src/screens/Settings/components/ChangeHandleDialog.tsx": {
@@ -958,6 +1704,19 @@
     },
     "typescript/no-unsafe-member-access": {
       "count": 1
+    }
+  },
+  "src/screens/VideoFeed/components/VideoCommentsDialog.tsx": {
+    "typescript/no-unsafe-call": {
+      "count": 1
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 16
+    }
+  },
+  "src/screens/VideoFeed/index.tsx": {
+    "no-unused-vars": {
+      "count": 3
     }
   },
   "src/state/a11y.tsx": {
@@ -1379,6 +2138,11 @@
       "count": 2
     }
   },
+  "src/view/com/posts/PostFeed.tsx": {
+    "no-unused-vars": {
+      "count": 1
+    }
+  },
   "src/view/com/posts/PostFeedErrorMessage.tsx": {
     "typescript/no-explicit-any": {
       "count": 1
@@ -1447,6 +2211,20 @@
       "count": 1
     }
   },
+  "src/view/com/util/verified/OrbisVerifiedBadge.tsx": {
+    "no-restricted-imports": {
+      "count": 1
+    },
+    "no-unused-vars": {
+      "count": 1
+    },
+    "react-native-a11y/has-accessibility-hint": {
+      "count": 1
+    },
+    "typescript/no-explicit-any": {
+      "count": 1
+    }
+  },
   "src/view/screens/Feeds.tsx": {
     "typescript/no-floating-promises": {
       "count": 3
@@ -1497,12 +2275,38 @@
       "count": 1
     }
   },
+  "src/view/shell/desktop/LeftNav.tsx": {
+    "no-unused-vars": {
+      "count": 5
+    }
+  },
   "src/view/shell/desktop/Search.tsx": {
     "typescript/no-unsafe-call": {
       "count": 3
     },
     "typescript/no-unsafe-member-access": {
       "count": 3
+    }
+  },
+  "svgo.config.mjs": {
+    "typescript/no-unsafe-call": {
+      "count": 1
+    },
+    "typescript/no-unsafe-member-access": {
+      "count": 1
+    },
+    "typescript/no-unsafe-return": {
+      "count": 1
+    }
+  },
+  "translate_ar.js": {
+    "import/no-nodejs-modules": {
+      "count": 1
+    }
+  },
+  "update_legal_pages.js": {
+    "import/no-nodejs-modules": {
+      "count": 1
     }
   }
 }

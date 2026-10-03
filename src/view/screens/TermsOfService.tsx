@@ -1,13 +1,14 @@
 import {View} from 'react-native'
 import {msg} from '@lingui/core/macro'
 import {useLingui} from '@lingui/react'
+
 import {usePalette} from '#/lib/hooks/usePalette'
 import {type CommonNavigatorParams, type NativeStackScreenProps} from '#/lib/routes/types'
+import {Text} from '#/view/com/util/text/Text'
 import {ScrollView} from '#/view/com/util/Views'
+import {atoms as a} from '#/alf'
 import * as Layout from '#/components/Layout'
 import {ViewHeader} from '../com/util/ViewHeader'
-import {Text} from '#/view/com/util/text/Text'
-import {atoms as a} from '#/alf'
 
 type Props = NativeStackScreenProps<CommonNavigatorParams, 'TermsOfService'>
 

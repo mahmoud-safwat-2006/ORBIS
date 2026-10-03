@@ -1,5 +1,4 @@
-﻿import React, {useState} from 'react'
-import {type ComponentProps, type JSX, memo, useCallback} from 'react'
+﻿import {type ComponentProps, type JSX, memo, useCallback, useState} from 'react'
 import {
   Linking,
   Pressable,
@@ -28,6 +27,7 @@ import {type SessionAccount, useSession} from '#/state/session'
 import {useSetDrawerOpen} from '#/state/shell'
 import {formatCount} from '#/view/com/util/numeric/format'
 import {UserAvatar} from '#/view/com/util/UserAvatar'
+import {OrbisVerifiedBadge, OrbisVerifiedModal} from '#/view/com/util/verified'
 import {useLogoVariant} from '#/view/icons/useLogoVariant'
 import {NavSignupCard} from '#/view/shell/NavSignupCard'
 import {atoms as a, tokens, useTheme, web} from '#/alf'
@@ -67,7 +67,6 @@ import {OTAChannelNotice} from '#/components/OTAChannelNotice'
 import {ProfileBadges} from '#/components/ProfileBadges'
 import {Text} from '#/components/Typography'
 import {useAnalytics} from '#/analytics'
-import {OrbisVerifiedBadge, OrbisVerifiedModal} from '#/view/com/util/verified'
 import {IS_NATIVE, IS_WEB} from '#/env'
 import {InviteFriendsDialog} from '#/features/inviteFriends'
 import {useActorStatus} from '#/features/liveNow'
@@ -753,24 +752,37 @@ function MenuItem({icon, label, count, bold, onPress}: MenuItemProps) {
 }
 
 function ExtraLinks() {
-  const {_} = useLingui()
   const t = useTheme()
   const logoVariant = useLogoVariant()
+  const navigation = useNavigation<NavigationProp>()
+  const setDrawerOpen = useSetDrawerOpen()
+
+  const openTerms = useCallback(() => {
+    setDrawerOpen(false)
+    navigation.navigate('TermsOfService')
+  }, [navigation, setDrawerOpen])
+
+  const openPrivacy = useCallback(() => {
+    setDrawerOpen(false)
+    navigation.navigate('PrivacyPolicy')
+  }, [navigation, setDrawerOpen])
 
   return (
     <View style={[a.flex_col, a.gap_md, a.flex_wrap]}>
-      <InlineLinkText
-        style={[a.text_md]}
-        label={_(msg`Terms of Service`)}
-        to="https://bsky.social/about/support/tos">
-        <Trans>Terms of Service</Trans>
-      </InlineLinkText>
-      <InlineLinkText
-        style={[a.text_md]}
-        to="https://bsky.social/about/support/privacy-policy"
-        label={_(msg`Privacy Policy`)}>
-        <Trans>Privacy Policy</Trans>
-      </InlineLinkText>
+      <TouchableOpacity
+        accessibilityRole="button"
+        onPress={openTerms}>
+        <Text style={[a.text_md, t.atoms.text_contrast_high]}>
+          <Trans>Terms of Service</Trans>
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        accessibilityRole="button"
+        onPress={openPrivacy}>
+        <Text style={[a.text_md, t.atoms.text_contrast_high]}>
+          <Trans>Privacy Policy</Trans>
+        </Text>
+      </TouchableOpacity>
       {logoVariant === 'kawaii' && (
         <Text style={t.atoms.text_contrast_medium}>
           <Trans>
@@ -787,6 +799,7 @@ function ExtraLinks() {
     </View>
   )
 }
+
 
 
 

@@ -94,11 +94,6 @@ msgstr ""
 msgid "{0, plural, one {# follower} other {# followers}}"
 msgstr ""
 
-#. placeholder {0}: profile.followsCount ?? 0
-#: src/screens/Profile/ProfileFollows.tsx:33
-msgid "{0, plural, one {# following} other {# following}}"
-msgstr ""
-
 #. placeholder {0}: item.count
 #: src/components/contacts/screens/ViewMatches.tsx:276
 msgid "{0, plural, one {# friend found!} other {# friends found!}}"
@@ -172,7 +167,7 @@ msgstr ""
 #. placeholder {0}: numUnreadNotifications ?? 0
 #: src/view/shell/bottom-bar/BottomBar.tsx:257
 #: src/view/shell/bottom-bar/BottomBar.tsx:289
-#: src/view/shell/Drawer.tsx:560
+#: src/view/shell/Drawer.tsx:564
 msgid "{0, plural, one {# unread item} other {# unread items}}"
 msgstr ""
 
@@ -286,8 +281,8 @@ msgstr ""
 msgid "{0} is not available"
 msgstr ""
 
-#. placeholder {0}: codeToLanguageName( expectedSourceLanguage, langPrefs.appLanguage, )
-#: src/lib/translation/index.tsx:323
+#. placeholder {0}: codeToLanguageName(expectedSourceLanguage, langPrefs.appLanguage)
+#: src/lib/translation/index.tsx:320
 msgid "{0} is not supported by your device."
 msgstr "{0} is not supported by your device."
 
@@ -462,6 +457,10 @@ msgstr ""
 msgid "{0}s"
 msgstr ""
 
+#: src/screens/Profile/ProfileFollows.tsx:42
+msgid "{actualFollowsCount, plural, one {# following} other {# following}}"
+msgstr "{actualFollowsCount, plural, one {# following} other {# following}}"
+
 #: src/screens/Moderation/index.tsx:179
 msgid "{badge, plural, one {# update} other {# updates}}"
 msgstr "{badge, plural, one {# update} other {# updates}}"
@@ -482,7 +481,7 @@ msgstr "{count, plural, one {# new join request} other {# new join requests}}"
 msgid "{count, plural, one {# request} other {# requests}}"
 msgstr "{count, plural, one {# request} other {# requests}}"
 
-#: src/view/shell/desktop/LeftNav.tsx:485
+#: src/view/shell/desktop/LeftNav.tsx:486
 msgid "{count, plural, one {# unread item} other {# unread items}}"
 msgstr ""
 
@@ -880,13 +879,13 @@ msgstr "<0>{0}, </0><1>{1}, </1>and {2, plural, one {# other} other {# others}} 
 
 #. placeholder {0}: formatCount(i18n, profile?.followersCount ?? 0)
 #. placeholder {1}: profile?.followersCount || 0
-#: src/view/shell/Drawer.tsx:156
+#: src/view/shell/Drawer.tsx:157
 msgid "<0>{0}</0> {1, plural, one {follower} other {followers}}"
 msgstr ""
 
 #. placeholder {0}: formatCount(i18n, profile?.followsCount ?? 0)
 #. placeholder {1}: profile?.followsCount || 0
-#: src/view/shell/Drawer.tsx:167
+#: src/view/shell/Drawer.tsx:168
 msgid "<0>{0}</0> {1, plural, one {following} other {following}}"
 msgstr ""
 
@@ -944,10 +943,13 @@ msgstr "<0>{displayName}</0><1/><2> added you</2>"
 msgid "<0>Community Guidelines: Harassment</0>"
 msgstr "<0>Community Guidelines: Harassment</0>"
 
-#: src/screens/Hashtag.tsx:232
 #: src/screens/Search/SearchResults.tsx:398
 msgid "<0>Sign in</0><1> or </1><2>create an account</2><3> </3><4>to search for news, sports, politics, and everything else happening on Bluesky.</4>"
 msgstr ""
+
+#: src/screens/Hashtag.tsx:232
+msgid "<0>Sign in</0><1> or </1><2>create an account</2><3> </3><4>to search for news, sports, politics, and everything else happening on ORBIS.</4>"
+msgstr "<0>Sign in</0><1> or </1><2>create an account</2><3> </3><4>to search for news, sports, politics, and everything else happening on ORBIS.</4>"
 
 #: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:251
 msgid "<0>Tap here to update your location with GPS.</0>"
@@ -963,13 +965,17 @@ msgstr "<0>You</0> and<1> </1><2>{0} </2>are included in your Starter Pack"
 msgid "⚠Invalid Handle"
 msgstr ""
 
+#: src/screens/Settings/AboutSettings.tsx:204
+msgid "🟢 جميع خوادم وخدمات شبكة ORBIS السحابية تعمل بكفاءة تامة 100% ولا توجد أي انقطاعات مسجلة."
+msgstr "🟢 جميع خوادم وخدمات شبكة ORBIS السحابية تعمل بكفاءة تامة 100% ولا توجد أي انقطاعات مسجلة."
+
 #: src/components/dialogs/MutedWords.tsx:204
 #: src/components/dialogs/MutedWords.tsx:553
 #: src/components/dialogs/MutedWords.tsx:556
 msgid "24 hours"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:437
+#: src/screens/Login/LoginForm.tsx:486
 msgid "2FA Confirmation"
 msgstr ""
 
@@ -1058,11 +1064,15 @@ msgid "A selected recipient is not followed by the sender."
 msgstr "A selected recipient is not followed by the sender."
 
 #: src/Navigation.tsx:507
-#: src/screens/Settings/AboutSettings.tsx:85
+#: src/screens/Settings/AboutSettings.tsx:86
 #: src/screens/Settings/Settings.tsx:267
 #: src/screens/Settings/Settings.tsx:270
 msgid "About"
 msgstr ""
+
+#: src/view/com/auth/SplashScreen.web.tsx:246
+msgid "About ORBIS"
+msgstr "About ORBIS"
 
 #: src/components/moderation/ReportDialog/utils/useReportOptions.ts:101
 msgid "Abusive or discriminatory behavior"
@@ -1253,8 +1263,8 @@ msgstr ""
 
 #: src/screens/Settings/Settings.tsx:596
 #: src/screens/Settings/Settings.tsx:599
-#: src/view/shell/desktop/LeftNav.tsx:277
-#: src/view/shell/desktop/LeftNav.tsx:280
+#: src/view/shell/desktop/LeftNav.tsx:278
+#: src/view/shell/desktop/LeftNav.tsx:281
 msgid "Add another account"
 msgstr ""
 
@@ -1414,7 +1424,7 @@ msgstr "Added to Starter Pack"
 msgid "Adding members to list..."
 msgstr ""
 
-#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:118
+#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:117
 msgid "Additional details (limit 1000 characters)"
 msgstr ""
 
@@ -1467,11 +1477,11 @@ msgstr ""
 msgid "Age Assurance"
 msgstr ""
 
-#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:74
+#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:73
 msgid "Age assurance inquiry failed to send, please try again."
 msgstr ""
 
-#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:84
+#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:83
 msgctxt "toast"
 msgid "Age assurance inquiry was submitted"
 msgstr ""
@@ -1585,7 +1595,7 @@ msgstr ""
 msgid "Allows access to direct messages"
 msgstr ""
 
-#: src/screens/Login/ForgotPasswordForm.tsx:178
+#: src/screens/Login/ForgotPasswordForm.tsx:169
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:239
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:245
 msgid "Already have a code?"
@@ -1776,10 +1786,6 @@ msgstr ""
 msgid "Animal welfare"
 msgstr ""
 
-#: src/lib/interests.ts:52
-msgid "Animals"
-msgstr ""
-
 #: src/components/Post/Embed/ExternalEmbed/Gif.tsx:89
 msgid "Animated GIF"
 msgstr ""
@@ -1821,7 +1827,7 @@ msgstr "Anyone can request to join"
 
 #: src/screens/Settings/ActivityPrivacySettings.tsx:112
 #: src/screens/Settings/ActivityPrivacySettings.tsx:117
-#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:165
+#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:163
 msgid "Anyone who follows me"
 msgstr ""
 
@@ -1879,7 +1885,7 @@ msgid "Appeal"
 msgstr ""
 
 #. placeholder {0}: strings.name
-#: src/components/moderation/AppealForm.tsx:104
+#: src/components/moderation/AppealForm.tsx:105
 msgid "Appeal \"{0}\" label"
 msgstr ""
 
@@ -1895,7 +1901,7 @@ msgstr "Appeal approved: Your post has been restored"
 msgid "Appeal label"
 msgstr "Appeal label"
 
-#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:92
+#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:91
 msgid "Appeal livestream suspension"
 msgstr ""
 
@@ -1903,26 +1909,26 @@ msgstr ""
 msgid "Appeal submitted"
 msgstr "Appeal submitted"
 
-#: src/components/moderation/AppealForm.tsx:94
-#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:82
-#: src/screens/Messages/components/ChatDisabled.tsx:123
+#: src/components/moderation/AppealForm.tsx:95
+#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:81
+#: src/screens/Messages/components/ChatDisabled.tsx:122
 msgctxt "toast"
 msgid "Appeal submitted"
 msgstr ""
 
-#: src/screens/Takendown.tsx:112
-#: src/screens/Takendown.tsx:138
+#: src/screens/Takendown.tsx:114
+#: src/screens/Takendown.tsx:140
 msgid "Appeal suspension"
 msgstr ""
 
-#: src/screens/Takendown.tsx:115
+#: src/screens/Takendown.tsx:117
 msgid "Appeal Suspension"
 msgstr ""
 
 #: src/screens/Messages/components/ChatDisabled.tsx:76
 #: src/screens/Messages/components/ChatDisabled.tsx:79
-#: src/screens/Messages/components/ChatDisabled.tsx:131
-#: src/screens/Messages/components/ChatDisabled.tsx:133
+#: src/screens/Messages/components/ChatDisabled.tsx:130
+#: src/screens/Messages/components/ChatDisabled.tsx:132
 msgid "Appeal this decision"
 msgstr ""
 
@@ -2043,10 +2049,6 @@ msgstr "Are you the person depicted, or an authorized representative acting on b
 msgid "Are you writing in <0>{suggestedLanguageName}</0>?"
 msgstr ""
 
-#: src/lib/interests.ts:53
-msgid "Art"
-msgstr ""
-
 #: src/view/com/composer/labels/LabelsBtn.tsx:167
 msgid "Artistic or non-erotic nudity."
 msgstr ""
@@ -2070,7 +2072,7 @@ msgstr ""
 msgid "At least 8 characters"
 msgstr ""
 
-#: src/screens/Settings/components/DeleteAccountDialog.tsx:344
+#: src/screens/Settings/components/DeleteAccountDialog.tsx:342
 msgid "AT Protocol FAQ"
 msgstr "AT Protocol FAQ"
 
@@ -2130,18 +2132,18 @@ msgstr "Awaiting review"
 #: src/components/dms/InitiateChatFlow.tsx:645
 #: src/components/dms/InitiateChatFlow.tsx:863
 #: src/components/dms/InitiateChatFlow.tsx:870
-#: src/components/moderation/AppealForm.tsx:156
 #: src/components/moderation/AppealForm.tsx:157
+#: src/components/moderation/AppealForm.tsx:158
 #: src/screens/Login/ChooseAccountForm.tsx:95
 #: src/screens/Login/ChooseAccountForm.tsx:99
-#: src/screens/Login/ForgotPasswordForm.tsx:123
-#: src/screens/Login/ForgotPasswordForm.tsx:128
-#: src/screens/Login/LoginForm.tsx:512
-#: src/screens/Login/LoginForm.tsx:517
+#: src/screens/Login/ForgotPasswordForm.tsx:114
+#: src/screens/Login/ForgotPasswordForm.tsx:119
+#: src/screens/Login/LoginForm.tsx:556
+#: src/screens/Login/LoginForm.tsx:561
 #: src/screens/Login/SetNewPasswordForm.tsx:162
 #: src/screens/Login/SetNewPasswordForm.tsx:168
-#: src/screens/Messages/components/ChatDisabled.tsx:162
-#: src/screens/Messages/components/ChatDisabled.tsx:164
+#: src/screens/Messages/components/ChatDisabled.tsx:161
+#: src/screens/Messages/components/ChatDisabled.tsx:163
 #: src/screens/Messages/components/InviteLinkDialog.tsx:274
 #: src/screens/Messages/components/InviteLinkDialog.tsx:302
 #: src/screens/Messages/Inbox.tsx:232
@@ -2378,10 +2380,6 @@ msgstr ""
 msgid "Blocking will not prevent labels from being applied on your account, but it will stop this account from replying in your threads or interacting with you."
 msgstr ""
 
-#: src/view/com/auth/SplashScreen.web.tsx:175
-msgid "Blog"
-msgstr ""
-
 #. Advanced search: Examples of hashtags
 #: src/screens/Search/components/AdvancedSearchDialog/hooks.tsx:17
 msgid "bloomscrolling booksky"
@@ -2389,17 +2387,11 @@ msgstr "bloomscrolling booksky"
 
 #: src/components/dialogs/ServerInput.tsx:144
 #: src/components/dialogs/ServerInput.tsx:146
-#: src/screens/CustomFeed/components/CustomFeedHeader.tsx:522
 msgid "Bluesky"
 msgstr ""
 
 #: src/screens/PostThread/components/ThreadItemAnchor.tsx:652
 msgid "Bluesky cannot confirm the authenticity of the claimed date."
-msgstr ""
-
-#: src/screens/Settings/AppIconSettings/useAppIconSets.ts:165
-msgctxt "Name of app icon variant"
-msgid "Bluesky Classic™"
 msgstr ""
 
 #: src/screens/ModerationInbox/components/AccountStatus.tsx:36
@@ -2411,7 +2403,6 @@ msgid "Bluesky helps friends find each other by creating an encoded digital fing
 msgstr ""
 
 #: src/components/dialogs/ServerInput.tsx:214
-#: src/screens/Login/components/HostingProviderDialog.tsx:236
 msgid "Bluesky is an open network where you can choose your hosting provider. If you're a developer, you can host your own server."
 msgstr ""
 
@@ -2444,32 +2435,12 @@ msgstr "Bluesky Moderation Service"
 msgid "Bluesky needs camera access to scan QR codes from other profiles."
 msgstr "Bluesky needs camera access to scan QR codes from other profiles."
 
-#: src/screens/Takendown.tsx:211
-msgid "Bluesky Social Terms of Service"
-msgstr ""
-
-#: src/screens/Settings/FindContactsSettings.tsx:579
-msgid "Bluesky stores your contacts as encoded data. Removing your contacts will immediately delete this data."
-msgstr ""
-
 #: src/components/StarterPack/ProfileStarterPacks.tsx:338
 msgid "Bluesky will choose a set of recommended accounts from people in your network."
 msgstr ""
 
-#: src/screens/Settings/components/PwiOptOut.tsx:102
-msgid "Bluesky will not show your account to logged-out users and will ask other apps to do the same. Other apps may not honor this request. It doesn't make your account private."
-msgstr "Bluesky will not show your account to logged-out users and will ask other apps to do the same. Other apps may not honor this request. It doesn't make your account private."
-
 #: src/components/dialogs/nuxs/InitialVerificationAnnouncement.tsx:137
 msgid "Bluesky will proactively verify notable and authentic accounts."
-msgstr ""
-
-#: src/screens/Settings/AppIconSettings/index.tsx:97
-msgid "Bluesky+"
-msgstr ""
-
-#: src/screens/Settings/AppIconSettings/index.tsx:100
-msgid "Bluesky+ icons"
 msgstr ""
 
 #: src/lib/moderation/useLabelBehaviorDescription.ts:56
@@ -2478,10 +2449,6 @@ msgstr ""
 
 #: src/lib/moderation/useLabelBehaviorDescription.ts:54
 msgid "Blur images and filter from feeds"
-msgstr ""
-
-#: src/lib/interests.ts:54
-msgid "Books"
 msgstr ""
 
 #: src/components/moderation/ReportDialog/utils/useReportOptions.ts:217
@@ -2541,10 +2508,6 @@ msgstr ""
 msgid "Browse topic {displayName}"
 msgstr ""
 
-#: src/view/com/auth/SplashScreen.web.tsx:170
-msgid "Business"
-msgstr ""
-
 #: src/screens/Bookmarks.tsx:293
 msgid "Button to go back to the home timeline"
 msgstr ""
@@ -2568,7 +2531,7 @@ msgstr "by @{0}"
 
 #. The group chat creator, in the format 'By {displayName}'.
 #. placeholder {0}: createSanitizedDisplayName( joinLinkPreview.owner, true, moderateProfile(joinLinkPreview.owner, moderationOpts).ui( 'displayName', ), )
-#. placeholder {0}: info.creatorHandle === TRENDING_HANDLE ? l`Bluesky` : sanitizeHandle(info.creatorHandle, '@')
+#. placeholder {0}: info.creatorHandle === TRENDING_HANDLE ? l`ORBIS` : sanitizeHandle(info.creatorHandle, '@')
 #: src/components/intents/GroupChatJoinDialog.tsx:384
 #: src/screens/CustomFeed/components/CustomFeedHeader.tsx:510
 msgid "By <0>{0}</0>"
@@ -2612,8 +2575,8 @@ msgid "Camera access needed"
 msgstr "Camera access needed"
 
 #: src/components/activity-notifications/SubscribeProfileDialog.tsx:210
-#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:135
-#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:141
+#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:134
+#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:140
 #: src/components/contacts/screens/GetContacts.tsx:294
 #: src/components/contacts/screens/GetContacts.tsx:299
 #: src/components/dialogs/DeviceLocationRequestDialog.tsx:141
@@ -2658,13 +2621,13 @@ msgstr "Camera access needed"
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:250
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:256
 #: src/screens/Settings/Settings.tsx:312
-#: src/screens/Takendown.tsx:100
-#: src/screens/Takendown.tsx:103
+#: src/screens/Takendown.tsx:102
+#: src/screens/Takendown.tsx:105
 #: src/view/com/composer/Composer.tsx:1839
 #: src/view/com/composer/Composer.tsx:1849
 #: src/view/com/composer/photos/EditImageDialog.web.tsx:44
 #: src/view/com/composer/photos/EditImageDialog.web.tsx:53
-#: src/view/shell/desktop/LeftNav.tsx:229
+#: src/view/shell/desktop/LeftNav.tsx:230
 msgid "Cancel"
 msgstr ""
 
@@ -2742,10 +2705,6 @@ msgstr ""
 msgid "Change Handle"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:650
-msgid "Change hosting provider"
-msgstr "Change hosting provider"
-
 #: src/components/moderation/ReportDialog/index.tsx:522
 msgid "Change moderation service"
 msgstr ""
@@ -2800,8 +2759,8 @@ msgstr "Channel"
 #: src/lib/hooks/useNotificationHandler.ts:133
 #: src/Navigation.tsx:533
 #: src/view/shell/bottom-bar/BottomBar.tsx:248
-#: src/view/shell/desktop/LeftNav.tsx:703
-#: src/view/shell/Drawer.tsx:528
+#: src/view/shell/desktop/LeftNav.tsx:705
+#: src/view/shell/Drawer.tsx:532
 msgid "Chat"
 msgstr ""
 
@@ -2926,7 +2885,7 @@ msgstr "Check for updates"
 msgid "Check my status"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:464
+#: src/screens/Login/LoginForm.tsx:513
 msgid "Check your email for a sign in code and enter it here."
 msgstr ""
 
@@ -3034,8 +2993,8 @@ msgstr "Clear date"
 msgid "Clear GIF search"
 msgstr "Clear GIF search"
 
+#: src/screens/Settings/AboutSettings.tsx:130
 #: src/screens/Settings/AboutSettings.tsx:134
-#: src/screens/Settings/AboutSettings.tsx:138
 msgid "Clear image cache"
 msgstr ""
 
@@ -3183,7 +3142,7 @@ msgstr "Close banner"
 msgid "Close dialog"
 msgstr ""
 
-#: src/view/shell/index.web.tsx:128
+#: src/view/shell/index.web.tsx:129
 msgid "Close drawer menu"
 msgstr ""
 
@@ -3252,13 +3211,14 @@ msgstr ""
 msgid "Color theme"
 msgstr ""
 
-#: src/lib/interests.ts:55
-msgid "Comedy"
-msgstr ""
+#: src/screens/VideoFeed/components/VideoCommentsDialog.tsx:38
+#: src/screens/VideoFeed/components/VideoSideActions.tsx:134
+msgid "Comments"
+msgstr "Comments"
 
-#: src/lib/interests.ts:56
-msgid "Comics"
-msgstr ""
+#: src/view/com/auth/SplashScreen.web.tsx:252
+msgid "Community"
+msgstr "Community"
 
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:46
 #: src/Navigation.tsx:372
@@ -3280,7 +3240,7 @@ msgstr ""
 
 #: src/lib/hotkeys/index.tsx:66
 #: src/view/com/feeds/ComposerPrompt.tsx:161
-#: src/view/shell/desktop/LeftNav.tsx:587
+#: src/view/shell/desktop/LeftNav.tsx:588
 msgid "Compose new post"
 msgstr ""
 
@@ -3317,7 +3277,7 @@ msgid "Confirm"
 msgstr ""
 
 #: src/components/dialogs/EmailDialog/components/TokenField.tsx:37
-#: src/screens/Login/LoginForm.tsx:443
+#: src/screens/Login/LoginForm.tsx:492
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:189
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:193
 #: src/screens/Settings/components/DeleteAccountDialog.tsx:250
@@ -3326,16 +3286,16 @@ msgstr ""
 msgid "Confirmation code"
 msgstr ""
 
-#: src/screens/Login/ForgotPasswordForm.tsx:136
+#: src/screens/Login/ForgotPasswordForm.tsx:127
 msgid "Connecting to service..."
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:543
+#: src/screens/Login/LoginForm.tsx:587
 msgid "Connecting to service…"
 msgstr "Connecting to service…"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:142
-#: src/screens/Login/LoginForm.tsx:549
+#: src/screens/Login/ForgotPasswordForm.tsx:133
+#: src/screens/Login/LoginForm.tsx:593
 msgid "Connecting…"
 msgstr "Connecting…"
 
@@ -3365,7 +3325,7 @@ msgstr ""
 msgid "Contact sync is not available on this device, as the app is unable to access your contacts."
 msgstr ""
 
-#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:100
+#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:99
 msgid "Contact us"
 msgstr ""
 
@@ -3493,7 +3453,7 @@ msgstr "Conversation left"
 msgid "Conversation not found."
 msgstr "Conversation not found."
 
-#: src/screens/Settings/AboutSettings.tsx:169
+#: src/screens/Settings/AboutSettings.tsx:165
 msgid "Copied build version to clipboard"
 msgstr ""
 
@@ -3517,7 +3477,7 @@ msgstr ""
 msgid "Copied!"
 msgstr ""
 
-#: src/screens/Settings/AboutSettings.tsx:145
+#: src/screens/Settings/AboutSettings.tsx:141
 msgid "Copies build version to clipboard"
 msgstr ""
 
@@ -3769,14 +3729,14 @@ msgstr "Create a Starter Pack for me"
 #: src/components/WelcomeModal.tsx:165
 #: src/screens/Messages/JoinRequest.tsx:318
 #: src/screens/Signup/index.tsx:139
-#: src/view/com/auth/SplashScreen.tsx:108
-#: src/view/com/auth/SplashScreen.web.tsx:117
+#: src/view/com/auth/SplashScreen.tsx:106
+#: src/view/com/auth/SplashScreen.web.tsx:181
 #: src/view/shell/bottom-bar/BottomBar.tsx:357
 #: src/view/shell/bottom-bar/BottomBar.tsx:361
 #: src/view/shell/bottom-bar/BottomBarWeb.tsx:250
 #: src/view/shell/bottom-bar/BottomBarWeb.tsx:255
-#: src/view/shell/NavSignupCard.tsx:48
-#: src/view/shell/NavSignupCard.tsx:53
+#: src/view/shell/NavSignupCard.tsx:47
+#: src/view/shell/NavSignupCard.tsx:52
 msgid "Create account"
 msgstr ""
 
@@ -3824,7 +3784,7 @@ msgstr ""
 
 #: src/screens/Messages/JoinRequest.tsx:312
 #: src/view/com/auth/SplashScreen.tsx:89
-#: src/view/com/auth/SplashScreen.web.tsx:109
+#: src/view/com/auth/SplashScreen.web.tsx:166
 msgid "Create new account"
 msgstr ""
 
@@ -3859,10 +3819,6 @@ msgstr ""
 
 #: src/screens/List/ListHiddenScreen.tsx:130
 msgid "Creator has been blocked"
-msgstr ""
-
-#: src/lib/interests.ts:57
-msgid "Culture"
 msgstr ""
 
 #: src/screens/Settings/BetaFeaturesSettings.tsx:196
@@ -4088,12 +4044,12 @@ msgstr ""
 msgid "Detach quote post?"
 msgstr ""
 
-#: src/screens/Settings/AboutSettings.tsx:158
+#: src/screens/Settings/AboutSettings.tsx:154
 msgctxt "toast"
 msgid "Developer mode disabled"
 msgstr ""
 
-#: src/screens/Settings/AboutSettings.tsx:152
+#: src/screens/Settings/AboutSettings.tsx:148
 msgctxt "toast"
 msgid "Developer mode enabled"
 msgstr ""
@@ -4103,7 +4059,7 @@ msgstr ""
 msgid "Developer options"
 msgstr ""
 
-#: src/lib/translation/index.tsx:312
+#: src/lib/translation/index.tsx:322
 msgid "Device failed to translate :("
 msgstr "Device failed to translate :("
 
@@ -4206,7 +4162,7 @@ msgstr ""
 msgid "Disconnect Germ DM"
 msgstr ""
 
-#: src/lib/strings/feed-names.ts:16
+#: src/lib/strings/feed-names.ts:30
 msgctxt "feed-name"
 msgid "Discover"
 msgstr "Discover"
@@ -4215,8 +4171,8 @@ msgstr "Discover"
 msgid "Discover feeds"
 msgstr "Discover feeds"
 
-#: src/view/com/posts/FollowingEmptyState.tsx:64
-#: src/view/com/posts/FollowingEmptyState.tsx:69
+#: src/view/com/posts/FollowingEmptyState.tsx:65
+#: src/view/com/posts/FollowingEmptyState.tsx:70
 #: src/view/com/posts/FollowingEndOfFeed.tsx:65
 #: src/view/com/posts/FollowingEndOfFeed.tsx:70
 msgid "Discover new custom feeds"
@@ -4357,7 +4313,7 @@ msgstr ""
 msgid "Double tap to close the dialog"
 msgstr ""
 
-#: src/screens/VideoFeed/index.tsx:1235
+#: src/screens/VideoFeed/index.tsx:1222
 msgid "Double tap to like"
 msgstr ""
 
@@ -4587,10 +4543,6 @@ msgstr ""
 msgid "Edit your Starter Pack"
 msgstr "Edit your Starter Pack"
 
-#: src/lib/interests.ts:59
-msgid "Education"
-msgstr ""
-
 #: src/screens/List/ListHiddenScreen.tsx:144
 msgid "Either the creator of this list has blocked you or you have blocked the creator."
 msgstr ""
@@ -4609,7 +4561,7 @@ msgstr ""
 msgid "Email 2FA enabled"
 msgstr ""
 
-#: src/screens/Login/ForgotPasswordForm.tsx:94
+#: src/screens/Login/ForgotPasswordForm.tsx:85
 msgid "Email address"
 msgstr ""
 
@@ -4760,11 +4712,11 @@ msgstr ""
 msgid "Enter the domain you want to use"
 msgstr ""
 
-#: src/screens/Login/ForgotPasswordForm.tsx:113
+#: src/screens/Login/ForgotPasswordForm.tsx:104
 msgid "Enter the email you used to create your account. We'll send you a \"reset code\" so you can set a new password."
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:338
+#: src/screens/Login/LoginForm.tsx:393
 msgid "Enter the username or email address you used when you created your account"
 msgstr ""
 
@@ -4772,12 +4724,12 @@ msgstr ""
 msgid "Enter your birthdate"
 msgstr ""
 
-#: src/screens/Login/ForgotPasswordForm.tsx:100
+#: src/screens/Login/ForgotPasswordForm.tsx:91
 #: src/screens/Signup/StepInfo/index.tsx:261
 msgid "Enter your email address"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:390
+#: src/screens/Login/LoginForm.tsx:445
 #: src/screens/Settings/components/DeleteAccountDialog.tsx:297
 msgid "Enter your password"
 msgstr ""
@@ -4807,7 +4759,7 @@ msgstr ""
 msgid "Error loading post"
 msgstr ""
 
-#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:156
+#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:154
 msgid "Error loading preference"
 msgstr ""
 
@@ -4899,7 +4851,7 @@ msgstr ""
 msgid "Expand post text"
 msgstr ""
 
-#: src/screens/VideoFeed/index.tsx:1111
+#: src/screens/VideoFeed/index.tsx:1098
 msgid "Expands or collapses post text"
 msgstr ""
 
@@ -4944,8 +4896,8 @@ msgstr ""
 
 #: src/Navigation.tsx:793
 #: src/screens/Search/Shell.tsx:549
-#: src/view/shell/desktop/LeftNav.tsx:682
-#: src/view/shell/Drawer.tsx:476
+#: src/view/shell/desktop/LeftNav.tsx:684
+#: src/view/shell/Drawer.tsx:480
 msgid "Explore"
 msgstr ""
 
@@ -5269,9 +5221,9 @@ msgstr ""
 msgid "Failed to send report"
 msgstr "Failed to send report"
 
-#: src/components/moderation/AppealForm.tsx:88
-#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:76
-#: src/screens/Messages/components/ChatDisabled.tsx:117
+#: src/components/moderation/AppealForm.tsx:89
+#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:75
+#: src/screens/Messages/components/ChatDisabled.tsx:116
 msgid "Failed to submit appeal, please try again."
 msgstr ""
 
@@ -5369,7 +5321,7 @@ msgstr ""
 
 #: src/view/shell/desktop/RightNav.tsx:109
 #: src/view/shell/desktop/RightNav.tsx:110
-#: src/view/shell/Drawer.tsx:430
+#: src/view/shell/Drawer.tsx:434
 msgid "Feedback"
 msgstr ""
 
@@ -5386,8 +5338,8 @@ msgstr ""
 #: src/screens/StarterPack/StarterPackScreen.tsx:193
 #: src/view/screens/Feeds.tsx:505
 #: src/view/screens/Profile.tsx:240
-#: src/view/shell/desktop/LeftNav.tsx:717
-#: src/view/shell/Drawer.tsx:592
+#: src/view/shell/desktop/LeftNav.tsx:719
+#: src/view/shell/Drawer.tsx:596
 msgid "Feeds"
 msgstr ""
 
@@ -5467,14 +5419,10 @@ msgstr ""
 msgid "Finally! Keep track of posts that matter to you. Save them to revisit anytime."
 msgstr ""
 
-#: src/lib/interests.ts:60
-msgid "Finance"
-msgstr ""
-
 #: src/view/com/posts/CustomFeedEmptyState.tsx:69
 #: src/view/com/posts/CustomFeedEmptyState.tsx:74
-#: src/view/com/posts/FollowingEmptyState.tsx:48
-#: src/view/com/posts/FollowingEmptyState.tsx:53
+#: src/view/com/posts/FollowingEmptyState.tsx:49
+#: src/view/com/posts/FollowingEmptyState.tsx:54
 #: src/view/com/posts/FollowingEndOfFeed.tsx:49
 #: src/view/com/posts/FollowingEndOfFeed.tsx:54
 msgid "Find accounts to follow"
@@ -5518,9 +5466,12 @@ msgid "Find your friends"
 msgstr ""
 
 #: src/screens/Onboarding/StepFindContactsIntro/index.tsx:46
-#: src/screens/Settings/FindContactsSettings.tsx:136
 msgid "Find your friends on Bluesky by verifying your phone number and matching with your contacts. We protect your information and you control what happens next. <0>Learn more</0>"
 msgstr ""
+
+#: src/screens/Settings/FindContactsSettings.tsx:136
+msgid "Find your friends on ORBIS by verifying your phone number and matching with your contacts. We protect your information and you control what happens next. <0>Learn more</0>"
+msgstr "Find your friends on ORBIS by verifying your phone number and matching with your contacts. We protect your information and you control what happens next. <0>Learn more</0>"
 
 #: src/screens/Onboarding/StepFinished/ValuePropositionPager.shared.tsx:31
 msgid "Find your people"
@@ -5564,7 +5515,7 @@ msgstr "Focus the search field"
 #: src/screens/Messages/ConversationSettings/Member.tsx:170
 #: src/screens/PostThread/components/ThreadItemAnchorFollowButton.tsx:157
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:416
-#: src/screens/VideoFeed/index.tsx:994
+#: src/screens/VideoFeed/index.tsx:1000
 #: src/view/com/notifications/NotificationFeedItem.tsx:890
 #: src/view/com/notifications/NotificationFeedItem.tsx:897
 msgid "Follow"
@@ -5580,7 +5531,7 @@ msgstr ""
 msgid "Follow {displayName}"
 msgstr "Follow {displayName}"
 
-#: src/screens/VideoFeed/index.tsx:973
+#: src/screens/VideoFeed/index.tsx:979
 msgid "Follow {handle}"
 msgstr ""
 
@@ -5679,13 +5630,13 @@ msgstr ""
 #: src/components/ProfileHoverCard/index.web.tsx:513
 #: src/screens/PostThread/components/ThreadItemAnchorFollowButton.tsx:160
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:412
-#: src/screens/VideoFeed/index.tsx:992
+#: src/screens/VideoFeed/index.tsx:998
 #: src/view/com/notifications/NotificationFeedItem.tsx:869
 #: src/view/com/notifications/NotificationFeedItem.tsx:885
 msgid "Following"
 msgstr ""
 
-#: src/lib/strings/feed-names.ts:13
+#: src/lib/strings/feed-names.ts:27
 #: src/screens/SavedFeeds.tsx:618
 #: src/view/screens/Feeds.tsx:597
 msgctxt "feed-name"
@@ -5705,7 +5656,7 @@ msgstr ""
 msgid "Following {displayName}"
 msgstr "Following {displayName}"
 
-#: src/screens/VideoFeed/index.tsx:972
+#: src/screens/VideoFeed/index.tsx:978
 msgid "Following {handle}"
 msgstr ""
 
@@ -5730,10 +5681,6 @@ msgstr ""
 
 #: src/screens/Settings/AppearanceSettings.tsx:146
 msgid "Font size"
-msgstr ""
-
-#: src/lib/interests.ts:61
-msgid "Food"
 msgstr ""
 
 #: src/ageAssurance/components/NoAccessScreen.tsx:109
@@ -5773,8 +5720,8 @@ msgstr ""
 msgid "Forgot Password"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:422
-#: src/screens/Login/LoginForm.tsx:429
+#: src/screens/Login/LoginForm.tsx:470
+#: src/screens/Login/LoginForm.tsx:477
 msgid "Forgot password?"
 msgstr ""
 
@@ -5850,7 +5797,7 @@ msgstr ""
 msgid "Get early access to experimental features we’re testing."
 msgstr "Get early access to experimental features we’re testing."
 
-#: src/view/shell/Drawer.tsx:434
+#: src/view/shell/Drawer.tsx:438
 msgid "Get help"
 msgstr ""
 
@@ -5967,14 +5914,14 @@ msgstr ""
 #: src/components/Layout/Header/index.tsx:134
 #: src/components/moderation/ScreenHider.tsx:157
 #: src/components/moderation/ScreenHider.tsx:166
-#: src/screens/Login/components/AuthLayout/Header/index.tsx:74
+#: src/screens/Login/components/AuthLayout/Header/index.tsx:72
 #: src/screens/Login/components/ConfirmHostingProviderDialog.tsx:160
 #: src/screens/Login/components/ConfirmHostingProviderDialog.tsx:163
 #: src/screens/ProfileList/components/ErrorScreen.tsx:35
 #: src/screens/ProfileList/components/ErrorScreen.tsx:41
 #: src/screens/VideoFeed/components/Header.tsx:163
-#: src/screens/VideoFeed/index.tsx:1296
-#: src/screens/VideoFeed/index.tsx:1300
+#: src/screens/VideoFeed/index.tsx:1283
+#: src/screens/VideoFeed/index.tsx:1287
 #: src/view/com/auth/LoggedOut.tsx:127
 #: src/view/com/profile/ProfileFollowers.tsx:225
 #: src/view/com/profile/ProfileFollowers.tsx:226
@@ -6051,15 +5998,15 @@ msgstr ""
 msgid "Go to feed"
 msgstr ""
 
-#: src/screens/Login/ForgotPasswordForm.tsx:172
+#: src/screens/Login/ForgotPasswordForm.tsx:163
 msgid "Go to next"
 msgstr ""
 
 #: src/components/dms/ConvoMenu.tsx:262
 #: src/screens/Messages/components/MessagesListInfoPanel.tsx:102
 #: src/screens/Messages/ConversationSettings/MemberMenu.tsx:194
-#: src/view/shell/desktop/LeftNav.tsx:337
-#: src/view/shell/desktop/LeftNav.tsx:343
+#: src/view/shell/desktop/LeftNav.tsx:338
+#: src/view/shell/desktop/LeftNav.tsx:344
 msgid "Go to profile"
 msgstr ""
 
@@ -6075,7 +6022,7 @@ msgstr ""
 msgid "Go to user’s profile"
 msgstr "Go to user’s profile"
 
-#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:104
+#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:103
 msgid "Going live is currently disabled for your account"
 msgstr ""
 
@@ -6276,7 +6223,7 @@ msgstr ""
 #: src/screens/Settings/Settings.tsx:263
 #: src/view/shell/desktop/RightNav.tsx:130
 #: src/view/shell/desktop/RightNav.tsx:133
-#: src/view/shell/Drawer.tsx:443
+#: src/view/shell/Drawer.tsx:447
 msgid "Help"
 msgstr ""
 
@@ -6306,7 +6253,7 @@ msgstr ""
 msgid "Hidden"
 msgstr ""
 
-#: src/screens/VideoFeed/index.tsx:774
+#: src/screens/VideoFeed/index.tsx:777
 msgid "Hidden by your moderation settings."
 msgstr ""
 
@@ -6343,7 +6290,7 @@ msgstr "Hide group chat updates"
 msgid "Hide lists"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:619
+#: src/screens/Login/LoginForm.tsx:658
 msgid "Hide password"
 msgstr "Hide password"
 
@@ -6425,23 +6372,23 @@ msgstr "Hmm, it seems we weren't able to compute your level of access. Please tr
 msgid "Hmm, it seems your device was unable to share age information with us."
 msgstr "Hmm, it seems your device was unable to share age information with us."
 
-#: src/view/com/posts/PostFeedErrorMessage.tsx:123
+#: src/view/com/posts/PostFeedErrorMessage.tsx:134
 msgid "Hmm, some kind of issue occurred when contacting the feed server. Please let the feed owner know about this issue."
 msgstr ""
 
-#: src/view/com/posts/PostFeedErrorMessage.tsx:111
+#: src/view/com/posts/PostFeedErrorMessage.tsx:122
 msgid "Hmm, the feed server appears to be misconfigured. Please let the feed owner know about this issue."
 msgstr ""
 
-#: src/view/com/posts/PostFeedErrorMessage.tsx:117
+#: src/view/com/posts/PostFeedErrorMessage.tsx:128
 msgid "Hmm, the feed server appears to be offline. Please let the feed owner know about this issue."
 msgstr ""
 
-#: src/view/com/posts/PostFeedErrorMessage.tsx:114
+#: src/view/com/posts/PostFeedErrorMessage.tsx:125
 msgid "Hmm, the feed server gave a bad response. Please let the feed owner know about this issue."
 msgstr ""
 
-#: src/view/com/posts/PostFeedErrorMessage.tsx:108
+#: src/view/com/posts/PostFeedErrorMessage.tsx:119
 msgid "Hmm, we're having trouble finding this feed. It may have been deleted."
 msgstr ""
 
@@ -6460,8 +6407,8 @@ msgstr ""
 #: src/Navigation.tsx:788
 #: src/Navigation.tsx:809
 #: src/view/shell/bottom-bar/BottomBar.tsx:202
-#: src/view/shell/desktop/LeftNav.tsx:669
-#: src/view/shell/Drawer.tsx:502
+#: src/view/shell/desktop/LeftNav.tsx:671
+#: src/view/shell/Drawer.tsx:506
 msgid "Home"
 msgstr ""
 
@@ -6471,19 +6418,8 @@ msgstr ""
 
 #: src/components/dialogs/ServerInput.tsx:138
 #: src/screens/Login/components/HostingProviderDialog.tsx:159
-#: src/screens/Login/ForgotPasswordForm.tsx:84
-#: src/screens/Login/LoginForm.tsx:665
 msgid "Hosting provider"
 msgstr ""
-
-#. placeholder {0}: toNiceHostingUrl(state.pdsUrl)
-#: src/screens/Login/LoginForm.tsx:661
-msgid "Hosting provider: {0}"
-msgstr "Hosting provider: {0}"
-
-#: src/screens/Login/LoginForm.tsx:663
-msgid "Hosting provider: Bluesky"
-msgstr "Hosting provider: Bluesky"
 
 #: src/components/contacts/components/InviteInfo.tsx:54
 msgid "How it works:"
@@ -6602,13 +6538,13 @@ msgstr ""
 msgid "Image {0} of {imageCount}"
 msgstr "Image {0} of {imageCount}"
 
-#: src/screens/Settings/AboutSettings.tsx:74
+#: src/screens/Settings/AboutSettings.tsx:75
 msgid "Image cache cleared"
 msgstr ""
 
 #. Android-only toast message which includes amount of space freed using localized number formatting
 #. placeholder {0}: i18n.number( Math.abs(sizeDiffBytes / 1024 / 1024), { notation: 'compact', style: 'unit', unit: 'megabyte', }, )
-#: src/screens/Settings/AboutSettings.tsx:60
+#: src/screens/Settings/AboutSettings.tsx:61
 msgid "Image cache cleared, freed {0}"
 msgstr ""
 
@@ -6752,7 +6688,7 @@ msgstr "Include posts made until this date"
 msgid "Include video timestamp ({videoTimestamp})"
 msgstr "Include video timestamp ({videoTimestamp})"
 
-#: src/screens/Login/LoginForm.tsx:164
+#: src/screens/Login/LoginForm.tsx:147
 msgid "Incorrect username or password"
 msgstr ""
 
@@ -6764,7 +6700,7 @@ msgstr ""
 msgid "Input new password"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:457
+#: src/screens/Login/LoginForm.tsx:506
 msgid "Input the code which has been emailed to you"
 msgstr ""
 
@@ -6796,7 +6732,7 @@ msgstr "Introducing group chats"
 msgid "Introducing saved posts AKA bookmarks"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:155
+#: src/screens/Login/LoginForm.tsx:138
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:78
 msgid "Invalid 2FA confirmation code."
 msgstr ""
@@ -6849,7 +6785,7 @@ msgid "Invite code not accepted. Check that you input it correctly and try again
 msgstr ""
 
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:359
-#: src/view/shell/Drawer.tsx:122
+#: src/view/shell/Drawer.tsx:123
 msgid "Invite friends"
 msgstr "Invite friends"
 
@@ -6937,11 +6873,6 @@ msgstr ""
 msgid "Job ID: {0}"
 msgstr ""
 
-#. Link to a page with job openings at Bluesky
-#: src/view/com/auth/SplashScreen.web.tsx:180
-msgid "Jobs"
-msgstr ""
-
 #: src/components/dms/ChatInvite/Root.tsx:118
 #: src/components/intents/GroupChatJoinDialog.tsx:301
 msgid "Join"
@@ -6965,12 +6896,8 @@ msgid "Join request rescinded."
 msgstr "Join request rescinded."
 
 #: src/components/StarterPack/QrCode.tsx:64
-#: src/view/shell/NavSignupCard.tsx:41
+#: src/view/shell/NavSignupCard.tsx:40
 msgid "Join the conversation"
-msgstr ""
-
-#: src/lib/interests.ts:63
-msgid "Journalism"
 msgstr ""
 
 #: src/view/com/composer/Composer.tsx:1556
@@ -7079,10 +7006,6 @@ msgstr "Learn more about <0>how to use advanced search</0>."
 msgid "Learn more about age assurance"
 msgstr ""
 
-#: src/view/com/auth/SplashScreen.web.tsx:168
-msgid "Learn more about Bluesky"
-msgstr ""
-
 #: src/components/contacts/components/InviteInfo.tsx:33
 msgid "Learn more about how inviting friends works"
 msgstr ""
@@ -7123,10 +7046,10 @@ msgctxt "english-only-resource"
 msgid "Learn more about verification on Bluesky"
 msgstr ""
 
-#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:130
-#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:133
-msgid "Learn more about what is public on Bluesky."
-msgstr ""
+#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:129
+#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:131
+msgid "Learn more about what is public on ORBIS."
+msgstr "Learn more about what is public on ORBIS."
 
 #: src/screens/Profile/components/GermButton.tsx:217
 msgid "Learn more about your Germ DM link"
@@ -7229,6 +7152,7 @@ msgid "Light"
 msgstr ""
 
 #: src/screens/CustomFeed/components/CustomFeedHeader.tsx:572
+#: src/screens/VideoFeed/components/VideoSideActions.tsx:110
 msgid "Like"
 msgstr ""
 
@@ -7314,6 +7238,10 @@ msgstr ""
 #: src/screens/PostThread/components/LikesStat.tsx:31
 msgid "Likes on this post"
 msgstr ""
+
+#: src/screens/VideoFeed/components/VideoSideActions.tsx:111
+msgid "Likes the post"
+msgstr "Likes the post"
 
 #: src/screens/PostThread/components/HeaderDropdown.tsx:49
 #: src/screens/PostThread/components/HeaderDropdown.tsx:54
@@ -7419,8 +7347,8 @@ msgstr ""
 #: src/view/screens/Lists.tsx:60
 #: src/view/screens/Profile.tsx:234
 #: src/view/screens/Profile.tsx:242
-#: src/view/shell/desktop/LeftNav.tsx:727
-#: src/view/shell/Drawer.tsx:607
+#: src/view/shell/desktop/LeftNav.tsx:729
+#: src/view/shell/Drawer.tsx:611
 msgid "Lists"
 msgstr ""
 
@@ -7536,12 +7464,7 @@ msgstr ""
 msgid "Logged out"
 msgstr ""
 
-#: src/view/shell/desktop/RightNav.tsx:142
-msgid "Logo by @sawaratsuki.bsky.social"
-msgstr ""
-
-#: src/view/shell/desktop/RightNav.tsx:139
-#: src/view/shell/Drawer.tsx:771
+#: src/view/shell/Drawer.tsx:788
 msgid "Logo by <0>@sawaratsuki.bsky.social</0>"
 msgstr ""
 
@@ -7750,7 +7673,7 @@ msgid "Message from @{0}: {1}"
 msgstr ""
 
 #. placeholder {0}: rawError.message
-#: src/view/com/posts/PostFeedErrorMessage.tsx:207
+#: src/view/com/posts/PostFeedErrorMessage.tsx:218
 msgid "Message from server: {0}"
 msgstr ""
 
@@ -7902,14 +7825,6 @@ msgstr ""
 msgid "Move feed up"
 msgstr ""
 
-#: src/lib/interests.ts:64
-msgid "Movies"
-msgstr ""
-
-#: src/lib/interests.ts:65
-msgid "Music"
-msgstr ""
-
 #: src/screens/Messages/ConversationSettings/index.tsx:529
 msgid "Mute"
 msgstr "Mute"
@@ -8052,10 +7967,6 @@ msgstr "My Starter Pack"
 msgid "Name"
 msgstr ""
 
-#: src/lib/interests.ts:66
-msgid "Nature"
-msgstr ""
-
 #. placeholder {0}: record.name
 #. placeholder {0}: view.record.name
 #: src/components/StarterPack/StarterPackCard.tsx:126
@@ -8067,13 +7978,13 @@ msgstr ""
 msgid "Navigate to Starter Pack"
 msgstr "Navigate to Starter Pack"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:148
-#: src/screens/Login/ForgotPasswordForm.tsx:173
-#: src/screens/Login/LoginForm.tsx:556
+#: src/screens/Login/ForgotPasswordForm.tsx:139
+#: src/screens/Login/ForgotPasswordForm.tsx:164
+#: src/screens/Login/LoginForm.tsx:600
 msgid "Navigates to the next screen"
 msgstr ""
 
-#: src/view/shell/Drawer.tsx:93
+#: src/view/shell/Drawer.tsx:94
 msgid "Navigates to your profile"
 msgstr ""
 
@@ -8212,7 +8123,7 @@ msgid "New post"
 msgstr ""
 
 #: src/view/com/feeds/FeedPage.tsx:180
-#: src/view/shell/desktop/LeftNav.tsx:598
+#: src/view/shell/desktop/LeftNav.tsx:599
 msgctxt "action"
 msgid "New post"
 msgstr ""
@@ -8237,9 +8148,9 @@ msgstr ""
 msgid "New Starter Pack"
 msgstr "New Starter Pack"
 
-#: src/screens/Login/LoginForm.tsx:570
-msgid "New to Bluesky? <0>Sign up</0>"
-msgstr "New to Bluesky? <0>Sign up</0>"
+#: src/screens/Login/LoginForm.tsx:614
+msgid "New to ORBIS? <0>Sign up</0>"
+msgstr "New to ORBIS? <0>Sign up</0>"
 
 #: src/components/dialogs/NewskieDialog/index.tsx:100
 msgid "New user info dialog"
@@ -8252,7 +8163,6 @@ msgstr ""
 msgid "Newest replies first"
 msgstr ""
 
-#: src/lib/interests.ts:67
 #: src/screens/Search/modules/ExploreTrendingTopics.tsx:252
 msgid "News"
 msgstr ""
@@ -8261,8 +8171,8 @@ msgstr ""
 #: src/components/contacts/screens/ViewMatches.tsx:418
 #: src/components/dms/AddMembersFlow.tsx:325
 #: src/components/dms/InitiateChatFlow.tsx:599
-#: src/screens/Login/ForgotPasswordForm.tsx:147
-#: src/screens/Login/ForgotPasswordForm.tsx:154
+#: src/screens/Login/ForgotPasswordForm.tsx:138
+#: src/screens/Login/ForgotPasswordForm.tsx:145
 #: src/screens/Login/SetNewPasswordForm.tsx:176
 #: src/screens/Login/SetNewPasswordForm.tsx:182
 #: src/screens/Onboarding/StepFinished/index.tsx:336
@@ -8421,7 +8331,7 @@ msgstr ""
 
 #: src/screens/Settings/ActivityPrivacySettings.tsx:130
 #: src/screens/Settings/ActivityPrivacySettings.tsx:135
-#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:162
+#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:160
 msgctxt "enable for"
 msgid "No one"
 msgstr ""
@@ -8593,8 +8503,8 @@ msgid "Note about sharing"
 msgstr ""
 
 #: src/screens/Settings/PrivacyAndSecuritySettings.tsx:120
-msgid "Note: Bluesky is part of the Atmosphere, an open public network. These settings ask other apps and websites to limit your visibility, but they can choose not to. Your public content may still appear elsewhere."
-msgstr "Note: Bluesky is part of the Atmosphere, an open public network. These settings ask other apps and websites to limit your visibility, but they can choose not to. Your public content may still appear elsewhere."
+msgid "Note: ORBIS is part of the Atmosphere, an open public network. These settings ask other apps and websites to limit your visibility, but they can choose not to. Your public content may still appear elsewhere."
+msgstr "Note: ORBIS is part of the Atmosphere, an open public network. These settings ask other apps and websites to limit your visibility, but they can choose not to. Your public content may still appear elsewhere."
 
 #: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:133
 msgid "Note: This post is only visible to logged-in users."
@@ -8635,8 +8545,8 @@ msgstr ""
 #: src/screens/Settings/Settings.tsx:204
 #: src/view/screens/Notifications.tsx:128
 #: src/view/shell/bottom-bar/BottomBar.tsx:285
-#: src/view/shell/desktop/LeftNav.tsx:692
-#: src/view/shell/Drawer.tsx:555
+#: src/view/shell/desktop/LeftNav.tsx:694
+#: src/view/shell/Drawer.tsx:559
 msgid "Notifications"
 msgstr ""
 
@@ -8696,8 +8606,8 @@ msgid "On"
 msgstr "On"
 
 #: src/screens/Settings/components/AlgoVisibilityOptOut.tsx:43
-msgid "On Bluesky, this means your posts will only appear in the Discover feed to people who follow you. Other apps can choose to use this preference in their own algorithmic recommendations."
-msgstr "On Bluesky, this means your posts will only appear in the Discover feed to people who follow you. Other apps can choose to use this preference in their own algorithmic recommendations."
+msgid "On ORBIS, this means your posts will only appear in the Discover feed to people who follow you. Other apps can choose to use this preference in their own algorithmic recommendations."
+msgstr "On ORBIS, this means your posts will only appear in the Discover feed to people who follow you. Other apps can choose to use this preference in their own algorithmic recommendations."
 
 #: src/components/StarterPack/QrCode.tsx:78
 msgid "on<0><1/><2><3/></2></0>"
@@ -8768,7 +8678,7 @@ msgstr "Only followers can join this group chat."
 
 #: src/screens/Settings/ActivityPrivacySettings.tsx:121
 #: src/screens/Settings/ActivityPrivacySettings.tsx:126
-#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:160
+#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:158
 msgid "Only followers who I follow"
 msgstr ""
 
@@ -8965,10 +8875,6 @@ msgstr "Opens {displayName} feed"
 msgid "Opens a dialog to add a content warning to your post"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:651
-msgid "Opens a dialog to change the hosting provider you sign in to"
-msgstr "Opens a dialog to change the hosting provider you sign in to"
-
 #: src/view/com/composer/threadgate/ThreadgateBtn.tsx:152
 msgid "Opens a dialog to choose who can interact with this post"
 msgstr ""
@@ -8997,6 +8903,10 @@ msgstr ""
 msgid "Opens change handle dialog"
 msgstr ""
 
+#: src/screens/VideoFeed/components/VideoSideActions.tsx:135
+msgid "Opens comments sheet"
+msgstr "Opens comments sheet"
+
 #: src/screens/PostThread/components/ThreadComposePrompt.tsx:64
 msgid "Opens composer"
 msgstr ""
@@ -9010,17 +8920,29 @@ msgstr ""
 msgid "Opens device gallery to select up to {MAX_GALLERY_IMAGES, plural, other {# images}}, or a single video or GIF."
 msgstr "Opens device gallery to select up to {MAX_GALLERY_IMAGES, plural, other {# images}}, or a single video or GIF."
 
+#: src/view/com/auth/SplashScreen.web.tsx:167
+msgid "Opens flow to create a new account"
+msgstr "Opens flow to create a new account"
+
 #: src/screens/Messages/JoinRequest.tsx:313
-#: src/view/com/auth/SplashScreen.tsx:91
-#: src/view/com/auth/SplashScreen.web.tsx:111
 msgid "Opens flow to create a new Bluesky account"
 msgstr ""
 
+#: src/view/com/auth/SplashScreen.tsx:90
+msgid "Opens flow to create a new ORBIS account"
+msgstr "Opens flow to create a new ORBIS account"
+
+#: src/view/com/auth/SplashScreen.web.tsx:190
+msgid "Opens flow to sign in to your existing account"
+msgstr "Opens flow to sign in to your existing account"
+
 #: src/screens/Messages/JoinRequest.tsx:299
-#: src/view/com/auth/SplashScreen.tsx:120
-#: src/view/com/auth/SplashScreen.web.tsx:125
 msgid "Opens flow to sign in to your existing Bluesky account"
 msgstr ""
+
+#: src/view/com/auth/SplashScreen.tsx:118
+msgid "Opens flow to sign in to your existing ORBIS account"
+msgstr "Opens flow to sign in to your existing ORBIS account"
 
 #: src/components/images/Gallery/index.tsx:460
 msgid "Opens full image"
@@ -9048,6 +8970,7 @@ msgid "Opens post language settings"
 msgstr ""
 
 #: src/components/dms/SystemMessageItem.tsx:61
+#: src/screens/VideoFeed/components/VideoSideActions.tsx:95
 msgid "Opens profile"
 msgstr "Opens profile"
 
@@ -9060,7 +8983,7 @@ msgstr "Opens the find and invite friends settings"
 msgid "Opens the GIF picker dialog"
 msgstr "Opens the GIF picker dialog"
 
-#: src/view/shell/Drawer.tsx:124
+#: src/view/shell/Drawer.tsx:125
 msgid "Opens the invite friends sheet to share your profile"
 msgstr "Opens the invite friends sheet to share your profile"
 
@@ -9123,6 +9046,47 @@ msgstr ""
 #: src/screens/Deactivated.tsx:183
 msgid "Or, sign in to one of your other accounts."
 msgstr ""
+
+#: src/screens/CustomFeed/components/CustomFeedHeader.tsx:522
+msgid "ORBIS"
+msgstr "ORBIS"
+
+#: src/view/shell/desktop/RightNav.tsx:142
+msgid "ORBIS © 2026 @sawaratsuki.bsky.social"
+msgstr "ORBIS © 2026 @sawaratsuki.bsky.social"
+
+#: src/view/shell/desktop/RightNav.tsx:139
+msgid "ORBIS © 2026 <0>@sawaratsuki.bsky.social</0>"
+msgstr "ORBIS © 2026 <0>@sawaratsuki.bsky.social</0>"
+
+#: src/screens/Settings/AppIconSettings/useAppIconSets.ts:165
+msgctxt "Name of app icon variant"
+msgid "ORBIS Classic"
+msgstr "ORBIS Classic"
+
+#: src/screens/Login/components/HostingProviderDialog.tsx:236
+msgid "ORBIS is an open network where you can choose your hosting provider. If you're a developer, you can host your own server."
+msgstr "ORBIS is an open network where you can choose your hosting provider. If you're a developer, you can host your own server."
+
+#: src/screens/Settings/FindContactsSettings.tsx:579
+msgid "ORBIS stores your contacts as encoded data. Removing your contacts will immediately delete this data."
+msgstr "ORBIS stores your contacts as encoded data. Removing your contacts will immediately delete this data."
+
+#: src/screens/Takendown.tsx:213
+msgid "ORBIS Terms of Service"
+msgstr "ORBIS Terms of Service"
+
+#: src/screens/Settings/components/PwiOptOut.tsx:102
+msgid "ORBIS will not show your account to logged-out users and will ask other apps to do the same. Other apps may not honor this request. It doesn't make your account private."
+msgstr "ORBIS will not show your account to logged-out users and will ask other apps to do the same. Other apps may not honor this request. It doesn't make your account private."
+
+#: src/screens/Settings/AppIconSettings/index.tsx:97
+msgid "ORBIS+"
+msgstr "ORBIS+"
+
+#: src/screens/Settings/AppIconSettings/index.tsx:100
+msgid "ORBIS+ icons"
+msgstr "ORBIS+ icons"
 
 #: src/components/OTAChannelNotice.tsx:84
 msgid "OTA channel"
@@ -9194,8 +9158,8 @@ msgid "Our moderation team has received your report."
 msgstr ""
 
 #: src/screens/Messages/components/ChatDisabled.tsx:54
-msgid "Our moderators have reviewed reports and decided to disable your access to chats on Bluesky."
-msgstr ""
+msgid "Our moderators have reviewed reports and decided to disable your access to chats on ORBIS."
+msgstr "Our moderators have reviewed reports and decided to disable your access to chats on ORBIS."
 
 #: src/components/dialogs/StarterPackDialog.tsx:372
 msgid "Owner"
@@ -9217,8 +9181,8 @@ msgstr ""
 msgid "Party GIFs"
 msgstr "Party GIFs"
 
-#: src/screens/Login/LoginForm.tsx:366
-#: src/screens/Login/LoginForm.tsx:373
+#: src/screens/Login/LoginForm.tsx:421
+#: src/screens/Login/LoginForm.tsx:428
 #: src/screens/Settings/AccountSettings.tsx:124
 #: src/screens/Settings/AccountSettings.tsx:128
 #: src/screens/Settings/components/DeleteAccountDialog.tsx:290
@@ -9327,10 +9291,6 @@ msgstr ""
 msgid "Personalize the message"
 msgstr ""
 
-#: src/lib/interests.ts:68
-msgid "Pets"
-msgstr ""
-
 #: src/components/contacts/screens/PhoneInput.tsx:192
 #: src/components/contacts/screens/PhoneInput.tsx:204
 msgid "Phone number"
@@ -9338,10 +9298,6 @@ msgstr ""
 
 #: src/components/contacts/screens/VerifyNumber.tsx:307
 msgid "Phone number verified"
-msgstr ""
-
-#: src/lib/interests.ts:69
-msgid "Photography"
 msgstr ""
 
 #: src/features/inviteFriends/components/ThemePicker.tsx:39
@@ -9527,24 +9483,24 @@ msgstr ""
 msgid "Please enter your new email address."
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:197
+#: src/screens/Login/LoginForm.tsx:178
 msgid "Please enter your password"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:191
+#: src/screens/Login/LoginForm.tsx:172
 msgid "Please enter your username"
 msgstr ""
 
 #. placeholder {0}: labeler ? sanitizeHandle(labeler.creator.handle, '@') : label.src
-#: src/components/moderation/AppealForm.tsx:131
+#: src/components/moderation/AppealForm.tsx:132
 msgid "Please explain why you think this label was incorrectly applied by {0}"
 msgstr ""
 
-#: src/screens/Messages/components/ChatDisabled.tsx:141
+#: src/screens/Messages/components/ChatDisabled.tsx:140
 msgid "Please explain why you think your chats were incorrectly disabled"
 msgstr ""
 
-#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:123
+#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:122
 msgid "Please explain why you think your Go Live access was incorrectly disabled."
 msgstr ""
 
@@ -9553,7 +9509,7 @@ msgstr ""
 msgid "Please go back, or activate this element to return to the start of the active content."
 msgstr ""
 
-#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:104
+#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:103
 msgid "Please provide any additional details you feel moderators may need in order to properly assess your Age Assurance status."
 msgstr ""
 
@@ -9600,7 +9556,6 @@ msgstr ""
 msgid "Please write your message below:"
 msgstr ""
 
-#: src/lib/interests.ts:70
 #: src/screens/Search/modules/ExploreTrendingTopics.tsx:246
 msgid "Politics"
 msgstr ""
@@ -9677,7 +9632,7 @@ msgstr ""
 #: src/screens/PostThread/components/ThreadItemAnchor.tsx:135
 #: src/screens/PostThread/components/ThreadItemPost.tsx:121
 #: src/screens/PostThread/components/ThreadItemTreePost.tsx:112
-#: src/screens/VideoFeed/index.tsx:565
+#: src/screens/VideoFeed/index.tsx:568
 msgid "Post has been deleted"
 msgstr ""
 
@@ -9815,6 +9770,10 @@ msgstr ""
 msgid "Privacy"
 msgstr ""
 
+#: src/view/com/auth/SplashScreen.web.tsx:249
+msgid "Privacy & Terms"
+msgstr "Privacy & Terms"
+
 #: src/screens/Settings/Settings.tsx:185
 #: src/screens/Settings/Settings.tsx:188
 msgid "Privacy and security"
@@ -9835,11 +9794,9 @@ msgstr ""
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:36
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:103
 #: src/Navigation.tsx:362
-#: src/screens/Settings/AboutSettings.tsx:102
-#: src/screens/Settings/AboutSettings.tsx:105
-#: src/view/screens/PrivacyPolicy.tsx:25
-#: src/view/shell/Drawer.tsx:766
-#: src/view/shell/Drawer.tsx:767
+#: src/screens/Settings/AboutSettings.tsx:103
+#: src/screens/Settings/AboutSettings.tsx:106
+#: src/view/shell/Drawer.tsx:783
 msgid "Privacy Policy"
 msgstr ""
 
@@ -9864,9 +9821,9 @@ msgid "profile"
 msgstr ""
 
 #: src/view/shell/bottom-bar/BottomBar.tsx:328
-#: src/view/shell/desktop/LeftNav.tsx:750
-#: src/view/shell/Drawer.tsx:92
-#: src/view/shell/Drawer.tsx:658
+#: src/view/shell/desktop/LeftNav.tsx:752
+#: src/view/shell/Drawer.tsx:93
+#: src/view/shell/Drawer.tsx:662
 msgid "Profile"
 msgstr ""
 
@@ -10033,11 +9990,11 @@ msgstr "Read about how to use advanced search filters"
 msgid "Read blog post"
 msgstr ""
 
-#: src/screens/VideoFeed/index.tsx:1112
+#: src/screens/VideoFeed/index.tsx:1099
 msgid "Read less"
 msgstr ""
 
-#: src/screens/VideoFeed/index.tsx:1112
+#: src/screens/VideoFeed/index.tsx:1099
 msgid "Read more"
 msgstr ""
 
@@ -10053,19 +10010,15 @@ msgstr ""
 msgid "Read our Community Guidelines"
 msgstr "Read our Community Guidelines"
 
-#: src/view/com/auth/SplashScreen.web.tsx:173
-msgid "Read the Bluesky blog"
-msgstr ""
-
 #: src/screens/Signup/StepInfo/Policies.tsx:53
 #: src/screens/Signup/StepInfo/Policies.tsx:79
-msgid "Read the Bluesky Privacy Policy"
-msgstr ""
+msgid "Read the ORBIS Privacy Policy"
+msgstr "Read the ORBIS Privacy Policy"
 
 #: src/screens/Signup/StepInfo/Policies.tsx:46
 #: src/screens/Signup/StepInfo/Policies.tsx:66
-msgid "Read the Bluesky Terms of Service"
-msgstr ""
+msgid "Read the ORBIS Terms of Service"
+msgstr "Read the ORBIS Terms of Service"
 
 #: src/components/WelcomeModal.tsx:148
 msgid "Real conversations."
@@ -10075,8 +10028,8 @@ msgstr ""
 msgid "Real people."
 msgstr ""
 
-#: src/screens/Takendown.tsx:156
-#: src/screens/Takendown.tsx:164
+#: src/screens/Takendown.tsx:158
+#: src/screens/Takendown.tsx:166
 msgid "Reason for appeal"
 msgstr ""
 
@@ -10148,7 +10101,7 @@ msgstr ""
 #: src/screens/Messages/ConversationSettings/prompts.tsx:178
 #: src/screens/Moderation/index.tsx:534
 #: src/screens/Settings/Settings.tsx:695
-#: src/view/com/posts/PostFeedErrorMessage.tsx:219
+#: src/view/com/posts/PostFeedErrorMessage.tsx:230
 msgid "Remove"
 msgstr ""
 
@@ -10209,11 +10162,11 @@ msgstr ""
 
 #: src/view/com/posts/FeedShutdownMsg.tsx:121
 #: src/view/com/posts/FeedShutdownMsg.tsx:125
-#: src/view/com/posts/PostFeedErrorMessage.tsx:175
+#: src/view/com/posts/PostFeedErrorMessage.tsx:186
 msgid "Remove feed"
 msgstr ""
 
-#: src/view/com/posts/PostFeedErrorMessage.tsx:216
+#: src/view/com/posts/PostFeedErrorMessage.tsx:227
 msgid "Remove feed?"
 msgstr ""
 
@@ -10284,7 +10237,7 @@ msgstr ""
 msgid "Remove suggestion"
 msgstr ""
 
-#: src/view/com/posts/PostFeedErrorMessage.tsx:217
+#: src/view/com/posts/PostFeedErrorMessage.tsx:228
 msgid "Remove this feed from your saved feeds"
 msgstr ""
 
@@ -10563,6 +10516,10 @@ msgstr "Report this Starter Pack"
 msgid "Report this user"
 msgstr ""
 
+#: src/screens/VideoFeed/components/VideoSideActions.tsx:158
+msgid "Repost"
+msgstr "Repost"
+
 #: src/components/PostControls/RepostButton.tsx:154
 #: src/components/PostControls/RepostButton.tsx:165
 #: src/components/PostControls/RepostButton.web.tsx:68
@@ -10737,7 +10694,7 @@ msgstr ""
 msgid "Reset password"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:423
+#: src/screens/Login/LoginForm.tsx:471
 msgid "Reset your password by sending a code to your email"
 msgstr "Reset your password by sending a code to your email"
 
@@ -10763,7 +10720,7 @@ msgstr "Restored post"
 msgid "Resync contacts"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:533
+#: src/screens/Login/LoginForm.tsx:577
 msgid "Retries signing in"
 msgstr ""
 
@@ -10782,8 +10739,8 @@ msgstr ""
 #: src/components/Post/Embed/VideoEmbed/VideoEmbedInner/VideoFallback.tsx:56
 #: src/components/Post/Embed/VideoEmbed/VideoEmbedInner/VideoFallback.tsx:59
 #: src/components/StarterPack/ProfileStarterPacks.tsx:371
-#: src/screens/Login/LoginForm.tsx:532
-#: src/screens/Login/LoginForm.tsx:538
+#: src/screens/Login/LoginForm.tsx:576
+#: src/screens/Login/LoginForm.tsx:582
 #: src/screens/Messages/ChatList.tsx:429
 #: src/screens/Messages/components/MessageListError.tsx:24
 #: src/screens/Messages/Inbox.tsx:210
@@ -10818,7 +10775,7 @@ msgstr ""
 
 #: src/screens/ProfileList/components/ErrorScreen.tsx:36
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:577
-#: src/screens/VideoFeed/index.tsx:1297
+#: src/screens/VideoFeed/index.tsx:1284
 #: src/view/screens/NotFound.tsx:54
 msgid "Returns to previous page"
 msgstr ""
@@ -10827,7 +10784,7 @@ msgstr ""
 msgid "Returns to the previous step"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:619
+#: src/screens/Login/LoginForm.tsx:658
 msgid "Reveal password"
 msgstr "Reveal password"
 
@@ -10919,8 +10876,8 @@ msgstr ""
 msgid "Save to my feeds"
 msgstr ""
 
-#: src/view/shell/desktop/LeftNav.tsx:737
-#: src/view/shell/Drawer.tsx:633
+#: src/view/shell/desktop/LeftNav.tsx:739
+#: src/view/shell/Drawer.tsx:637
 msgctxt "link to bookmarks screen"
 msgid "Saved"
 msgstr ""
@@ -10965,10 +10922,6 @@ msgstr "Scan"
 #: src/Navigation.tsx:342
 msgid "Scan QR code"
 msgstr "Scan QR code"
-
-#: src/lib/interests.ts:71
-msgid "Science"
-msgstr ""
 
 #: src/components/InterestTabs.tsx:258
 msgid "Scroll left"
@@ -11129,10 +11082,6 @@ msgstr ""
 
 #: src/components/RichTextTag.tsx:142
 msgid "See #{tag} posts by user"
-msgstr ""
-
-#: src/view/com/auth/SplashScreen.web.tsx:178
-msgid "See jobs at Bluesky"
 msgstr ""
 
 #: src/components/FeedInterstitials.tsx:495
@@ -11365,12 +11314,12 @@ msgstr ""
 
 #: src/components/SendErrorReportDialog.tsx:60
 #: src/components/SendErrorReportDialog.tsx:64
-#: src/screens/Settings/AboutSettings.tsx:125
-#: src/screens/Settings/AboutSettings.tsx:128
+#: src/screens/Settings/AboutSettings.tsx:121
+#: src/screens/Settings/AboutSettings.tsx:124
 msgid "Send error report"
 msgstr "Send error report"
 
-#: src/view/shell/Drawer.tsx:423
+#: src/view/shell/Drawer.tsx:427
 msgid "Send feedback"
 msgstr ""
 
@@ -11427,6 +11376,10 @@ msgstr ""
 msgid "Set app icon to {0}"
 msgstr ""
 
+#: src/screens/Login/LoginForm.tsx:531
+msgid "Set network manually"
+msgstr "Set network manually"
+
 #: src/screens/Login/SetNewPasswordForm.tsx:104
 msgid "Set new password"
 msgstr ""
@@ -11447,22 +11400,18 @@ msgstr ""
 msgid "Set your birthdate below and we'll get you back to posting and exploring in no time!"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:353
+#: src/screens/Login/LoginForm.tsx:408
 msgid "set your hosting provider manually"
 msgstr "set your hosting provider manually"
 
-#: src/screens/Login/LoginForm.tsx:487
-msgid "Set your hosting provider manually"
-msgstr "Set your hosting provider manually"
-
-#: src/screens/Login/ForgotPasswordForm.tsx:108
+#: src/screens/Login/ForgotPasswordForm.tsx:99
 msgid "Sets email for password reset"
 msgstr ""
 
 #: src/Navigation.tsx:239
 #: src/screens/Settings/Settings.tsx:102
-#: src/view/shell/desktop/LeftNav.tsx:760
-#: src/view/shell/Drawer.tsx:671
+#: src/view/shell/desktop/LeftNav.tsx:762
+#: src/view/shell/Drawer.tsx:675
 msgid "Settings"
 msgstr ""
 
@@ -11542,6 +11491,7 @@ msgstr ""
 #: src/screens/Messages/components/InviteLinkDialog.tsx:424
 #: src/screens/StarterPack/StarterPackScreen.tsx:435
 #: src/screens/Topic.tsx:91
+#: src/screens/VideoFeed/components/VideoSideActions.tsx:186
 msgid "Share"
 msgstr ""
 
@@ -11676,8 +11626,8 @@ msgstr ""
 #: src/features/liveNow/components/LiveStatusDialog.tsx:315
 #: src/features/liveNow/components/LiveStatusDialog.tsx:319
 #: src/screens/List/ListHiddenScreen.tsx:193
-#: src/screens/VideoFeed/index.tsx:777
-#: src/screens/VideoFeed/index.tsx:783
+#: src/screens/VideoFeed/index.tsx:780
+#: src/screens/VideoFeed/index.tsx:786
 msgid "Show anyway"
 msgstr ""
 
@@ -11800,22 +11750,22 @@ msgstr ""
 #: src/screens/Hashtag.tsx:233
 #: src/screens/Login/index.tsx:143
 #: src/screens/Login/index.tsx:165
-#: src/screens/Login/LoginForm.tsx:275
-#: src/screens/Login/LoginForm.tsx:555
-#: src/screens/Login/LoginForm.tsx:561
+#: src/screens/Login/LoginForm.tsx:236
+#: src/screens/Login/LoginForm.tsx:599
+#: src/screens/Login/LoginForm.tsx:605
 #: src/screens/Messages/JoinRequest.tsx:298
 #: src/screens/Messages/JoinRequest.tsx:304
 #: src/screens/Search/SearchResults.tsx:399
-#: src/view/com/auth/SplashScreen.tsx:118
-#: src/view/com/auth/SplashScreen.tsx:125
-#: src/view/com/auth/SplashScreen.web.tsx:123
-#: src/view/com/auth/SplashScreen.web.tsx:131
+#: src/view/com/auth/SplashScreen.tsx:116
+#: src/view/com/auth/SplashScreen.tsx:123
+#: src/view/com/auth/SplashScreen.web.tsx:188
+#: src/view/com/auth/SplashScreen.web.tsx:207
 #: src/view/shell/bottom-bar/BottomBar.tsx:366
 #: src/view/shell/bottom-bar/BottomBar.tsx:370
 #: src/view/shell/bottom-bar/BottomBarWeb.tsx:260
 #: src/view/shell/bottom-bar/BottomBarWeb.tsx:265
-#: src/view/shell/NavSignupCard.tsx:58
-#: src/view/shell/NavSignupCard.tsx:63
+#: src/view/shell/NavSignupCard.tsx:57
+#: src/view/shell/NavSignupCard.tsx:62
 msgid "Sign in"
 msgstr ""
 
@@ -11864,23 +11814,23 @@ msgstr ""
 #: src/screens/Settings/Settings.tsx:311
 #: src/screens/SignupQueued.tsx:100
 #: src/screens/SignupQueued.tsx:103
-#: src/screens/Takendown.tsx:86
-#: src/view/shell/desktop/LeftNav.tsx:228
-#: src/view/shell/desktop/LeftNav.tsx:283
-#: src/view/shell/desktop/LeftNav.tsx:286
+#: src/screens/Takendown.tsx:88
+#: src/view/shell/desktop/LeftNav.tsx:229
+#: src/view/shell/desktop/LeftNav.tsx:284
+#: src/view/shell/desktop/LeftNav.tsx:287
 msgid "Sign out"
 msgstr ""
 
-#: src/screens/Takendown.tsx:89
+#: src/screens/Takendown.tsx:91
 msgid "Sign Out"
 msgstr ""
 
 #: src/screens/Settings/Settings.tsx:308
-#: src/view/shell/desktop/LeftNav.tsx:225
+#: src/view/shell/desktop/LeftNav.tsx:226
 msgid "Sign out?"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:573
+#: src/screens/Login/LoginForm.tsx:617
 msgid "Sign up"
 msgstr "Sign up"
 
@@ -11955,10 +11905,6 @@ msgstr ""
 #: src/analytics/features/index.ts:91
 msgid "Social proofing on posts"
 msgstr "Social proofing on posts"
-
-#: src/lib/interests.ts:58
-msgid "Software Dev"
-msgstr ""
 
 #: src/screens/Moderation/index.tsx:523
 msgid "Some moderation services in your list are no longer available."
@@ -12098,7 +12044,6 @@ msgstr ""
 msgid "Spam or other inauthentic behavior or deception"
 msgstr ""
 
-#: src/lib/interests.ts:72
 #: src/screens/Search/modules/ExploreTrendingTopics.tsx:244
 msgid "Sports"
 msgstr ""
@@ -12184,8 +12129,8 @@ msgstr "Starter Packs let you easily share your favorite feeds and people with y
 msgid "Starter Packs let you share your favorite feeds and people with your friends."
 msgstr ""
 
-#: src/screens/Settings/AboutSettings.tsx:110
-#: src/screens/Settings/AboutSettings.tsx:113
+#: src/screens/Settings/AboutSettings.tsx:111
+#: src/screens/Settings/AboutSettings.tsx:114
 msgid "Status Page"
 msgstr ""
 
@@ -12215,25 +12160,25 @@ msgstr ""
 msgid "Streaming on Twitch? Set your live status on Bluesky to add a badge to your avatar. Tapping it takes people straight to your stream."
 msgstr ""
 
-#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:124
-#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:130
-#: src/components/moderation/AppealForm.tsx:165
+#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:123
+#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:129
 #: src/components/moderation/AppealForm.tsx:166
+#: src/components/moderation/AppealForm.tsx:167
 #: src/components/SendErrorReportDialog.tsx:90
 #: src/components/SendErrorReportDialog.tsx:95
+#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:137
 #: src/features/liveNow/components/GoLiveDisabledDialog.tsx:138
-#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:139
-#: src/screens/Messages/components/ChatDisabled.tsx:173
-#: src/screens/Messages/components/ChatDisabled.tsx:175
+#: src/screens/Messages/components/ChatDisabled.tsx:172
+#: src/screens/Messages/components/ChatDisabled.tsx:174
 #: src/screens/Settings/components/BetaFeaturesFeedbackDialog.tsx:133
 msgid "Submit"
 msgstr ""
 
-#: src/screens/Takendown.tsx:74
+#: src/screens/Takendown.tsx:76
 msgid "Submit appeal"
 msgstr ""
 
-#: src/screens/Takendown.tsx:78
+#: src/screens/Takendown.tsx:80
 msgid "Submit Appeal"
 msgstr ""
 
@@ -12365,11 +12310,11 @@ msgstr "Suspended accounts cannot participate in chat."
 #: src/screens/Settings/Settings.tsx:126
 #: src/screens/Settings/Settings.tsx:138
 #: src/screens/Settings/Settings.tsx:636
-#: src/view/shell/desktop/LeftNav.tsx:263
+#: src/view/shell/desktop/LeftNav.tsx:264
 msgid "Switch account"
 msgstr ""
 
-#: src/view/shell/desktop/LeftNav.tsx:125
+#: src/view/shell/desktop/LeftNav.tsx:126
 msgid "Switch accounts"
 msgstr ""
 
@@ -12384,7 +12329,7 @@ msgid "Switch OTA channel"
 msgstr "Switch OTA channel"
 
 #. placeholder {0}: sanitizeHandle( profile?.handle ?? account.handle, '@', )
-#: src/view/shell/desktop/LeftNav.tsx:365
+#: src/view/shell/desktop/LeftNav.tsx:366
 msgid "Switch to {0}"
 msgstr ""
 
@@ -12396,8 +12341,6 @@ msgid "System"
 msgstr ""
 
 #: src/screens/Log.tsx:49
-#: src/screens/Settings/AboutSettings.tsx:117
-#: src/screens/Settings/AboutSettings.tsx:120
 #: src/screens/Settings/Settings.tsx:462
 msgid "System log"
 msgstr ""
@@ -12505,10 +12448,6 @@ msgstr ""
 msgid "Teach our algorithm what you like"
 msgstr ""
 
-#: src/lib/interests.ts:73
-msgid "Tech"
-msgstr ""
-
 #: src/screens/Profile/Header/EditProfileDialog.tsx:368
 msgid "Tell us a bit about yourself"
 msgstr ""
@@ -12530,11 +12469,9 @@ msgstr ""
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:31
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:98
 #: src/Navigation.tsx:367
-#: src/screens/Settings/AboutSettings.tsx:94
-#: src/screens/Settings/AboutSettings.tsx:97
-#: src/view/screens/TermsOfService.tsx:25
-#: src/view/shell/Drawer.tsx:759
-#: src/view/shell/Drawer.tsx:761
+#: src/screens/Settings/AboutSettings.tsx:95
+#: src/screens/Settings/AboutSettings.tsx:98
+#: src/view/shell/Drawer.tsx:776
 msgid "Terms of Service"
 msgstr ""
 
@@ -12542,9 +12479,9 @@ msgstr ""
 msgid "Text & tags"
 msgstr ""
 
-#: src/components/moderation/AppealForm.tsx:129
-#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:121
-#: src/screens/Messages/components/ChatDisabled.tsx:140
+#: src/components/moderation/AppealForm.tsx:130
+#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:120
+#: src/screens/Messages/components/ChatDisabled.tsx:139
 msgid "Text input field"
 msgstr ""
 
@@ -12586,7 +12523,7 @@ msgstr ""
 msgid "That's all, folks!"
 msgstr ""
 
-#: src/screens/VideoFeed/index.tsx:1269
+#: src/screens/VideoFeed/index.tsx:1256
 msgid "That's everything!"
 msgstr ""
 
@@ -12679,10 +12616,6 @@ msgstr "The post you reported has been restored after another review. If you’d
 msgid "The post you’re replying to was marked as being written in {suggestedLanguageName} by its author. Would you like to reply in <0>{suggestedLanguageName}</0>?"
 msgstr "The post you’re replying to was marked as being written in {suggestedLanguageName} by its author. Would you like to reply in <0>{suggestedLanguageName}</0>?"
 
-#: src/view/screens/PrivacyPolicy.tsx:29
-msgid "The Privacy Policy has been moved to <0/>"
-msgstr ""
-
 #: src/view/com/composer/state/video.ts:488
 msgid "The processed video is too large. Please try again with a smaller file."
 msgstr "The processed video is too large. Please try again with a smaller file."
@@ -12727,10 +12660,6 @@ msgstr ""
 
 #: src/view/screens/Support.tsx:31
 msgid "The support form has been moved. If you need help, please <0/> or visit {HELP_DESK_URL} to get in touch with us."
-msgstr ""
-
-#: src/view/screens/TermsOfService.tsx:29
-msgid "The Terms of Service have been moved to"
 msgstr ""
 
 #: src/components/intents/VerifyEmailIntentDialog.tsx:91
@@ -12814,7 +12743,7 @@ msgstr ""
 msgid "There was an issue fetching your service info"
 msgstr ""
 
-#: src/view/com/posts/PostFeedErrorMessage.tsx:151
+#: src/view/com/posts/PostFeedErrorMessage.tsx:162
 msgid "There was an issue removing this feed. Please check your internet connection and try again."
 msgstr ""
 
@@ -12869,8 +12798,8 @@ msgid "There was an unexpected issue in the application. Please let us know if t
 msgstr ""
 
 #: src/screens/SignupQueued.tsx:139
-msgid "There's been a rush of new users to Bluesky! We'll activate your account as soon as we can."
-msgstr ""
+msgid "There's been a rush of new users to ORBIS! We'll activate your account as soon as we can."
+msgstr "There's been a rush of new users to ORBIS! We'll activate your account as soon as we can."
 
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:662
 msgid "These are your default settings"
@@ -12940,14 +12869,17 @@ msgstr "This app is receiving updates from <0>{0}</0>."
 msgid "This app is running a deployment of <0>{currentChannel}</0>. Restore the {defaultChannel} deployment to get back to a standard build."
 msgstr "This app is running a deployment of <0>{currentChannel}</0>. Restore the {defaultChannel} deployment to get back to a standard build."
 
-#: src/components/moderation/AppealForm.tsx:107
+#: src/components/moderation/AppealForm.tsx:108
 msgid "This appeal will be sent to <0>{sourceName}</0>."
 msgstr ""
 
-#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:113
-#: src/screens/Messages/components/ChatDisabled.tsx:136
+#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:112
 msgid "This appeal will be sent to Bluesky's moderation service."
 msgstr ""
+
+#: src/screens/Messages/components/ChatDisabled.tsx:135
+msgid "This appeal will be sent to ORBIS's moderation service."
+msgstr "This appeal will be sent to ORBIS's moderation service."
 
 #: src/screens/PostThread/components/ThreadItemAnchorNoUnauthenticated.tsx:27
 #: src/screens/PostThread/components/ThreadItemPostNoUnauthenticated.tsx:47
@@ -13007,9 +12939,9 @@ msgstr ""
 msgid "This content is not available because one of the users involved has blocked the other."
 msgstr ""
 
-#: src/view/com/posts/PostFeedErrorMessage.tsx:120
-msgid "This content is not viewable without a Bluesky account."
-msgstr ""
+#: src/view/com/posts/PostFeedErrorMessage.tsx:131
+msgid "This content is not viewable without an ORBIS account."
+msgstr "This content is not viewable without an ORBIS account."
 
 #: src/components/intents/GroupChatJoinDialog.tsx:151
 msgid "This conversation is locked."
@@ -13048,7 +12980,7 @@ msgstr ""
 msgid "This feature is not available while using an App Password. Please sign in with your main password."
 msgstr ""
 
-#: src/view/com/posts/PostFeedErrorMessage.tsx:126
+#: src/view/com/posts/PostFeedErrorMessage.tsx:137
 msgid "This feed is currently receiving high traffic and is temporarily unavailable. Please try again later."
 msgstr ""
 
@@ -13126,12 +13058,12 @@ msgstr ""
 
 #. placeholder {0}: sanitizeHandle(list.creator.handle, '@')
 #: src/screens/List/ListHiddenScreen.tsx:154
-msgid "This list – created by <0>{0}</0> – contains possible violations of Bluesky's community guidelines in its name or description."
-msgstr ""
+msgid "This list – created by <0>{0}</0> – contains possible violations of ORBIS's community guidelines in its name or description."
+msgstr "This list – created by <0>{0}</0> – contains possible violations of ORBIS's community guidelines in its name or description."
 
 #: src/screens/List/ListHiddenScreen.tsx:149
-msgid "This list – created by you – contains possible violations of Bluesky's community guidelines in its name or description."
-msgstr ""
+msgid "This list – created by you – contains possible violations of ORBIS's community guidelines in its name or description."
+msgstr "This list – created by you – contains possible violations of ORBIS's community guidelines in its name or description."
 
 #: src/screens/ProfileList/AboutSection.tsx:100
 msgid "This list is empty."
@@ -13281,8 +13213,8 @@ msgid "This will delete \"{0}\" from your muted words. You can always add it bac
 msgstr ""
 
 #: src/screens/Settings/components/DeleteAccountDialog.tsx:336
-msgid "This will irreversibly delete your Bluesky account <0>{currentHandle}</0> and all associated data. Note that this will affect any other <1>AT Protocol</1> services you use with this account."
-msgstr ""
+msgid "This will irreversibly delete your ORBIS account <0>{currentHandle}</0> and all associated data. Note that this will affect any other <1>AT Protocol</1> services you use with this account."
+msgstr "This will irreversibly delete your ORBIS account <0>{currentHandle}</0> and all associated data. Note that this will affect any other <1>AT Protocol</1> services you use with this account."
 
 #. placeholder {0}: account.handle
 #: src/screens/Settings/Settings.tsx:690
@@ -13492,10 +13424,6 @@ msgstr "Try Google Translate"
 msgid "Try it"
 msgstr "Try it"
 
-#: src/lib/interests.ts:74
-msgid "TV"
-msgstr ""
-
 #: src/features/inviteFriends/components/ThemePicker.tsx:32
 msgid "Twilight"
 msgstr "Twilight"
@@ -13524,7 +13452,7 @@ msgstr ""
 
 #: src/screens/Login/ForgotPasswordForm.tsx:70
 #: src/screens/Login/index.tsx:100
-#: src/screens/Login/LoginForm.tsx:168
+#: src/screens/Login/LoginForm.tsx:151
 #: src/screens/Login/SetNewPasswordForm.tsx:82
 #: src/screens/Signup/index.tsx:89
 msgid "Unable to contact your service. Please check your Internet connection."
@@ -13675,7 +13603,7 @@ msgstr ""
 msgid "Unfollow account"
 msgstr ""
 
-#: src/screens/VideoFeed/index.tsx:976
+#: src/screens/VideoFeed/index.tsx:982
 msgid "Unfollows the user"
 msgstr ""
 
@@ -13950,8 +13878,8 @@ msgid "Uploading video..."
 msgstr ""
 
 #: src/screens/Settings/AppPasswords.tsx:68
-msgid "Use app passwords to sign in to other Bluesky clients without giving full access to your account or password."
-msgstr ""
+msgid "Use app passwords to sign in to other ORBIS clients without giving full access to your account or password."
+msgstr "Use app passwords to sign in to other ORBIS clients without giving full access to your account or password."
 
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:576
 msgid "Use default provider"
@@ -14056,11 +13984,11 @@ msgstr ""
 msgid "Username must only contain letters (a-z), numbers, and hyphens"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:306
+#: src/screens/Login/LoginForm.tsx:361
 msgid "Username or email"
 msgstr "Username or email"
 
-#: src/screens/Login/LoginForm.tsx:316
+#: src/screens/Login/LoginForm.tsx:371
 msgid "Username or email address"
 msgstr ""
 
@@ -14180,8 +14108,8 @@ msgid "Verifying..."
 msgstr ""
 
 #. placeholder {0}: env.APP_VERSION
-#: src/screens/Settings/AboutSettings.tsx:144
-#: src/screens/Settings/AboutSettings.tsx:173
+#: src/screens/Settings/AboutSettings.tsx:140
+#: src/screens/Settings/AboutSettings.tsx:169
 msgid "Version {0}"
 msgstr ""
 
@@ -14209,20 +14137,19 @@ msgid "Video from {0}: {text}"
 msgstr ""
 
 #. placeholder {0}: sanitizeHandle( post.author.handle, '@', )
-#: src/screens/VideoFeed/index.tsx:1231
+#: src/screens/VideoFeed/index.tsx:1218
 msgid "Video from {0}. Tap to play or pause the video"
 msgstr ""
 
-#: src/lib/interests.ts:62
 #: src/screens/Search/modules/ExploreTrendingTopics.tsx:248
 msgid "Video Games"
 msgstr ""
 
-#: src/screens/VideoFeed/index.tsx:1230
+#: src/screens/VideoFeed/index.tsx:1217
 msgid "Video is paused"
 msgstr ""
 
-#: src/screens/VideoFeed/index.tsx:1230
+#: src/screens/VideoFeed/index.tsx:1217
 msgid "Video is playing"
 msgstr ""
 
@@ -14274,7 +14201,7 @@ msgstr ""
 #. placeholder {0}: profile.handle
 #: src/screens/CustomFeed/components/CustomFeedHeader.tsx:513
 #: src/screens/Search/components/SearchProfileCard.tsx:37
-#: src/screens/VideoFeed/index.tsx:937
+#: src/screens/VideoFeed/index.tsx:943
 #: src/view/com/notifications/NotificationFeedItem.tsx:600
 msgid "View {0}'s profile"
 msgstr ""
@@ -14305,8 +14232,8 @@ msgstr ""
 msgid "View debug entry"
 msgstr ""
 
-#: src/screens/VideoFeed/index.tsx:805
-#: src/screens/VideoFeed/index.tsx:823
+#: src/screens/VideoFeed/index.tsx:808
+#: src/screens/VideoFeed/index.tsx:826
 msgid "View details"
 msgstr ""
 
@@ -14353,7 +14280,7 @@ msgstr ""
 #: src/components/ProfileHoverCard/index.web.tsx:473
 #: src/components/ProfileHoverCard/index.web.tsx:493
 #: src/components/ProfileHoverCard/index.web.tsx:520
-#: src/view/com/posts/PostFeedErrorMessage.tsx:181
+#: src/view/com/posts/PostFeedErrorMessage.tsx:192
 #: src/view/com/util/PostMeta.tsx:93
 #: src/view/com/util/PostMeta.tsx:121
 msgid "View profile"
@@ -14505,7 +14432,7 @@ msgstr "We could not connect to the service that provides this custom feed. It m
 msgid "We could not find this list. It was probably deleted."
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:349
+#: src/screens/Login/LoginForm.tsx:404
 msgid "We couldn't find an account with that username. Please check that you've typed it correctly, or <0>set your hosting provider manually</0>."
 msgstr "We couldn't find an account with that username. Please check that you've typed it correctly, or <0>set your hosting provider manually</0>."
 
@@ -14533,9 +14460,9 @@ msgstr "We couldn’t load this conversation’s settings"
 msgid "We couldn't load your account settings. Check your internet connection and try again."
 msgstr "We couldn't load your account settings. Check your internet connection and try again."
 
-#: src/screens/Login/LoginForm.tsx:483
-msgid "We couldn’t verify your hosting provider. Check your internet connection, or <0>set your hosting provider manually</0>."
-msgstr "We couldn’t verify your hosting provider. Check your internet connection, or <0>set your hosting provider manually</0>."
+#: src/screens/Login/LoginForm.tsx:527
+msgid "We couldn’t verify your network connection. Check your internet connection, or <0>set network manually</0>."
+msgstr "We couldn’t verify your network connection. Check your internet connection, or <0>set network manually</0>."
 
 #: src/components/contacts/screens/GetContacts.tsx:246
 msgid "We delete hashes after matches are made"
@@ -14752,7 +14679,6 @@ msgstr "What you reported"
 msgid "what’s up"
 msgstr "what’s up"
 
-#: src/view/com/auth/SplashScreen.web.tsx:99
 #: src/view/com/composer/Composer.tsx:1624
 #: src/view/com/feeds/ComposerPrompt.tsx:206
 msgid "What's up?"
@@ -14790,7 +14716,7 @@ msgstr ""
 msgid "Whoops! Trending videos failed to load."
 msgstr ""
 
-#: src/screens/Takendown.tsx:167
+#: src/screens/Takendown.tsx:169
 msgid "Why are you appealing?"
 msgstr ""
 
@@ -14857,10 +14783,6 @@ msgstr ""
 msgid "Write your reply"
 msgstr ""
 
-#: src/lib/interests.ts:75
-msgid "Writers"
-msgstr ""
-
 #. placeholder {0}: verifyError.did
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:368
 msgid "Wrong DID returned from server. Received: {0}"
@@ -14892,7 +14814,7 @@ msgstr "Yes GIFs"
 msgid "Yes, deactivate"
 msgstr ""
 
-#: src/screens/Settings/components/DeleteAccountDialog.tsx:354
+#: src/screens/Settings/components/DeleteAccountDialog.tsx:352
 msgid "Yes, delete my account"
 msgstr ""
 
@@ -14941,7 +14863,7 @@ msgstr "You are blocking this person"
 msgid "You are creating an account on"
 msgstr ""
 
-#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:107
+#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:106
 msgid "You are currently blocked from using the Go Live feature. To appeal this moderation decision, please submit the form below."
 msgstr ""
 
@@ -14992,10 +14914,10 @@ msgid "You can adjust your interests at any time from \"Content and media\" sett
 msgstr ""
 
 #: src/screens/Settings/components/DeleteAccountDialog.tsx:217
-msgid "You can also <0>temporarily deactivate</0> your account instead. Your profile, posts, feeds, and lists will no longer be visible to other Bluesky users. You can reactivate your account at any time by logging in."
-msgstr ""
+msgid "You can also <0>temporarily deactivate</0> your account instead. Your profile, posts, feeds, and lists will no longer be visible to other ORBIS users. You can reactivate your account at any time by logging in."
+msgstr "You can also <0>temporarily deactivate</0> your account instead. Your profile, posts, feeds, and lists will no longer be visible to other ORBIS users. You can reactivate your account at any time by logging in."
 
-#: src/view/com/posts/FollowingEmptyState.tsx:60
+#: src/view/com/posts/FollowingEmptyState.tsx:61
 #: src/view/com/posts/FollowingEndOfFeed.tsx:61
 msgid "You can also discover new Custom Feeds to follow."
 msgstr ""
@@ -15325,7 +15247,7 @@ msgid "You will be eligible to appear in this Starter Pack again."
 msgstr "You will be eligible to appear in this Starter Pack again."
 
 #: src/screens/Settings/Settings.tsx:309
-#: src/view/shell/desktop/LeftNav.tsx:226
+#: src/view/shell/desktop/LeftNav.tsx:227
 msgid "You will be signed out of all your accounts."
 msgstr ""
 
@@ -15411,7 +15333,7 @@ msgstr ""
 msgid "You're signed in with an App Password. Please sign in with your main password to continue deactivating your account."
 msgstr ""
 
-#: src/components/moderation/AppealForm.tsx:84
+#: src/components/moderation/AppealForm.tsx:85
 msgid "You've already appealed this label and it's being reviewed by our moderation team."
 msgstr ""
 
@@ -15460,7 +15382,7 @@ msgstr ""
 msgid "You've reached your daily limit for video uploads (too many videos)"
 msgstr ""
 
-#: src/screens/VideoFeed/index.tsx:1278
+#: src/screens/VideoFeed/index.tsx:1265
 msgid "You've run out of videos to watch. Maybe it's a good time to take a break?"
 msgstr ""
 
@@ -15477,7 +15399,7 @@ msgstr "Your account cannot submit reports while it is suspended."
 msgid "Your account has been deleted, see ya! ✌️"
 msgstr ""
 
-#: src/screens/Takendown.tsx:140
+#: src/screens/Takendown.tsx:142
 msgid "Your account has been suspended"
 msgstr ""
 
@@ -15514,16 +15436,16 @@ msgstr "Your account notifications"
 msgid "Your account repository, containing all public data records, can be downloaded as a \"CAR\" file. This file does not include media embeds, such as images, or your private data, which must be fetched separately."
 msgstr ""
 
-#: src/screens/Takendown.tsx:208
-msgid "Your account was found to be in violation of the <0>Bluesky Social Terms of Service</0>. You have been sent an email outlining the specific violation and suspension period, if applicable. You can appeal this decision if you believe it was made in error."
-msgstr ""
+#: src/screens/Takendown.tsx:210
+msgid "Your account was found to be in violation of the <0>ORBIS Terms of Service</0>. You have been sent an email outlining the specific violation and suspension period, if applicable. You can appeal this decision if you believe it was made in error."
+msgstr "Your account was found to be in violation of the <0>ORBIS Terms of Service</0>. You have been sent an email outlining the specific violation and suspension period, if applicable. You can appeal this decision if you believe it was made in error."
 
 #: src/screens/ModerationInbox/index.tsx:213
 msgctxt "moderation-report-action"
 msgid "Your account was suspended"
 msgstr "Your account was suspended"
 
-#: src/screens/Takendown.tsx:148
+#: src/screens/Takendown.tsx:150
 msgid "Your appeal has been submitted. If your appeal succeeds, you will receive an email."
 msgstr ""
 
@@ -15540,12 +15462,12 @@ msgid "Your choice will be remembered for future links. You can change it at any
 msgstr ""
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:378
-msgid "Your contact {firstAuthorLink} is on Bluesky"
-msgstr ""
+msgid "Your contact {firstAuthorLink} is on ORBIS"
+msgstr "Your contact {firstAuthorLink} is on ORBIS"
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:376
-msgid "Your contact {firstAuthorName} is on Bluesky"
-msgstr ""
+msgid "Your contact {firstAuthorName} is on ORBIS"
+msgstr "Your contact {firstAuthorName} is on ORBIS"
 
 #: src/components/contacts/screens/ViewMatches.tsx:462
 msgid "Your contact {name}"
@@ -15585,7 +15507,7 @@ msgstr ""
 msgid "Your followers"
 msgstr ""
 
-#: src/view/com/posts/FollowingEmptyState.tsx:41
+#: src/view/com/posts/FollowingEmptyState.tsx:42
 msgid "Your following feed is empty! Follow more users to see what's happening."
 msgstr ""
 
@@ -15595,8 +15517,8 @@ msgid "Your full handle will be <0>@{0}</0>"
 msgstr ""
 
 #: src/screens/Login/components/HostingProviderDialog.tsx:182
-msgid "Your hosting provider can’t be detected from an email address, so the default Bluesky service will be used. Enter your username instead, or set your provider manually."
-msgstr "Your hosting provider can’t be detected from an email address, so the default Bluesky service will be used. Enter your username instead, or set your provider manually."
+msgid "Your hosting provider can’t be detected from an email address, so the default ORBIS service will be used. Enter your username instead, or set your provider manually."
+msgstr "Your hosting provider can’t be detected from an email address, so the default ORBIS service will be used. Enter your username instead, or set your provider manually."
 
 #: src/view/com/composer/state/video.ts:470
 msgid "Your hosting provider does not support videos this large. Please try again with a smaller file."
@@ -15640,8 +15562,8 @@ msgid "Your note:"
 msgstr "Your note:"
 
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:74
-msgid "Your password has been changed successfully! Please use your new password when you sign in to Bluesky from now on."
-msgstr ""
+msgid "Your password has been changed successfully! Please use your new password when you sign in to ORBIS from now on."
+msgstr "Your password has been changed successfully! Please use your new password when you sign in to ORBIS from now on."
 
 #: src/screens/Signup/StepInfo/index.tsx:167
 msgid "Your password must be at least 8 characters long."
@@ -15674,8 +15596,8 @@ msgid "Your profile picture surrounded by concentric circles of other users' pro
 msgstr ""
 
 #: src/screens/Settings/components/DeactivateAccountDialog.tsx:75
-msgid "Your profile, posts, feeds, and lists will no longer be visible to other Bluesky users. You can reactivate your account at any time by logging in."
-msgstr ""
+msgid "Your profile, posts, feeds, and lists will no longer be visible to other ORBIS users. You can reactivate your account at any time by logging in."
+msgstr "Your profile, posts, feeds, and lists will no longer be visible to other ORBIS users. You can reactivate your account at any time by logging in."
 
 #: src/view/com/composer/Composer.tsx:1238
 msgid "Your reply was sent"
@@ -15715,3 +15637,19 @@ msgstr "Your username and password will be shared with <0>{host}</0>. If you don
 #: src/components/verification/VerificationsDialog.tsx:67
 msgid "Your verifications"
 msgstr ""
+
+#: src/screens/Settings/AboutSettings.tsx:203
+msgid "حالة نظام ORBIS"
+msgstr "حالة نظام ORBIS"
+
+#: src/view/screens/PrivacyPolicy.tsx:21
+msgid "سياسة الخصوصية"
+msgstr "سياسة الخصوصية"
+
+#: src/view/screens/TermsOfService.tsx:21
+msgid "شروط الخدمة"
+msgstr "شروط الخدمة"
+
+#: src/view/com/posts/PostFeedErrorMessage.tsx:85
+msgid "لا توجد منشورات متاحة حالياً"
+msgstr "لا توجد منشورات متاحة حالياً"

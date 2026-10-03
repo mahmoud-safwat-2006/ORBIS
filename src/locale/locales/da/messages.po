@@ -99,11 +99,6 @@ msgstr "{0, plural, one {# dag} other {# dage}}"
 msgid "{0, plural, one {# follower} other {# followers}}"
 msgstr "{0, plural, one {# følger} other {# følgere}}"
 
-#. placeholder {0}: profile.followsCount ?? 0
-#: src/screens/Profile/ProfileFollows.tsx:33
-msgid "{0, plural, one {# following} other {# following}}"
-msgstr "{0, plural, one {# følger} other {# følger}}"
-
 #. placeholder {0}: item.count
 #: src/components/contacts/screens/ViewMatches.tsx:276
 msgid "{0, plural, one {# friend found!} other {# friends found!}}"
@@ -175,9 +170,9 @@ msgstr "{0, plural, one {# sekund} other {# sekunder}}"
 
 #. placeholder {0}: numUnreadMessages.numUnread ?? 0
 #. placeholder {0}: numUnreadNotifications ?? 0
-#: src/view/shell/bottom-bar/BottomBar.tsx:251
-#: src/view/shell/bottom-bar/BottomBar.tsx:283
-#: src/view/shell/Drawer.tsx:560
+#: src/view/shell/bottom-bar/BottomBar.tsx:257
+#: src/view/shell/bottom-bar/BottomBar.tsx:289
+#: src/view/shell/Drawer.tsx:564
 msgid "{0, plural, one {# unread item} other {# unread items}}"
 msgstr "{0, plural, one {# ulæst besked} other {# ulæste beskeder}}"
 
@@ -210,6 +205,11 @@ msgstr "{0, plural, one {følger} other {følgere}}"
 msgid "{0, plural, one {following} other {following}}"
 msgstr "{0, plural, one {følger} other {følger}}"
 
+#. placeholder {0}: content.count
+#: src/components/NewPostsPill/index.tsx:169
+msgid "{0, plural, one {Load # new post} other {Load # new posts}}"
+msgstr ""
+
 #. placeholder {0}: profile.postsCount || 0
 #: src/screens/Profile/Header/Metrics.tsx:58
 msgid "{0, plural, one {post} other {posts}}"
@@ -227,7 +227,7 @@ msgid "{0, plural, other {+# more}}"
 msgstr "{0, plural, one {}other {+# flere}}"
 
 #. placeholder {0}: aaRegionConfig.minAccessAge
-#: src/screens/Signup/StepInfo/index.tsx:325
+#: src/screens/Signup/StepInfo/index.tsx:337
 msgid "{0, plural, other {You must be # years of age or older to create an account in your region.}}"
 msgstr "{0, plural, other {Du skal være mindst # år gammel for at oprette en konto i dit område.}}"
 
@@ -286,8 +286,8 @@ msgstr "{0} er live"
 msgid "{0} is not available"
 msgstr "{0} er ikke tilgængelig"
 
-#. placeholder {0}: codeToLanguageName( expectedSourceLanguage, langPrefs.appLanguage, )
-#: src/lib/translation/index.tsx:323
+#. placeholder {0}: codeToLanguageName(expectedSourceLanguage, langPrefs.appLanguage)
+#: src/lib/translation/index.tsx:320
 msgid "{0} is not supported by your device."
 msgstr "{0} er ikke understøttet af din enhed."
 
@@ -336,7 +336,7 @@ msgstr "{0} reagerede med {1}"
 
 #. Accessibility hint for the bottom bar chat icon when the number of unread messages exceeds the cap, with the + symbol already included – for example, 99+ unread items
 #. placeholder {0}: numUnreadMessages.numUnread
-#: src/view/shell/bottom-bar/BottomBar.tsx:246
+#: src/view/shell/bottom-bar/BottomBar.tsx:252
 msgid "{0} unread items"
 msgstr "{0} ulæste beskeder"
 
@@ -462,6 +462,10 @@ msgstr "{0}m"
 msgid "{0}s"
 msgstr "{0}s"
 
+#: src/screens/Profile/ProfileFollows.tsx:42
+msgid "{actualFollowsCount, plural, one {# following} other {# following}}"
+msgstr ""
+
 #: src/screens/Moderation/index.tsx:179
 msgid "{badge, plural, one {# update} other {# updates}}"
 msgstr "{badge, plural, one {# opdatering} other {# opdateringer}}"
@@ -482,7 +486,7 @@ msgstr "{count, plural, one {# ny anmodning om deltagelse} other {# nye anmodnin
 msgid "{count, plural, one {# request} other {# requests}}"
 msgstr "{count, plural, one {# anmodning} other {# anmodninger}}"
 
-#: src/view/shell/desktop/LeftNav.tsx:484
+#: src/view/shell/desktop/LeftNav.tsx:486
 msgid "{count, plural, one {# unread item} other {# unread items}}"
 msgstr "{count, plural, one {# ulæst besked} other {# ulæste beskeder}}"
 
@@ -775,7 +779,7 @@ msgstr "{name}s foretrukne feeds and brugere – kom og vær med!"
 msgid "{name}’s Starter Pack"
 msgstr "{name}s startpakke"
 
-#: src/view/shell/bottom-bar/BottomBarWeb.tsx:334
+#: src/view/shell/bottom-bar/BottomBarWeb.tsx:344
 msgid "{notificationCount, plural, one {# unread item} other {# unread items}}"
 msgstr "{notificationCount, plural, one {# ulæst besked} other {# ulæste beskeder}}"
 
@@ -783,13 +787,21 @@ msgstr "{notificationCount, plural, one {# ulæst besked} other {# ulæste beske
 msgid "{numMatches, plural, one {# contact found} other {# contacts found}}"
 msgstr "{numMatches, plural, one {# kontakt fundet} other {# kontakter fundet}}"
 
-#: src/components/NewskieDialog.tsx:116
+#: src/components/dialogs/NewskieDialog/utils.ts:49
 msgid "{profileName} joined Bluesky {timeAgoString} ago"
 msgstr "{profileName} oprettede sig på Bluesky for {timeAgoString} siden"
 
-#: src/components/NewskieDialog.tsx:113
+#: src/components/dialogs/NewskieDialog/utils.ts:32
+msgid "{profileName} joined Bluesky just now"
+msgstr ""
+
+#: src/components/dialogs/NewskieDialog/utils.ts:47
 msgid "{profileName} joined Bluesky using a Starter Pack {timeAgoString} ago"
 msgstr "{profileName} oprettede sig på Bluesky via en startpakke for {timeAgoString} siden"
+
+#: src/components/dialogs/NewskieDialog/utils.ts:31
+msgid "{profileName} joined Bluesky using a Starter Pack just now"
+msgstr ""
 
 #. The trending topic rank, i.e. "1. March Madness", "2. The Bachelor"
 #. The trending topic rank, i.e. "1. March Madness", "2. The Bachelor"
@@ -837,6 +849,10 @@ msgstr "{userName} er verificeret"
 msgid "{userName}'s verifications"
 msgstr "{userName}s verifikationer"
 
+#: src/components/Post/Embed/AtCard/index.tsx:160
+msgid "@{displayedHandle}"
+msgstr ""
+
 #. Number of images beyond the first 3
 #. placeholder {0}: labels.length
 #. placeholder {0}: totalNumber - 3
@@ -868,13 +884,13 @@ msgstr "<0>{0}, </0><1>{1} </1>og {2, plural, one {# anden} other {# andre}} er 
 
 #. placeholder {0}: formatCount(i18n, profile?.followersCount ?? 0)
 #. placeholder {1}: profile?.followersCount || 0
-#: src/view/shell/Drawer.tsx:156
+#: src/view/shell/Drawer.tsx:157
 msgid "<0>{0}</0> {1, plural, one {follower} other {followers}}"
 msgstr "<0>{0}</0> {1, plural, one {følger} other {følgere}}"
 
 #. placeholder {0}: formatCount(i18n, profile?.followsCount ?? 0)
 #. placeholder {1}: profile?.followsCount || 0
-#: src/view/shell/Drawer.tsx:167
+#: src/view/shell/Drawer.tsx:168
 msgid "<0>{0}</0> {1, plural, one {following} other {following}}"
 msgstr "<0>{0}</0> {1, plural, one {følger} other {følger}}"
 
@@ -932,10 +948,13 @@ msgstr "<0>{displayName}</0><1/><2> tilføjede dig</2>"
 msgid "<0>Community Guidelines: Harassment</0>"
 msgstr "<0>Fællesskabsregler: Chikane</0>"
 
-#: src/screens/Hashtag.tsx:232
 #: src/screens/Search/SearchResults.tsx:398
 msgid "<0>Sign in</0><1> or </1><2>create an account</2><3> </3><4>to search for news, sports, politics, and everything else happening on Bluesky.</4>"
 msgstr "<0>Log ind</0><1> eller </1><2>opret en konto</2><3> </3><4>for at søge efter nyheder, sport, politik og alt andet, der sker på Bluesky.</4>"
+
+#: src/screens/Hashtag.tsx:232
+msgid "<0>Sign in</0><1> or </1><2>create an account</2><3> </3><4>to search for news, sports, politics, and everything else happening on ORBIS.</4>"
+msgstr ""
 
 #: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:251
 msgid "<0>Tap here to update your location with GPS.</0>"
@@ -951,13 +970,17 @@ msgstr "<0>Du</0> og<1> </1><2>{0} </2>er med i din startpakke"
 msgid "⚠Invalid Handle"
 msgstr "⚠Ugyldigt handle"
 
+#: src/screens/Settings/AboutSettings.tsx:204
+msgid "🟢 جميع خوادم وخدمات شبكة ORBIS السحابية تعمل بكفاءة تامة 100% ولا توجد أي انقطاعات مسجلة."
+msgstr ""
+
 #: src/components/dialogs/MutedWords.tsx:204
 #: src/components/dialogs/MutedWords.tsx:553
 #: src/components/dialogs/MutedWords.tsx:556
 msgid "24 hours"
 msgstr "24 timer"
 
-#: src/screens/Login/LoginForm.tsx:437
+#: src/screens/Login/LoginForm.tsx:486
 msgid "2FA Confirmation"
 msgstr "Tofaktorgodkendelse"
 
@@ -1046,11 +1069,15 @@ msgid "A selected recipient is not followed by the sender."
 msgstr "En valgt modtager følges ikke af afsenderen."
 
 #: src/Navigation.tsx:507
-#: src/screens/Settings/AboutSettings.tsx:85
+#: src/screens/Settings/AboutSettings.tsx:86
 #: src/screens/Settings/Settings.tsx:267
 #: src/screens/Settings/Settings.tsx:270
 msgid "About"
 msgstr "Om"
+
+#: src/view/com/auth/SplashScreen.web.tsx:246
+msgid "About ORBIS"
+msgstr ""
 
 #: src/components/moderation/ReportDialog/utils/useReportOptions.ts:101
 msgid "Abusive or discriminatory behavior"
@@ -1118,11 +1145,11 @@ msgctxt "toast"
 msgid "Account followed"
 msgstr "Konto fulgt"
 
-#: src/lib/strings/errors.ts:68
+#: src/lib/strings/errors.ts:72
 msgid "Account has been suspended"
 msgstr "Konto blev suspenderet"
 
-#: src/lib/strings/errors.ts:71
+#: src/lib/strings/errors.ts:75
 msgid "Account is deactivated"
 msgstr "Konto er deaktiveret"
 
@@ -1156,7 +1183,7 @@ msgstr "Konto fjernet fra kvikadgang"
 
 #: src/screens/Messages/ConversationSettings/MemberMenu.tsx:109
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:87
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:301
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:302
 #: src/view/com/profile/ProfileMenu.tsx:198
 msgctxt "toast"
 msgid "Account unblocked"
@@ -1241,8 +1268,8 @@ msgstr "Tilføj alt-tekst (valgfrit)"
 
 #: src/screens/Settings/Settings.tsx:596
 #: src/screens/Settings/Settings.tsx:599
-#: src/view/shell/desktop/LeftNav.tsx:276
-#: src/view/shell/desktop/LeftNav.tsx:279
+#: src/view/shell/desktop/LeftNav.tsx:278
+#: src/view/shell/desktop/LeftNav.tsx:281
 msgid "Add another account"
 msgstr "Tilføj endnu en konto"
 
@@ -1402,7 +1429,7 @@ msgstr "Tilføjet til startpakke"
 msgid "Adding members to list..."
 msgstr "Tilføj medlemmer til liste ..."
 
-#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:118
+#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:117
 msgid "Additional details (limit 1000 characters)"
 msgstr "Yderligere oplysninger (maks. 1000 tegn)"
 
@@ -1455,11 +1482,11 @@ msgstr "Avanceret"
 msgid "Age Assurance"
 msgstr "Alderstjek"
 
-#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:74
+#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:73
 msgid "Age assurance inquiry failed to send, please try again."
 msgstr "Anmodning om alderstjek fejlede, prøv igen."
 
-#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:84
+#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:83
 msgctxt "toast"
 msgid "Age assurance inquiry was submitted"
 msgstr "Anmodning om alderstjek"
@@ -1538,8 +1565,8 @@ msgstr "Tillad direkte beskeder fra"
 msgid "Allow group chat invites from"
 msgstr "Tillad gruppechatinvitationer fra"
 
-#: src/components/dialogs/DeviceLocationRequestDialog.tsx:127
-#: src/components/dialogs/DeviceLocationRequestDialog.tsx:133
+#: src/components/dialogs/DeviceLocationRequestDialog.tsx:128
+#: src/components/dialogs/DeviceLocationRequestDialog.tsx:134
 msgid "Allow location access"
 msgstr "Tillad adgang til lokalitet"
 
@@ -1573,7 +1600,7 @@ msgstr "Tillad svar fra dine følgere"
 msgid "Allows access to direct messages"
 msgstr "Tillader adgang til direkte beskeder"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:178
+#: src/screens/Login/ForgotPasswordForm.tsx:169
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:239
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:245
 msgid "Already have a code?"
@@ -1764,11 +1791,7 @@ msgstr "Seksuelle overgreb mod dyr"
 msgid "Animal welfare"
 msgstr "Dyrevelfærd"
 
-#: src/lib/interests.ts:52
-msgid "Animals"
-msgstr "Dyr"
-
-#: src/components/Post/Embed/ExternalEmbed/Gif.tsx:85
+#: src/components/Post/Embed/ExternalEmbed/Gif.tsx:89
 msgid "Animated GIF"
 msgstr "Animeret GIF"
 
@@ -1809,7 +1832,7 @@ msgstr "Alle kan anmode om at blive medlem"
 
 #: src/screens/Settings/ActivityPrivacySettings.tsx:112
 #: src/screens/Settings/ActivityPrivacySettings.tsx:117
-#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:165
+#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:163
 msgid "Anyone who follows me"
 msgstr "Alle som følger mig"
 
@@ -1867,7 +1890,7 @@ msgid "Appeal"
 msgstr "Klag"
 
 #. placeholder {0}: strings.name
-#: src/components/moderation/AppealForm.tsx:104
+#: src/components/moderation/AppealForm.tsx:105
 msgid "Appeal \"{0}\" label"
 msgstr "Klag over mærkatet \"{0}\""
 
@@ -1883,7 +1906,7 @@ msgstr "Klage taget til følge: Dit opslag er blevet genskabt"
 msgid "Appeal label"
 msgstr "Klag over mærkat"
 
-#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:92
+#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:91
 msgid "Appeal livestream suspension"
 msgstr "Klag over livestreamblokering"
 
@@ -1891,26 +1914,26 @@ msgstr "Klag over livestreamblokering"
 msgid "Appeal submitted"
 msgstr "Klage afsendt"
 
-#: src/components/moderation/AppealForm.tsx:94
-#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:82
-#: src/screens/Messages/components/ChatDisabled.tsx:123
+#: src/components/moderation/AppealForm.tsx:95
+#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:81
+#: src/screens/Messages/components/ChatDisabled.tsx:122
 msgctxt "toast"
 msgid "Appeal submitted"
 msgstr "Klage afsendt"
 
-#: src/screens/Takendown.tsx:112
-#: src/screens/Takendown.tsx:138
+#: src/screens/Takendown.tsx:114
+#: src/screens/Takendown.tsx:140
 msgid "Appeal suspension"
 msgstr "Klag over spærring"
 
-#: src/screens/Takendown.tsx:115
+#: src/screens/Takendown.tsx:117
 msgid "Appeal Suspension"
 msgstr "Klag over spærring"
 
 #: src/screens/Messages/components/ChatDisabled.tsx:76
 #: src/screens/Messages/components/ChatDisabled.tsx:79
-#: src/screens/Messages/components/ChatDisabled.tsx:131
-#: src/screens/Messages/components/ChatDisabled.tsx:133
+#: src/screens/Messages/components/ChatDisabled.tsx:130
+#: src/screens/Messages/components/ChatDisabled.tsx:132
 msgid "Appeal this decision"
 msgstr "Klag over afgørelse"
 
@@ -1925,6 +1948,10 @@ msgstr "Klag over denne mærkat"
 msgid "Appearance"
 msgstr "Udseende"
 
+#: src/components/OTAChannelNotice.tsx:224
+msgid "Apply"
+msgstr ""
+
 #: src/screens/Feeds/NoSavedFeedsOfAnyType.tsx:52
 #: src/screens/Home/NoFeedsPinned.tsx:94
 msgid "Apply default recommended feeds"
@@ -1934,6 +1961,10 @@ msgstr "Brug anbefalede standardfeeds"
 #: src/screens/Settings/Settings.tsx:529
 msgid "Apply Pull Request"
 msgstr "Anvend pull request"
+
+#: src/components/OTAChannelNotice.tsx:221
+msgid "Apply update from this channel"
+msgstr ""
 
 #. placeholder {0}: niceDate(i18n, createdAt, 'medium')
 #: src/screens/PostThread/components/ThreadItemAnchor.tsx:627
@@ -2023,10 +2054,6 @@ msgstr "Er du den afbildede person eller en officiel repræsentant for denne?"
 msgid "Are you writing in <0>{suggestedLanguageName}</0>?"
 msgstr "Skriver du på <0>{suggestedLanguageName}</0>?"
 
-#: src/lib/interests.ts:53
-msgid "Art"
-msgstr "Kunst"
-
 #: src/view/com/composer/labels/LabelsBtn.tsx:167
 msgid "Artistic or non-erotic nudity."
 msgstr "Kunstnerisk og ikkeerotisk nøgenhed."
@@ -2050,7 +2077,7 @@ msgstr "Vælg emne for algo"
 msgid "At least 8 characters"
 msgstr "Mindst 8 tegn"
 
-#: src/screens/Settings/components/DeleteAccountDialog.tsx:344
+#: src/screens/Settings/components/DeleteAccountDialog.tsx:342
 msgid "AT Protocol FAQ"
 msgstr "AT Protocol-FAQ"
 
@@ -2110,18 +2137,18 @@ msgstr "Afventer gennemgang"
 #: src/components/dms/InitiateChatFlow.tsx:645
 #: src/components/dms/InitiateChatFlow.tsx:863
 #: src/components/dms/InitiateChatFlow.tsx:870
-#: src/components/moderation/AppealForm.tsx:156
 #: src/components/moderation/AppealForm.tsx:157
+#: src/components/moderation/AppealForm.tsx:158
 #: src/screens/Login/ChooseAccountForm.tsx:95
 #: src/screens/Login/ChooseAccountForm.tsx:99
-#: src/screens/Login/ForgotPasswordForm.tsx:123
-#: src/screens/Login/ForgotPasswordForm.tsx:128
-#: src/screens/Login/LoginForm.tsx:512
-#: src/screens/Login/LoginForm.tsx:517
+#: src/screens/Login/ForgotPasswordForm.tsx:114
+#: src/screens/Login/ForgotPasswordForm.tsx:119
+#: src/screens/Login/LoginForm.tsx:556
+#: src/screens/Login/LoginForm.tsx:561
 #: src/screens/Login/SetNewPasswordForm.tsx:162
 #: src/screens/Login/SetNewPasswordForm.tsx:168
-#: src/screens/Messages/components/ChatDisabled.tsx:162
-#: src/screens/Messages/components/ChatDisabled.tsx:164
+#: src/screens/Messages/components/ChatDisabled.tsx:161
+#: src/screens/Messages/components/ChatDisabled.tsx:163
 #: src/screens/Messages/components/InviteLinkDialog.tsx:274
 #: src/screens/Messages/components/InviteLinkDialog.tsx:302
 #: src/screens/Messages/Inbox.tsx:232
@@ -2253,7 +2280,7 @@ msgstr "Fødselsdato"
 #: src/components/moderation/BlockDialog.tsx:190
 #: src/components/moderation/BlockDialog.tsx:210
 #: src/screens/Messages/ConversationSettings/MemberMenu.tsx:227
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:190
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:191
 msgid "Block"
 msgstr "Bloker"
 
@@ -2325,7 +2352,7 @@ msgstr "Bloker bruger og/eller slet denne samtale"
 msgid "Block user and/or leave this conversation"
 msgstr "Bloker bruger og/eller forlad denne samtale"
 
-#: src/components/Post/Embed/index.tsx:215
+#: src/components/Post/Embed/index.tsx:261
 msgid "Blocked"
 msgstr "Blokeret"
 
@@ -2358,10 +2385,6 @@ msgstr "Blokering er offentlig. Blokerede konti kan ikke svare i dine tråde, om
 msgid "Blocking will not prevent labels from being applied on your account, but it will stop this account from replying in your threads or interacting with you."
 msgstr "Blokering vil ikke spærre for, at der bliver sat mærkater på din konto, men det vil forhindre denne konto fra at svare i dine tråde eller interagere med dig."
 
-#: src/view/com/auth/SplashScreen.web.tsx:175
-msgid "Blog"
-msgstr "Blog"
-
 #. Advanced search: Examples of hashtags
 #: src/screens/Search/components/AdvancedSearchDialog/hooks.tsx:17
 msgid "bloomscrolling booksky"
@@ -2369,18 +2392,12 @@ msgstr "bloomscrolling booksky"
 
 #: src/components/dialogs/ServerInput.tsx:144
 #: src/components/dialogs/ServerInput.tsx:146
-#: src/screens/CustomFeed/components/CustomFeedHeader.tsx:522
 msgid "Bluesky"
 msgstr "Bluesky"
 
 #: src/screens/PostThread/components/ThreadItemAnchor.tsx:652
 msgid "Bluesky cannot confirm the authenticity of the claimed date."
 msgstr "Bluesky kan ikke bekræfte den anførte datos gyldighed."
-
-#: src/screens/Settings/AppIconSettings/useAppIconSets.ts:165
-msgctxt "Name of app icon variant"
-msgid "Bluesky Classic™"
-msgstr "Bluesky Classic™"
 
 #: src/screens/ModerationInbox/components/AccountStatus.tsx:36
 msgid "Bluesky has taken action on your account or content for violating our community guidelines. Further violations will lead to stronger enforcement, including suspension."
@@ -2391,7 +2408,6 @@ msgid "Bluesky helps friends find each other by creating an encoded digital fing
 msgstr "Bluesky hjælper venner med at finde hinanden ved at danne et digitalt fingeraftryk, en såkaldt tjeksum, og herefter lede efter identiske tjeksummer."
 
 #: src/components/dialogs/ServerInput.tsx:214
-#: src/screens/Login/components/HostingProviderDialog.tsx:236
 msgid "Bluesky is an open network where you can choose your hosting provider. If you're a developer, you can host your own server."
 msgstr "Bluesky er et åbent netværk, hvor du kan vælge din egen udbyder. Hvis du er udvikler, kan du køre din egen server."
 
@@ -2424,33 +2440,13 @@ msgstr "Blueskys moderationstjeneste"
 msgid "Bluesky needs camera access to scan QR codes from other profiles."
 msgstr "Bluesky har brug for adgang til kameraet for at skanne QR-koder fra andre profiler."
 
-#: src/screens/Takendown.tsx:211
-msgid "Bluesky Social Terms of Service"
-msgstr "Bluesky Socials tjenestevilkår"
-
-#: src/screens/Settings/FindContactsSettings.tsx:579
-msgid "Bluesky stores your contacts as encoded data. Removing your contacts will immediately delete this data."
-msgstr "Bluesky gemmer dine kontakter som krypteret data. Hvis du fjerner dine kontakter, sletter vi øjeblikkeligt denne data."
-
 #: src/components/StarterPack/ProfileStarterPacks.tsx:338
 msgid "Bluesky will choose a set of recommended accounts from people in your network."
 msgstr "Bluesky vil vælge et antal anbefalede konti fra personer i dit netværk."
 
-#: src/screens/Settings/components/PwiOptOut.tsx:102
-msgid "Bluesky will not show your account to logged-out users and will ask other apps to do the same. Other apps may not honor this request. It doesn't make your account private."
-msgstr "Bluesky vil ikke vise din konto til udloggede brugere og vil anmode andre apps om at gøre det samme. Andre apps respekterer ikke nødvendigvis denne anmodning. Din konto bliver ikke konto privat."
-
 #: src/components/dialogs/nuxs/InitialVerificationAnnouncement.tsx:137
 msgid "Bluesky will proactively verify notable and authentic accounts."
 msgstr "Bluesky vil løbende verificere populære konti."
-
-#: src/screens/Settings/AppIconSettings/index.tsx:97
-msgid "Bluesky+"
-msgstr "Bluesky+"
-
-#: src/screens/Settings/AppIconSettings/index.tsx:100
-msgid "Bluesky+ icons"
-msgstr "Bluesky+-ikoner"
 
 #: src/lib/moderation/useLabelBehaviorDescription.ts:56
 msgid "Blur images"
@@ -2459,10 +2455,6 @@ msgstr "Slør billeder"
 #: src/lib/moderation/useLabelBehaviorDescription.ts:54
 msgid "Blur images and filter from feeds"
 msgstr "Slør billeder og filtrer fra feeds"
-
-#: src/lib/interests.ts:54
-msgid "Books"
-msgstr "Bøger"
 
 #: src/components/moderation/ReportDialog/utils/useReportOptions.ts:217
 msgid "Breaking site rules"
@@ -2521,10 +2513,6 @@ msgstr "Se emnet {0}"
 msgid "Browse topic {displayName}"
 msgstr "Se emnet {displayName}"
 
-#: src/view/com/auth/SplashScreen.web.tsx:170
-msgid "Business"
-msgstr "Om Bluesky"
-
 #: src/screens/Bookmarks.tsx:293
 msgid "Button to go back to the home timeline"
 msgstr "Knap, der går til din hjemmetidslinje"
@@ -2548,7 +2536,7 @@ msgstr "af @{0}"
 
 #. The group chat creator, in the format 'By {displayName}'.
 #. placeholder {0}: createSanitizedDisplayName( joinLinkPreview.owner, true, moderateProfile(joinLinkPreview.owner, moderationOpts).ui( 'displayName', ), )
-#. placeholder {0}: info.creatorHandle === TRENDING_HANDLE ? l`Bluesky` : sanitizeHandle(info.creatorHandle, '@')
+#. placeholder {0}: info.creatorHandle === TRENDING_HANDLE ? l`ORBIS` : sanitizeHandle(info.creatorHandle, '@')
 #: src/components/intents/GroupChatJoinDialog.tsx:384
 #: src/screens/CustomFeed/components/CustomFeedHeader.tsx:510
 msgid "By <0>{0}</0>"
@@ -2592,12 +2580,12 @@ msgid "Camera access needed"
 msgstr "Kameraadgang krævet"
 
 #: src/components/activity-notifications/SubscribeProfileDialog.tsx:210
-#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:135
-#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:141
+#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:134
+#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:140
 #: src/components/contacts/screens/GetContacts.tsx:294
 #: src/components/contacts/screens/GetContacts.tsx:299
-#: src/components/dialogs/DeviceLocationRequestDialog.tsx:140
-#: src/components/dialogs/DeviceLocationRequestDialog.tsx:145
+#: src/components/dialogs/DeviceLocationRequestDialog.tsx:141
+#: src/components/dialogs/DeviceLocationRequestDialog.tsx:146
 #: src/components/dialogs/EmailDialog/screens/Manage2FA/Enable.tsx:122
 #: src/components/dialogs/EmailDialog/screens/Manage2FA/Enable.tsx:128
 #: src/components/dialogs/InAppBrowserConsent.tsx:99
@@ -2638,13 +2626,13 @@ msgstr "Kameraadgang krævet"
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:250
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:256
 #: src/screens/Settings/Settings.tsx:312
-#: src/screens/Takendown.tsx:100
-#: src/screens/Takendown.tsx:103
+#: src/screens/Takendown.tsx:102
+#: src/screens/Takendown.tsx:105
 #: src/view/com/composer/Composer.tsx:1839
 #: src/view/com/composer/Composer.tsx:1849
 #: src/view/com/composer/photos/EditImageDialog.web.tsx:44
 #: src/view/com/composer/photos/EditImageDialog.web.tsx:53
-#: src/view/shell/desktop/LeftNav.tsx:228
+#: src/view/shell/desktop/LeftNav.tsx:230
 msgid "Cancel"
 msgstr "Annuller"
 
@@ -2722,10 +2710,6 @@ msgstr "Vælg appsprog"
 msgid "Change Handle"
 msgstr "Skift handle"
 
-#: src/screens/Login/LoginForm.tsx:650
-msgid "Change hosting provider"
-msgstr "Skift udbyder"
-
 #: src/components/moderation/ReportDialog/index.tsx:522
 msgid "Change moderation service"
 msgstr "Skift moderationstjeneste"
@@ -2772,11 +2756,16 @@ msgstr "Ændringer blev gemt"
 msgid "Changes to the Starter Pack will not be reflected in the list after creation. The list will be an independent copy."
 msgstr "Ændringer til startpakken vil ikke blive afspejlet i listen efter oprettelse. Listen vil blive en uafhængig kopi."
 
+#: src/components/OTAChannelNotice.tsx:203
+#: src/components/OTAChannelNotice.tsx:207
+msgid "Channel"
+msgstr ""
+
 #: src/lib/hooks/useNotificationHandler.ts:133
 #: src/Navigation.tsx:533
-#: src/view/shell/bottom-bar/BottomBar.tsx:242
-#: src/view/shell/desktop/LeftNav.tsx:697
-#: src/view/shell/Drawer.tsx:528
+#: src/view/shell/bottom-bar/BottomBar.tsx:248
+#: src/view/shell/desktop/LeftNav.tsx:705
+#: src/view/shell/Drawer.tsx:532
 msgid "Chat"
 msgstr "Chat"
 
@@ -2888,12 +2877,20 @@ msgstr "Tjek <0>{currentEmail}</0> for en e-mail med en bekræftelseskode, du sk
 msgid "Check back later!"
 msgstr "Kig forbi senere!"
 
+#: src/components/OTAChannelNotice.tsx:120
+msgid "Check for OTA updates"
+msgstr ""
+
+#: src/components/OTAChannelNotice.tsx:127
+msgid "Check for updates"
+msgstr ""
+
 #: src/screens/SignupQueued.tsx:85
 #: src/screens/SignupQueued.tsx:89
 msgid "Check my status"
 msgstr "Tjek min status"
 
-#: src/screens/Login/LoginForm.tsx:464
+#: src/screens/Login/LoginForm.tsx:513
 msgid "Check your email for a sign in code and enter it here."
 msgstr "Tjek din e-mail efter en bekræftelseskode og indtast den her."
 
@@ -2970,7 +2967,7 @@ msgstr "Vælg din udbyder"
 msgid "Choose your own timeline! Feeds built by the community help you find content you love."
 msgstr "Vælg din egen tidslinje! Specialbyggede feeds skabt af andre brugere hjælper dig med at finde indhold, du vil synes om."
 
-#: src/screens/Signup/StepInfo/index.tsx:282
+#: src/screens/Signup/StepInfo/index.tsx:289
 msgid "Choose your password"
 msgstr "Husk din adgangskode"
 
@@ -3001,8 +2998,8 @@ msgstr "Nulstil dato"
 msgid "Clear GIF search"
 msgstr "Nulstil GIF-søgning"
 
+#: src/screens/Settings/AboutSettings.tsx:130
 #: src/screens/Settings/AboutSettings.tsx:134
-#: src/screens/Settings/AboutSettings.tsx:138
 msgid "Clear image cache"
 msgstr "Tøm billedcache"
 
@@ -3077,6 +3074,8 @@ msgstr "Klik for at prøve at sende beskeden igen"
 #: src/components/AltBadgeWithDialog.tsx:88
 #: src/components/dialogs/LanguageSelectDialog.tsx:359
 #: src/components/dialogs/lists/UserAddRemoveListsDialog.tsx:147
+#: src/components/dialogs/NewskieDialog/index.tsx:154
+#: src/components/dialogs/NewskieDialog/index.tsx:160
 #: src/components/dialogs/nuxs/ActivitySubscriptions.tsx:160
 #: src/components/dialogs/nuxs/ActivitySubscriptions.tsx:169
 #: src/components/dialogs/nuxs/BookmarksAnnouncement.tsx:165
@@ -3101,8 +3100,6 @@ msgstr "Klik for at prøve at sende beskeden igen"
 #: src/components/dms/InitiateChatFlow.tsx:670
 #: src/components/intents/GroupChatJoinDialog.tsx:251
 #: src/components/intents/GroupChatJoinDialog.tsx:286
-#: src/components/NewskieDialog.tsx:170
-#: src/components/NewskieDialog.tsx:176
 #: src/components/ProgressGuide/FollowDialog.tsx:456
 #: src/components/StarterPack/Wizard/WizardEditListDialog.tsx:119
 #: src/components/StarterPack/Wizard/WizardEditListDialog.tsx:125
@@ -3150,7 +3147,7 @@ msgstr "Luk banner"
 msgid "Close dialog"
 msgstr "Luk dialog"
 
-#: src/view/shell/index.web.tsx:128
+#: src/view/shell/index.web.tsx:129
 msgid "Close drawer menu"
 msgstr "Luk navigation"
 
@@ -3219,13 +3216,14 @@ msgstr "Farvetilstand"
 msgid "Color theme"
 msgstr "Farvetema"
 
-#: src/lib/interests.ts:55
-msgid "Comedy"
-msgstr "Komik"
+#: src/screens/VideoFeed/components/VideoCommentsDialog.tsx:38
+#: src/screens/VideoFeed/components/VideoSideActions.tsx:134
+msgid "Comments"
+msgstr ""
 
-#: src/lib/interests.ts:56
-msgid "Comics"
-msgstr "Tegneserier"
+#: src/view/com/auth/SplashScreen.web.tsx:252
+msgid "Community"
+msgstr ""
 
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:46
 #: src/Navigation.tsx:372
@@ -3247,7 +3245,7 @@ msgstr "Løs opgaven"
 
 #: src/lib/hotkeys/index.tsx:66
 #: src/view/com/feeds/ComposerPrompt.tsx:161
-#: src/view/shell/desktop/LeftNav.tsx:586
+#: src/view/shell/desktop/LeftNav.tsx:588
 msgid "Compose new post"
 msgstr "Skriv nyt opslag"
 
@@ -3284,7 +3282,7 @@ msgid "Confirm"
 msgstr "Bekræft"
 
 #: src/components/dialogs/EmailDialog/components/TokenField.tsx:37
-#: src/screens/Login/LoginForm.tsx:443
+#: src/screens/Login/LoginForm.tsx:492
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:189
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:193
 #: src/screens/Settings/components/DeleteAccountDialog.tsx:250
@@ -3293,16 +3291,16 @@ msgstr "Bekræft"
 msgid "Confirmation code"
 msgstr "Bekræftelseskode"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:136
+#: src/screens/Login/ForgotPasswordForm.tsx:127
 msgid "Connecting to service..."
 msgstr "Forbinder til tjeneste ..."
 
-#: src/screens/Login/LoginForm.tsx:543
+#: src/screens/Login/LoginForm.tsx:587
 msgid "Connecting to service…"
 msgstr "Forbinder til tjeneste …"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:142
-#: src/screens/Login/LoginForm.tsx:549
+#: src/screens/Login/ForgotPasswordForm.tsx:133
+#: src/screens/Login/LoginForm.tsx:593
 msgid "Connecting…"
 msgstr "Forbinder …"
 
@@ -3332,7 +3330,7 @@ msgstr "Kontakt support"
 msgid "Contact sync is not available on this device, as the app is unable to access your contacts."
 msgstr "Kontaktsynkronisering er ikke tilgængelig på denne enhed, da appen ikke har adgang til dine kontakter."
 
-#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:100
+#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:99
 msgid "Contact us"
 msgstr "Kontakt os"
 
@@ -3460,7 +3458,7 @@ msgstr "Samtale forladt"
 msgid "Conversation not found."
 msgstr "Samtale ikke fundet."
 
-#: src/screens/Settings/AboutSettings.tsx:169
+#: src/screens/Settings/AboutSettings.tsx:165
 msgid "Copied build version to clipboard"
 msgstr "Kopieret versionsnummer til udklipsholder"
 
@@ -3484,7 +3482,7 @@ msgstr "Kopieret til udklipsholder"
 msgid "Copied!"
 msgstr "Kopieret!"
 
-#: src/screens/Settings/AboutSettings.tsx:145
+#: src/screens/Settings/AboutSettings.tsx:141
 msgid "Copies build version to clipboard"
 msgstr "Kopierer versionsnummer til udklipsholder"
 
@@ -3736,14 +3734,14 @@ msgstr "Opret en startpakke for mig"
 #: src/components/WelcomeModal.tsx:165
 #: src/screens/Messages/JoinRequest.tsx:318
 #: src/screens/Signup/index.tsx:139
-#: src/view/com/auth/SplashScreen.tsx:108
-#: src/view/com/auth/SplashScreen.web.tsx:117
-#: src/view/shell/bottom-bar/BottomBar.tsx:351
-#: src/view/shell/bottom-bar/BottomBar.tsx:355
-#: src/view/shell/bottom-bar/BottomBarWeb.tsx:240
-#: src/view/shell/bottom-bar/BottomBarWeb.tsx:245
-#: src/view/shell/NavSignupCard.tsx:48
-#: src/view/shell/NavSignupCard.tsx:53
+#: src/view/com/auth/SplashScreen.tsx:106
+#: src/view/com/auth/SplashScreen.web.tsx:181
+#: src/view/shell/bottom-bar/BottomBar.tsx:357
+#: src/view/shell/bottom-bar/BottomBar.tsx:361
+#: src/view/shell/bottom-bar/BottomBarWeb.tsx:250
+#: src/view/shell/bottom-bar/BottomBarWeb.tsx:255
+#: src/view/shell/NavSignupCard.tsx:47
+#: src/view/shell/NavSignupCard.tsx:52
 msgid "Create account"
 msgstr "Opret konto"
 
@@ -3791,7 +3789,7 @@ msgstr "Opret moderationsliste"
 
 #: src/screens/Messages/JoinRequest.tsx:312
 #: src/view/com/auth/SplashScreen.tsx:89
-#: src/view/com/auth/SplashScreen.web.tsx:109
+#: src/view/com/auth/SplashScreen.web.tsx:166
 msgid "Create new account"
 msgstr "Opret ny konto"
 
@@ -3827,10 +3825,6 @@ msgstr "Oprettet {0}"
 #: src/screens/List/ListHiddenScreen.tsx:130
 msgid "Creator has been blocked"
 msgstr "Skaber er blokeret"
-
-#: src/lib/interests.ts:57
-msgid "Culture"
-msgstr "Kultur"
 
 #: src/screens/Settings/BetaFeaturesSettings.tsx:196
 msgid "Current beta features"
@@ -3877,7 +3871,7 @@ msgstr "Mørk"
 msgid "Dark theme"
 msgstr "Mørk tilstand"
 
-#: src/screens/Signup/StepInfo/index.tsx:310
+#: src/screens/Signup/StepInfo/index.tsx:321
 msgid "Date of birth"
 msgstr "Fødselsdato"
 
@@ -4009,7 +4003,7 @@ msgstr "Slet denne liste?"
 msgid "Delete this post?"
 msgstr "Slet dette opslag?"
 
-#: src/components/Post/Embed/index.tsx:208
+#: src/components/Post/Embed/index.tsx:254
 msgid "Deleted"
 msgstr "Slettet"
 
@@ -4055,12 +4049,12 @@ msgstr "Afkobl citat"
 msgid "Detach quote post?"
 msgstr "Afkobl citeret opslag?"
 
-#: src/screens/Settings/AboutSettings.tsx:158
+#: src/screens/Settings/AboutSettings.tsx:154
 msgctxt "toast"
 msgid "Developer mode disabled"
 msgstr "Udviklertilstand deaktiveret"
 
-#: src/screens/Settings/AboutSettings.tsx:152
+#: src/screens/Settings/AboutSettings.tsx:148
 msgctxt "toast"
 msgid "Developer mode enabled"
 msgstr "Udviklertilstand aktiveret"
@@ -4070,7 +4064,7 @@ msgstr "Udviklertilstand aktiveret"
 msgid "Developer options"
 msgstr "Udviklingerindstillinger"
 
-#: src/lib/translation/index.tsx:312
+#: src/lib/translation/index.tsx:322
 msgid "Device failed to translate :("
 msgstr "Enhed kunne ikke oversætte :("
 
@@ -4173,7 +4167,7 @@ msgstr "Kasser opslag?"
 msgid "Disconnect Germ DM"
 msgstr "Frakobl Germ DM"
 
-#: src/lib/strings/feed-names.ts:16
+#: src/lib/strings/feed-names.ts:30
 msgctxt "feed-name"
 msgid "Discover"
 msgstr ""
@@ -4182,8 +4176,8 @@ msgstr ""
 msgid "Discover feeds"
 msgstr "Opdag feeds"
 
-#: src/view/com/posts/FollowingEmptyState.tsx:64
-#: src/view/com/posts/FollowingEmptyState.tsx:69
+#: src/view/com/posts/FollowingEmptyState.tsx:65
+#: src/view/com/posts/FollowingEmptyState.tsx:70
 #: src/view/com/posts/FollowingEndOfFeed.tsx:65
 #: src/view/com/posts/FollowingEndOfFeed.tsx:70
 msgid "Discover new custom feeds"
@@ -4297,8 +4291,8 @@ msgstr "Bare rolig! Alle eksisterende beskeder og indstillinger er gemt og vi bl
 #: src/components/dialogs/ServerInput.tsx:239
 #: src/components/dms/AfterReportConversationDialog.tsx:164
 #: src/components/dms/AfterReportDialog.tsx:145
-#: src/components/forms/DateField/index.tsx:128
-#: src/components/forms/DateField/index.tsx:145
+#: src/components/forms/DateField/index.tsx:136
+#: src/components/forms/DateField/index.tsx:153
 #: src/features/inviteFriends/InviteFriendsDialogInner.tsx:148
 #: src/features/inviteFriends/InviteFriendsDialogInner.tsx:154
 #: src/lib/media/picker.tsx:37
@@ -4324,7 +4318,7 @@ msgstr "Tryk dobbelt eller langt på beskeden for at tilføje en reaktion"
 msgid "Double tap to close the dialog"
 msgstr "Tryk dobbelt for at lukke dialogen"
 
-#: src/screens/VideoFeed/index.tsx:1235
+#: src/screens/VideoFeed/index.tsx:1222
 msgid "Double tap to like"
 msgstr "Tryk dobbelt for at like"
 
@@ -4523,13 +4517,13 @@ msgstr "Rediger interaktionsindstillinger"
 
 #: src/screens/Profile/Header/EditProfileDialog.tsx:265
 #: src/screens/Profile/Header/EditProfileDialog.tsx:271
-#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:299
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:336
+#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:300
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:337
 msgid "Edit profile"
 msgstr "Rediger profil"
 
-#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:302
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:338
+#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:303
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:339
 msgid "Edit Profile"
 msgstr "Rediger profil"
 
@@ -4554,16 +4548,12 @@ msgstr "Rediger, hvem der kan svare"
 msgid "Edit your Starter Pack"
 msgstr "Rediger din startpakke"
 
-#: src/lib/interests.ts:59
-msgid "Education"
-msgstr "Uddannelse"
-
 #: src/screens/List/ListHiddenScreen.tsx:144
 msgid "Either the creator of this list has blocked you or you have blocked the creator."
 msgstr "Enten har listens skaber blokeret dig, eller også har du blokeret listens skaber."
 
 #: src/screens/Settings/AccountSettings.tsx:69
-#: src/screens/Signup/StepInfo/index.tsx:234
+#: src/screens/Signup/StepInfo/index.tsx:241
 msgid "Email"
 msgstr "E-mail"
 
@@ -4576,7 +4566,7 @@ msgstr "2FA via e-mail deaktiveret"
 msgid "Email 2FA enabled"
 msgstr "2FA via e-mail aktiveret"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:94
+#: src/screens/Login/ForgotPasswordForm.tsx:85
 msgid "Email address"
 msgstr "E-mailadresse"
 
@@ -4727,11 +4717,11 @@ msgstr "Indtast den 6-cfirede kode sendt til {prettyNumber}"
 msgid "Enter the domain you want to use"
 msgstr "Indtast det domæne, du ønsker at bruge"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:113
+#: src/screens/Login/ForgotPasswordForm.tsx:104
 msgid "Enter the email you used to create your account. We'll send you a \"reset code\" so you can set a new password."
 msgstr "Indtast den e-mailadresse, du brugte, da du oprettede din konto. Vi sender dig en nulstillingskode, så du kan vælge en ny adgangskode."
 
-#: src/screens/Login/LoginForm.tsx:338
+#: src/screens/Login/LoginForm.tsx:393
 msgid "Enter the username or email address you used when you created your account"
 msgstr "Indtast det brugernavn eller den e-mailadresse, du brugte, da du oprettede din konto"
 
@@ -4739,12 +4729,12 @@ msgstr "Indtast det brugernavn eller den e-mailadresse, du brugte, da du oprette
 msgid "Enter your birthdate"
 msgstr "Indtast din fødselsdato"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:100
-#: src/screens/Signup/StepInfo/index.tsx:254
+#: src/screens/Login/ForgotPasswordForm.tsx:91
+#: src/screens/Signup/StepInfo/index.tsx:261
 msgid "Enter your email address"
 msgstr "Indtast din e-mailadresse"
 
-#: src/screens/Login/LoginForm.tsx:390
+#: src/screens/Login/LoginForm.tsx:445
 #: src/screens/Settings/components/DeleteAccountDialog.tsx:297
 msgid "Enter your password"
 msgstr "Indtast din adgangskode"
@@ -4774,7 +4764,7 @@ msgstr "Kunne ikke hente seneste data."
 msgid "Error loading post"
 msgstr "Fejl ved indlæsning af opslag"
 
-#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:156
+#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:154
 msgid "Error loading preference"
 msgstr "Kunne ikke indlæse indstilling"
 
@@ -4866,11 +4856,11 @@ msgstr "Udvid eller sammenklap det fulde opslag, du besvarer"
 msgid "Expand post text"
 msgstr "Udvid opslagets tekst"
 
-#: src/screens/VideoFeed/index.tsx:1111
+#: src/screens/VideoFeed/index.tsx:1098
 msgid "Expands or collapses post text"
 msgstr "Udvider eller sammenklapper opslagets tekst"
 
-#: src/lib/api/index.ts:500
+#: src/lib/api/index.ts:504
 msgid "Expected uri to resolve to a record"
 msgstr "Forventede, at URI henviste til et dataelement"
 
@@ -4911,8 +4901,8 @@ msgstr "Pornografiske billeder."
 
 #: src/Navigation.tsx:793
 #: src/screens/Search/Shell.tsx:549
-#: src/view/shell/desktop/LeftNav.tsx:676
-#: src/view/shell/Drawer.tsx:476
+#: src/view/shell/desktop/LeftNav.tsx:684
+#: src/view/shell/Drawer.tsx:480
 msgid "Explore"
 msgstr "Udforsk"
 
@@ -5136,13 +5126,13 @@ msgid "Failed to lock group chat"
 msgstr "Kunne ikke låse gruppechat"
 
 #: src/screens/Messages/ChatList.tsx:636
-#: src/view/shell/bottom-bar/BottomBar.tsx:447
+#: src/view/shell/bottom-bar/BottomBar.tsx:453
 msgid "Failed to mark all chats as read"
 msgstr "Kunne ikke markere alle chats som læst"
 
 #: src/screens/Messages/ChatList.tsx:645
 #: src/screens/Messages/Inbox.tsx:303
-#: src/view/shell/bottom-bar/BottomBar.tsx:456
+#: src/view/shell/bottom-bar/BottomBar.tsx:462
 msgid "Failed to mark all requests as read"
 msgstr "Kunne ikke markere alle anmodninger som læst"
 
@@ -5200,7 +5190,7 @@ msgstr "Kunne ikke fjerne verifikation"
 msgid "Failed to rescind your request. Please try again."
 msgstr "Kunne ikke trække din anmodning tilbage. Prøv igen."
 
-#: src/components/dialogs/DeviceLocationRequestDialog.tsx:81
+#: src/components/dialogs/DeviceLocationRequestDialog.tsx:82
 msgid "Failed to resolve location. Please try again."
 msgstr "Kunne ikke bestemme din lokalitet. Prøv igen senere."
 
@@ -5236,9 +5226,9 @@ msgstr "Kunne ikke sende e-mail, prøv igen."
 msgid "Failed to send report"
 msgstr "Kunne ikke sende fejlmelding"
 
-#: src/components/moderation/AppealForm.tsx:88
-#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:76
-#: src/screens/Messages/components/ChatDisabled.tsx:117
+#: src/components/moderation/AppealForm.tsx:89
+#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:75
+#: src/screens/Messages/components/ChatDisabled.tsx:116
 msgid "Failed to submit appeal, please try again."
 msgstr "Afsendelse af klage fejlede, prøv igen."
 
@@ -5336,7 +5326,7 @@ msgstr "Feed utilgængeligt"
 
 #: src/view/shell/desktop/RightNav.tsx:109
 #: src/view/shell/desktop/RightNav.tsx:110
-#: src/view/shell/Drawer.tsx:430
+#: src/view/shell/Drawer.tsx:434
 msgid "Feedback"
 msgstr "Kontakt"
 
@@ -5353,8 +5343,8 @@ msgstr "Feedback blev sendt feedets ejer"
 #: src/screens/StarterPack/StarterPackScreen.tsx:193
 #: src/view/screens/Feeds.tsx:505
 #: src/view/screens/Profile.tsx:240
-#: src/view/shell/desktop/LeftNav.tsx:711
-#: src/view/shell/Drawer.tsx:592
+#: src/view/shell/desktop/LeftNav.tsx:719
+#: src/view/shell/Drawer.tsx:596
 msgid "Feeds"
 msgstr "Feeds"
 
@@ -5434,14 +5424,10 @@ msgstr "Endelig!"
 msgid "Finally! Keep track of posts that matter to you. Save them to revisit anytime."
 msgstr "Endelig! Hold styr på opslag, der er relevante for dig. Gem dem og find dem let igen senere."
 
-#: src/lib/interests.ts:60
-msgid "Finance"
-msgstr "Økonomi"
-
 #: src/view/com/posts/CustomFeedEmptyState.tsx:69
 #: src/view/com/posts/CustomFeedEmptyState.tsx:74
-#: src/view/com/posts/FollowingEmptyState.tsx:48
-#: src/view/com/posts/FollowingEmptyState.tsx:53
+#: src/view/com/posts/FollowingEmptyState.tsx:49
+#: src/view/com/posts/FollowingEmptyState.tsx:54
 #: src/view/com/posts/FollowingEndOfFeed.tsx:49
 #: src/view/com/posts/FollowingEndOfFeed.tsx:54
 msgid "Find accounts to follow"
@@ -5485,9 +5471,12 @@ msgid "Find your friends"
 msgstr "Find dine venner"
 
 #: src/screens/Onboarding/StepFindContactsIntro/index.tsx:46
-#: src/screens/Settings/FindContactsSettings.tsx:136
 msgid "Find your friends on Bluesky by verifying your phone number and matching with your contacts. We protect your information and you control what happens next. <0>Learn more</0>"
 msgstr "Find dine venner på Bluesky ved at bekræfte dit telefonnummer og sammenligne med dine kontakter. Vi passer på dine oplysninger, og du har selv kontrol over dem. <0>Læs mere</0>"
+
+#: src/screens/Settings/FindContactsSettings.tsx:136
+msgid "Find your friends on ORBIS by verifying your phone number and matching with your contacts. We protect your information and you control what happens next. <0>Learn more</0>"
+msgstr ""
 
 #: src/screens/Onboarding/StepFinished/ValuePropositionPager.shared.tsx:31
 msgid "Find your people"
@@ -5530,8 +5519,8 @@ msgstr "Fokuser søgefeltet"
 #: src/components/ProfileHoverCard/index.web.tsx:514
 #: src/screens/Messages/ConversationSettings/Member.tsx:170
 #: src/screens/PostThread/components/ThreadItemAnchorFollowButton.tsx:157
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:415
-#: src/screens/VideoFeed/index.tsx:994
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:416
+#: src/screens/VideoFeed/index.tsx:1000
 #: src/view/com/notifications/NotificationFeedItem.tsx:890
 #: src/view/com/notifications/NotificationFeedItem.tsx:897
 msgid "Follow"
@@ -5539,7 +5528,7 @@ msgstr "Følg"
 
 #. placeholder {0}: profile.handle
 #: src/screens/PostThread/components/ThreadItemAnchorFollowButton.tsx:144
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:403
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:404
 msgid "Follow {0}"
 msgstr "Følg {0}"
 
@@ -5547,7 +5536,7 @@ msgstr "Følg {0}"
 msgid "Follow {displayName}"
 msgstr "Følg {displayName}"
 
-#: src/screens/VideoFeed/index.tsx:973
+#: src/screens/VideoFeed/index.tsx:979
 msgid "Follow {handle}"
 msgstr "Følg {handle}"
 
@@ -5587,7 +5576,7 @@ msgstr "Følg alle konti"
 #. User is not following this account, click to follow back
 #: src/components/ProfileCard.tsx:552
 #: src/screens/PostThread/components/ThreadItemAnchorFollowButton.tsx:155
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:413
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:414
 #: src/view/com/notifications/NotificationFeedItem.tsx:890
 #: src/view/com/notifications/NotificationFeedItem.tsx:897
 msgid "Follow back"
@@ -5645,14 +5634,14 @@ msgstr "Følgere, du kender"
 #: src/components/ProfileHoverCard/index.web.tsx:502
 #: src/components/ProfileHoverCard/index.web.tsx:513
 #: src/screens/PostThread/components/ThreadItemAnchorFollowButton.tsx:160
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:411
-#: src/screens/VideoFeed/index.tsx:992
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:412
+#: src/screens/VideoFeed/index.tsx:998
 #: src/view/com/notifications/NotificationFeedItem.tsx:869
 #: src/view/com/notifications/NotificationFeedItem.tsx:885
 msgid "Following"
 msgstr "Følger"
 
-#: src/lib/strings/feed-names.ts:13
+#: src/lib/strings/feed-names.ts:27
 #: src/screens/SavedFeeds.tsx:618
 #: src/view/screens/Feeds.tsx:597
 msgctxt "feed-name"
@@ -5663,7 +5652,7 @@ msgstr "Følger"
 #. placeholder {0}: sanitizeDisplayName( displayNameOrHandle, moderation.ui('displayName'), )
 #. placeholder {0}: sanitizeDisplayName( profile.displayName || profile.handle, )
 #: src/components/ProfileCard.tsx:501
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:250
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:251
 #: src/view/com/notifications/NotificationFeedItem.tsx:820
 msgid "Following {0}"
 msgstr "Følger {0}"
@@ -5672,7 +5661,7 @@ msgstr "Følger {0}"
 msgid "Following {displayName}"
 msgstr "Følger {displayName}"
 
-#: src/screens/VideoFeed/index.tsx:972
+#: src/screens/VideoFeed/index.tsx:978
 msgid "Following {handle}"
 msgstr "Følger {handle}"
 
@@ -5698,10 +5687,6 @@ msgstr "Skrifttype"
 #: src/screens/Settings/AppearanceSettings.tsx:146
 msgid "Font size"
 msgstr "Tekststørrelse"
-
-#: src/lib/interests.ts:61
-msgid "Food"
-msgstr "Mad"
 
 #: src/ageAssurance/components/NoAccessScreen.tsx:109
 msgid "For organizational accounts, use the birthdate of the person who is responsible for the account."
@@ -5740,8 +5725,8 @@ msgstr "Ikke mere støj"
 msgid "Forgot Password"
 msgstr "Glemt adgangskode"
 
-#: src/screens/Login/LoginForm.tsx:422
-#: src/screens/Login/LoginForm.tsx:429
+#: src/screens/Login/LoginForm.tsx:470
+#: src/screens/Login/LoginForm.tsx:477
 msgid "Forgot password?"
 msgstr "Glemt adgangskode?"
 
@@ -5817,7 +5802,7 @@ msgstr "Germ DM forbundet"
 msgid "Get early access to experimental features we’re testing."
 msgstr "Vær med til at teste nye funktioner på vej."
 
-#: src/view/shell/Drawer.tsx:434
+#: src/view/shell/Drawer.tsx:438
 msgid "Get help"
 msgstr "Få hjælp"
 
@@ -5934,14 +5919,14 @@ msgstr "Forherligelse af vold"
 #: src/components/Layout/Header/index.tsx:134
 #: src/components/moderation/ScreenHider.tsx:157
 #: src/components/moderation/ScreenHider.tsx:166
-#: src/screens/Login/components/AuthLayout/Header/index.tsx:74
+#: src/screens/Login/components/AuthLayout/Header/index.tsx:72
 #: src/screens/Login/components/ConfirmHostingProviderDialog.tsx:160
 #: src/screens/Login/components/ConfirmHostingProviderDialog.tsx:163
 #: src/screens/ProfileList/components/ErrorScreen.tsx:35
 #: src/screens/ProfileList/components/ErrorScreen.tsx:41
 #: src/screens/VideoFeed/components/Header.tsx:163
-#: src/screens/VideoFeed/index.tsx:1296
-#: src/screens/VideoFeed/index.tsx:1300
+#: src/screens/VideoFeed/index.tsx:1283
+#: src/screens/VideoFeed/index.tsx:1287
 #: src/view/com/auth/LoggedOut.tsx:127
 #: src/view/com/profile/ProfileFollowers.tsx:225
 #: src/view/com/profile/ProfileFollowers.tsx:226
@@ -5994,7 +5979,7 @@ msgid "Go live for"
 msgstr "Gå live i"
 
 #. placeholder {0}: name.displayName
-#: src/components/Post/KnownLikers.tsx:76
+#: src/components/Post/KnownLikers.tsx:75
 msgid "Go to {0}'s profile"
 msgstr "Gå til {0}s profil"
 
@@ -6018,15 +6003,15 @@ msgstr "Gå til samtale med {0}"
 msgid "Go to feed"
 msgstr "Gå til feed"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:172
+#: src/screens/Login/ForgotPasswordForm.tsx:163
 msgid "Go to next"
 msgstr "Gå til næste"
 
 #: src/components/dms/ConvoMenu.tsx:262
 #: src/screens/Messages/components/MessagesListInfoPanel.tsx:102
 #: src/screens/Messages/ConversationSettings/MemberMenu.tsx:194
-#: src/view/shell/desktop/LeftNav.tsx:336
-#: src/view/shell/desktop/LeftNav.tsx:342
+#: src/view/shell/desktop/LeftNav.tsx:338
+#: src/view/shell/desktop/LeftNav.tsx:344
 msgid "Go to profile"
 msgstr "Gå til profil"
 
@@ -6042,7 +6027,7 @@ msgstr "Gå til brugers profil"
 msgid "Go to user’s profile"
 msgstr "Gå til brugers profil"
 
-#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:104
+#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:103
 msgid "Going live is currently disabled for your account"
 msgstr "Din konto er i øjeblikket spærret for at gå live"
 
@@ -6227,7 +6212,7 @@ msgstr "Hadtale"
 msgid "Have a code? <0>Click here.</0>"
 msgstr "Har du en kode? <0>Klik her.</0>"
 
-#: src/screens/Signup/StepInfo/index.tsx:334
+#: src/screens/Signup/StepInfo/index.tsx:346
 msgid "Have we got your location wrong? <0>Tap here to update your location with GPS.</0>"
 msgstr "Er din lokalitet forkert? <0>Tryk her for at opdatere din lokalitet med GPS.</0>"
 
@@ -6243,7 +6228,7 @@ msgstr "Gemmes af Bluesky i 7 dage for at forhindre misbrug og slettes herefter"
 #: src/screens/Settings/Settings.tsx:263
 #: src/view/shell/desktop/RightNav.tsx:130
 #: src/view/shell/desktop/RightNav.tsx:133
-#: src/view/shell/Drawer.tsx:443
+#: src/view/shell/Drawer.tsx:447
 msgid "Help"
 msgstr "Hjælp"
 
@@ -6273,7 +6258,7 @@ msgstr "Halløj!"
 msgid "Hidden"
 msgstr "Skjult"
 
-#: src/screens/VideoFeed/index.tsx:774
+#: src/screens/VideoFeed/index.tsx:777
 msgid "Hidden by your moderation settings."
 msgstr "Skjult af dine moderationsindstillinger."
 
@@ -6310,7 +6295,7 @@ msgstr "Skjul gruppechatopdateringer"
 msgid "Hide lists"
 msgstr "Skjul lister"
 
-#: src/screens/Login/LoginForm.tsx:619
+#: src/screens/Login/LoginForm.tsx:658
 msgid "Hide password"
 msgstr "Skjul adgangskode"
 
@@ -6392,23 +6377,23 @@ msgstr "Hmm, det ser ud til, at vi ikke kunne beregne dit adgangsniveau. Prøv i
 msgid "Hmm, it seems your device was unable to share age information with us."
 msgstr "Hmm, det ser ud til, at din enhed ikke kunne dele aldersoplysninger med os."
 
-#: src/view/com/posts/PostFeedErrorMessage.tsx:123
+#: src/view/com/posts/PostFeedErrorMessage.tsx:134
 msgid "Hmm, some kind of issue occurred when contacting the feed server. Please let the feed owner know about this issue."
 msgstr "Hmm, der opstod en fejl ved forbindelsen til feedserveren. Fortæl feedets ejer om dette problem."
 
-#: src/view/com/posts/PostFeedErrorMessage.tsx:111
+#: src/view/com/posts/PostFeedErrorMessage.tsx:122
 msgid "Hmm, the feed server appears to be misconfigured. Please let the feed owner know about this issue."
 msgstr "Hmm, feedserveren ser ud til at være fejlkonfigureret. Fortæl feedets ejer om dette problem."
 
-#: src/view/com/posts/PostFeedErrorMessage.tsx:117
+#: src/view/com/posts/PostFeedErrorMessage.tsx:128
 msgid "Hmm, the feed server appears to be offline. Please let the feed owner know about this issue."
 msgstr "Hmm, feedserveren ser ud til at være offline. Fortæl feedets ejer om dette problem."
 
-#: src/view/com/posts/PostFeedErrorMessage.tsx:114
+#: src/view/com/posts/PostFeedErrorMessage.tsx:125
 msgid "Hmm, the feed server gave a bad response. Please let the feed owner know about this issue."
 msgstr "Hmm, feedserveren gav et ugyldigt svar. Fortæl feedets ejer om dette problem."
 
-#: src/view/com/posts/PostFeedErrorMessage.tsx:108
+#: src/view/com/posts/PostFeedErrorMessage.tsx:119
 msgid "Hmm, we're having trouble finding this feed. It may have been deleted."
 msgstr "Hmm, vi kan ikke finde dette feed. Det er muligvis blevet slettet."
 
@@ -6426,9 +6411,9 @@ msgstr "Vent lidt! Vi udruller gradvist adgang til video, og du er stadig i kø.
 
 #: src/Navigation.tsx:788
 #: src/Navigation.tsx:809
-#: src/view/shell/bottom-bar/BottomBar.tsx:196
-#: src/view/shell/desktop/LeftNav.tsx:666
-#: src/view/shell/Drawer.tsx:502
+#: src/view/shell/bottom-bar/BottomBar.tsx:202
+#: src/view/shell/desktop/LeftNav.tsx:671
+#: src/view/shell/Drawer.tsx:506
 msgid "Home"
 msgstr "Forside"
 
@@ -6438,19 +6423,8 @@ msgstr "Server:"
 
 #: src/components/dialogs/ServerInput.tsx:138
 #: src/screens/Login/components/HostingProviderDialog.tsx:159
-#: src/screens/Login/ForgotPasswordForm.tsx:84
-#: src/screens/Login/LoginForm.tsx:665
 msgid "Hosting provider"
 msgstr "Udbyder"
-
-#. placeholder {0}: toNiceHostingUrl(state.pdsUrl)
-#: src/screens/Login/LoginForm.tsx:661
-msgid "Hosting provider: {0}"
-msgstr "Udbyder: {0}"
-
-#: src/screens/Login/LoginForm.tsx:663
-msgid "Hosting provider: Bluesky"
-msgstr "Udbyder: Bluesky"
 
 #: src/components/contacts/components/InviteInfo.tsx:54
 msgid "How it works:"
@@ -6504,7 +6478,7 @@ msgstr "Hvis ingen er valgt, vil alle sprog optræde i dine feeds."
 msgid "If you are 18 years of age or older and want to try again, click the button below and use a different verification method if one is available in your region. If you have questions or concerns, <0>our support team can help.</0>"
 msgstr "Hvis du er over 18 år og ønsker at prøve igen, så klik på knappen herunder og benyt en anden verifikationsmetode, hvis der er en tilgængelig i dit område. Hvis du har spørgsmål eller bekymringer, <0>kan vores supportteam hjælpe</0>."
 
-#: src/screens/Signup/StepInfo/index.tsx:351
+#: src/screens/Signup/StepInfo/index.tsx:363
 msgid "If you are not yet an adult according to the laws of your country, your parent or legal guardian must read these Terms on your behalf."
 msgstr "Hvis du endnu ikke er myndig i henhold til dit lands lovgivning, skal din forælder eller værge læse disse vilkår på dine vegne."
 
@@ -6569,13 +6543,13 @@ msgstr "Billede {0} af {1}"
 msgid "Image {0} of {imageCount}"
 msgstr "Billede {0} af {imageCount}"
 
-#: src/screens/Settings/AboutSettings.tsx:74
+#: src/screens/Settings/AboutSettings.tsx:75
 msgid "Image cache cleared"
 msgstr "Billedcache blev tømt"
 
 #. Android-only toast message which includes amount of space freed using localized number formatting
 #. placeholder {0}: i18n.number( Math.abs(sizeDiffBytes / 1024 / 1024), { notation: 'compact', style: 'unit', unit: 'megabyte', }, )
-#: src/screens/Settings/AboutSettings.tsx:60
+#: src/screens/Settings/AboutSettings.tsx:61
 msgid "Image cache cleared, freed {0}"
 msgstr "Billedcache tømt, frigjorde {0}"
 
@@ -6719,7 +6693,7 @@ msgstr "Inkluder opslag oprettet indtil denne dato"
 msgid "Include video timestamp ({videoTimestamp})"
 msgstr "Inkluder videotidsstempel ({videoTimestamp})"
 
-#: src/screens/Login/LoginForm.tsx:164
+#: src/screens/Login/LoginForm.tsx:147
 msgid "Incorrect username or password"
 msgstr "Forkert brugernavn eller adgangskode"
 
@@ -6731,7 +6705,7 @@ msgstr "Indtast kode sendt med e-mail for at nulstille adgangskode"
 msgid "Input new password"
 msgstr "Indtast ny adgangskode"
 
-#: src/screens/Login/LoginForm.tsx:457
+#: src/screens/Login/LoginForm.tsx:506
 msgid "Input the code which has been emailed to you"
 msgstr "Indtast den kode, du har modtaget på e-mail"
 
@@ -6763,7 +6737,7 @@ msgstr "Vi præsenterer: Gruppechats"
 msgid "Introducing saved posts AKA bookmarks"
 msgstr "Vi præsenterer: Gemte opslag, også kendt som bogmærker"
 
-#: src/screens/Login/LoginForm.tsx:155
+#: src/screens/Login/LoginForm.tsx:138
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:78
 msgid "Invalid 2FA confirmation code."
 msgstr "Ugyldig 2FA-bekræftelseskode"
@@ -6807,16 +6781,16 @@ msgstr "Inviter"
 msgid "Invite {name} to join Bluesky"
 msgstr "Inviter {name} til at oprette sig på Bluesky"
 
-#: src/screens/Signup/StepInfo/index.tsx:204
+#: src/screens/Signup/StepInfo/index.tsx:211
 msgid "Invite code"
 msgstr "Invitationskode"
 
-#: src/screens/Signup/state.ts:360
+#: src/screens/Signup/state.ts:366
 msgid "Invite code not accepted. Check that you input it correctly and try again."
 msgstr "Invitationskode ikke accepteret. Tjek at du har indtastet den korrekt og prøv igen."
 
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:358
-#: src/view/shell/Drawer.tsx:122
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:359
+#: src/view/shell/Drawer.tsx:123
 msgid "Invite friends"
 msgstr "Inviter venner"
 
@@ -6843,10 +6817,6 @@ msgstr "Invitationslink"
 msgctxt "profile invite"
 msgid "Invite link"
 msgstr "Invitationslink"
-
-#: src/features/inviteFriends/InviteFriendsDialogInner.tsx:128
-msgid "Invite link copied"
-msgstr "Invitationslink kopieret"
 
 #: src/components/dms/getSystemMessageInfo.ts:140
 msgid "Invite link created"
@@ -6890,7 +6860,7 @@ msgstr "Invitationer, men personlige"
 msgid "It looks like some of your contacts have not tried to find you here yet. You can personally invite them by customizing a draft message we will provide."
 msgstr "Det ser ud til, at nogle af dine kontakter endnu ikke har forsøgt at finde dig her. Du kan sende dem en personlig invitation ved at tilpasse det udkast, vi stiller til rådighed."
 
-#: src/screens/Signup/StepInfo/index.tsx:384
+#: src/screens/Signup/StepInfo/index.tsx:396
 msgid "It's correct"
 msgstr "Ja, det er korrekt"
 
@@ -6907,11 +6877,6 @@ msgstr "Lige nu er der kun dig! Føj flere personer til din startpakke ved at s�
 #: src/view/com/composer/Composer.tsx:2641
 msgid "Job ID: {0}"
 msgstr "Job-ID: {0}"
-
-#. Link to a page with job openings at Bluesky
-#: src/view/com/auth/SplashScreen.web.tsx:180
-msgid "Jobs"
-msgstr "Jobs"
 
 #: src/components/dms/ChatInvite/Root.tsx:118
 #: src/components/intents/GroupChatJoinDialog.tsx:301
@@ -6936,13 +6901,9 @@ msgid "Join request rescinded."
 msgstr "Anmodning om deltagelse trukket tilbage."
 
 #: src/components/StarterPack/QrCode.tsx:64
-#: src/view/shell/NavSignupCard.tsx:41
+#: src/view/shell/NavSignupCard.tsx:40
 msgid "Join the conversation"
 msgstr "Deltag i samtalen"
-
-#: src/lib/interests.ts:63
-msgid "Journalism"
-msgstr "Journalistik"
 
 #: src/view/com/composer/Composer.tsx:1556
 #: src/view/com/composer/Composer.tsx:1571
@@ -7050,10 +7011,6 @@ msgstr "Læs mere om <0>hvordan du bruger avanceret søgning</0>."
 msgid "Learn more about age assurance"
 msgstr "Læs mere om alderstjek"
 
-#: src/view/com/auth/SplashScreen.web.tsx:168
-msgid "Learn more about Bluesky"
-msgstr "Læs mere om Bluesky"
-
 #: src/components/contacts/components/InviteInfo.tsx:33
 msgid "Learn more about how inviting friends works"
 msgstr "Læs mere om, hvordan du inviterer venner"
@@ -7094,10 +7051,10 @@ msgctxt "english-only-resource"
 msgid "Learn more about verification on Bluesky"
 msgstr "Læs mere om verifikation på Bluesky"
 
-#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:130
-#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:133
-msgid "Learn more about what is public on Bluesky."
-msgstr "Læs mere om, hvad der er offentligt på Bluesky."
+#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:129
+#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:131
+msgid "Learn more about what is public on ORBIS."
+msgstr ""
 
 #: src/screens/Profile/components/GermButton.tsx:217
 msgid "Learn more about your Germ DM link"
@@ -7200,6 +7157,7 @@ msgid "Light"
 msgstr "Lys"
 
 #: src/screens/CustomFeed/components/CustomFeedHeader.tsx:572
+#: src/screens/VideoFeed/components/VideoSideActions.tsx:110
 msgid "Like"
 msgstr "Like"
 
@@ -7222,7 +7180,7 @@ msgstr "Like 10 opslag for at træne Discover-feedet"
 msgid "Like this feed"
 msgstr "Like dette feed"
 
-#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:145
+#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:146
 msgid "Like this labeler"
 msgstr "Like denne mærkningstjeneste"
 
@@ -7247,7 +7205,7 @@ msgstr "Liket af {0, plural, one {# bruger} other {# brugere}}"
 #. Social proof below a post; the bolded name is a person the viewer follows who liked the post
 #. placeholder {0}: nameLink(names[0])
 #. placeholder {0}: names[0].displayName
-#: src/components/Post/KnownLikers.tsx:68
+#: src/components/Post/KnownLikers.tsx:67
 #: src/components/Post/KnownLikers.tsx:111
 msgid "Liked by {0}"
 msgstr "Liket af {0}"
@@ -7257,15 +7215,15 @@ msgstr "Liket af {0}"
 #. placeholder {0}: names[0].displayName
 #. placeholder {1}: nameLink(names[1])
 #. placeholder {1}: names[1].displayName
-#: src/components/Post/KnownLikers.tsx:67
+#: src/components/Post/KnownLikers.tsx:66
 #: src/components/Post/KnownLikers.tsx:107
 msgid "Liked by {0} and {1}"
 msgstr "Liket af {0} og {1}"
 
 #: src/components/LabelingServiceCard/index.tsx:96
 #: src/screens/CustomFeed/components/CustomFeedHeader.tsx:548
-#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:165
-#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:179
+#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:166
+#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:180
 msgid "Liked by {likeCount, plural, one {# user} other {# users}}"
 msgstr "Liket af {likeCount, plural, one {# bruger} other {# brugere}}"
 
@@ -7285,6 +7243,10 @@ msgstr "Likes af dine videredelinger"
 #: src/screens/PostThread/components/LikesStat.tsx:31
 msgid "Likes on this post"
 msgstr "Likes af dette opslag"
+
+#: src/screens/VideoFeed/components/VideoSideActions.tsx:111
+msgid "Likes the post"
+msgstr ""
 
 #: src/screens/PostThread/components/HeaderDropdown.tsx:49
 #: src/screens/PostThread/components/HeaderDropdown.tsx:54
@@ -7390,8 +7352,8 @@ msgstr "Liste ikke længere skjult"
 #: src/view/screens/Lists.tsx:60
 #: src/view/screens/Profile.tsx:234
 #: src/view/screens/Profile.tsx:242
-#: src/view/shell/desktop/LeftNav.tsx:721
-#: src/view/shell/Drawer.tsx:607
+#: src/view/shell/desktop/LeftNav.tsx:729
+#: src/view/shell/Drawer.tsx:611
 msgid "Lists"
 msgstr "Lister"
 
@@ -7444,18 +7406,25 @@ msgstr "Indlæs flere"
 msgid "Load more suggested feeds"
 msgstr "Indlæs flere foreslåede feeds"
 
+#. Accessible action on the notification list pill.
+#: src/components/NewPostsPill/index.tsx:163
 #: src/view/screens/Notifications.tsx:271
 msgid "Load new notifications"
 msgstr "Indlæs nye notifikationer"
 
+#: src/components/NewPostsPill/index.tsx:168
 #: src/screens/CustomFeed/index.tsx:208
 #: src/screens/Profile/Sections/Feed.tsx:121
 #: src/screens/ProfileList/FeedSection.tsx:113
-#: src/view/com/feeds/FeedPage.tsx:168
+#: src/view/com/feeds/FeedPage.tsx:169
 msgid "Load new posts"
 msgstr "Indlæs nye opslag"
 
-#: src/screens/Messages/components/MessageComposer.tsx:257
+#: src/view/screens/Storybook/NewPostsPill.tsx:138
+msgid "Load new posts from the people you follow"
+msgstr ""
+
+#: src/screens/Messages/components/MessageComposer.tsx:269
 msgctxt "placeholder"
 msgid "Loading chat…"
 msgstr "Indlæser chat…"
@@ -7500,12 +7469,7 @@ msgstr "Log"
 msgid "Logged out"
 msgstr "Logget ud"
 
-#: src/view/shell/desktop/RightNav.tsx:142
-msgid "Logo by @sawaratsuki.bsky.social"
-msgstr "Logo af @sawaratsuki.bsky.social"
-
-#: src/view/shell/desktop/RightNav.tsx:139
-#: src/view/shell/Drawer.tsx:771
+#: src/view/shell/Drawer.tsx:788
 msgid "Logo by <0>@sawaratsuki.bsky.social</0>"
 msgstr "Logo af <0>@sawaratsuki.bsky.social</0>"
 
@@ -7578,8 +7542,8 @@ msgstr "Marker alle læst"
 
 #: src/screens/Messages/ChatList.tsx:655
 #: src/screens/Messages/ChatList.tsx:659
-#: src/view/shell/bottom-bar/BottomBar.tsx:465
-#: src/view/shell/bottom-bar/BottomBar.tsx:469
+#: src/view/shell/bottom-bar/BottomBar.tsx:471
+#: src/view/shell/bottom-bar/BottomBar.tsx:475
 msgid "Mark all chats as read"
 msgstr "Marker alle chats som læst"
 
@@ -7589,8 +7553,8 @@ msgstr "Marker alle anmeldelser som læst"
 
 #: src/screens/Messages/ChatList.tsx:663
 #: src/screens/Messages/ChatList.tsx:667
-#: src/view/shell/bottom-bar/BottomBar.tsx:473
-#: src/view/shell/bottom-bar/BottomBar.tsx:477
+#: src/view/shell/bottom-bar/BottomBar.tsx:479
+#: src/view/shell/bottom-bar/BottomBar.tsx:483
 msgid "Mark all requests as read"
 msgstr "Marker alle anmodninger som læst"
 
@@ -7604,12 +7568,12 @@ msgid "Marked all as read"
 msgstr "Marker alle som læst"
 
 #: src/screens/Messages/ChatList.tsx:633
-#: src/view/shell/bottom-bar/BottomBar.tsx:444
+#: src/view/shell/bottom-bar/BottomBar.tsx:450
 msgid "Marked all chats as read"
 msgstr "Markerede alle chats som læst"
 
 #: src/screens/Messages/ChatList.tsx:642
-#: src/view/shell/bottom-bar/BottomBar.tsx:453
+#: src/view/shell/bottom-bar/BottomBar.tsx:459
 msgid "Marked all requests as read"
 msgstr "Markerede alle anmodninger som læst"
 
@@ -7679,7 +7643,7 @@ msgctxt "action"
 msgid "Message"
 msgstr "Send besked"
 
-#: src/screens/Messages/components/MessageComposer.tsx:258
+#: src/screens/Messages/components/MessageComposer.tsx:270
 msgctxt "description"
 msgid "Message"
 msgstr "Besked"
@@ -7714,15 +7678,15 @@ msgid "Message from @{0}: {1}"
 msgstr "Besked fra @{0}: {1}"
 
 #. placeholder {0}: rawError.message
-#: src/view/com/posts/PostFeedErrorMessage.tsx:207
+#: src/view/com/posts/PostFeedErrorMessage.tsx:218
 msgid "Message from server: {0}"
 msgstr "Besked fra server: {0}"
 
-#: src/screens/Messages/components/MessageComposer.tsx:254
+#: src/screens/Messages/components/MessageComposer.tsx:266
 msgid "Message input field"
 msgstr "Beskedfelt"
 
-#: src/screens/Messages/components/MessageComposer.tsx:117
+#: src/screens/Messages/components/MessageComposer.tsx:127
 msgid "Message is too long ({graphemeCount}/{MAX_DM_GRAPHEME_LENGTH})"
 msgstr "Besked for lang ({graphemeCount}/{MAX_DM_GRAPHEME_LENGTH})"
 
@@ -7866,14 +7830,6 @@ msgstr "Ryk feed ned"
 msgid "Move feed up"
 msgstr "Ryk feed op"
 
-#: src/lib/interests.ts:64
-msgid "Movies"
-msgstr "Film"
-
-#: src/lib/interests.ts:65
-msgid "Music"
-msgstr "Musik"
-
 #: src/screens/Messages/ConversationSettings/index.tsx:529
 msgid "Mute"
 msgstr "Lydløs"
@@ -8016,10 +7972,6 @@ msgstr "Min startpakke"
 msgid "Name"
 msgstr "Navn"
 
-#: src/lib/interests.ts:66
-msgid "Nature"
-msgstr "Natur"
-
 #. placeholder {0}: record.name
 #. placeholder {0}: view.record.name
 #: src/components/StarterPack/StarterPackCard.tsx:126
@@ -8031,13 +7983,13 @@ msgstr "Gå til {0}"
 msgid "Navigate to Starter Pack"
 msgstr "Gå til startpakke"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:148
-#: src/screens/Login/ForgotPasswordForm.tsx:173
-#: src/screens/Login/LoginForm.tsx:556
+#: src/screens/Login/ForgotPasswordForm.tsx:139
+#: src/screens/Login/ForgotPasswordForm.tsx:164
+#: src/screens/Login/LoginForm.tsx:600
 msgid "Navigates to the next screen"
 msgstr "Går til næste skærmbillede"
 
-#: src/view/shell/Drawer.tsx:93
+#: src/view/shell/Drawer.tsx:94
 msgid "Navigates to your profile"
 msgstr "Går til din profil"
 
@@ -8055,6 +8007,12 @@ msgstr "Glem det, opret et handle til mig"
 msgctxt "action"
 msgid "New"
 msgstr "Ny"
+
+#. A short label offering newly arrived notifications.
+#: src/components/NewPostsPill/index.tsx:241
+msgctxt "new content pill"
+msgid "New"
+msgstr ""
 
 #: src/components/dialogs/nuxs/GroupChatsAnnouncement.tsx:171
 msgctxt "nux-description"
@@ -8169,11 +8127,19 @@ msgstr "Ny adgangskode"
 msgid "New post"
 msgstr "Nyt opslag"
 
-#: src/view/com/feeds/FeedPage.tsx:179
-#: src/view/shell/desktop/LeftNav.tsx:597
+#: src/view/com/feeds/FeedPage.tsx:180
+#: src/view/shell/desktop/LeftNav.tsx:599
 msgctxt "action"
 msgid "New post"
 msgstr "Nyt opslag"
+
+#: src/components/NewPostsPill/index.tsx:236
+msgid "New posts"
+msgstr ""
+
+#: src/view/screens/Storybook/NewPostsPill.tsx:137
+msgid "New posts are ready to load from the people you follow"
+msgstr ""
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:540
 msgid "New posts from {firstAuthorLink} and <0>{additionalAuthorsCount, plural, one {{formattedAuthorsCount} other} other {{formattedAuthorsCount} others}}</0> "
@@ -8187,11 +8153,11 @@ msgstr "Nye opslag fra {firstAuthorName} og {additionalAuthorsCount, plural, one
 msgid "New Starter Pack"
 msgstr "Ny startpakke"
 
-#: src/screens/Login/LoginForm.tsx:570
-msgid "New to Bluesky? <0>Sign up</0>"
-msgstr "Ny på Bluesky? <0>Opret konto</0>"
+#: src/screens/Login/LoginForm.tsx:614
+msgid "New to ORBIS? <0>Sign up</0>"
+msgstr ""
 
-#: src/components/NewskieDialog.tsx:123
+#: src/components/dialogs/NewskieDialog/index.tsx:100
 msgid "New user info dialog"
 msgstr "Ny bruger"
 
@@ -8202,7 +8168,6 @@ msgstr "Ny bruger"
 msgid "Newest replies first"
 msgstr "Nyeste svar først"
 
-#: src/lib/interests.ts:67
 #: src/screens/Search/modules/ExploreTrendingTopics.tsx:252
 msgid "News"
 msgstr "Nyheder"
@@ -8211,8 +8176,8 @@ msgstr "Nyheder"
 #: src/components/contacts/screens/ViewMatches.tsx:418
 #: src/components/dms/AddMembersFlow.tsx:325
 #: src/components/dms/InitiateChatFlow.tsx:599
-#: src/screens/Login/ForgotPasswordForm.tsx:147
-#: src/screens/Login/ForgotPasswordForm.tsx:154
+#: src/screens/Login/ForgotPasswordForm.tsx:138
+#: src/screens/Login/ForgotPasswordForm.tsx:145
 #: src/screens/Login/SetNewPasswordForm.tsx:176
 #: src/screens/Login/SetNewPasswordForm.tsx:182
 #: src/screens/Onboarding/StepFinished/index.tsx:336
@@ -8329,7 +8294,7 @@ msgstr "Ingen lister"
 #. placeholder {0}: sanitizeDisplayName( displayNameOrHandle, moderation.ui('displayName'), )
 #. placeholder {0}: sanitizeDisplayName( profile.displayName || profile.handle, )
 #: src/components/ProfileCard.tsx:529
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:279
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:280
 #: src/view/com/notifications/NotificationFeedItem.tsx:841
 msgid "No longer following {0}"
 msgstr "Følger ikke længere {0}"
@@ -8371,7 +8336,7 @@ msgstr "Ingen"
 
 #: src/screens/Settings/ActivityPrivacySettings.tsx:130
 #: src/screens/Settings/ActivityPrivacySettings.tsx:135
-#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:162
+#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:160
 msgctxt "enable for"
 msgid "No one"
 msgstr "Ingen"
@@ -8503,7 +8468,7 @@ msgstr "Intime billeder uden samtykke"
 msgid "Non-sexual Nudity"
 msgstr "Ikkeseksuel nøgenhed"
 
-#: src/components/OTAChannelNotice.tsx:37
+#: src/components/OTAChannelNotice.tsx:68
 msgid "Non-standard OTA channel"
 msgstr "Ikke-standard OTA-kanal"
 
@@ -8543,8 +8508,8 @@ msgid "Note about sharing"
 msgstr "Note vedr. deling"
 
 #: src/screens/Settings/PrivacyAndSecuritySettings.tsx:120
-msgid "Note: Bluesky is part of the Atmosphere, an open public network. These settings ask other apps and websites to limit your visibility, but they can choose not to. Your public content may still appear elsewhere."
-msgstr "OBS: Bluesky er en del af Atmosfæren, et åbent offentligt netværk. Disse indstillinger anmoder apps og websites om at begrænse din synlighed, men de kan vælge ikke at gøre dette. Dit offentlige indhold kan stadig dukke op andre steder."
+msgid "Note: ORBIS is part of the Atmosphere, an open public network. These settings ask other apps and websites to limit your visibility, but they can choose not to. Your public content may still appear elsewhere."
+msgstr ""
 
 #: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:133
 msgid "Note: This post is only visible to logged-in users."
@@ -8584,9 +8549,9 @@ msgstr "Notifikationslyde"
 #: src/screens/Settings/Settings.tsx:201
 #: src/screens/Settings/Settings.tsx:204
 #: src/view/screens/Notifications.tsx:128
-#: src/view/shell/bottom-bar/BottomBar.tsx:279
-#: src/view/shell/desktop/LeftNav.tsx:686
-#: src/view/shell/Drawer.tsx:555
+#: src/view/shell/bottom-bar/BottomBar.tsx:285
+#: src/view/shell/desktop/LeftNav.tsx:694
+#: src/view/shell/Drawer.tsx:559
 msgid "Notifications"
 msgstr "Notifikationer"
 
@@ -8618,7 +8583,7 @@ msgstr "Åh nej!"
 
 #. Confirm button text.
 #: src/components/contacts/screens/GetContacts.tsx:319
-#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:223
+#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:224
 #: src/screens/Search/modules/ExploreInterestsCard.tsx:44
 #: src/screens/Settings/AppIconSettings/index.tsx:46
 #: src/screens/Settings/AppIconSettings/index.tsx:232
@@ -8646,8 +8611,8 @@ msgid "On"
 msgstr "Aktiveret"
 
 #: src/screens/Settings/components/AlgoVisibilityOptOut.tsx:43
-msgid "On Bluesky, this means your posts will only appear in the Discover feed to people who follow you. Other apps can choose to use this preference in their own algorithmic recommendations."
-msgstr "På Bluesky betyder det, at dine indlæg kun vises i Discover-feedet for folk, der følger dig. Andre apps kan vælge at anvende denne præference i deres egne algoritmiske anbefalinger."
+msgid "On ORBIS, this means your posts will only appear in the Discover feed to people who follow you. Other apps can choose to use this preference in their own algorithmic recommendations."
+msgstr ""
 
 #: src/components/StarterPack/QrCode.tsx:78
 msgid "on<0><1/><2><3/></2></0>"
@@ -8718,7 +8683,7 @@ msgstr "Kun følgere kan deltage i denne gruppechat."
 
 #: src/screens/Settings/ActivityPrivacySettings.tsx:121
 #: src/screens/Settings/ActivityPrivacySettings.tsx:126
-#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:160
+#: src/screens/Settings/PrivacyAndSecuritySettings.tsx:158
 msgid "Only followers who I follow"
 msgstr "Kun følgere, jeg følger"
 
@@ -8807,7 +8772,7 @@ msgstr "Åbn kladde"
 msgid "Open drawer menu"
 msgstr "Åbn navigation"
 
-#: src/screens/Messages/components/MessageComposer.tsx:216
+#: src/screens/Messages/components/MessageComposer.tsx:228
 #: src/view/com/composer/Composer.tsx:2271
 msgid "Open emoji picker"
 msgstr "Åbn emojivælger"
@@ -8915,10 +8880,6 @@ msgstr "Åbner feedet {displayName}"
 msgid "Opens a dialog to add a content warning to your post"
 msgstr "Åbner en dialog, hvor du kan tilføje en indholdsadvarsel til dit opslag"
 
-#: src/screens/Login/LoginForm.tsx:651
-msgid "Opens a dialog to change the hosting provider you sign in to"
-msgstr "Åbner en dialog for at ændre den udbyder, du logger ind i"
-
 #: src/view/com/composer/threadgate/ThreadgateBtn.tsx:152
 msgid "Opens a dialog to choose who can interact with this post"
 msgstr "Åbner en dialog, hvor du kan angive, hvem der kan interagere med dette opslag"
@@ -8947,6 +8908,10 @@ msgstr "Åbner undertekst- og alt-tekstdialog"
 msgid "Opens change handle dialog"
 msgstr "Åbner handleskiftdialog"
 
+#: src/screens/VideoFeed/components/VideoSideActions.tsx:135
+msgid "Opens comments sheet"
+msgstr ""
+
 #: src/screens/PostThread/components/ThreadComposePrompt.tsx:64
 msgid "Opens composer"
 msgstr "Åbner skrivefelt til nyt opslag"
@@ -8960,17 +8925,29 @@ msgstr "Åbner enhedens kamera"
 msgid "Opens device gallery to select up to {MAX_GALLERY_IMAGES, plural, other {# images}}, or a single video or GIF."
 msgstr "Åbner enhedens kamerarulle for at vælge op til {MAX_GALLERY_IMAGES, plural, one {}other {# billeder}} eller en enkelt video eller GIF."
 
+#: src/view/com/auth/SplashScreen.web.tsx:167
+msgid "Opens flow to create a new account"
+msgstr ""
+
 #: src/screens/Messages/JoinRequest.tsx:313
-#: src/view/com/auth/SplashScreen.tsx:91
-#: src/view/com/auth/SplashScreen.web.tsx:111
 msgid "Opens flow to create a new Bluesky account"
 msgstr "Åbner formular til oprettelse af en ny Bluesky-konto"
 
+#: src/view/com/auth/SplashScreen.tsx:90
+msgid "Opens flow to create a new ORBIS account"
+msgstr ""
+
+#: src/view/com/auth/SplashScreen.web.tsx:190
+msgid "Opens flow to sign in to your existing account"
+msgstr ""
+
 #: src/screens/Messages/JoinRequest.tsx:299
-#: src/view/com/auth/SplashScreen.tsx:120
-#: src/view/com/auth/SplashScreen.web.tsx:125
 msgid "Opens flow to sign in to your existing Bluesky account"
 msgstr "Åbner formular til at logge ind på din eksisterende Bluesky-konto"
+
+#: src/view/com/auth/SplashScreen.tsx:118
+msgid "Opens flow to sign in to your existing ORBIS account"
+msgstr ""
 
 #: src/components/images/Gallery/index.tsx:460
 msgid "Opens full image"
@@ -8998,6 +8975,7 @@ msgid "Opens post language settings"
 msgstr "Åbner opslagets sprogindstillinger"
 
 #: src/components/dms/SystemMessageItem.tsx:61
+#: src/screens/VideoFeed/components/VideoSideActions.tsx:95
 msgid "Opens profile"
 msgstr "Åbner profil"
 
@@ -9010,7 +8988,7 @@ msgstr "Åbner indstillinger for at finde og invitere venner"
 msgid "Opens the GIF picker dialog"
 msgstr "Åbner GIF-vælgerdialogboksen"
 
-#: src/view/shell/Drawer.tsx:124
+#: src/view/shell/Drawer.tsx:125
 msgid "Opens the invite friends sheet to share your profile"
 msgstr "Åbner venneinvitationsfanen for deling af din profil"
 
@@ -9073,6 +9051,51 @@ msgstr "Eller fortsæt med en anden konto."
 #: src/screens/Deactivated.tsx:183
 msgid "Or, sign in to one of your other accounts."
 msgstr "Eller log på en af dine andre konti."
+
+#: src/screens/CustomFeed/components/CustomFeedHeader.tsx:522
+msgid "ORBIS"
+msgstr ""
+
+#: src/view/shell/desktop/RightNav.tsx:142
+msgid "ORBIS © 2026 @sawaratsuki.bsky.social"
+msgstr ""
+
+#: src/view/shell/desktop/RightNav.tsx:139
+msgid "ORBIS © 2026 <0>@sawaratsuki.bsky.social</0>"
+msgstr ""
+
+#: src/screens/Settings/AppIconSettings/useAppIconSets.ts:165
+msgctxt "Name of app icon variant"
+msgid "ORBIS Classic"
+msgstr ""
+
+#: src/screens/Login/components/HostingProviderDialog.tsx:236
+msgid "ORBIS is an open network where you can choose your hosting provider. If you're a developer, you can host your own server."
+msgstr ""
+
+#: src/screens/Settings/FindContactsSettings.tsx:579
+msgid "ORBIS stores your contacts as encoded data. Removing your contacts will immediately delete this data."
+msgstr ""
+
+#: src/screens/Takendown.tsx:213
+msgid "ORBIS Terms of Service"
+msgstr ""
+
+#: src/screens/Settings/components/PwiOptOut.tsx:102
+msgid "ORBIS will not show your account to logged-out users and will ask other apps to do the same. Other apps may not honor this request. It doesn't make your account private."
+msgstr ""
+
+#: src/screens/Settings/AppIconSettings/index.tsx:97
+msgid "ORBIS+"
+msgstr ""
+
+#: src/screens/Settings/AppIconSettings/index.tsx:100
+msgid "ORBIS+ icons"
+msgstr ""
+
+#: src/components/OTAChannelNotice.tsx:84
+msgid "OTA channel"
+msgstr ""
 
 #: src/screens/Settings/components/OTAInfo.tsx:60
 msgid "OTA status: ..."
@@ -9140,8 +9163,8 @@ msgid "Our moderation team has received your report."
 msgstr "Vores moderatorteam har modtaget din anmeldelse."
 
 #: src/screens/Messages/components/ChatDisabled.tsx:54
-msgid "Our moderators have reviewed reports and decided to disable your access to chats on Bluesky."
-msgstr "Vores moderatorer har gennemgået anmeldelser og besluttet at spærre din adgang til chats på Bluesky."
+msgid "Our moderators have reviewed reports and decided to disable your access to chats on ORBIS."
+msgstr ""
 
 #: src/components/dialogs/StarterPackDialog.tsx:372
 msgid "Owner"
@@ -9163,12 +9186,12 @@ msgstr "Side ikke fundet"
 msgid "Party GIFs"
 msgstr "Fest-GIF’er"
 
-#: src/screens/Login/LoginForm.tsx:366
-#: src/screens/Login/LoginForm.tsx:373
+#: src/screens/Login/LoginForm.tsx:421
+#: src/screens/Login/LoginForm.tsx:428
 #: src/screens/Settings/AccountSettings.tsx:124
 #: src/screens/Settings/AccountSettings.tsx:128
 #: src/screens/Settings/components/DeleteAccountDialog.tsx:290
-#: src/screens/Signup/StepInfo/index.tsx:269
+#: src/screens/Signup/StepInfo/index.tsx:276
 msgid "Password"
 msgstr "Adgangskode"
 
@@ -9273,10 +9296,6 @@ msgstr "Person tilføj/fjern"
 msgid "Personalize the message"
 msgstr "Tilpas beskeden"
 
-#: src/lib/interests.ts:68
-msgid "Pets"
-msgstr "Kæledyr"
-
 #: src/components/contacts/screens/PhoneInput.tsx:192
 #: src/components/contacts/screens/PhoneInput.tsx:204
 msgid "Phone number"
@@ -9285,10 +9304,6 @@ msgstr "Telefonnummer"
 #: src/components/contacts/screens/VerifyNumber.tsx:307
 msgid "Phone number verified"
 msgstr "Telefonnummer bekræftet"
-
-#: src/lib/interests.ts:69
-msgid "Photography"
-msgstr "Fotografi"
 
 #: src/features/inviteFriends/components/ThemePicker.tsx:39
 msgid "Pick a color theme"
@@ -9385,11 +9400,11 @@ msgstr "Vælg de mærkater, der beskriver det indhold, du er ved at slå op."
 msgid "Please check your email inbox for further instructions. It may take a minute or two to arrive."
 msgstr "Tjek din e-mail for yderligere instruktioner. Der kan gå et par minutter, før du modtager dem."
 
-#: src/screens/Signup/state.ts:307
+#: src/screens/Signup/state.ts:303
 msgid "Please choose your handle."
 msgstr "Vælg dit handle."
 
-#: src/screens/Signup/state.ts:299
+#: src/screens/Signup/state.ts:295
 #: src/screens/Signup/StepInfo/index.tsx:160
 msgid "Please choose your password."
 msgstr "Vælg din adgangskode."
@@ -9398,7 +9413,7 @@ msgstr "Vælg din adgangskode."
 msgid "Please click on the link in the email we just sent you to verify your new email address. This is an important step to allow you to continue enjoying all the features of Bluesky."
 msgstr "Klik på linket i den e-mail, vi lige har sendt dig, for at bekræfte din nye e-mailadresse. Dette er nødvendigt for, at du fortsat kan have glæde af alle Blueskys funktioner."
 
-#: src/screens/Signup/state.ts:319
+#: src/screens/Signup/state.ts:325
 msgid "Please complete the verification captcha."
 msgstr "Løs verifikationsopgaven"
 
@@ -9455,7 +9470,12 @@ msgstr "Indtast den kode, du har modtaget, samt den nye adgangskode, du ønsker 
 msgid "Please enter the security code we sent to your previous email address."
 msgstr "Indtast den sikkerhedskode, vi har sendt til din gamle e-mailadresse."
 
-#: src/screens/Signup/state.ts:283
+#: src/screens/Signup/state.ts:313
+#: src/screens/Signup/StepInfo/index.tsx:174
+msgid "Please enter your date of birth."
+msgstr ""
+
+#: src/screens/Signup/state.ts:279
 #: src/screens/Signup/StepInfo/index.tsx:133
 msgid "Please enter your email."
 msgstr "Indtast din e-mail."
@@ -9468,24 +9488,24 @@ msgstr "Indtast din invitationskode."
 msgid "Please enter your new email address."
 msgstr "Indtast din nye e-mailadresse."
 
-#: src/screens/Login/LoginForm.tsx:197
+#: src/screens/Login/LoginForm.tsx:178
 msgid "Please enter your password"
 msgstr "Indtast din adgangskode"
 
-#: src/screens/Login/LoginForm.tsx:191
+#: src/screens/Login/LoginForm.tsx:172
 msgid "Please enter your username"
 msgstr "Indtast dit brugernavn"
 
 #. placeholder {0}: labeler ? sanitizeHandle(labeler.creator.handle, '@') : label.src
-#: src/components/moderation/AppealForm.tsx:131
+#: src/components/moderation/AppealForm.tsx:132
 msgid "Please explain why you think this label was incorrectly applied by {0}"
 msgstr "Forklar, hvorfor du mener, at denne mærkat er anvendt fejlagtigt af {0}"
 
-#: src/screens/Messages/components/ChatDisabled.tsx:141
+#: src/screens/Messages/components/ChatDisabled.tsx:140
 msgid "Please explain why you think your chats were incorrectly disabled"
 msgstr "Forklar, hvorfor du mener, at dine chats er deaktiveret fejlagtigt"
 
-#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:123
+#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:122
 msgid "Please explain why you think your Go Live access was incorrectly disabled."
 msgstr "Forklar, hvorfor du mener, at din adgang til at gå live fejlagtigt er blevet spærret."
 
@@ -9494,7 +9514,7 @@ msgstr "Forklar, hvorfor du mener, at din adgang til at gå live fejlagtigt er b
 msgid "Please go back, or activate this element to return to the start of the active content."
 msgstr "Gå tilbage eller aktiver dette element for at vende tilbage til starten af det aktive indhold."
 
-#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:104
+#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:103
 msgid "Please provide any additional details you feel moderators may need in order to properly assess your Age Assurance status."
 msgstr "Angiv yderligere oplysninger, som du finder relevante for, at moderatorerne kan gennemføre alderstjek af dig."
 
@@ -9541,7 +9561,6 @@ msgstr "Indtast din e-mail"
 msgid "Please write your message below:"
 msgstr "Skriv din besked herunder:"
 
-#: src/lib/interests.ts:70
 #: src/screens/Search/modules/ExploreTrendingTopics.tsx:246
 msgid "Politics"
 msgstr "Politik"
@@ -9611,14 +9630,14 @@ msgctxt "toast"
 msgid "Post deleted"
 msgstr "Opslag slettet"
 
-#: src/lib/api/index.ts:194
+#: src/lib/api/index.ts:195
 msgid "Post failed to upload. Please check your Internet connection and try again."
 msgstr "Opslag kunne ikke publiceres. Tjek din internetforbindelse og prøv igen."
 
 #: src/screens/PostThread/components/ThreadItemAnchor.tsx:135
 #: src/screens/PostThread/components/ThreadItemPost.tsx:121
 #: src/screens/PostThread/components/ThreadItemTreePost.tsx:112
-#: src/screens/VideoFeed/index.tsx:565
+#: src/screens/VideoFeed/index.tsx:568
 msgid "Post has been deleted"
 msgstr "Indlæg er blevet slettet"
 
@@ -9756,6 +9775,10 @@ msgstr "Primært sprog"
 msgid "Privacy"
 msgstr "Privatliv"
 
+#: src/view/com/auth/SplashScreen.web.tsx:249
+msgid "Privacy & Terms"
+msgstr ""
+
 #: src/screens/Settings/Settings.tsx:185
 #: src/screens/Settings/Settings.tsx:188
 msgid "Privacy and security"
@@ -9776,11 +9799,9 @@ msgstr "Privatlivs- og sikkerhedsindstillinger"
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:36
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:103
 #: src/Navigation.tsx:362
-#: src/screens/Settings/AboutSettings.tsx:102
-#: src/screens/Settings/AboutSettings.tsx:105
-#: src/view/screens/PrivacyPolicy.tsx:25
-#: src/view/shell/Drawer.tsx:766
-#: src/view/shell/Drawer.tsx:767
+#: src/screens/Settings/AboutSettings.tsx:103
+#: src/screens/Settings/AboutSettings.tsx:106
+#: src/view/shell/Drawer.tsx:783
 msgid "Privacy Policy"
 msgstr "Privatlivspolitik"
 
@@ -9796,7 +9817,7 @@ msgstr "Behandler GIF ..."
 msgid "Processing video..."
 msgstr "Behandler video..."
 
-#: src/lib/api/index.ts:65
+#: src/lib/api/index.ts:66
 msgid "Processing..."
 msgstr "Behandler..."
 
@@ -9804,10 +9825,10 @@ msgstr "Behandler..."
 msgid "profile"
 msgstr "profil"
 
-#: src/view/shell/bottom-bar/BottomBar.tsx:322
-#: src/view/shell/desktop/LeftNav.tsx:744
-#: src/view/shell/Drawer.tsx:92
-#: src/view/shell/Drawer.tsx:658
+#: src/view/shell/bottom-bar/BottomBar.tsx:328
+#: src/view/shell/desktop/LeftNav.tsx:752
+#: src/view/shell/Drawer.tsx:93
+#: src/view/shell/Drawer.tsx:662
 msgid "Profile"
 msgstr "Profil"
 
@@ -9815,8 +9836,12 @@ msgstr "Profil"
 msgid "Profile banner placeholder"
 msgstr "Pladsholder for profilbanner"
 
+#: src/features/inviteFriends/InviteFriendsDialogInner.tsx:128
+msgid "Profile link copied"
+msgstr ""
+
 #: src/features/inviteFriends/InviteScannerScreen.tsx:210
-#: src/lib/strings/errors.ts:74
+#: src/lib/strings/errors.ts:78
 msgid "Profile not found"
 msgstr "Profil ikke fundet"
 
@@ -9970,11 +9995,11 @@ msgstr "Læs om, hvordan du bruger avancerede søgefiltre"
 msgid "Read blog post"
 msgstr "Læs blogindlæg"
 
-#: src/screens/VideoFeed/index.tsx:1112
+#: src/screens/VideoFeed/index.tsx:1099
 msgid "Read less"
 msgstr "Læs mindre"
 
-#: src/screens/VideoFeed/index.tsx:1112
+#: src/screens/VideoFeed/index.tsx:1099
 msgid "Read more"
 msgstr "Læs mere"
 
@@ -9990,19 +10015,15 @@ msgstr "Læs vores blogindlæg"
 msgid "Read our Community Guidelines"
 msgstr "Læs vores fællesskabsregler"
 
-#: src/view/com/auth/SplashScreen.web.tsx:173
-msgid "Read the Bluesky blog"
-msgstr "Læs Blueskys blog"
-
 #: src/screens/Signup/StepInfo/Policies.tsx:53
 #: src/screens/Signup/StepInfo/Policies.tsx:79
-msgid "Read the Bluesky Privacy Policy"
-msgstr "Læs Blueskys privatlivspolitik"
+msgid "Read the ORBIS Privacy Policy"
+msgstr ""
 
 #: src/screens/Signup/StepInfo/Policies.tsx:46
 #: src/screens/Signup/StepInfo/Policies.tsx:66
-msgid "Read the Bluesky Terms of Service"
-msgstr "Læs Blueskys tjenestevilkår"
+msgid "Read the ORBIS Terms of Service"
+msgstr ""
 
 #: src/components/WelcomeModal.tsx:148
 msgid "Real conversations."
@@ -10012,8 +10033,8 @@ msgstr "Rigtige samtaler."
 msgid "Real people."
 msgstr "Rigtige mennesker."
 
-#: src/screens/Takendown.tsx:156
-#: src/screens/Takendown.tsx:164
+#: src/screens/Takendown.tsx:158
+#: src/screens/Takendown.tsx:166
 msgid "Reason for appeal"
 msgstr "Begrundelse for klage"
 
@@ -10085,7 +10106,7 @@ msgstr "Genindlæs samtaler"
 #: src/screens/Messages/ConversationSettings/prompts.tsx:178
 #: src/screens/Moderation/index.tsx:534
 #: src/screens/Settings/Settings.tsx:695
-#: src/view/com/posts/PostFeedErrorMessage.tsx:219
+#: src/view/com/posts/PostFeedErrorMessage.tsx:230
 msgid "Remove"
 msgstr "Fjern"
 
@@ -10146,11 +10167,11 @@ msgstr "Fjern indlejring"
 
 #: src/view/com/posts/FeedShutdownMsg.tsx:121
 #: src/view/com/posts/FeedShutdownMsg.tsx:125
-#: src/view/com/posts/PostFeedErrorMessage.tsx:175
+#: src/view/com/posts/PostFeedErrorMessage.tsx:186
 msgid "Remove feed"
 msgstr "Fjern feed"
 
-#: src/view/com/posts/PostFeedErrorMessage.tsx:216
+#: src/view/com/posts/PostFeedErrorMessage.tsx:227
 msgid "Remove feed?"
 msgstr "Fjern feed?"
 
@@ -10221,7 +10242,7 @@ msgstr "Fjern deling"
 msgid "Remove suggestion"
 msgstr "Fjern forslag"
 
-#: src/view/com/posts/PostFeedErrorMessage.tsx:217
+#: src/view/com/posts/PostFeedErrorMessage.tsx:228
 msgid "Remove this feed from your saved feeds"
 msgstr "Fjern dette feed fra dine gemte feeds"
 
@@ -10248,11 +10269,11 @@ msgstr "Fjern verifikation"
 msgid "Remove your verification for this account?"
 msgstr "Fjern verifikation fra denne konto?"
 
-#: src/components/Post/Embed/index.tsx:243
+#: src/components/Post/Embed/index.tsx:289
 msgid "Removed by author"
 msgstr "Fjernet af forfatter"
 
-#: src/components/Post/Embed/index.tsx:241
+#: src/components/Post/Embed/index.tsx:287
 msgid "Removed by you"
 msgstr "Fjernet af dig"
 
@@ -10500,6 +10521,10 @@ msgstr "Anmeld denne startpakke"
 msgid "Report this user"
 msgstr "Anmeld denne bruger"
 
+#: src/screens/VideoFeed/components/VideoSideActions.tsx:158
+msgid "Repost"
+msgstr ""
+
 #: src/components/PostControls/RepostButton.tsx:154
 #: src/components/PostControls/RepostButton.tsx:165
 #: src/components/PostControls/RepostButton.web.tsx:68
@@ -10611,7 +10636,7 @@ msgstr "Gør alt-tekst obligatorisk i dine egne opslag"
 msgid "Require an email code to sign in to your account."
 msgstr "Kræv en bekræftelseskode via e-mail for at logge ind på din konto."
 
-#: src/screens/Signup/StepInfo/index.tsx:218
+#: src/screens/Signup/StepInfo/index.tsx:225
 msgid "Required for this provider"
 msgstr "Obligatorisk for denne udbyder"
 
@@ -10674,7 +10699,7 @@ msgstr "Nulstil velkomsttilstand"
 msgid "Reset password"
 msgstr "Nulstil adgangskode"
 
-#: src/screens/Login/LoginForm.tsx:423
+#: src/screens/Login/LoginForm.tsx:471
 msgid "Reset your password by sending a code to your email"
 msgstr "Nulstil din adgangskode ved at sende en kode til din e-mail"
 
@@ -10683,11 +10708,11 @@ msgctxt "moderation-report-filter"
 msgid "Resolved"
 msgstr ""
 
-#: src/components/OTAChannelNotice.tsx:58
+#: src/components/OTAChannelNotice.tsx:109
 msgid "Restore default"
 msgstr "Gendan standard"
 
-#: src/components/OTAChannelNotice.tsx:54
+#: src/components/OTAChannelNotice.tsx:102
 msgid "Restore the {defaultChannel} deployment"
 msgstr "Gendan {defaultChannel}-udrulningen"
 
@@ -10700,7 +10725,7 @@ msgstr "Genskabt opslag"
 msgid "Resync contacts"
 msgstr "Synkroniser kontakter"
 
-#: src/screens/Login/LoginForm.tsx:533
+#: src/screens/Login/LoginForm.tsx:577
 msgid "Retries signing in"
 msgstr "Forsøger at logge ind igen"
 
@@ -10719,8 +10744,8 @@ msgstr "Prøver at gentage den seneste handling, der fejlede"
 #: src/components/Post/Embed/VideoEmbed/VideoEmbedInner/VideoFallback.tsx:56
 #: src/components/Post/Embed/VideoEmbed/VideoEmbedInner/VideoFallback.tsx:59
 #: src/components/StarterPack/ProfileStarterPacks.tsx:371
-#: src/screens/Login/LoginForm.tsx:532
-#: src/screens/Login/LoginForm.tsx:538
+#: src/screens/Login/LoginForm.tsx:576
+#: src/screens/Login/LoginForm.tsx:582
 #: src/screens/Messages/ChatList.tsx:429
 #: src/screens/Messages/components/MessageListError.tsx:24
 #: src/screens/Messages/Inbox.tsx:210
@@ -10755,7 +10780,7 @@ msgstr "Vender tilbage til forsiden"
 
 #: src/screens/ProfileList/components/ErrorScreen.tsx:36
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:577
-#: src/screens/VideoFeed/index.tsx:1297
+#: src/screens/VideoFeed/index.tsx:1284
 #: src/view/screens/NotFound.tsx:54
 msgid "Returns to previous page"
 msgstr "Går til forrige side"
@@ -10764,7 +10789,7 @@ msgstr "Går til forrige side"
 msgid "Returns to the previous step"
 msgstr "Går tilbage til det forrige trin"
 
-#: src/screens/Login/LoginForm.tsx:619
+#: src/screens/Login/LoginForm.tsx:658
 msgid "Reveal password"
 msgstr "Vis adgangskode"
 
@@ -10856,8 +10881,8 @@ msgstr "Gem disse indstillinger til næste gang"
 msgid "Save to my feeds"
 msgstr "Føj til mine feeds"
 
-#: src/view/shell/desktop/LeftNav.tsx:731
-#: src/view/shell/Drawer.tsx:633
+#: src/view/shell/desktop/LeftNav.tsx:739
+#: src/view/shell/Drawer.tsx:637
 msgctxt "link to bookmarks screen"
 msgid "Saved"
 msgstr "Gemte"
@@ -10878,7 +10903,7 @@ msgstr "Gemte opslag"
 msgid "Saved to your feeds"
 msgstr "Tilføjet dine feeds"
 
-#: src/components/NewskieDialog.tsx:142
+#: src/components/dialogs/NewskieDialog/index.tsx:119
 #: src/view/com/notifications/NotificationFeedItem.tsx:937
 #: src/view/com/notifications/NotificationFeedItem.tsx:945
 msgid "Say hello!"
@@ -10903,10 +10928,6 @@ msgstr "Skan"
 msgid "Scan QR code"
 msgstr "Skan QR-kode"
 
-#: src/lib/interests.ts:71
-msgid "Science"
-msgstr "Videnskab"
-
 #: src/components/InterestTabs.tsx:258
 msgid "Scroll left"
 msgstr "Rul til venstre"
@@ -10919,6 +10940,7 @@ msgstr "Rul til højre"
 msgid "Scroll to the message this is replying to"
 msgstr "Rul til den besked, der svares på"
 
+#: src/components/NewPostsPill/index.tsx:161
 #: src/screens/ProfileList/AboutSection.tsx:132
 msgid "Scroll to top"
 msgstr "Rul til toppen"
@@ -10931,7 +10953,7 @@ msgstr "Rul til toppen"
 #: src/screens/Search/Shell.tsx:549
 #: src/screens/Search/Shell.tsx:612
 #: src/screens/Search/Shell.tsx:753
-#: src/view/shell/bottom-bar/BottomBar.tsx:216
+#: src/view/shell/bottom-bar/BottomBar.tsx:222
 msgid "Search"
 msgstr "Søg"
 
@@ -11066,10 +11088,6 @@ msgstr "Se #{tag}-indlæg"
 #: src/components/RichTextTag.tsx:142
 msgid "See #{tag} posts by user"
 msgstr "Se #{tag}-indlæg af bruger"
-
-#: src/view/com/auth/SplashScreen.web.tsx:178
-msgid "See jobs at Bluesky"
-msgstr "Se jobs hos Bluesky"
 
 #: src/components/FeedInterstitials.tsx:495
 #: src/components/FeedInterstitials.tsx:554
@@ -11261,7 +11279,8 @@ msgstr "Vælg sprog for appens brugergrænseflade."
 msgid "Select which languages you want your subscribed feeds to include. If none are selected, all languages will be shown."
 msgstr "Vælg, hvilke sprog du vil se i dine feeds. Hvis ingen er valgt, vil du se opslag på alle sprog."
 
-#: src/screens/Signup/StepInfo/index.tsx:311
+#: src/screens/Signup/StepInfo/index.tsx:322
+#: src/screens/Signup/StepInfo/index.tsx:323
 msgid "Select your date of birth"
 msgstr "Angiv din fødselsdato"
 
@@ -11300,16 +11319,16 @@ msgstr "Send e-mail"
 
 #: src/components/SendErrorReportDialog.tsx:60
 #: src/components/SendErrorReportDialog.tsx:64
-#: src/screens/Settings/AboutSettings.tsx:125
-#: src/screens/Settings/AboutSettings.tsx:128
+#: src/screens/Settings/AboutSettings.tsx:121
+#: src/screens/Settings/AboutSettings.tsx:124
 msgid "Send error report"
 msgstr "Send fejlmelding"
 
-#: src/view/shell/Drawer.tsx:423
+#: src/view/shell/Drawer.tsx:427
 msgid "Send feedback"
 msgstr "Send feedback"
 
-#: src/screens/Messages/components/MessageComposer.tsx:327
+#: src/screens/Messages/components/MessageComposer.tsx:339
 msgid "Send message"
 msgstr "Send besked"
 
@@ -11362,6 +11381,10 @@ msgstr "Serveradresse"
 msgid "Set app icon to {0}"
 msgstr "Sæt appikon til {0}"
 
+#: src/screens/Login/LoginForm.tsx:531
+msgid "Set network manually"
+msgstr ""
+
 #: src/screens/Login/SetNewPasswordForm.tsx:104
 msgid "Set new password"
 msgstr "Angiv ny adgangskode"
@@ -11382,22 +11405,18 @@ msgstr "Angiv, hvem der kan besvare dit opslag"
 msgid "Set your birthdate below and we'll get you back to posting and exploring in no time!"
 msgstr "Angiv din fødselsdato herunder, så du kan fortsætte med at bruge Bluesky med det samme!"
 
-#: src/screens/Login/LoginForm.tsx:353
+#: src/screens/Login/LoginForm.tsx:408
 msgid "set your hosting provider manually"
 msgstr "angiv din udbyder manuelt"
 
-#: src/screens/Login/LoginForm.tsx:487
-msgid "Set your hosting provider manually"
-msgstr "Angiv din udbyder manuelt"
-
-#: src/screens/Login/ForgotPasswordForm.tsx:108
+#: src/screens/Login/ForgotPasswordForm.tsx:99
 msgid "Sets email for password reset"
 msgstr "Angiver e-mail til nulstilling af adgangskode"
 
 #: src/Navigation.tsx:239
 #: src/screens/Settings/Settings.tsx:102
-#: src/view/shell/desktop/LeftNav.tsx:754
-#: src/view/shell/Drawer.tsx:671
+#: src/view/shell/desktop/LeftNav.tsx:762
+#: src/view/shell/Drawer.tsx:675
 msgid "Settings"
 msgstr "Indstillinger"
 
@@ -11477,6 +11496,7 @@ msgstr "Erotik"
 #: src/screens/Messages/components/InviteLinkDialog.tsx:424
 #: src/screens/StarterPack/StarterPackScreen.tsx:435
 #: src/screens/Topic.tsx:91
+#: src/screens/VideoFeed/components/VideoSideActions.tsx:186
 msgid "Share"
 msgstr "Del"
 
@@ -11611,8 +11631,8 @@ msgstr "Vis alt-tekst"
 #: src/features/liveNow/components/LiveStatusDialog.tsx:315
 #: src/features/liveNow/components/LiveStatusDialog.tsx:319
 #: src/screens/List/ListHiddenScreen.tsx:193
-#: src/screens/VideoFeed/index.tsx:777
-#: src/screens/VideoFeed/index.tsx:783
+#: src/screens/VideoFeed/index.tsx:780
+#: src/screens/VideoFeed/index.tsx:786
 msgid "Show anyway"
 msgstr "Vis alligevel"
 
@@ -11735,22 +11755,22 @@ msgstr "Viser indholdet"
 #: src/screens/Hashtag.tsx:233
 #: src/screens/Login/index.tsx:143
 #: src/screens/Login/index.tsx:165
-#: src/screens/Login/LoginForm.tsx:275
-#: src/screens/Login/LoginForm.tsx:555
-#: src/screens/Login/LoginForm.tsx:561
+#: src/screens/Login/LoginForm.tsx:236
+#: src/screens/Login/LoginForm.tsx:599
+#: src/screens/Login/LoginForm.tsx:605
 #: src/screens/Messages/JoinRequest.tsx:298
 #: src/screens/Messages/JoinRequest.tsx:304
 #: src/screens/Search/SearchResults.tsx:399
-#: src/view/com/auth/SplashScreen.tsx:118
-#: src/view/com/auth/SplashScreen.tsx:125
-#: src/view/com/auth/SplashScreen.web.tsx:123
-#: src/view/com/auth/SplashScreen.web.tsx:131
-#: src/view/shell/bottom-bar/BottomBar.tsx:360
-#: src/view/shell/bottom-bar/BottomBar.tsx:364
-#: src/view/shell/bottom-bar/BottomBarWeb.tsx:250
-#: src/view/shell/bottom-bar/BottomBarWeb.tsx:255
-#: src/view/shell/NavSignupCard.tsx:58
-#: src/view/shell/NavSignupCard.tsx:63
+#: src/view/com/auth/SplashScreen.tsx:116
+#: src/view/com/auth/SplashScreen.tsx:123
+#: src/view/com/auth/SplashScreen.web.tsx:188
+#: src/view/com/auth/SplashScreen.web.tsx:207
+#: src/view/shell/bottom-bar/BottomBar.tsx:366
+#: src/view/shell/bottom-bar/BottomBar.tsx:370
+#: src/view/shell/bottom-bar/BottomBarWeb.tsx:260
+#: src/view/shell/bottom-bar/BottomBarWeb.tsx:265
+#: src/view/shell/NavSignupCard.tsx:57
+#: src/view/shell/NavSignupCard.tsx:62
 msgid "Sign in"
 msgstr "Log ind"
 
@@ -11799,23 +11819,23 @@ msgstr "Log ind for at se opslag"
 #: src/screens/Settings/Settings.tsx:311
 #: src/screens/SignupQueued.tsx:100
 #: src/screens/SignupQueued.tsx:103
-#: src/screens/Takendown.tsx:86
-#: src/view/shell/desktop/LeftNav.tsx:227
-#: src/view/shell/desktop/LeftNav.tsx:282
-#: src/view/shell/desktop/LeftNav.tsx:285
+#: src/screens/Takendown.tsx:88
+#: src/view/shell/desktop/LeftNav.tsx:229
+#: src/view/shell/desktop/LeftNav.tsx:284
+#: src/view/shell/desktop/LeftNav.tsx:287
 msgid "Sign out"
 msgstr "Log ud"
 
-#: src/screens/Takendown.tsx:89
+#: src/screens/Takendown.tsx:91
 msgid "Sign Out"
 msgstr "Log ud"
 
 #: src/screens/Settings/Settings.tsx:308
-#: src/view/shell/desktop/LeftNav.tsx:224
+#: src/view/shell/desktop/LeftNav.tsx:226
 msgid "Sign out?"
 msgstr "Log ud?"
 
-#: src/screens/Login/LoginForm.tsx:573
+#: src/screens/Login/LoginForm.tsx:617
 msgid "Sign up"
 msgstr "Opret konto"
 
@@ -11887,13 +11907,9 @@ msgid "Social media you control."
 msgstr "Sociale medier på dine præmisser."
 
 #. Name for a feature flag
-#: src/analytics/features/index.ts:84
+#: src/analytics/features/index.ts:91
 msgid "Social proofing on posts"
 msgstr ""
-
-#: src/lib/interests.ts:58
-msgid "Software Dev"
-msgstr "Softwareudvikling"
 
 #: src/screens/Moderation/index.tsx:523
 msgid "Some moderation services in your list are no longer available."
@@ -12002,8 +12018,8 @@ msgstr "Noget galt? Fortæl os om det."
 msgid "Sorry, we're unable to load account suggestions at this time."
 msgstr "Beklager, vi kan ikke indlæse forslag lige nu."
 
-#: src/App.tsx:138
-#: src/App.web.tsx:117
+#: src/App.tsx:142
+#: src/App.web.tsx:121
 msgid "Sorry! Your session expired. Please sign in again."
 msgstr "Desværre! Din session er udløbet. Log venligst ind igen."
 
@@ -12033,13 +12049,12 @@ msgstr "Spam"
 msgid "Spam or other inauthentic behavior or deception"
 msgstr "Spam, snyd eller bedrag"
 
-#: src/lib/interests.ts:72
 #: src/screens/Search/modules/ExploreTrendingTopics.tsx:244
 msgid "Sports"
 msgstr "Sport"
 
 #. Description of a feature flag (Social proofing on posts)
-#: src/analytics/features/index.ts:90
+#: src/analytics/features/index.ts:97
 msgid "Spot posts your friends and follows have liked."
 msgstr "Se opslag, dine venner og følgere har liket."
 
@@ -12119,8 +12134,8 @@ msgstr "Startpakker lader dig let dele dine foretrukne feeds og personer med din
 msgid "Starter Packs let you share your favorite feeds and people with your friends."
 msgstr "Startpakker lader dig dele dine foretrukne feeds og konto med dine venner."
 
-#: src/screens/Settings/AboutSettings.tsx:110
-#: src/screens/Settings/AboutSettings.tsx:113
+#: src/screens/Settings/AboutSettings.tsx:111
+#: src/screens/Settings/AboutSettings.tsx:114
 msgid "Status Page"
 msgstr "Statusside"
 
@@ -12150,25 +12165,25 @@ msgstr "Storybook"
 msgid "Streaming on Twitch? Set your live status on Bluesky to add a badge to your avatar. Tapping it takes people straight to your stream."
 msgstr "Streamer du på Twitch? Aktiver livetilstand på Bluesky for at tilføje en markering til din avatar. Når man trykker på den, kommer man direkte til din stream."
 
-#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:124
-#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:130
-#: src/components/moderation/AppealForm.tsx:165
+#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:123
+#: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:129
 #: src/components/moderation/AppealForm.tsx:166
+#: src/components/moderation/AppealForm.tsx:167
 #: src/components/SendErrorReportDialog.tsx:90
 #: src/components/SendErrorReportDialog.tsx:95
+#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:137
 #: src/features/liveNow/components/GoLiveDisabledDialog.tsx:138
-#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:139
-#: src/screens/Messages/components/ChatDisabled.tsx:173
-#: src/screens/Messages/components/ChatDisabled.tsx:175
+#: src/screens/Messages/components/ChatDisabled.tsx:172
+#: src/screens/Messages/components/ChatDisabled.tsx:174
 #: src/screens/Settings/components/BetaFeaturesFeedbackDialog.tsx:133
 msgid "Submit"
 msgstr "Gem"
 
-#: src/screens/Takendown.tsx:74
+#: src/screens/Takendown.tsx:76
 msgid "Submit appeal"
 msgstr "Afsend klage"
 
-#: src/screens/Takendown.tsx:78
+#: src/screens/Takendown.tsx:80
 msgid "Submit Appeal"
 msgstr "Afsend klage"
 
@@ -12211,11 +12226,11 @@ msgstr "Abonner på @{0} for at bruge disse labels:"
 msgid "Subscribe to account activity"
 msgstr "Abonner på kontoaktivitet"
 
-#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:350
+#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:351
 msgid "Subscribe to Labeler"
 msgstr "Abonner på mærkningstjeneste"
 
-#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:316
+#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:317
 msgid "Subscribe to this labeler"
 msgstr "Abonner på denne mærkningstjeneste"
 
@@ -12300,16 +12315,26 @@ msgstr "Spærrede konti kan ikke deltage i en chat."
 #: src/screens/Settings/Settings.tsx:126
 #: src/screens/Settings/Settings.tsx:138
 #: src/screens/Settings/Settings.tsx:636
-#: src/view/shell/desktop/LeftNav.tsx:262
+#: src/view/shell/desktop/LeftNav.tsx:264
 msgid "Switch account"
 msgstr "Skift konto"
 
-#: src/view/shell/desktop/LeftNav.tsx:124
+#: src/view/shell/desktop/LeftNav.tsx:126
 msgid "Switch accounts"
 msgstr "Skift konti"
 
+#: src/components/OTAChannelNotice.tsx:139
+msgid "Switch channel"
+msgstr ""
+
+#: src/components/OTAChannelNotice.tsx:135
+#: src/components/OTAChannelNotice.tsx:195
+#: src/components/OTAChannelNotice.tsx:199
+msgid "Switch OTA channel"
+msgstr ""
+
 #. placeholder {0}: sanitizeHandle( profile?.handle ?? account.handle, '@', )
-#: src/view/shell/desktop/LeftNav.tsx:364
+#: src/view/shell/desktop/LeftNav.tsx:366
 msgid "Switch to {0}"
 msgstr "Skift til {0}"
 
@@ -12321,8 +12346,6 @@ msgid "System"
 msgstr "System"
 
 #: src/screens/Log.tsx:49
-#: src/screens/Settings/AboutSettings.tsx:117
-#: src/screens/Settings/AboutSettings.tsx:120
 #: src/screens/Settings/Settings.tsx:462
 msgid "System log"
 msgstr "Systemlog"
@@ -12335,7 +12358,7 @@ msgstr "Kun tags"
 msgid "Take the conversation private."
 msgstr "Tag samtalen privat."
 
-#: src/components/dialogs/DeviceLocationRequestDialog.tsx:109
+#: src/components/dialogs/DeviceLocationRequestDialog.tsx:110
 msgid "Tap below to allow Bluesky to access your GPS location. We will then use that data to more accurately determine the content and features available in your region."
 msgstr "Tryk for at give Bluesky adgang til din GPS-lokalitet. Vi bruger denne oplysning til at styre, hvilket indhold og hvilke funktioner der er tilgængelige i dit område."
 
@@ -12352,7 +12375,7 @@ msgid "Tap for more information"
 msgstr "Tryk for mere info"
 
 #: src/ageAssurance/components/NoAccessScreen.tsx:216
-#: src/screens/Signup/StepInfo/index.tsx:337
+#: src/screens/Signup/StepInfo/index.tsx:349
 msgid "Tap here to update your location with GPS."
 msgstr "Tryk her for at opdatere din lokalitet med GPS."
 
@@ -12430,10 +12453,6 @@ msgstr "Opgaven er løst - 10 likes!"
 msgid "Teach our algorithm what you like"
 msgstr "Lær vores algoritme, hvad du kan lide"
 
-#: src/lib/interests.ts:73
-msgid "Tech"
-msgstr "Teknologi"
-
 #: src/screens/Profile/Header/EditProfileDialog.tsx:368
 msgid "Tell us a bit about yourself"
 msgstr "Fortæl os lidt mere om dig selv"
@@ -12455,11 +12474,9 @@ msgstr "Tjenestevilkår"
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:31
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:98
 #: src/Navigation.tsx:367
-#: src/screens/Settings/AboutSettings.tsx:94
-#: src/screens/Settings/AboutSettings.tsx:97
-#: src/view/screens/TermsOfService.tsx:25
-#: src/view/shell/Drawer.tsx:759
-#: src/view/shell/Drawer.tsx:761
+#: src/screens/Settings/AboutSettings.tsx:95
+#: src/screens/Settings/AboutSettings.tsx:98
+#: src/view/shell/Drawer.tsx:776
 msgid "Terms of Service"
 msgstr "Tjenestevilkår"
 
@@ -12467,9 +12484,9 @@ msgstr "Tjenestevilkår"
 msgid "Text & tags"
 msgstr "Tekst og tags"
 
-#: src/components/moderation/AppealForm.tsx:129
-#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:121
-#: src/screens/Messages/components/ChatDisabled.tsx:140
+#: src/components/moderation/AppealForm.tsx:130
+#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:120
+#: src/screens/Messages/components/ChatDisabled.tsx:139
 msgid "Text input field"
 msgstr "Tekstfelt"
 
@@ -12511,13 +12528,13 @@ msgstr "Det brugernavn er allerede taget"
 msgid "That's all, folks!"
 msgstr "Det var alt, folkens!"
 
-#: src/screens/VideoFeed/index.tsx:1269
+#: src/screens/VideoFeed/index.tsx:1256
 msgid "That's everything!"
 msgstr "Det var alt"
 
 #: src/components/moderation/BlockDialog.tsx:150
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:184
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:428
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:185
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:429
 msgid "The account will be able to interact with you after unblocking."
 msgstr "Kontoen vil være i stand til at interagere med dig, når du fjerner blokering."
 
@@ -12604,10 +12621,6 @@ msgstr "Det opslag, du rapporterede, er blevet gendannet efter yderligere gennem
 msgid "The post you’re replying to was marked as being written in {suggestedLanguageName} by its author. Would you like to reply in <0>{suggestedLanguageName}</0>?"
 msgstr "Det opslag du svarer på, er anført som skrevet på {suggestedLanguageName} af dets forfatter. Vil du svare på <0>{suggestedLanguageName}</0>?"
 
-#: src/view/screens/PrivacyPolicy.tsx:29
-msgid "The Privacy Policy has been moved to <0/>"
-msgstr "Privatlivspolitikken er flyttet til <0/>"
-
 #: src/view/com/composer/state/video.ts:488
 msgid "The processed video is too large. Please try again with a smaller file."
 msgstr "Den behandlede video er for stor. Prøv igen med en mindre fil."
@@ -12637,8 +12650,8 @@ msgstr "Den valgte video er for lang."
 msgid "The selected video uses an unsupported format."
 msgstr "Den valgte video er i et ikkeunderstøttet format."
 
-#: src/lib/hooks/useCleanError.ts:41
-#: src/lib/strings/errors.ts:53
+#: src/lib/hooks/useCleanError.ts:43
+#: src/lib/strings/errors.ts:57
 msgid "The server appears to be experiencing issues. Please try again in a few moments."
 msgstr "Der ser ud til at være problemer med serveren. Prøv igen om lidt."
 
@@ -12653,10 +12666,6 @@ msgstr "Kontekstmenuens emne"
 #: src/view/screens/Support.tsx:31
 msgid "The support form has been moved. If you need help, please <0/> or visit {HELP_DESK_URL} to get in touch with us."
 msgstr "Kontaktformularen er flyttet. Hvis du har brug for hjælp, <0/> eller besøg {HELP_DESK_URL} for at kontakte os."
-
-#: src/view/screens/TermsOfService.tsx:29
-msgid "The Terms of Service have been moved to"
-msgstr "Tjenestevilkårene er flyttet til"
 
 #: src/components/intents/VerifyEmailIntentDialog.tsx:91
 msgid "The verification code you have provided is invalid. Please make sure that you have used the correct verification link or request a new one."
@@ -12739,7 +12748,7 @@ msgstr "Lister kunne ikke indlæses. Tryk her for at prøve igen."
 msgid "There was an issue fetching your service info"
 msgstr "Dine tjenesteindstillinger kunne ikke indlæses"
 
-#: src/view/com/posts/PostFeedErrorMessage.tsx:151
+#: src/view/com/posts/PostFeedErrorMessage.tsx:162
 msgid "There was an issue removing this feed. Please check your internet connection and try again."
 msgstr "Feed kunne ikke fjernes. Tjek din internetforbindelse og prøv igen."
 
@@ -12759,9 +12768,9 @@ msgstr "Dine feeds kunne ikke opdateres. Tjek din internetforbindelse og prøv i
 #: src/screens/PostThread/components/ThreadItemAnchorFollowButton.tsx:117
 #: src/screens/PostThread/components/ThreadItemAnchorFollowButton.tsx:130
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:92
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:260
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:290
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:306
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:261
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:291
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:307
 #: src/view/com/profile/ProfileMenu.tsx:139
 #: src/view/com/profile/ProfileMenu.tsx:152
 #: src/view/com/profile/ProfileMenu.tsx:171
@@ -12794,8 +12803,8 @@ msgid "There was an unexpected issue in the application. Please let us know if t
 msgstr "Der opstod en uventet fejl i appen. Giv os besked om, at det er sket for dig!"
 
 #: src/screens/SignupQueued.tsx:139
-msgid "There's been a rush of new users to Bluesky! We'll activate your account as soon as we can."
-msgstr "Der kommer mange nye brugere til Bluesky for tiden! Vi aktiverer din konto, så snart vi kan."
+msgid "There's been a rush of new users to ORBIS! We'll activate your account as soon as we can."
+msgstr ""
 
 #: src/components/dialogs/PostInteractionSettingsDialog.tsx:662
 msgid "These are your default settings"
@@ -12856,18 +12865,26 @@ msgstr "Denne konto er blokeret af en eller flere af dine moderationslister. For
 msgid "This action can be undone at any time."
 msgstr "Denne handling kan omgøres når som helst."
 
-#: src/components/OTAChannelNotice.tsx:40
+#. placeholder {0}: currentChannel ?? defaultChannel
+#: src/components/OTAChannelNotice.tsx:87
+msgid "This app is receiving updates from <0>{0}</0>."
+msgstr ""
+
+#: src/components/OTAChannelNotice.tsx:71
 msgid "This app is running a deployment of <0>{currentChannel}</0>. Restore the {defaultChannel} deployment to get back to a standard build."
 msgstr "Denne app kører en udrulning af <0>{currentChannel}</0>. Gendan {defaultChannel}-udrulningen for at komme tilbage til et standard-build."
 
-#: src/components/moderation/AppealForm.tsx:107
+#: src/components/moderation/AppealForm.tsx:108
 msgid "This appeal will be sent to <0>{sourceName}</0>."
 msgstr "Denne klage vil blive sendt til <0>{sourceName}</0>."
 
-#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:113
-#: src/screens/Messages/components/ChatDisabled.tsx:136
+#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:112
 msgid "This appeal will be sent to Bluesky's moderation service."
 msgstr "Denne klage vil blive sendt til Blueskys moderationstjeneste."
+
+#: src/screens/Messages/components/ChatDisabled.tsx:135
+msgid "This appeal will be sent to ORBIS's moderation service."
+msgstr ""
 
 #: src/screens/PostThread/components/ThreadItemAnchorNoUnauthenticated.tsx:27
 #: src/screens/PostThread/components/ThreadItemPostNoUnauthenticated.tsx:47
@@ -12927,9 +12944,9 @@ msgstr "Denne indhold ligger hos {0}. Vil du aktivere eksterne medier?"
 msgid "This content is not available because one of the users involved has blocked the other."
 msgstr "Dette indhold er ikke tilgængeligt, fordi nogle af de involverede brugere har blokeret hinanden."
 
-#: src/view/com/posts/PostFeedErrorMessage.tsx:120
-msgid "This content is not viewable without a Bluesky account."
-msgstr "Denne indhold kan ikke ses uden en Bluesky-konto."
+#: src/view/com/posts/PostFeedErrorMessage.tsx:131
+msgid "This content is not viewable without an ORBIS account."
+msgstr ""
 
 #: src/components/intents/GroupChatJoinDialog.tsx:151
 msgid "This conversation is locked."
@@ -12960,15 +12977,15 @@ msgstr "Denne funktion tillader brugere at modtage notifikationer om dine nye op
 msgid "This feature is in beta. You can read more about repository exports in <0>this blogpost</0>."
 msgstr "Denne funktion er i beta. Du kan læse mere om dataeksport i <0>dette blogindlæg</0>."
 
-#: src/lib/hooks/useCleanError.ts:61
+#: src/lib/hooks/useCleanError.ts:63
 msgid "This feature is not available while using an app password. Please sign in with your main password."
 msgstr "Denne funktion er ikke tilgængelig, når du bruger en appadgangskode. Log ind med din primære adgangskode."
 
-#: src/lib/strings/errors.ts:65
+#: src/lib/strings/errors.ts:69
 msgid "This feature is not available while using an App Password. Please sign in with your main password."
 msgstr "Denne funktion er ikke tilgængelig, når du bruger en appadgangskode. Log ind med din primære adgangskode."
 
-#: src/view/com/posts/PostFeedErrorMessage.tsx:126
+#: src/view/com/posts/PostFeedErrorMessage.tsx:137
 msgid "This feed is currently receiving high traffic and is temporarily unavailable. Please try again later."
 msgstr "Dette feed oplever i øjeblikket mange besøgende og er midlertidigt utilgængelig. Prøv igen senere."
 
@@ -13046,12 +13063,12 @@ msgstr "Dette link fører dig til følgende website:"
 
 #. placeholder {0}: sanitizeHandle(list.creator.handle, '@')
 #: src/screens/List/ListHiddenScreen.tsx:154
-msgid "This list – created by <0>{0}</0> – contains possible violations of Bluesky's community guidelines in its name or description."
-msgstr "Denne liste – oprettet af <0>{0}</0> – overtræder muligvis Blueskys fællesskabsregler med sit navn eller sin beskrivelse."
+msgid "This list – created by <0>{0}</0> – contains possible violations of ORBIS's community guidelines in its name or description."
+msgstr ""
 
 #: src/screens/List/ListHiddenScreen.tsx:149
-msgid "This list – created by you – contains possible violations of Bluesky's community guidelines in its name or description."
-msgstr "Denne liste – oprettet dig – overtræder muligvis Blueskys fællesskabsregler med sit navn eller sin beskrivelse."
+msgid "This list – created by you – contains possible violations of ORBIS's community guidelines in its name or description."
+msgstr ""
 
 #: src/screens/ProfileList/AboutSection.tsx:100
 msgid "This list is empty."
@@ -13175,7 +13192,7 @@ msgstr "Denne bruger optræder i listen <0>{0}</0>, som du har blokeret."
 msgid "This user is included in the <0>{0}</0> list which you have muted."
 msgstr "Denne bruger optræder i listen <0>{0}</0>, som du har skjult."
 
-#: src/components/NewskieDialog.tsx:50
+#: src/components/dialogs/NewskieDialog/index.tsx:50
 msgid "This user is new here. Press for more info about when they joined."
 msgstr "Denne bruger er ny her. Tryk for at se, hvornår kontoen blev oprettet."
 
@@ -13201,8 +13218,8 @@ msgid "This will delete \"{0}\" from your muted words. You can always add it bac
 msgstr "Dette vil fjerne \"{0}\" fra dine skjulte ord. Du kan altid tilføje det igen senere."
 
 #: src/screens/Settings/components/DeleteAccountDialog.tsx:336
-msgid "This will irreversibly delete your Bluesky account <0>{currentHandle}</0> and all associated data. Note that this will affect any other <1>AT Protocol</1> services you use with this account."
-msgstr "Dette vil uigenkaldeligt slette din Bluesky-konto <0>{currentHandle}</0> og alle tilknyttede data. Bemærk at dette også vil påvirke alle andre <1>AT Protocol</1>-tjenester, du benytter med denne konto."
+msgid "This will irreversibly delete your ORBIS account <0>{currentHandle}</0> and all associated data. Note that this will affect any other <1>AT Protocol</1> services you use with this account."
+msgstr ""
 
 #. placeholder {0}: account.handle
 #: src/screens/Settings/Settings.tsx:690
@@ -13412,10 +13429,6 @@ msgstr "Prøv Google Translate"
 msgid "Try it"
 msgstr "Prøv det"
 
-#: src/lib/interests.ts:74
-msgid "TV"
-msgstr "Tv"
-
 #: src/features/inviteFriends/components/ThemePicker.tsx:32
 msgid "Twilight"
 msgstr "Tusmørke"
@@ -13428,12 +13441,12 @@ msgstr "Tofaktorgodkendelse (2FA)"
 msgid "Type:"
 msgstr "Type:"
 
-#: src/components/dialogs/DeviceLocationRequestDialog.tsx:86
+#: src/components/dialogs/DeviceLocationRequestDialog.tsx:87
 msgid "Unable to access location. You'll need to visit your system settings to enable location services for Bluesky."
 msgstr "Kunne ikke tilgå lokation. Du skal give Bluesky adgang til lokationsoplysninger under systemindstillinger."
 
-#: src/lib/hooks/useCleanError.ts:30
-#: src/lib/strings/errors.ts:40
+#: src/lib/hooks/useCleanError.ts:32
+#: src/lib/strings/errors.ts:44
 msgid "Unable to connect. Please check your internet connection and try again."
 msgstr "Kan ikke forbinde. Tjek din internetforbindelse og prøv igen."
 
@@ -13444,7 +13457,7 @@ msgstr "Kunne ikke kontakte din udbyder. Tjek din internetforbindelse og prøv i
 
 #: src/screens/Login/ForgotPasswordForm.tsx:70
 #: src/screens/Login/index.tsx:100
-#: src/screens/Login/LoginForm.tsx:168
+#: src/screens/Login/LoginForm.tsx:151
 #: src/screens/Login/SetNewPasswordForm.tsx:82
 #: src/screens/Signup/index.tsx:89
 msgid "Unable to contact your service. Please check your Internet connection."
@@ -13472,7 +13485,7 @@ msgstr "Kunne ikke finde den valgte modtager."
 msgid "Unable to load your account"
 msgstr "Kunne ikke indlæse din konto"
 
-#: src/lib/strings/errors.ts:77
+#: src/lib/strings/errors.ts:81
 msgid "Unable to resolve handle"
 msgstr "Handle ikke genkendt"
 
@@ -13499,15 +13512,15 @@ msgstr "Utilgængelig feedinformation"
 #: src/components/moderation/BlockDialog.tsx:188
 #: src/components/moderation/BlockDialog.tsx:210
 #: src/screens/Messages/ConversationSettings/MemberMenu.tsx:227
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:190
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:371
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:433
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:191
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:372
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:434
 #: src/screens/ProfileList/components/Header.tsx:171
 #: src/screens/ProfileList/components/Header.tsx:178
 msgid "Unblock"
 msgstr "Bloker ikke længere"
 
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:375
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:376
 msgctxt "action"
 msgid "Unblock"
 msgstr "Bloker ikke længere"
@@ -13527,8 +13540,8 @@ msgstr "Bloker ikke længere konto"
 msgid "Unblock account?"
 msgstr "Fjern blokering af konto?"
 
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:182
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:426
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:183
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:427
 msgid "Unblock Account?"
 msgstr "Bloker ikke længere konto?"
 
@@ -13586,7 +13599,7 @@ msgid "Undo repost ({0, plural, one {# repost} other {# reposts}})"
 msgstr "Fortryd deling ({0, plural, one {# deling} other {# delinger}})"
 
 #. placeholder {0}: profile.handle
-#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:402
+#: src/screens/Profile/Header/ProfileHeaderStandard.tsx:403
 msgid "Unfollow {0}"
 msgstr "Følg ikke længer {0}"
 
@@ -13595,7 +13608,7 @@ msgstr "Følg ikke længer {0}"
 msgid "Unfollow account"
 msgstr "Følg ikke længere konto"
 
-#: src/screens/VideoFeed/index.tsx:976
+#: src/screens/VideoFeed/index.tsx:982
 msgid "Unfollows the user"
 msgstr "Ophører med at følge brugeren"
 
@@ -13737,7 +13750,7 @@ msgstr "Ulæst"
 msgid "Unsnooze email reminder"
 msgstr "Udsæt ikke længere påmindelsen"
 
-#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:348
+#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:349
 msgid "Unsubscribe"
 msgstr "Afmeld abonnement"
 
@@ -13746,7 +13759,7 @@ msgstr "Afmeld abonnement"
 msgid "Unsubscribe from list"
 msgstr "Afmeld abonnement på liste"
 
-#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:315
+#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:316
 msgid "Unsubscribe from this labeler"
 msgstr "Afmeld abonnement på denne mærkningstjeneste"
 
@@ -13809,8 +13822,8 @@ msgstr "Opdater din e-mail"
 
 #: src/ageAssurance/components/NoAccessScreen.tsx:211
 #: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:253
-#: src/components/dialogs/DeviceLocationRequestDialog.tsx:41
-#: src/components/dialogs/DeviceLocationRequestDialog.tsx:105
+#: src/components/dialogs/DeviceLocationRequestDialog.tsx:42
+#: src/components/dialogs/DeviceLocationRequestDialog.tsx:106
 msgid "Update your location"
 msgstr "Opdater din lokalitet"
 
@@ -13855,13 +13868,13 @@ msgstr "Upload fra bibliotek"
 msgid "Uploading GIF..."
 msgstr "Uploader GIF ..."
 
-#: src/lib/api/index.ts:336
-#: src/lib/api/index.ts:363
+#: src/lib/api/index.ts:337
+#: src/lib/api/index.ts:364
 msgid "Uploading images..."
 msgstr "Uploader billeder..."
 
-#: src/lib/api/index.ts:436
-#: src/lib/api/index.ts:460
+#: src/lib/api/index.ts:437
+#: src/lib/api/index.ts:461
 msgid "Uploading link thumbnail..."
 msgstr "Uploader forhåndsvisning af link..."
 
@@ -13870,8 +13883,8 @@ msgid "Uploading video..."
 msgstr "Uploader video..."
 
 #: src/screens/Settings/AppPasswords.tsx:68
-msgid "Use app passwords to sign in to other Bluesky clients without giving full access to your account or password."
-msgstr "Brug appadgangskoder til at logge ind i andre Bluesky-klienter uden at give fuld adgang til din konto eller adgangskode."
+msgid "Use app passwords to sign in to other ORBIS clients without giving full access to your account or password."
+msgstr ""
 
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:576
 msgid "Use default provider"
@@ -13976,11 +13989,11 @@ msgstr "Brugernavn kan ikke begynde eller slutte med en bindestreg"
 msgid "Username must only contain letters (a-z), numbers, and hyphens"
 msgstr "Brugernavn kan kun indeholde bogstaver (a-z), tal og bindestreger"
 
-#: src/screens/Login/LoginForm.tsx:306
+#: src/screens/Login/LoginForm.tsx:361
 msgid "Username or email"
 msgstr "Brugernavn eller e-mail"
 
-#: src/screens/Login/LoginForm.tsx:316
+#: src/screens/Login/LoginForm.tsx:371
 msgid "Username or email address"
 msgstr "Brugernavn eller e-mailadresse"
 
@@ -14100,8 +14113,8 @@ msgid "Verifying..."
 msgstr "Bekræfter ..."
 
 #. placeholder {0}: env.APP_VERSION
-#: src/screens/Settings/AboutSettings.tsx:144
-#: src/screens/Settings/AboutSettings.tsx:173
+#: src/screens/Settings/AboutSettings.tsx:140
+#: src/screens/Settings/AboutSettings.tsx:169
 msgid "Version {0}"
 msgstr "Version {0}"
 
@@ -14129,20 +14142,19 @@ msgid "Video from {0}: {text}"
 msgstr "Videofeed fra {0}: {text}"
 
 #. placeholder {0}: sanitizeHandle( post.author.handle, '@', )
-#: src/screens/VideoFeed/index.tsx:1231
+#: src/screens/VideoFeed/index.tsx:1218
 msgid "Video from {0}. Tap to play or pause the video"
 msgstr "Video fra {0}. Tryk for at starte eller stoppe afspilning"
 
-#: src/lib/interests.ts:62
 #: src/screens/Search/modules/ExploreTrendingTopics.tsx:248
 msgid "Video Games"
 msgstr "Computerspil"
 
-#: src/screens/VideoFeed/index.tsx:1230
+#: src/screens/VideoFeed/index.tsx:1217
 msgid "Video is paused"
 msgstr "Video er sat på pause"
 
-#: src/screens/VideoFeed/index.tsx:1230
+#: src/screens/VideoFeed/index.tsx:1217
 msgid "Video is playing"
 msgstr "Video afspiller"
 
@@ -14194,7 +14206,7 @@ msgstr "{0}s profilbillede"
 #. placeholder {0}: profile.handle
 #: src/screens/CustomFeed/components/CustomFeedHeader.tsx:513
 #: src/screens/Search/components/SearchProfileCard.tsx:37
-#: src/screens/VideoFeed/index.tsx:937
+#: src/screens/VideoFeed/index.tsx:943
 #: src/view/com/notifications/NotificationFeedItem.tsx:600
 msgid "View {0}'s profile"
 msgstr "Se {0}s profil"
@@ -14225,8 +14237,8 @@ msgstr "Se blogpost for mere information"
 msgid "View debug entry"
 msgstr "Se loghændelse"
 
-#: src/screens/VideoFeed/index.tsx:805
-#: src/screens/VideoFeed/index.tsx:823
+#: src/screens/VideoFeed/index.tsx:808
+#: src/screens/VideoFeed/index.tsx:826
 msgid "View details"
 msgstr "Læs mere"
 
@@ -14273,7 +14285,7 @@ msgstr "Vis opslag"
 #: src/components/ProfileHoverCard/index.web.tsx:473
 #: src/components/ProfileHoverCard/index.web.tsx:493
 #: src/components/ProfileHoverCard/index.web.tsx:520
-#: src/view/com/posts/PostFeedErrorMessage.tsx:181
+#: src/view/com/posts/PostFeedErrorMessage.tsx:192
 #: src/view/com/util/PostMeta.tsx:93
 #: src/view/com/util/PostMeta.tsx:121
 msgid "View profile"
@@ -14369,10 +14381,22 @@ msgstr "Vold"
 msgid "Violent or threatening content"
 msgstr "Voldeligt eller truende indhold"
 
+#. placeholder {0}: view.title
+#. placeholder {1}: provider.name
+#: src/components/Post/Embed/AtCard/index.tsx:61
+msgid "Visit {0} on {1}"
+msgstr ""
+
 #: src/components/dialogs/LinkWarning.tsx:112
 #: src/components/dialogs/LinkWarning.tsx:122
+#: src/components/Post/Embed/AtCard/index.tsx:185
 msgid "Visit site"
 msgstr "Besøg website"
+
+#. placeholder {0}: provider.name
+#: src/components/Post/Embed/AtCard/index.tsx:62
+msgid "Visit site on {0}"
+msgstr ""
 
 #: src/view/screens/Notifications.tsx:296
 msgid "Visit your notification settings"
@@ -14413,7 +14437,7 @@ msgstr "Vi kunne ikke forbinde til den tjeneste, der udbyder dette tilpassede fe
 msgid "We could not find this list. It was probably deleted."
 msgstr "Vi kunne ikke finde denne liste. Den er sikkert blevet slettet."
 
-#: src/screens/Login/LoginForm.tsx:349
+#: src/screens/Login/LoginForm.tsx:404
 msgid "We couldn't find an account with that username. Please check that you've typed it correctly, or <0>set your hosting provider manually</0>."
 msgstr "Vi kunne ikke finde en konto med dette brugernavn. Tjek at du har indtastet det korrekt, eller <0>angiv din udbyder manuelt</0>."
 
@@ -14441,9 +14465,9 @@ msgstr "Vi kunne ikke indlæse indstillingerne for denne samtale"
 msgid "We couldn't load your account settings. Check your internet connection and try again."
 msgstr "Vi kunne ikke indlæse dine kontoindstillinger. Tjek din internetforbindelse og prøv igen."
 
-#: src/screens/Login/LoginForm.tsx:483
-msgid "We couldn’t verify your hosting provider. Check your internet connection, or <0>set your hosting provider manually</0>."
-msgstr "Vi kunne ikke bekræfte din udbyder. Tjek din internetforbindelse, eller <0>angiv din udbyder manuelt</0>."
+#: src/screens/Login/LoginForm.tsx:527
+msgid "We couldn’t verify your network connection. Check your internet connection, or <0>set network manually</0>."
+msgstr ""
 
 #: src/components/contacts/screens/GetContacts.tsx:246
 msgid "We delete hashes after matches are made"
@@ -14610,7 +14634,7 @@ msgstr "Beklager! Det opslag, du svarer på, er blevet slettet."
 msgid "We're sorry! We can't find the page you were looking for."
 msgstr "Beklager! Vi kan ikke finde den side, du leder efter."
 
-#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:216
+#: src/screens/Profile/Header/ProfileHeaderLabeler.tsx:217
 msgid "We're sorry! You can only subscribe to twenty labelers, and you've reached your limit of twenty."
 msgstr "Beklager! Du kan kun abonnere på 20 mærkningstjenester, og du har nået denne grænse."
 
@@ -14639,7 +14663,7 @@ msgstr "Alderstjek er gennemført. Du kan nu lukke denne dialog."
 msgid "Welcome back!"
 msgstr "Velkommen tilbage!"
 
-#: src/components/NewskieDialog.tsx:142
+#: src/components/dialogs/NewskieDialog/index.tsx:119
 msgid "Welcome, friend!"
 msgstr "Velkommen, min ven!"
 
@@ -14660,7 +14684,6 @@ msgstr "Hvad du anmeldte"
 msgid "what’s up"
 msgstr "hva’ så"
 
-#: src/view/com/auth/SplashScreen.web.tsx:99
 #: src/view/com/composer/Composer.tsx:1624
 #: src/view/com/feeds/ComposerPrompt.tsx:206
 msgid "What's up?"
@@ -14698,7 +14721,7 @@ msgstr "Ups!"
 msgid "Whoops! Trending videos failed to load."
 msgstr "Ups! Populære videoer kunne ikke indlæses."
 
-#: src/screens/Takendown.tsx:167
+#: src/screens/Takendown.tsx:169
 msgid "Why are you appealing?"
 msgstr "Hvorfor ønsker du at klage?"
 
@@ -14765,10 +14788,6 @@ msgstr "Skriv dit opslag"
 msgid "Write your reply"
 msgstr "Skriv dit svar"
 
-#: src/lib/interests.ts:75
-msgid "Writers"
-msgstr "Forfattere"
-
 #. placeholder {0}: verifyError.did
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:368
 msgid "Wrong DID returned from server. Received: {0}"
@@ -14800,7 +14819,7 @@ msgstr "Ja-GIF’er"
 msgid "Yes, deactivate"
 msgstr "Ja, deaktiveret"
 
-#: src/screens/Settings/components/DeleteAccountDialog.tsx:354
+#: src/screens/Settings/components/DeleteAccountDialog.tsx:352
 msgid "Yes, delete my account"
 msgstr "Ja, slet min konto"
 
@@ -14849,7 +14868,7 @@ msgstr "Du blokerer denne person"
 msgid "You are creating an account on"
 msgstr "Du er ved at oprette en konto på"
 
-#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:107
+#: src/features/liveNow/components/GoLiveDisabledDialog.tsx:106
 msgid "You are currently blocked from using the Go Live feature. To appeal this moderation decision, please submit the form below."
 msgstr "Du er i øjeblikket blokeret fra at gå live."
 
@@ -14900,10 +14919,10 @@ msgid "You can adjust your interests at any time from \"Content and media\" sett
 msgstr "Du kan ændre dine interesser når som helst under Indhold og medier-indstillinger."
 
 #: src/screens/Settings/components/DeleteAccountDialog.tsx:217
-msgid "You can also <0>temporarily deactivate</0> your account instead. Your profile, posts, feeds, and lists will no longer be visible to other Bluesky users. You can reactivate your account at any time by logging in."
-msgstr "Du kan også <0>midlertidigt deaktivere</0> din konto. Din profil og dine opslag, feeds og lister vil ikke længere være synlige for andre Bluesky-brugere. Du kan når som helst genaktivere din konto ved at logge ind."
+msgid "You can also <0>temporarily deactivate</0> your account instead. Your profile, posts, feeds, and lists will no longer be visible to other ORBIS users. You can reactivate your account at any time by logging in."
+msgstr ""
 
-#: src/view/com/posts/FollowingEmptyState.tsx:60
+#: src/view/com/posts/FollowingEmptyState.tsx:61
 #: src/view/com/posts/FollowingEndOfFeed.tsx:61
 msgid "You can also discover new Custom Feeds to follow."
 msgstr "Du kan også finde nye specialbyggede feeds, du kan følge."
@@ -14987,8 +15006,8 @@ msgstr "Du kan ikke tilføje flere end {EMOJI_REACTION_LIMIT, plural, one {# emo
 msgid "You cannot create a group chat yet."
 msgstr "Du kan endnu oprette en gruppechat endnu."
 
-#: src/lib/hooks/useCleanError.ts:54
-#: src/lib/strings/errors.ts:62
+#: src/lib/hooks/useCleanError.ts:56
+#: src/lib/strings/errors.ts:66
 msgid "You cannot update your birthdate while using an app password. Please sign in with your main password to update your birthdate."
 msgstr "Du kan ikke opdatere din fødselsdato, mens du bruger en appadgangskode. Log ind med din præmire adgangskode for at opdatere din fødselsdato."
 
@@ -15122,13 +15141,21 @@ msgstr "Du skjulte dette svar."
 msgid "You initiated this flow already, {0} ago. It may take up to 5 minutes for emails to reach your inbox. Please consider waiting a few minutes before trying again."
 msgstr "Du har allerede påbegyndt dette forløb for {0} siden. Det kan tage op til fem minutter for en e-mail at nå din indbakke. Vent nogle minutter, før du prøver igen."
 
-#: src/components/NewskieDialog.tsx:108
+#: src/components/dialogs/NewskieDialog/utils.ts:42
 msgid "You joined Bluesky {timeAgoString} ago"
 msgstr "Du oprettede dig på Bluesky for {timeAgoString} siden"
 
-#: src/components/NewskieDialog.tsx:105
+#: src/components/dialogs/NewskieDialog/utils.ts:27
+msgid "You joined Bluesky just now"
+msgstr ""
+
+#: src/components/dialogs/NewskieDialog/utils.ts:40
 msgid "You joined Bluesky using a Starter Pack {timeAgoString} ago"
 msgstr "Du oprettede dig på Bluesky via en startpakke for {timeAgoString} siden"
+
+#: src/components/dialogs/NewskieDialog/utils.ts:26
+msgid "You joined Bluesky using a Starter Pack just now"
+msgstr ""
 
 #: src/components/moderation/LabelsOnMeDialog.tsx:83
 msgid "You may appeal non-self labels if you feel they were placed in error."
@@ -15225,7 +15252,7 @@ msgid "You will be eligible to appear in this Starter Pack again."
 msgstr ""
 
 #: src/screens/Settings/Settings.tsx:309
-#: src/view/shell/desktop/LeftNav.tsx:225
+#: src/view/shell/desktop/LeftNav.tsx:227
 msgid "You will be signed out of all your accounts."
 msgstr "Du vil blive logget ud af alle dine konti."
 
@@ -15311,7 +15338,7 @@ msgstr "Du er i kø"
 msgid "You're signed in with an App Password. Please sign in with your main password to continue deactivating your account."
 msgstr "Du er logget ind med en appadgangskode. Log ind med din primære adgangskode for at deaktivere din konto."
 
-#: src/components/moderation/AppealForm.tsx:84
+#: src/components/moderation/AppealForm.tsx:85
 msgid "You've already appealed this label and it's being reviewed by our moderation team."
 msgstr "Du har allerede klaget over denne mærkat, og vores moderatorteam er ved behandle sagen."
 
@@ -15340,7 +15367,7 @@ msgstr "Du er nået enden af dit feed! Find flere konti, du kan føge."
 msgid "You've reached the maximum number of drafts"
 msgstr "Du har nået det maksimale antal kladder"
 
-#: src/lib/hooks/useCleanError.ts:68
+#: src/lib/hooks/useCleanError.ts:70
 msgid "You've reached the maximum number of requests allowed. Please try again later."
 msgstr "Du har nået det maksimalt tilladte antal forespørgsler. Prøv igen senere."
 
@@ -15360,7 +15387,7 @@ msgstr "Du har nået din daglige grænse for videouploads (for mange bytes)"
 msgid "You've reached your daily limit for video uploads (too many videos)"
 msgstr "Du har nået din daglige grænse for videouploads (for mange videoer)"
 
-#: src/screens/VideoFeed/index.tsx:1278
+#: src/screens/VideoFeed/index.tsx:1265
 msgid "You've run out of videos to watch. Maybe it's a good time to take a break?"
 msgstr "Du er løbet tør for videoer at se. Måske er det på tide at holde en pause?"
 
@@ -15377,7 +15404,7 @@ msgstr "Din konto kan ikke sende anmeldelser, mens den er spærret."
 msgid "Your account has been deleted, see ya! ✌️"
 msgstr "Din konto blev slettet. Vi ses! ✌️"
 
-#: src/screens/Takendown.tsx:140
+#: src/screens/Takendown.tsx:142
 msgid "Your account has been suspended"
 msgstr "Din konto er suspenderet"
 
@@ -15414,20 +15441,20 @@ msgstr "Dine kontonotifikationer"
 msgid "Your account repository, containing all public data records, can be downloaded as a \"CAR\" file. This file does not include media embeds, such as images, or your private data, which must be fetched separately."
 msgstr "Dit kontoarkiv, som indeholder al din offentlige data, kan downloades som en CAR-fil. Denne fil indeholder ikke vedhæftede medier, fx billeder, eller dine private oplysninger, som skal downloades separat."
 
-#: src/screens/Takendown.tsx:208
-msgid "Your account was found to be in violation of the <0>Bluesky Social Terms of Service</0>. You have been sent an email outlining the specific violation and suspension period, if applicable. You can appeal this decision if you believe it was made in error."
-msgstr "Din konto overtræder <0>Bluesky Socials tjenestevilkår</0>. Du har fået en e-mail, der beskriver, hvad du har gjort forkert, og hvor længe du vil være suspenderet. Du kan klage over denne beslutning, hvis du mener, der er sket en fejl."
+#: src/screens/Takendown.tsx:210
+msgid "Your account was found to be in violation of the <0>ORBIS Terms of Service</0>. You have been sent an email outlining the specific violation and suspension period, if applicable. You can appeal this decision if you believe it was made in error."
+msgstr ""
 
 #: src/screens/ModerationInbox/index.tsx:213
 msgctxt "moderation-report-action"
 msgid "Your account was suspended"
 msgstr "Din konto blev suspenderet"
 
-#: src/screens/Takendown.tsx:148
+#: src/screens/Takendown.tsx:150
 msgid "Your appeal has been submitted. If your appeal succeeds, you will receive an email."
 msgstr "Din klage er blevet afsendt. Hvis du får medhold i din klage, vil du få besked via e-mail."
 
-#: src/screens/Signup/StepInfo/index.tsx:298
+#: src/screens/Signup/StepInfo/index.tsx:305
 msgid "Your birth date"
 msgstr "Din fødselsdato"
 
@@ -15440,12 +15467,12 @@ msgid "Your choice will be remembered for future links. You can change it at any
 msgstr "Dit valg vil blive anvendt for links fremover. Du kan når som helst ændre det under indstillinger."
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:378
-msgid "Your contact {firstAuthorLink} is on Bluesky"
-msgstr "Din kontakt {firstAuthorLink} er på Bluesky"
+msgid "Your contact {firstAuthorLink} is on ORBIS"
+msgstr ""
 
 #: src/view/com/notifications/NotificationFeedItem.tsx:376
-msgid "Your contact {firstAuthorName} is on Bluesky"
-msgstr "Din kontakt {firstAuthorName} er på Bluesky"
+msgid "Your contact {firstAuthorName} is on ORBIS"
+msgstr ""
 
 #: src/components/contacts/screens/ViewMatches.tsx:462
 msgid "Your contact {name}"
@@ -15468,7 +15495,7 @@ msgstr "Din e-mail"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:51
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:84
-#: src/screens/Signup/state.ts:291
+#: src/screens/Signup/state.ts:287
 #: src/screens/Signup/StepInfo/index.tsx:140
 msgid "Your email appears to be invalid."
 msgstr "Din e-mail ser ud til at være ugyldig."
@@ -15485,7 +15512,7 @@ msgstr "Dit første like!"
 msgid "Your followers"
 msgstr "Dine følgere"
 
-#: src/view/com/posts/FollowingEmptyState.tsx:41
+#: src/view/com/posts/FollowingEmptyState.tsx:42
 msgid "Your following feed is empty! Follow more users to see what's happening."
 msgstr "Dit følgerfeed er tomt! Følg flere brugere for at se, hvad der foregår."
 
@@ -15495,8 +15522,8 @@ msgid "Your full handle will be <0>@{0}</0>"
 msgstr "Dit fulde handle bliver <0>@{0}</0>"
 
 #: src/screens/Login/components/HostingProviderDialog.tsx:182
-msgid "Your hosting provider can’t be detected from an email address, so the default Bluesky service will be used. Enter your username instead, or set your provider manually."
-msgstr "Din udbyder kan ikke detekteres ud fra en e-mailadresse, så standardudbyderen vil blive anvendt. Indtast i stedet dit brugernavn, eller vælg din udbyder manuelt."
+msgid "Your hosting provider can’t be detected from an email address, so the default ORBIS service will be used. Enter your username instead, or set your provider manually."
+msgstr ""
 
 #: src/view/com/composer/state/video.ts:470
 msgid "Your hosting provider does not support videos this large. Please try again with a smaller file."
@@ -15523,7 +15550,7 @@ msgstr "Dine interesser blev opdateret!"
 msgid "Your interests help us find what you like!"
 msgstr "Dine interesser hjælper os med at finde noget, du kan lide!"
 
-#: src/screens/Signup/StepInfo/index.tsx:367
+#: src/screens/Signup/StepInfo/index.tsx:379
 msgid "Your location has been updated."
 msgstr "Din lokalitet blev opdateret."
 
@@ -15540,8 +15567,8 @@ msgid "Your note:"
 msgstr "Din note:"
 
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:74
-msgid "Your password has been changed successfully! Please use your new password when you sign in to Bluesky from now on."
-msgstr "Din adgangskode er nu ændret! Fremover skal du bruge din nye adgangskode, når du logger på Bluesky."
+msgid "Your password has been changed successfully! Please use your new password when you sign in to ORBIS from now on."
+msgstr ""
 
 #: src/screens/Signup/StepInfo/index.tsx:167
 msgid "Your password must be at least 8 characters long."
@@ -15574,8 +15601,8 @@ msgid "Your profile picture surrounded by concentric circles of other users' pro
 msgstr "Dit profilbillede omgivet af koncentriske cirkler af andre brugeres profilbilleder"
 
 #: src/screens/Settings/components/DeactivateAccountDialog.tsx:75
-msgid "Your profile, posts, feeds, and lists will no longer be visible to other Bluesky users. You can reactivate your account at any time by logging in."
-msgstr "Din profil, dine opslag, feeds og lister vil ikke længere kunne ses af andre Bluesky-brugere. Du kan genaktivere din konto når som helst ved at logge ind."
+msgid "Your profile, posts, feeds, and lists will no longer be visible to other ORBIS users. You can reactivate your account at any time by logging in."
+msgstr ""
 
 #: src/view/com/composer/Composer.tsx:1238
 msgid "Your reply was sent"
@@ -15615,3 +15642,19 @@ msgstr "Dit brugernavn og din adgangskode vil blive delt med <0>{host}</0>. Hvis
 #: src/components/verification/VerificationsDialog.tsx:67
 msgid "Your verifications"
 msgstr "Dine verifikationer"
+
+#: src/screens/Settings/AboutSettings.tsx:203
+msgid "حالة نظام ORBIS"
+msgstr ""
+
+#: src/view/screens/PrivacyPolicy.tsx:21
+msgid "سياسة الخصوصية"
+msgstr ""
+
+#: src/view/screens/TermsOfService.tsx:21
+msgid "شروط الخدمة"
+msgstr ""
+
+#: src/view/com/posts/PostFeedErrorMessage.tsx:85
+msgid "لا توجد منشورات متاحة حالياً"
+msgstr ""

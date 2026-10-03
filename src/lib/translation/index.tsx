@@ -1,4 +1,4 @@
-import {useCallback, useContext, useEffect, useMemo, useState} from 'react'
+﻿import {useCallback, useContext, useEffect, useMemo, useState} from 'react'
 import {LayoutAnimation, Platform} from 'react-native'
 import {getLocales} from 'expo-localization'
 import {onTranslateTask} from '@bsky.app/expo-translate-text'
@@ -309,22 +309,18 @@ export function Provider({children}: React.PropsWithChildren<unknown>) {
           resultTargetLanguage: null,
           textLength: text.length,
         })
-        let errorMessage = l`Device failed to translate :(`
-        if (e.message === E_SAME_AS_SOURCE_LANGUAGE) {
-          errorMessage = l`Translation to the same language is unavailable on your device.`
-        }
-        if (e.message === E_EMPTY_RESULT) {
-          errorMessage = l`No translation received from your device.`
-        }
-        if (
-          expectedSourceLanguage &&
-          e.message.includes(E_INVALID_SOURCE_LANGUAGE)
-        ) {
-          errorMessage = l`${codeToLanguageName(
-            expectedSourceLanguage,
-            langPrefs.appLanguage,
-          )} is not supported by your device.`
-        }
+        const errorMessage = ((errObj: Error) => {
+          if (errObj.message === E_SAME_AS_SOURCE_LANGUAGE) {
+            return l`Translation to the same language is unavailable on your device.`
+          }
+          if (errObj.message === E_EMPTY_RESULT) {
+            return l`No translation received from your device.`
+          }
+          if (expectedSourceLanguage && errObj.message.includes(E_INVALID_SOURCE_LANGUAGE)) {
+            return l`${codeToLanguageName(expectedSourceLanguage, langPrefs.appLanguage)} is not supported by your device.`
+          }
+          return l`Device failed to translate :(`
+        })(e)
         if (!IS_ANDROID) {
           LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut)
         }

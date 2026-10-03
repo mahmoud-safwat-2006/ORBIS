@@ -1,9 +1,9 @@
 import assert from 'node:assert'
 
 import {DAY, SECOND} from '@atproto/common'
-import {Express} from 'express'
+import {type Express} from 'express'
 
-import {AppContext} from '../context.js'
+import {type AppContext} from '../context.js'
 import {observedHandler} from './util.js'
 
 export default function (ctx: AppContext, app: Express) {

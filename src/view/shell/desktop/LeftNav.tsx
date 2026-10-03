@@ -1,7 +1,5 @@
-﻿import {OrbisVerifiedBadge, OrbisVerifiedModal} from '#/view/com/util/verified'
-import {Pressable} from 'react-native'
-import {useCallback, useMemo, useState} from 'react'
-import {StyleSheet, View} from 'react-native'
+﻿import {useCallback, useMemo, useState} from 'react'
+import {Pressable, StyleSheet, View} from 'react-native'
 import {PlatformInfo} from '@bsky.app/expo-bluesky-swiss-army'
 import {plural} from '@lingui/core/macro'
 import {Trans, useLingui} from '@lingui/react/macro'
@@ -29,6 +27,7 @@ import {useCloseAllActiveElements} from '#/state/util'
 import {LoadingPlaceholder} from '#/view/com/util/LoadingPlaceholder'
 import {PressableWithHover} from '#/view/com/util/PressableWithHover'
 import {UserAvatar} from '#/view/com/util/UserAvatar'
+import {OrbisVerifiedBadge, OrbisVerifiedModal} from '#/view/com/util/verified'
 import {NavSignupCard} from '#/view/shell/NavSignupCard'
 import {
   atoms as a,

@@ -1,4 +1,4 @@
-import {memo, useCallback, useEffect, useMemo, useRef, useState} from 'react'
+﻿import {memo, useCallback, useEffect, useMemo, useRef, useState} from 'react'
 import {
   LayoutAnimation,
   type ListRenderItem,
@@ -85,6 +85,7 @@ import {Header} from '#/screens/VideoFeed/components/Header'
 import {atoms as a, ios, platform, ThemeProvider, useTheme} from '#/alf'
 import {setSystemUITheme} from '#/alf/util/systemUI'
 import {Button, ButtonIcon, ButtonText} from '#/components/Button'
+import * as Dialog from '#/components/Dialog'
 import {Divider} from '#/components/Divider'
 import {ArrowLeft_Stroke2_Corner0_Rounded as ArrowLeftIcon} from '#/components/icons/Arrow'
 import {Check_Stroke2_Corner0_Rounded as CheckIcon} from '#/components/icons/Check'
@@ -104,6 +105,8 @@ import {IS_ANDROID} from '#/env'
 import {app} from '#/lexicons'
 import * as bsky from '#/types/bsky'
 import {Scrubber, VIDEO_PLAYER_BOTTOM_INSET} from './components/Scrubber'
+import {VideoCommentsDialog} from './components/VideoCommentsDialog'
+import {VideoSideActions} from './components/VideoSideActions'
 
 function createThreeVideoPlayers(
   sources?: [string, string, string],
@@ -856,6 +859,7 @@ function Overlay({
   const {currentAccount} = useSession()
   const navigation = useNavigation<NavigationProp>()
   const seekingAnimationSV = useSharedValue(0)
+  const commentsControl = Dialog.useDialogControl()
 
   const profile = useProfileShadow(post.author)
   const [queueFollow, queueUnfollow] = useProfileFollowMutationQueue(
@@ -923,6 +927,8 @@ function Overlay({
             )}
           </View>
 
+            <VideoSideActions post={post} onOpenComments={() => commentsControl.open()} />
+            <VideoCommentsDialog control={commentsControl} postUri={post.uri} replyCount={post.replyCount} />
           <LinearGradient
             colors={[
               'rgba(0,0,0,0)',
@@ -1002,25 +1008,6 @@ function Overlay({
                   value={richText}
                   authorHandle={post.author.handle}
                 />
-              )}
-              {record && (
-                <View style={[{left: -5}]}>
-                  <PostControls
-                    richText={richText}
-                    post={post}
-                    record={record}
-                    feedContext={feedContext}
-                    logContext="FeedItem"
-                    forceGoogleTranslate={true}
-                    onPressReply={() =>
-                      navigation.navigate('PostThread', {
-                        name: post.author.did,
-                        rkey,
-                      })
-                    }
-                    big
-                  />
-                </View>
               )}
             </Animated.View>
             <Scrubber
@@ -1314,3 +1301,4 @@ function isTallAspectRatio(
     (aspectRatio?.width ?? 1) / (aspectRatio?.height ?? 1)
   return videoAspectRatio <= 9 / 16
 }
+

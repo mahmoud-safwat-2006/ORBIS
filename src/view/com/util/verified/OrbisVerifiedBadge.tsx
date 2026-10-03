@@ -1,6 +1,6 @@
 ﻿import React from 'react'
 import {Pressable, StyleSheet, View} from 'react-native'
-import Svg, {Path, Circle} from 'react-native-svg'
+import Svg, {Circle,Path} from 'react-native-svg'
 
 export type VerifiedTier = 'personal' | 'business' | 'official'
 

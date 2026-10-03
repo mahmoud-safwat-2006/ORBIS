@@ -7,6 +7,7 @@ interface Props {
   handle?: string
   displayName?: string
   did?: string
+  tier?: string
 }
 
 export function OrbisVerifiedBadge({size = 19, handle, displayName, did}: Props) {

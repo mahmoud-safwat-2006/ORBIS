@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:123456789012:android:079c43af-e813-4f8b-97fc-e98bfe721f96",
         "android_client_info": {
-          "package_name": "social.orbis.mobile"
+          "package_name": "social.orbis.app"
         }
       },
       "oauth_client": [],

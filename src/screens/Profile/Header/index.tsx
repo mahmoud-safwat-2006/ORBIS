@@ -1,3 +1,4 @@
+﻿import {OrbisVerifiedBadge} from '#/view/com/util/verified/OrbisVerifiedBadge'
 import {memo, useMemo, useState} from 'react'
 import {type LayoutChangeEvent, StyleSheet, View} from 'react-native'
 import Animated, {

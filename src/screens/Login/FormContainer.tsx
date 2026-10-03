@@ -1,4 +1,4 @@
-import {type StyleProp, View, type ViewStyle} from 'react-native'
+﻿import {type StyleProp, View, type ViewStyle} from 'react-native'
 
 import {atoms as a, useBreakpoints, useGutters} from '#/alf'
 import {Text} from '#/components/Typography'

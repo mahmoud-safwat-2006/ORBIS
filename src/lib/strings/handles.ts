@@ -1,4 +1,4 @@
-// Regex from the go implementation
+﻿// Regex from the go implementation
 // https://github.com/ORBIS-social/indigo/blob/main/atproto/syntax/handle.go#L10
 import {i18n} from '@lingui/core'
 import {msg} from '@lingui/core/macro'

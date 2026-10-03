@@ -1,3 +1,4 @@
+﻿import {OrbisVerifiedBadge} from '#/view/com/util/verified/OrbisVerifiedBadge'
 import {useCallback, useEffect, useState} from 'react'
 import {View} from 'react-native'
 import {msg} from '@lingui/core/macro'

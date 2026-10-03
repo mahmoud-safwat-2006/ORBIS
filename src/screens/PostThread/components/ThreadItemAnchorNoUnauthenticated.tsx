@@ -1,3 +1,4 @@
+﻿import {OrbisVerifiedBadge} from '#/view/com/util/verified/OrbisVerifiedBadge'
 import {View} from 'react-native'
 import {Trans} from '@lingui/react/macro'
 

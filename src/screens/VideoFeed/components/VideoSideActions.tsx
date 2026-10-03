@@ -1,152 +1,100 @@
-﻿import {useState} from 'react'
+﻿import React, {useState} from 'react'
 import {Pressable, StyleSheet, Text, View} from 'react-native'
-import {msg} from '@lingui/core/macro'
-import {useLingui} from '@lingui/react'
+import Svg, {Path} from 'react-native-svg'
 
-import {CountWheel} from '#/lib/custom-animations/CountWheel'
-import {useHaptics} from '#/lib/haptics'
-import {shareUrl} from '#/lib/sharing'
-import {toShareUrl} from '#/lib/strings/url-helpers'
-import {type Shadow} from '#/state/cache/types'
-import {
-  usePostLikeMutationQueue,
-  usePostRepostMutationQueue,
-} from '#/state/queries/post'
-import {ArrowShareRight_Stroke2_Corner2_Rounded as ShareIcon} from '#/components/icons/ArrowShareRight'
-import {Bookmark_Stroke2_Corner0_Rounded as BookmarkIcon} from '#/components/icons/Bookmark'
-import {Bubble_Stroke2_Corner2_Rounded as Bubble} from '#/components/icons/Bubble'
-import {DotGrid_Stroke2_Corner0_Rounded as MoreIcon} from '#/components/icons/DotGrid'
-import {Heart2_Filled_Stroke2_Corner0_Rounded as LikeFilled, Heart2_Stroke2_Corner0_Rounded as LikeOutline} from '#/components/icons/Heart2'
-import {useFormatPostStatCount} from '#/components/PostControls/util'
-import {type app} from '#/lexicons'
+interface VideoSideActionsProps {
+  post: any
+  onLikePress?: () => void
+  onCommentPress?: () => void
+  onSharePress?: () => void
+  onMorePress?: () => void
+}
 
 export function VideoSideActions({
   post,
-  onOpenComments,
-}: {
-  post: Shadow<app.bsky.feed.defs.PostView>
-  onOpenComments: () => void
-}) {
-  const {_} = useLingui()
-  const playHaptic = useHaptics()
-  const formatCount = useFormatPostStatCount()
+  onLikePress,
+  onCommentPress,
+  onSharePress,
+  onMorePress,
+}: VideoSideActionsProps) {
+  const [isLiked, setIsLiked] = useState(false)
+  const initialLikes = post?.likeCount ?? 0
+  const [likeCount, setLikeCount] = useState(initialLikes)
 
-  // Likes
-  const [queueLike, queueUnlike] = usePostLikeMutationQueue(
-    post,
-    undefined,
-    undefined,
-    'ImmersiveVideo',
-  )
-  const isLiked = Boolean(post.viewer?.like)
-  const [hasLikedToggled, setHasLikedToggled] = useState(false)
-
-  const toggleLike = () => {
-    playHaptic('Light')
-    setHasLikedToggled(true)
+  const handleLike = () => {
     if (isLiked) {
-      void queueUnlike()
+      setIsLiked(false)
+      setLikeCount((prev: number) => Math.max(0, prev - 1))
     } else {
-      void queueLike()
+      setIsLiked(true)
+      setLikeCount((prev: number) => prev + 1)
     }
-  }
-
-  const onShare = () => {
-    playHaptic('Light')
-    const url = toShareUrl(post.uri)
-    void shareUrl(url)
+    onLikePress?.()
   }
 
   return (
-    <View style={styles.fbSideContainer}>
-      {/* 1. Like Button - Facebook Reels exact look */}
+    <View style={styles.container}>
+      {/* 1. زر الإعجاب لايك فيسبوك ريلز 👍 */}
       <View style={styles.actionItem}>
-        <Pressable
-          onPress={toggleLike}
-          accessibilityLabel={_(msg`Like`)}
-          accessibilityHint={_(msg`Likes the video`)}
-          accessibilityRole="button"
-          hitSlop={8}
-          style={styles.actionBtn}>
-          {isLiked ? (
-            <LikeFilled size="2xl" fill="#2374E1" />
-          ) : (
-            <LikeOutline size="2xl" fill="#FFFFFF" />
-          )}
+        <Pressable onPress={handleLike} style={styles.iconBtn}>
+          <Svg width={30} height={30} viewBox="0 0 24 24" fill="none">
+            <Path
+              d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3zM7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"
+              stroke="#FFFFFF"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill={isLiked ? '#1877F2' : 'none'}
+            />
+          </Svg>
         </Pressable>
-        <CountWheel
-          count={post.likeCount ?? 0}
-          isToggled={isLiked}
-          hasBeenToggled={hasLikedToggled}
-          renderCount={({count}) => (
-            <Text style={styles.countText}>{formatCount(count)}</Text>
-          )}
-        />
+        <Text style={styles.actionCount}>{likeCount > 0 ? likeCount : 'إعجاب'}</Text>
       </View>
 
-      {/* 2. Comments Button */}
+      {/* 2. زر التعليق 💬 */}
       <View style={styles.actionItem}>
-        <Pressable
-          onPress={onOpenComments}
-          accessibilityLabel={_(msg`Comments`)}
-          accessibilityHint={_(msg`Opens comments`)}
-          accessibilityRole="button"
-          hitSlop={8}
-          style={styles.actionBtn}>
-          <Bubble size="2xl" fill="#FFFFFF" />
+        <Pressable onPress={onCommentPress} style={styles.iconBtn}>
+          <Svg width={30} height={30} viewBox="0 0 24 24" fill="none">
+            <Path
+              d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+              stroke="#FFFFFF"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </Svg>
         </Pressable>
-        <CountWheel
-          count={post.replyCount ?? 0}
-          isToggled={false}
-          hasBeenToggled={false}
-          renderCount={({count}) => (
-            <Text style={styles.countText}>{formatCount(count)}</Text>
-          )}
-        />
+        <Text style={styles.actionCount}>{post?.replyCount ?? 'تعليق'}</Text>
       </View>
 
-      {/* 3. Share Button */}
+      {/* 3. زر المشاركة ↗ */}
       <View style={styles.actionItem}>
-        <Pressable
-          onPress={onShare}
-          accessibilityLabel={_(msg`Share`)}
-          accessibilityHint={_(msg`Shares video`)}
-          accessibilityRole="button"
-          hitSlop={8}
-          style={styles.actionBtn}>
-          <ShareIcon size="2xl" fill="#FFFFFF" />
+        <Pressable onPress={onSharePress} style={styles.iconBtn}>
+          <Svg width={30} height={30} viewBox="0 0 24 24" fill="none">
+            <Path
+              d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"
+              stroke="#FFFFFF"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </Svg>
         </Pressable>
-        <Text style={styles.countText}>
-          {formatCount((post.repostCount ?? 0) + (post.quoteCount ?? 0))}
-        </Text>
+        <Text style={styles.actionCount}>مشاركة</Text>
       </View>
 
-      {/* 4. Bookmark (Save) Button */}
+      {/* 4. المزيد ... */}
       <View style={styles.actionItem}>
-        <Pressable
-          onPress={onShare}
-          accessibilityLabel={_(msg`Save`)}
-          accessibilityHint={_(msg`Saves video`)}
-          accessibilityRole="button"
-          hitSlop={8}
-          style={styles.actionBtn}>
-          <BookmarkIcon size="2xl" fill="#FFFFFF" />
-        </Pressable>
-        <Text style={styles.countText}>
-          {formatCount((post.likeCount ?? 0) > 0 ? Math.floor((post.likeCount ?? 0) * 0.4) : 0)}
-        </Text>
-      </View>
-
-      {/* 5. More Options Button (...) */}
-      <View style={styles.actionItem}>
-        <Pressable
-          onPress={onShare}
-          accessibilityLabel={_(msg`More`)}
-          accessibilityHint={_(msg`More options`)}
-          accessibilityRole="button"
-          hitSlop={8}
-          style={styles.actionBtn}>
-          <MoreIcon size="lg" fill="#FFFFFF" />
+        <Pressable onPress={onMorePress} style={styles.iconBtn}>
+          <Svg width={28} height={28} viewBox="0 0 24 24" fill="none">
+            <Path
+              d="M12 13a1 1 0 100-2 1 1 0 000 2zM19 13a1 1 0 100-2 1 1 0 000 2zM5 13a1 1 0 100-2 1 1 0 000 2z"
+              stroke="#FFFFFF"
+              strokeWidth={2.5}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </Svg>
         </Pressable>
       </View>
     </View>
@@ -154,40 +102,30 @@ export function VideoSideActions({
 }
 
 const styles = StyleSheet.create({
-  fbSideContainer: {
+  container: {
     position: 'absolute',
-    left: 16, // أقصى اليسار دائماً
-    bottom: 95,
+    left: 12,
+    bottom: 90,
+    zIndex: 50,
     alignItems: 'center',
-    gap: 20,
-    zIndex: 999,
-    direction: 'ltr',
+    gap: 16,
   },
   actionItem: {
     alignItems: 'center',
     justifyContent: 'center',
   },
-  actionBtn: {
-    width: 44,
-    height: 44,
+  iconBtn: {
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'transparent',
-    shadowColor: '#000',
-    shadowOffset: {width: 0, height: 2},
-    shadowOpacity: 0.8,
-    shadowRadius: 4,
-    elevation: 5,
+    padding: 6,
   },
-  countText: {
+  actionCount: {
     color: '#FFFFFF',
     fontSize: 12,
     fontWeight: '700',
-    marginTop: 3,
+    marginTop: 2,
     textShadowColor: 'rgba(0, 0, 0, 0.95)',
     textShadowOffset: {width: 0, height: 1},
     textShadowRadius: 3,
-    textAlign: 'center',
-    letterSpacing: 0.2,
   },
 })

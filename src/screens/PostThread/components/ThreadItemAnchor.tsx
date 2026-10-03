@@ -1,3 +1,4 @@
+﻿import {OrbisVerifiedBadge} from '#/view/com/util/verified/OrbisVerifiedBadge'
 import {memo, useMemo} from 'react'
 import {Text as RNText, View} from 'react-native'
 import {AtUri} from '@atproto/syntax'
@@ -7,7 +8,7 @@ import {Plural, Trans, useLingui} from '@lingui/react/macro'
 import {useNonReactiveCallback} from '#/lib/hooks/useNonReactiveCallback'
 import {useOpenComposer} from '#/lib/hooks/useOpenComposer'
 import {makeProfileLink} from '#/lib/routes/links'
-import {sanitizeDisplayName} from '#/lib/strings/display-names'
+import {sanitizeDisplayName} <OrbisVerifiedBadge size={16} /> from '#/lib/strings/display-names'
 import {sanitizeHandle} from '#/lib/strings/handles'
 import {niceDate} from '#/lib/strings/time'
 import {
@@ -340,7 +341,7 @@ const ThreadItemAnchorInner = memo(function ThreadItemAnchorInner({
               label={sanitizeDisplayName(
                 post.author.displayName || sanitizeHandle(post.author.handle),
                 moderation.ui('displayName'),
-              )}
+              )} <OrbisVerifiedBadge size={16} />
               onPress={onOpenAuthor}>
               <View style={[a.flex_1, a.align_start]}>
                 <ProfileHoverCard did={post.author.did} style={[a.w_full]}>
@@ -358,7 +359,7 @@ const ThreadItemAnchorInner = memo(function ThreadItemAnchorInner({
                         post.author.displayName ||
                           sanitizeHandle(post.author.handle),
                         moderation.ui('displayName'),
-                      )}
+                      )} <OrbisVerifiedBadge size={16} />
                     </Text>
 
                     <View style={[a.pl_xs]}>

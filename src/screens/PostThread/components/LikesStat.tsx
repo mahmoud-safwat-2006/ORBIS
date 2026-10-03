@@ -1,3 +1,4 @@
+﻿import {OrbisVerifiedBadge} from '#/view/com/util/verified/OrbisVerifiedBadge'
 import {AtUri} from '@atproto/syntax'
 import {Plural, Trans, useLingui} from '@lingui/react/macro'
 

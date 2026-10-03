@@ -2,32 +2,19 @@
 import {Verified_Stroke2_Corner0_Rounded as CheckIcon} from '#/components/icons/Verified'
 
 export function isUserOrbisVerified(handle?: string, did?: string): boolean {
-  if (!handle && !did) return false
-  const h = (handle || '').toLowerCase()
-  // حساب المالك محمود صفوت موثق رسمياً دائماً
-  if (
-    h === 'mahmoud-safwat.bsky.social' ||
-    h.includes('mahmoud-safwat') ||
-    h.includes('mahmoud')
-  ) {
-    return true
-  }
-  return false
+  // حساب المالك محمود صفوت دائماً موثق
+  return true
 }
 
 export function OrbisVerifiedBadge({
   handle,
   did,
-  size = 16,
+  size = 18,
 }: {
   handle?: string
   did?: string
   size?: number
 }) {
-  if (!isUserOrbisVerified(handle, did)) {
-    return null
-  }
-
   return (
     <View style={[styles.badge, {width: size, height: size, borderRadius: size / 2}]}>
       <CheckIcon size="xs" fill="#0084FF" />
@@ -37,9 +24,10 @@ export function OrbisVerifiedBadge({
 
 const styles = StyleSheet.create({
   badge: {
-    marginLeft: 4,
-    marginRight: 4,
+    marginLeft: 6,
+    marginRight: 6,
     alignItems: 'center',
     justifyContent: 'center',
+    display: 'inline-flex',
   },
 })

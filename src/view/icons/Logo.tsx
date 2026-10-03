@@ -22,7 +22,7 @@ export function Logo({
 }: LogoProps) {
   return (
     <Svg
-      accessibilityIgnoresInvertColors
+      
       fill="none"
       viewBox="0 0 100 100"
       width={width}

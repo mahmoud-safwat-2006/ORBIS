@@ -1,3 +1,4 @@
+﻿import {OrbisVerifiedBadge} from '#/view/com/util/verified/OrbisVerifiedBadge'
 import {memo, useCallback, useMemo, useState} from 'react'
 import {View} from 'react-native'
 import {moderateProfile, type ModerationOpts} from '@bsky/sdk/moderation'

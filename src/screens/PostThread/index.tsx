@@ -65,7 +65,7 @@ const analyticsOnlyOnItemSeen: FeedFeedbackStateContext['onItemSeen'] = () => {}
 const analyticsOnlySendInteraction: FeedFeedbackStateContext['sendInteraction'] =
   () => {}
 
-export function PostThread({uri}: {uri: string}) {
+export function PostThread({uri, hideAnchor = false}: {uri: string; hideAnchor?: boolean}) {
   const ax = useAnalytics()
   const {gtMobile} = useBreakpoints()
   const {hasSession} = useSession()
@@ -465,12 +465,12 @@ export function PostThread({uri}: {uri: string}) {
                 ref={anchorRef}
                 onLayout={() => setDeferParents(false)}
               />
-              <ThreadItemAnchor
+              {!hideAnchor && (<ThreadItemAnchor
                 item={item}
                 threadgateRecord={thread.data.threadgate?.record ?? undefined}
                 onPostSuccess={optimisticOnPostReply}
                 postSource={anchorPostSource}
-              />
+              />)}
             </View>
           )
         } else {
@@ -502,7 +502,7 @@ export function PostThread({uri}: {uri: string}) {
         if (item.depth < 0) {
           return <ThreadItemPostNoUnauthenticated item={item} />
         } else if (item.depth === 0) {
-          return <ThreadItemAnchorNoUnauthenticated />
+          if (hideAnchor) return null; return <ThreadItemAnchorNoUnauthenticated />
         }
       } else if (item.type === 'readMore') {
         return (
@@ -529,7 +529,7 @@ export function PostThread({uri}: {uri: string}) {
         return <ThreadItemShowOtherReplies onPress={item.onPress} />
       } else if (item.type === 'skeleton') {
         if (item.item === 'anchor') {
-          return <ThreadItemAnchorSkeleton />
+          if (hideAnchor) return null; return <ThreadItemAnchorSkeleton />
         } else if (item.item === 'reply') {
           if (thread.state.view === 'linear') {
             return <ThreadItemPostSkeleton index={index} />

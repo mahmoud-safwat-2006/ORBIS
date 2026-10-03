@@ -41,7 +41,7 @@ export function VideoCommentsDialog({
 
         {/* عرض الثريد والتعليقات بالكامل */}
         <View style={[a.flex_1]}>
-          <PostThread uri={postUri} />
+          <PostThread uri={postUri} hideAnchor={true} />
         </View>
       </Dialog.ScrollableInner>
     </Dialog.Outer>

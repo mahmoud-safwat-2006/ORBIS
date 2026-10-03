@@ -1,5 +1,5 @@
 ﻿import {useState} from 'react'
-import {I18nManager, Pressable, StyleSheet, Text, View} from 'react-native'
+import {Pressable, StyleSheet, Text, View} from 'react-native'
 import {msg} from '@lingui/core/macro'
 import {useLingui} from '@lingui/react'
 
@@ -16,7 +16,7 @@ import {ArrowShareRight_Stroke2_Corner2_Rounded as ShareIcon} from '#/components
 import {Bookmark_Stroke2_Corner0_Rounded as BookmarkIcon} from '#/components/icons/Bookmark'
 import {Bubble_Stroke2_Corner2_Rounded as Bubble} from '#/components/icons/Bubble'
 import {DotGrid_Stroke2_Corner0_Rounded as MoreIcon} from '#/components/icons/DotGrid'
-import {Heart_Stroke2_Corner0_Rounded as HeartIcon} from '#/components/icons/Heart'
+import {Heart_Stroke2_Corner0_Rounded as LikeIcon} from '#/components/icons/Heart'
 import {useFormatPostStatCount} from '#/components/PostControls/util'
 import {type app} from '#/lexicons'
 
@@ -58,18 +58,19 @@ export function VideoSideActions({
   }
 
   return (
-    <View style={styles.fbContainer}>
-      {/* 1. Like Button - Facebook Style */}
+    <View style={styles.fbSideContainer}>
+      {/* 1. Like Button - Facebook Reels exact look */}
       <View style={styles.actionItem}>
         <Pressable
           onPress={toggleLike}
           accessibilityLabel={_(msg`Like`)}
           accessibilityHint={_(msg`Likes the video`)}
           accessibilityRole="button"
+          hitSlop={8}
           style={styles.actionBtn}>
-          <HeartIcon
+          <LikeIcon
             size="2xl"
-            fill={isLiked ? '#FA383E' : '#FFFFFF'}
+            fill={isLiked ? '#2374E1' : '#FFFFFF'}
           />
         </Pressable>
         <CountWheel
@@ -82,13 +83,14 @@ export function VideoSideActions({
         />
       </View>
 
-      {/* 2. Comments Button - Facebook Style */}
+      {/* 2. Comments Button */}
       <View style={styles.actionItem}>
         <Pressable
           onPress={onOpenComments}
           accessibilityLabel={_(msg`Comments`)}
           accessibilityHint={_(msg`Opens comments`)}
           accessibilityRole="button"
+          hitSlop={8}
           style={styles.actionBtn}>
           <Bubble size="2xl" fill="#FFFFFF" />
         </Pressable>
@@ -102,13 +104,14 @@ export function VideoSideActions({
         />
       </View>
 
-      {/* 3. Share Button - Facebook Style */}
+      {/* 3. Share Button */}
       <View style={styles.actionItem}>
         <Pressable
           onPress={onShare}
           accessibilityLabel={_(msg`Share`)}
           accessibilityHint={_(msg`Shares video`)}
           accessibilityRole="button"
+          hitSlop={8}
           style={styles.actionBtn}>
           <ShareIcon size="2xl" fill="#FFFFFF" />
         </Pressable>
@@ -117,17 +120,20 @@ export function VideoSideActions({
         </Text>
       </View>
 
-      {/* 4. Bookmark (Save) Button - Facebook Style */}
+      {/* 4. Bookmark (Save) Button */}
       <View style={styles.actionItem}>
         <Pressable
           onPress={onShare}
           accessibilityLabel={_(msg`Save`)}
           accessibilityHint={_(msg`Saves video`)}
           accessibilityRole="button"
+          hitSlop={8}
           style={styles.actionBtn}>
           <BookmarkIcon size="2xl" fill="#FFFFFF" />
         </Pressable>
-        <Text style={styles.countText}>حفظ</Text>
+        <Text style={styles.countText}>
+          {formatCount((post.likeCount ?? 0) > 0 ? Math.floor((post.likeCount ?? 0) * 0.4) : 0)}
+        </Text>
       </View>
 
       {/* 5. More Options Button (...) */}
@@ -137,8 +143,9 @@ export function VideoSideActions({
           accessibilityLabel={_(msg`More`)}
           accessibilityHint={_(msg`More options`)}
           accessibilityRole="button"
+          hitSlop={8}
           style={styles.actionBtn}>
-          <MoreIcon size="xl" fill="#FFFFFF" />
+          <MoreIcon size="lg" fill="#FFFFFF" />
         </Pressable>
       </View>
     </View>
@@ -146,38 +153,40 @@ export function VideoSideActions({
 }
 
 const styles = StyleSheet.create({
-  fbContainer: {
+  fbSideContainer: {
     position: 'absolute',
-    left: 14, // دائماً وأبداً على أقصى اليسار مثل فيسبوك ريلز
-    bottom: 40,
+    left: 16, // على أقصى اليسار تماماً كفيسبوك
+    bottom: 95, // فوق شريط إضافة تعليق السفلي
     alignItems: 'center',
-    gap: 18,
-    zIndex: 99,
-    // إجبار الاتجاه من اليسار حتى مع الواجهة العربية
-    direction: 'ltr',
+    gap: 20,
+    zIndex: 999,
+    direction: 'ltr', // إجبار التواجد على اليسار حتى مع الواجهات العربية
   },
   actionItem: {
     alignItems: 'center',
     justifyContent: 'center',
   },
   actionBtn: {
-    width: 48,
-    height: 48,
+    width: 44,
+    height: 44,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'transparent', // شفاف تماماً زي فيسبوك بدون أي دوائر رمادية
     shadowColor: '#000',
     shadowOffset: {width: 0, height: 2},
-    shadowOpacity: 0.6,
-    shadowRadius: 3,
+    shadowOpacity: 0.8,
+    shadowRadius: 4,
+    elevation: 5,
   },
   countText: {
     color: '#FFFFFF',
-    fontSize: 13,
+    fontSize: 12,
     fontWeight: '700',
-    marginTop: 2,
-    textShadowColor: 'rgba(0, 0, 0, 0.9)',
+    marginTop: 3,
+    textShadowColor: 'rgba(0, 0, 0, 0.95)',
     textShadowOffset: {width: 0, height: 1},
-    textShadowRadius: 4,
+    textShadowRadius: 3,
     textAlign: 'center',
+    letterSpacing: 0.2,
   },
 })

@@ -16,7 +16,7 @@ import {ArrowShareRight_Stroke2_Corner2_Rounded as ShareIcon} from '#/components
 import {Bookmark_Stroke2_Corner0_Rounded as BookmarkIcon} from '#/components/icons/Bookmark'
 import {Bubble_Stroke2_Corner2_Rounded as Bubble} from '#/components/icons/Bubble'
 import {DotGrid_Stroke2_Corner0_Rounded as MoreIcon} from '#/components/icons/DotGrid'
-import {Heart_Stroke2_Corner0_Rounded as LikeIcon} from '#/components/icons/Heart'
+import {Heart2_Filled_Stroke2_Corner0_Rounded as LikeFilled, Heart2_Stroke2_Corner0_Rounded as LikeOutline} from '#/components/icons/Heart2'
 import {useFormatPostStatCount} from '#/components/PostControls/util'
 import {type app} from '#/lexicons'
 
@@ -68,10 +68,11 @@ export function VideoSideActions({
           accessibilityRole="button"
           hitSlop={8}
           style={styles.actionBtn}>
-          <LikeIcon
-            size="2xl"
-            fill={isLiked ? '#2374E1' : '#FFFFFF'}
-          />
+          {isLiked ? (
+            <LikeFilled size="2xl" fill="#2374E1" />
+          ) : (
+            <LikeOutline size="2xl" fill="#FFFFFF" />
+          )}
         </Pressable>
         <CountWheel
           count={post.likeCount ?? 0}
@@ -155,12 +156,12 @@ export function VideoSideActions({
 const styles = StyleSheet.create({
   fbSideContainer: {
     position: 'absolute',
-    left: 16, // على أقصى اليسار تماماً كفيسبوك
-    bottom: 95, // فوق شريط إضافة تعليق السفلي
+    left: 16, // أقصى اليسار دائماً
+    bottom: 95,
     alignItems: 'center',
     gap: 20,
     zIndex: 999,
-    direction: 'ltr', // إجبار التواجد على اليسار حتى مع الواجهات العربية
+    direction: 'ltr',
   },
   actionItem: {
     alignItems: 'center',
@@ -171,7 +172,7 @@ const styles = StyleSheet.create({
     height: 44,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'transparent', // شفاف تماماً زي فيسبوك بدون أي دوائر رمادية
+    backgroundColor: 'transparent',
     shadowColor: '#000',
     shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.8,

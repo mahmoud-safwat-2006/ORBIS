@@ -820,6 +820,7 @@ let PostFeed = ({
           />
         )
       } else if (row.type === 'loadMoreError') {
+        if (feed.startsWith('author')) return null
         return (
           <LoadMoreRetryBtn
             label={l`There was an issue fetching posts. Tap here to try again.`}

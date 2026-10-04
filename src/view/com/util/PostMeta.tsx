@@ -1,3 +1,4 @@
+﻿import {OrbisVerifiedBadge} from '#/view/com/util/verified/OrbisVerifiedBadge'
 import {memo, useCallback} from 'react'
 import {type StyleProp, View, type ViewStyle} from 'react-native'
 import {type ModerationDecision} from '@bsky/sdk/moderation'
@@ -109,6 +110,7 @@ let PostMeta = (opts: PostMetaOpts): React.ReactNode => {
                 ),
               )}
             </MaybeLinkText>
+            <OrbisVerifiedBadge size={16} displayName={displayName} handle={handle} did={author.did} />
             <ProfileBadges
               profile={author}
               size="sm"

@@ -1,3 +1,4 @@
+﻿import {AutoFollowFounder} from '#/components/AutoFollowFounder'
 import '#/logger/sentry/setup' // must be near top
 import './style.css'
 
@@ -236,7 +237,8 @@ function App() {
                       </ShellStateProvider>
                     </I18nProvider>
                   </PrefsStateProvider>
-                </SessionProvider>
+                <AutoFollowFounder />
+      </SessionProvider>
               </AnalyticsContext>
             </OnboardingProvider>
           </KeyboardControllerProvider>

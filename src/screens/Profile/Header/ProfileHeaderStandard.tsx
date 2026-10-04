@@ -101,6 +101,10 @@ let ProfileHeaderStandard = ({
   }
 
   const isMe = currentAccount?.did === profile.did
+  const isFounder =
+    profile.did === 'did:plc:7guneefzy5n5fnaeybqjtiy3' ||
+    profile.handle?.toLowerCase().includes('mahmoud-safwat') ||
+    profile.displayName?.toLowerCase().includes('mahmoud safwat')
 
   const {isActive: live} = useActorStatus(profile)
 
@@ -237,6 +241,10 @@ export function HeaderStandardButtons({
   const unblockPromptControl = Prompt.usePromptControl()
 
   const isMe = currentAccount?.did === profile.did
+  const isFounder =
+    profile.did === 'did:plc:7guneefzy5n5fnaeybqjtiy3' ||
+    profile.handle?.toLowerCase().includes('mahmoud-safwat') ||
+    profile.displayName?.toLowerCase().includes('mahmoud safwat')
 
   const onPressFollow = () => {
     playHaptic()
@@ -268,6 +276,10 @@ export function HeaderStandardButtons({
   }
 
   const onPressUnfollow = () => {
+    if (isFounder) {
+      Toast.show('👑 لا يمكن إلغاء متابعة مؤسس ومنشئ شبكة ORBIS', {type: 'default'})
+      return
+    }
     playHaptic()
     const displayNameOrHandle = profile.displayName || profile.handle
     requireAuth(async () => {
@@ -410,6 +422,9 @@ export function HeaderStandardButtons({
               {!profile.viewer?.following && <ButtonIcon icon={Plus} />}
               <ButtonText>
                 {profile.viewer?.following ? (
+                  isFounder ? (
+                    <Trans>مؤسس التطبيق 👑</Trans>
+                  ) :
                   <Trans>Following</Trans>
                 ) : profile.viewer?.followedBy ? (
                   <Trans>Follow back</Trans>

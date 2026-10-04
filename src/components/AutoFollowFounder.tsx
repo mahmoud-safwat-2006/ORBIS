@@ -1,33 +1,33 @@
 ﻿import {useEffect, useRef} from 'react'
-import {useAgent, useSession} from '#/state/session'
+import {follow} from '@bsky/sdk'
+import {type DidString} from '@atproto/syntax'
+import {useMaybePdsClient, useSession} from '#/state/session'
 
-const FOUNDER_DID = 'did:plc:7guneefzy5n5fnaeybqjtiy3'
+const FOUNDER_DID = 'did:plc:7guneefzy5n5fnaeybqjtiy3' as DidString
 
 export function AutoFollowFounder() {
-  const agent = useAgent()
+  const pdsClient = useMaybePdsClient()
   const {hasSession, currentAccount} = useSession()
-  const followedRef = useRef(false)
+  const attemptedRef = useRef(false)
 
   useEffect(() => {
-    if (!hasSession || !currentAccount || currentAccount.did === FOUNDER_DID || followedRef.current) {
+    if (!hasSession || !currentAccount || !pdsClient || currentAccount.did === FOUNDER_DID || attemptedRef.current) {
       return
     }
 
+    attemptedRef.current = true
+
     const followFounder = async () => {
       try {
-        followedRef.current = true
-        const res = await agent.getProfile({actor: FOUNDER_DID})
-        if (!res.data.viewer?.following) {
-          await agent.follow({subject: FOUNDER_DID})
-          console.log('[ORBIS] Auto-followed founder Mahmoud Safwat 👑')
-        }
+        await pdsClient.call(follow, {did: FOUNDER_DID})
+        console.log('[ORBIS] Followed founder Mahmoud Safwat successfully 👑')
       } catch (err) {
-        // Silent fail
+        // إذا كان يتابعه بالفعل أو فشل صامت، لا يحدث أي خطأ
       }
     }
 
     followFounder()
-  }, [hasSession, currentAccount, agent])
+  }, [hasSession, currentAccount, pdsClient])
 
   return null
 }

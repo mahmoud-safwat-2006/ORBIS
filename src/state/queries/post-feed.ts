@@ -148,7 +148,7 @@ export function usePostFeedQuery(
    * loads. -esb
    */
   const enabled =
-    opts?.enabled !== false && Boolean(moderationOpts) && Boolean(preferences)
+    opts?.enabled !== false && Boolean(moderationOpts)
   const userInterests = aggregateUserInterests(preferences)
   const followingPinnedIndex =
     preferences?.savedFeeds?.findIndex(

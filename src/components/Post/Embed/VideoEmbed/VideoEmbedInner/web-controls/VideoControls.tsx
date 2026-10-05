@@ -340,6 +340,20 @@ export function Controls({
         ]}
         onPress={onPressEmptySpace}
       />
+
+      {/* Center Modern Facebook-style Play Button */}
+      {(!playing || showControls) && (
+        <div style={{position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none', zIndex: 10}}>
+          <button type="button" onClick={evt => { evt.stopPropagation(); onPressPlayPause(); }} style={{pointerEvents: 'auto', width: 68, height: 68, borderRadius: '50%', backgroundColor: 'rgba(15, 20, 28, 0.75)', border: '2px solid #0085ff', boxShadow: '0 4px 24px rgba(0, 133, 255, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'all 0.2s ease', transform: 'scale(1)'}} onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.1)'} onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}>
+            {playing ? (
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
+            ) : (
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="#FFFFFF" style={{marginLeft: 4}}><path d="M8 5v14l11-7z" /></svg>
+            )}
+          </button>
+        </div>
+      )}
+
       {!showControls && !focused && duration > 0 && (
         <TimeIndicator time={Math.floor(duration - currentTime)} />
       )}

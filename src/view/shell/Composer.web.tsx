@@ -41,7 +41,7 @@ function Inner({state}: {state: ComposerOpts}) {
         role="dialog"
         aria-modal
         style={flatten([
-          {position: 'fixed'},
+          {position: 'fixed', zIndex: 99999},
           a.inset_0,
           {backgroundColor: '#000c'},
           a.flex,

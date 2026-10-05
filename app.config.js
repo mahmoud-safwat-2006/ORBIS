@@ -278,7 +278,7 @@ module.exports = function (_config) {
               /** @type {[string, any]} */ ([
                 '@sentry/react-native/expo',
                 {
-                  organization: 'blueskyweb',
+                  organization: 'orbisweb',
                   project: 'app',
                   url: 'https://sentry.io',
                   experimental_android: {
@@ -394,7 +394,7 @@ module.exports = function (_config) {
             },
 
             /**
-             * Bluesky+ core set
+             * Orbis+ core set
              */
             core_aurora: {
               ios: './assets/app-icons/ios_icon_core_aurora.png',
@@ -449,7 +449,7 @@ module.exports = function (_config) {
           'expo-contacts',
           {
             contactsPermission:
-              'I agree to allow Bluesky to use my contacts for friend discovery until I opt out.',
+              'I agree to allow Orbis to use my contacts for friend discovery until I opt out.',
           },
         ],
       ],
@@ -461,7 +461,7 @@ module.exports = function (_config) {
                 appExtensions: [
                   {
                     targetName: 'Share-with-ORBIS',
-                    bundleIdentifier: 'xyz.blueskyweb.app.Share-with-Bluesky',
+                    bundleIdentifier: 'xyz.orbisweb.app.Share-with-Orbis',
                     entitlements: {
                       'com.apple.security.application-groups': [
                         'group.app.bsky',
@@ -469,8 +469,8 @@ module.exports = function (_config) {
                     },
                   },
                   {
-                    targetName: 'BlueskyNSE',
-                    bundleIdentifier: 'xyz.blueskyweb.app.BlueskyNSE',
+                    targetName: 'OrbisNSE',
+                    bundleIdentifier: 'xyz.orbisweb.app.OrbisNSE',
                     entitlements: {
                       'com.apple.security.application-groups': [
                         'group.app.bsky',
@@ -478,8 +478,8 @@ module.exports = function (_config) {
                     },
                   },
                   {
-                    targetName: 'BlueskyClip',
-                    bundleIdentifier: 'xyz.blueskyweb.app.AppClip',
+                    targetName: 'OrbisClip',
+                    bundleIdentifier: 'xyz.orbisweb.app.AppClip',
                   },
                 ],
               },

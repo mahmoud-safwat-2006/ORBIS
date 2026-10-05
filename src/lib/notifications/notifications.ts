@@ -56,7 +56,7 @@ async function _registerPushToken({
         : PUBLIC_APPVIEW_DID,
       platform: Platform.OS,
       token: token.data,
-      appId: 'xyz.blueskyweb.app',
+      appId: 'social.orbis.app',
       ageRestricted: extra.ageRestricted ?? false,
     }
 
@@ -157,7 +157,7 @@ export function useGetAndRegisterPushToken() {
     }: {
       isAgeRestricted?: boolean
     } = {}) => {
-      if (!IS_NATIVE || IS_DEV) return
+      if (!IS_NATIVE) return
 
       /**
        * This will also fire the listener added via `addPushTokenListener`. That
@@ -194,6 +194,20 @@ export function useGetAndRegisterPushToken() {
  * Registered via the shell, which wraps the navigation stack, meaning if we
  * have a current account, this handling will be registered and ready to go.
  */
+
+if (Platform.OS === 'android') {
+  Notifications.setNotificationChannelAsync('default', {
+    name: 'ORBIS Notifications',
+    importance: Notifications.AndroidImportance.MAX,
+    vibrationPattern: [0, 250, 250, 250],
+    lightColor: '#0085ff',
+    sound: 'dm.mp3',
+    enableVibrate: true,
+    enableLights: true,
+    showBadge: true,
+  }).catch(() => {})
+}
+
 export function useNotificationsRegistration() {
   const {currentAccount} = useSession()
   const registerPushToken = useRegisterPushToken()
@@ -359,7 +373,7 @@ export async function unregisterPushToken(clients: TemporaryPushClient[]) {
               : PUBLIC_APPVIEW_DID,
             platform: Platform.OS,
             token: token.data,
-            appId: 'xyz.blueskyweb.app',
+            appId: 'social.orbis.app',
           },
           {
             service: NOTIF_SERVICE,

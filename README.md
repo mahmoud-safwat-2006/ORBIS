@@ -1,6 +1,6 @@
-# Bluesky Social App
+# Orbis Social App
 
-Welcome friends! This is the codebase for the Bluesky Social app.
+Welcome friends! This is the codebase for the Orbis Social app.
 
 Get the app itself:
 
@@ -23,7 +23,7 @@ The Authenticated Transfer Protocol ("AT Protocol" or "atproto") is a decentrali
 - [Protocol Specifications](https://atproto.com/specs/atp)
 - [Blogpost on self-authenticating data structures](https://bsky.social/about/blog/3-6-2022-a-self-authenticating-social-protocol)
 
-The Bluesky Social application encompasses a set of schemas and APIs built in the overall AT Protocol framework. The namespace for these "Lexicons" is `app.bsky.*`.
+The Orbis Social application encompasses a set of schemas and APIs built in the overall AT Protocol framework. The namespace for these "Lexicons" is `app.bsky.*`.
 
 ## Contributions
 
@@ -54,12 +54,12 @@ You have our blessing 🪄✨ to fork this application! However, it's very impor
 
 Please be sure to:
 
-- Change all branding in the repository and UI to clearly differentiate from Bluesky.
+- Change all branding in the repository and UI to clearly differentiate from Orbis.
 - Change any support links (feedback, email, terms of service, etc) to your own systems.
 - Replace any analytics or error-collection systems with your own so we don't get super confused.
-- Replace the landing-screen illustration in `assets/illustrations/`. It is commissioned artwork licensed to Bluesky alone, and our MIT license does not cover it.
+- Replace the landing-screen illustration in `assets/illustrations/`. It is commissioned artwork licensed to Orbis alone, and our MIT license does not cover it.
 - Source your own UI icons. The glyph set in `assets/icons/` is licensed to us by a third party for our own use, and that license does not extend to you.
-- Replace the Bluesky logo, app icons, and other brand assets. Our trademarks are not licensed with the code.
+- Replace the Orbis logo, app icons, and other brand assets. Our trademarks are not licensed with the code.
 
 Please read [./ASSETS.md](./ASSETS.md) before you ship. Not every file in this repository is
 covered by our MIT license — some of the artwork, icons, fonts, and brand assets are licensed to
@@ -73,7 +73,7 @@ If you discover any security issues, please send an email to security@bsky.app. 
 
 ## Are you a developer interested in building on atproto?
 
-Bluesky is an open social network built on the AT Protocol, a flexible technology that will never lock developers out of the ecosystems that they help build. With atproto, third-party integration can be as seamless as first-party through custom feeds, federated services, clients, and more.
+Orbis is an open social network built on the AT Protocol, a flexible technology that will never lock developers out of the ecosystems that they help build. With atproto, third-party integration can be as seamless as first-party through custom feeds, federated services, clients, and more.
 
 ## License (MIT)
 
@@ -83,8 +83,8 @@ It does not cover every file. Certain images, icons, fonts, and brand assets are
 by third parties, or are trademarks, and are carved out — see [./ASSETS.md](./ASSETS.md). Required
 third-party attribution notices are collected in [./NOTICE.md](./NOTICE.md).
 
-Bluesky Social PBC has committed to a software patent non-aggression pledge. For details see [the original announcement](https://bsky.social/about/blog/10-01-2025-patent-pledge).
+Orbis Social PBC has committed to a software patent non-aggression pledge. For details see [the original announcement](https://bsky.social/about/blog/10-01-2025-patent-pledge).
 
 ## P.S.
 
-We ❤️ you and all of the ways you support us. Thank you for making Bluesky a great place!
+We ❤️ you and all of the ways you support us. Thank you for making Orbis a great place!

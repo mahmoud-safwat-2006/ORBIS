@@ -1,6 +1,6 @@
 # expo-background-notification-handler
 
-A custom Expo module for managing shared notification preferences and handling background notifications in the Bluesky Social app. This module enables communication between the main app and notification service extensions through shared storage.
+A custom Expo module for managing shared notification preferences and handling background notifications in the Orbis Social app. This module enables communication between the main app and notification service extensions through shared storage.
 
 ## Purpose
 
@@ -147,7 +147,7 @@ Requires App Group entitlement configured in Xcode:
 
 Requires Firebase Cloud Messaging (FCM) integration:
 - Dependency: `com.google.firebase:firebase-messaging-ktx:24.0.0`
-- SharedPreferences name: `xyz.blueskyweb.app`
+- SharedPreferences name: `xyz.orbisweb.app`
 
 ## Usage in the App
 

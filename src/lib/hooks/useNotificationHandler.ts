@@ -87,9 +87,9 @@ export function isChatNotificationPayload(
 }
 
 const DEFAULT_HANDLER_OPTIONS = {
-  shouldShowBanner: false,
-  shouldShowList: false,
-  shouldPlaySound: false,
+  shouldShowBanner: true,
+  shouldShowList: true,
+  shouldPlaySound: true,
   shouldSetBadge: true,
 } satisfies Notifications.NotificationBehavior
 
@@ -324,7 +324,7 @@ export function useNotificationsHandler() {
           return Promise.resolve({
             shouldShowList: shouldAlert,
             shouldShowBanner: shouldAlert,
-            shouldPlaySound: false,
+            shouldPlaySound: true,
             shouldSetBadge: false,
           } satisfies Notifications.NotificationBehavior)
         }

@@ -1,7 +1,7 @@
 {
   "name": "@bsky.app/react-native-scroll-forwarder",
   "version": "0.0.0",
-  "description": "Scroll forwarder module for Bluesky profile headers",
+  "description": "Scroll forwarder module for  profile headers",
   "main": "src/index",
   "codegenConfig": {
     "name": "ScrollForwarderViewSpec",

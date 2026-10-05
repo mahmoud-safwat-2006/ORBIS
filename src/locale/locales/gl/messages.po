@@ -215,10 +215,10 @@ msgstr ""
 msgid "{0, plural, one {post} other {posts}}"
 msgstr ""
 
-#. Number of users (always at least 25) who have joined Bluesky using a specific Starter Pack
+#. Number of users (always at least 25) who have joined Orbis using a specific Starter Pack
 #. placeholder {0}: starterPack.joinedAllTimeCount || 0
 #: src/screens/StarterPack/StarterPackScreen.tsx:492
-msgid "{0, plural, other {# people have}} joined Bluesky via this Starter Pack!"
+msgid "{0, plural, other {# people have}} joined Orbis via this Starter Pack!"
 msgstr ""
 
 #. placeholder {0}: starterPack.list.listItemCount - 4
@@ -731,7 +731,7 @@ msgctxt "Displayed when there are more than 20 requests to join a group chat"
 msgid "{JOIN_REQUESTS_THRESHOLD}+ new join requests"
 msgstr ""
 
-#. Number of users (always at least 50) who have joined Bluesky using a specific Starter Pack
+#. Number of users (always at least 50) who have joined Orbis using a specific Starter Pack
 #: src/components/StarterPack/StarterPackCard.tsx:97
 msgid "{joinedAllTimeCount, plural, other {# users have}} joined!"
 msgstr ""
@@ -788,19 +788,19 @@ msgid "{numMatches, plural, one {# contact found} other {# contacts found}}"
 msgstr ""
 
 #: src/components/dialogs/NewskieDialog/utils.ts:49
-msgid "{profileName} joined Bluesky {timeAgoString} ago"
+msgid "{profileName} joined Orbis {timeAgoString} ago"
 msgstr ""
 
 #: src/components/dialogs/NewskieDialog/utils.ts:32
-msgid "{profileName} joined Bluesky just now"
+msgid "{profileName} joined Orbis just now"
 msgstr ""
 
 #: src/components/dialogs/NewskieDialog/utils.ts:47
-msgid "{profileName} joined Bluesky using a Starter Pack {timeAgoString} ago"
+msgid "{profileName} joined Orbis using a Starter Pack {timeAgoString} ago"
 msgstr ""
 
 #: src/components/dialogs/NewskieDialog/utils.ts:31
-msgid "{profileName} joined Bluesky using a Starter Pack just now"
+msgid "{profileName} joined Orbis using a Starter Pack just now"
 msgstr ""
 
 #. The trending topic rank, i.e. "1. March Madness", "2. The Bachelor"
@@ -949,7 +949,7 @@ msgid "<0>Community Guidelines: Harassment</0>"
 msgstr ""
 
 #: src/screens/Search/SearchResults.tsx:398
-msgid "<0>Sign in</0><1> or </1><2>create an account</2><3> </3><4>to search for news, sports, politics, and everything else happening on Bluesky.</4>"
+msgid "<0>Sign in</0><1> or </1><2>create an account</2><3> </3><4>to search for news, sports, politics, and everything else happening on Orbis.</4>"
 msgstr ""
 
 #: src/screens/Hashtag.tsx:232
@@ -997,7 +997,7 @@ msgid "7 days"
 msgstr "7 días"
 
 #: src/screens/Onboarding/StepFinished/ValuePropositionPager.shared.tsx:27
-msgid "A collection of popular feeds you can find on Bluesky, including News, Booksky, Game Dev, Blacksky, and Fountain Pens"
+msgid "A collection of popular feeds you can find on Orbis, including News, Booksky, Game Dev, Blacksky, and Fountain Pens"
 msgstr ""
 
 #: src/screens/ModerationInbox/index.tsx:204
@@ -1046,7 +1046,7 @@ msgstr ""
 
 #. Contains a post that originally appeared in English. Consider translating the post text if it makes sense in your language, and noting that the post was translated from English.
 #: src/components/dialogs/nuxs/LiveNowBetaDialog.tsx:147
-msgid "A screenshot of a post from @esb.lol, showing the user is currently livestreaming content on Twitch. The post reads: \"Hello! I'm live on Twitch, and I'm testing Bluesky's latest feature too!\""
+msgid "A screenshot of a post from @esb.lol, showing the user is currently livestreaming content on Twitch. The post reads: \"Hello! I'm live on Twitch, and I'm testing Orbis's latest feature too!\""
 msgstr ""
 
 #. Contains a post that originally appeared in English. Consider translating the post text if it makes sense in your language, and noting that the post was translated from English.
@@ -1060,7 +1060,7 @@ msgstr ""
 
 #. Contains a post that originally appeared in English. Consider translating the post text if it makes sense in your language, and noting that the post was translated from English.
 #: src/components/dialogs/nuxs/DraftsAnnouncement.tsx:98
-msgid "A screenshot of the post composer with a new button next to the post button that says \"Drafts\", with a rainbow firework effect. Below, the text in the composer reads \"Hey, did you hear the news? Bluesky has drafts now!!!\"."
+msgid "A screenshot of the post composer with a new button next to the post button that says \"Drafts\", with a rainbow firework effect. Below, the text in the composer reads \"Hey, did you hear the news? Orbis has drafts now!!!\"."
 msgstr ""
 
 #: src/components/dms/dialogs/NewChatDialog.tsx:102
@@ -1201,7 +1201,7 @@ msgid "Account unmuted"
 msgstr "Conta desenmudecida"
 
 #: src/components/verification/VerifierDialog.tsx:101
-msgid "Accounts with a scalloped blue check mark <0><1/></0> can verify others. These trusted verifiers are selected by Bluesky."
+msgid "Accounts with a scalloped blue check mark <0><1/></0> can verify others. These trusted verifiers are selected by Orbis."
 msgstr ""
 
 #: src/lib/hooks/useNotificationHandler.ts:214
@@ -1727,20 +1727,20 @@ msgstr ""
 
 #: src/components/contacts/components/HeroImage.tsx:28
 #: src/components/dialogs/nuxs/FindContactsAnnouncement.tsx:79
-msgid "An illustration depicting user avatars flowing from a contact book into the Bluesky app"
+msgid "An illustration depicting user avatars flowing from a contact book into the Orbis app"
 msgstr ""
 
 #: src/screens/Onboarding/StepFinished/ValuePropositionPager.shared.tsx:45
-msgid "An illustration of several Bluesky posts alongside repost, like, and comment icons"
+msgid "An illustration of several Orbis posts alongside repost, like, and comment icons"
 msgstr ""
 
 #: src/components/dialogs/nuxs/InviteFriendsAnnouncement.tsx:111
-msgid "An illustration of the Bluesky app with a paper airplane flying out of it, representing inviting friends"
+msgid "An illustration of the Orbis app with a paper airplane flying out of it, representing inviting friends"
 msgstr ""
 
 #: src/components/dialogs/nuxs/InitialVerificationAnnouncement.tsx:87
 #: src/components/verification/VerifierDialog.tsx:89
-msgid "An illustration showing that Bluesky selects trusted verifiers, and trusted verifiers in turn verify individual user accounts."
+msgid "An illustration showing that Orbis selects trusted verifiers, and trusted verifiers in turn verify individual user accounts."
 msgstr ""
 
 #: src/screens/Messages/components/InviteLinkDialog.tsx:196
@@ -1771,7 +1771,7 @@ msgid "An issue occurred, please try again."
 msgstr "Ocurreu un erro. Proba de novo."
 
 #: src/components/dialogs/nuxs/InitialVerificationAnnouncement.tsx:122
-msgid "An mockup of a iPhone showing the Bluesky app open to the profile of a verified user with a blue checkmark next to their display name."
+msgid "An mockup of a iPhone showing the Orbis app open to the profile of a verified user with a blue checkmark next to their display name."
 msgstr ""
 
 #: src/components/moderation/ModerationDetailsDialog.tsx:154
@@ -1800,7 +1800,7 @@ msgid "Announcement"
 msgstr ""
 
 #: src/components/dialogs/nuxs/InitialVerificationAnnouncement.tsx:39
-msgid "Announcing verification on Bluesky"
+msgid "Announcing verification on Orbis"
 msgstr ""
 
 #. Placeholder text for a date picker
@@ -2392,60 +2392,60 @@ msgstr ""
 
 #: src/components/dialogs/ServerInput.tsx:144
 #: src/components/dialogs/ServerInput.tsx:146
-msgid "Bluesky"
-msgstr "Bluesky"
+msgid "Orbis"
+msgstr "Orbis"
 
 #: src/screens/PostThread/components/ThreadItemAnchor.tsx:652
-msgid "Bluesky cannot confirm the authenticity of the claimed date."
-msgstr "Bluesky non pode confirmar a autenticidade da data solicitada."
+msgid "Orbis cannot confirm the authenticity of the claimed date."
+msgstr "Orbis non pode confirmar a autenticidade da data solicitada."
 
 #: src/screens/ModerationInbox/components/AccountStatus.tsx:36
-msgid "Bluesky has taken action on your account or content for violating our community guidelines. Further violations will lead to stronger enforcement, including suspension."
+msgid "Orbis has taken action on your account or content for violating our community guidelines. Further violations will lead to stronger enforcement, including suspension."
 msgstr ""
 
 #: src/components/contacts/screens/GetContacts.tsx:237
-msgid "Bluesky helps friends find each other by creating an encoded digital fingerprint, called a \"hash\", and then looking for matching hashes."
+msgid "Orbis helps friends find each other by creating an encoded digital fingerprint, called a \"hash\", and then looking for matching hashes."
 msgstr ""
 
 #: src/components/dialogs/ServerInput.tsx:214
-msgid "Bluesky is an open network where you can choose your hosting provider. If you're a developer, you can host your own server."
-msgstr "Bluesky é unha rede aberta onde podes elixir o teu proveedor de aloxamento. Se es desenvolves, podes aloxar o teu propio servidor."
+msgid "Orbis is an open network where you can choose your hosting provider. If you're a developer, you can host your own server."
+msgstr "Orbis é unha rede aberta onde podes elixir o teu proveedor de aloxamento. Se es desenvolves, podes aloxar o teu propio servidor."
 
 #: src/components/dialogs/ServerInput.tsx:162
-msgid "Bluesky is an open network where you can choose your own provider. If you're new here, we recommend sticking with the default Bluesky Social option."
-msgstr "Bluesky é unha rede aberta onde ti podes escoller o teu propio provedor. Se acabas de chegar, recomendámosche a opción predefinida de Bluesky Social."
+msgid "Orbis is an open network where you can choose your own provider. If you're new here, we recommend sticking with the default Orbis Social option."
+msgstr "Orbis é unha rede aberta onde ti podes escoller o teu propio provedor. Se acabas de chegar, recomendámosche a opción predefinida de Orbis Social."
 
 #: src/components/ProgressGuide/List.tsx:115
-msgid "Bluesky is better with friends!"
-msgstr "Bluesky é mellor con amizades!"
+msgid "Orbis is better with friends!"
+msgstr "Orbis é mellor con amizades!"
 
 #: src/screens/Onboarding/StepFindContactsIntro/index.tsx:43
-msgid "Bluesky is more fun with friends"
+msgid "Orbis is more fun with friends"
 msgstr ""
 
 #: src/components/dialogs/nuxs/FindContactsAnnouncement.tsx:108
-msgid "Bluesky is more fun with friends! Import your contacts to see who’s already here."
+msgid "Orbis is more fun with friends! Import your contacts to see who’s already here."
 msgstr ""
 
 #: src/components/contacts/screens/ViewMatches.tsx:323
-msgid "Bluesky is more fun with friends. Do you want to invite some of yours? <0/>"
+msgid "Orbis is more fun with friends. Do you want to invite some of yours? <0/>"
 msgstr ""
 
 #: src/screens/ModerationInbox/Report.tsx:38
 #: src/screens/ModerationInbox/Subject.tsx:38
-msgid "Bluesky Moderation Service"
+msgid "Orbis Moderation Service"
 msgstr ""
 
 #: src/features/inviteFriends/InviteScannerScreen.tsx:105
-msgid "Bluesky needs camera access to scan QR codes from other profiles."
+msgid "Orbis needs camera access to scan QR codes from other profiles."
 msgstr ""
 
 #: src/components/StarterPack/ProfileStarterPacks.tsx:338
-msgid "Bluesky will choose a set of recommended accounts from people in your network."
-msgstr "Bluesky elexirá un conxunto de contas recomendadas na túa rede."
+msgid "Orbis will choose a set of recommended accounts from people in your network."
+msgstr "Orbis elexirá un conxunto de contas recomendadas na túa rede."
 
 #: src/components/dialogs/nuxs/InitialVerificationAnnouncement.tsx:137
-msgid "Bluesky will proactively verify notable and authentic accounts."
+msgid "Orbis will proactively verify notable and authentic accounts."
 msgstr ""
 
 #: src/lib/moderation/useLabelBehaviorDescription.ts:56
@@ -3844,7 +3844,7 @@ msgid "Customization options"
 msgstr ""
 
 #: src/screens/Onboarding/Layout.tsx:126
-msgid "Customizes your Bluesky experience"
+msgid "Customizes your Orbis experience"
 msgstr ""
 
 #: src/components/moderation/ReportDialog/utils/useReportOptions.ts:202
@@ -4327,8 +4327,8 @@ msgid "Download"
 msgstr ""
 
 #: src/screens/StarterPack/StarterPackLandingScreen.tsx:321
-msgid "Download Bluesky"
-msgstr "Descargar Bluesky"
+msgid "Download Orbis"
+msgstr "Descargar Orbis"
 
 #: src/screens/Settings/components/ExportCarDialog.tsx:153
 msgid "Download chat data"
@@ -4373,7 +4373,7 @@ msgid "Drop to add images"
 msgstr "Arrastra para agregar imaxes"
 
 #: src/components/ageAssurance/useAgeAssuranceCopy.ts:20
-msgid "Due to laws in your region, certain features on Bluesky are currently restricted until you're able to verify you're an adult."
+msgid "Due to laws in your region, certain features on Orbis are currently restricted until you're able to verify you're an adult."
 msgstr ""
 
 #: src/components/dialogs/MutedWords.tsx:164
@@ -5463,7 +5463,7 @@ msgid "Find people you know"
 msgstr ""
 
 #: src/screens/Search/Shell.tsx:765
-msgid "Find posts, users, and feeds on Bluesky"
+msgid "Find posts, users, and feeds on Orbis"
 msgstr ""
 
 #: src/components/dialogs/nuxs/FindContactsAnnouncement.tsx:98
@@ -5471,7 +5471,7 @@ msgid "Find your friends"
 msgstr ""
 
 #: src/screens/Onboarding/StepFindContactsIntro/index.tsx:46
-msgid "Find your friends on Bluesky by verifying your phone number and matching with your contacts. We protect your information and you control what happens next. <0>Learn more</0>"
+msgid "Find your friends on Orbis by verifying your phone number and matching with your contacts. We protect your information and you control what happens next. <0>Learn more</0>"
 msgstr ""
 
 #: src/screens/Settings/FindContactsSettings.tsx:136
@@ -5732,7 +5732,7 @@ msgstr "Esquecéches o teu contrasinal?"
 
 #. This is alt text for a marketing image which transcribes English text that appears in the image
 #: src/components/dialogs/nuxs/GroupChatsAnnouncement.tsx:153
-msgid "Four message bubbles representing a group chat. First message: \"Did you hear the news? Bluesky has group chats now!\" Second message: \"omg, no way\" Third message: \"Wow, 50 people in one chat!\" Fourth message: \"You can send invite links too!\""
+msgid "Four message bubbles representing a group chat. First message: \"Did you hear the news? Orbis has group chats now!\" Second message: \"omg, no way\" Third message: \"Wow, 50 people in one chat!\" Fourth message: \"You can send invite links too!\""
 msgstr ""
 
 #: src/screens/Onboarding/StepFinished/ValuePropositionPager.shared.tsx:22
@@ -6221,7 +6221,7 @@ msgid "Having trouble?"
 msgstr "Tes problemas?"
 
 #: src/components/contacts/screens/PhoneInput.tsx:290
-msgid "Held by Bluesky for 7 days to prevent abuse, then deleted"
+msgid "Held by Orbis for 7 days to prevent abuse, then deleted"
 msgstr ""
 
 #: src/screens/Settings/Settings.tsx:259
@@ -6444,7 +6444,7 @@ msgid "Human trafficking"
 msgstr ""
 
 #: src/components/contacts/screens/GetContacts.tsx:269
-msgid "I consent to Bluesky using my contacts for mutual friend discovery and to retain hashed data for matching until I opt out."
+msgid "I consent to Orbis using my contacts for mutual friend discovery and to retain hashed data for matching until I opt out."
 msgstr ""
 
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:140
@@ -6463,7 +6463,7 @@ msgstr "Enténdoo"
 
 #. placeholder {0}: currentAccount.handle
 #: src/components/contacts/screens/ViewMatches.tsx:586
-msgid "I'm on Bluesky as {0} - come find me! https://bsky.app/download"
+msgid "I'm on Orbis as {0} - come find me! https://bsky.app/download"
 msgstr ""
 
 #: src/components/Lightbox/Lightbox.web.tsx:247
@@ -6778,7 +6778,7 @@ msgid "Invite"
 msgstr ""
 
 #: src/components/contacts/screens/ViewMatches.tsx:575
-msgid "Invite {name} to join Bluesky"
+msgid "Invite {name} to join Orbis"
 msgstr ""
 
 #: src/screens/Signup/StepInfo/index.tsx:211
@@ -6887,8 +6887,8 @@ msgstr ""
 #: src/screens/StarterPack/StarterPackLandingScreen.tsx:207
 #: src/screens/StarterPack/StarterPackScreen.tsx:466
 #: src/screens/StarterPack/StarterPackScreen.tsx:476
-msgid "Join Bluesky"
-msgstr "Únete a Bluesky"
+msgid "Join Orbis"
+msgstr "Únete a Orbis"
 
 #: src/components/intents/GroupChatJoinDialog.tsx:70
 #: src/components/intents/GroupChatJoinDialog.tsx:469
@@ -7048,7 +7048,7 @@ msgstr "Aprender máis sobre esta advertencia"
 #: src/components/verification/VerificationsDialog.tsx:154
 #: src/components/verification/VerifierDialog.tsx:123
 msgctxt "english-only-resource"
-msgid "Learn more about verification on Bluesky"
+msgid "Learn more about verification on Orbis"
 msgstr ""
 
 #: src/screens/Settings/PrivacyAndSecuritySettings.tsx:129
@@ -7117,8 +7117,8 @@ msgstr ""
 
 #: src/components/dialogs/LinkWarning.tsx:83
 #: src/components/dialogs/LinkWarning.tsx:91
-msgid "Leaving Bluesky"
-msgstr "Saír de Bluesky"
+msgid "Leaving Orbis"
+msgstr "Saír de Orbis"
 
 #: src/screens/Messages/ConversationSettings/prompts.tsx:153
 msgid "Leaving this chat will lock it permanently and you won’t be able to rejoin."
@@ -8211,7 +8211,7 @@ msgid "No action taken"
 msgstr ""
 
 #: src/screens/Onboarding/StepFinished/ValuePropositionPager.shared.tsx:42
-msgid "No ads, no invasive tracking, no engagement traps. Bluesky respects your time and attention."
+msgid "No ads, no invasive tracking, no engagement traps. Orbis respects your time and attention."
 msgstr ""
 
 #: src/screens/Settings/AppPasswords.tsx:109
@@ -8930,8 +8930,8 @@ msgid "Opens flow to create a new account"
 msgstr ""
 
 #: src/screens/Messages/JoinRequest.tsx:313
-msgid "Opens flow to create a new Bluesky account"
-msgstr "Abrir o fluxo para crear unha nova conta Bluesky"
+msgid "Opens flow to create a new Orbis account"
+msgstr "Abrir o fluxo para crear unha nova conta Orbis"
 
 #: src/view/com/auth/SplashScreen.tsx:90
 msgid "Opens flow to create a new ORBIS account"
@@ -8942,8 +8942,8 @@ msgid "Opens flow to sign in to your existing account"
 msgstr ""
 
 #: src/screens/Messages/JoinRequest.tsx:299
-msgid "Opens flow to sign in to your existing Bluesky account"
-msgstr "Abrir o fluxo para iniciar sesión na túa conta Bluesky existente"
+msgid "Opens flow to sign in to your existing Orbis account"
+msgstr "Abrir o fluxo para iniciar sesión na túa conta Orbis existente"
 
 #: src/view/com/auth/SplashScreen.tsx:118
 msgid "Opens flow to sign in to your existing ORBIS account"
@@ -9410,7 +9410,7 @@ msgid "Please choose your password."
 msgstr "Por favor, escolle o teu contrasinal."
 
 #: src/components/dialogs/EmailDialog/screens/Update.tsx:286
-msgid "Please click on the link in the email we just sent you to verify your new email address. This is an important step to allow you to continue enjoying all the features of Bluesky."
+msgid "Please click on the link in the email we just sent you to verify your new email address. This is an important step to allow you to continue enjoying all the features of Orbis."
 msgstr ""
 
 #: src/screens/Signup/state.ts:325
@@ -9542,7 +9542,7 @@ msgid "Please submit your report through the Report non-consensual intimate imag
 msgstr ""
 
 #: src/features/inviteFriends/InviteScannerScreen.web.tsx:40
-msgid "Please use the Bluesky mobile app to scan a QR code."
+msgid "Please use the Orbis mobile app to scan a QR code."
 msgstr ""
 
 #: src/screens/Settings/FindContactsSettings.tsx:110
@@ -9661,7 +9661,7 @@ msgid "Post Interaction Settings"
 msgstr "Axustes de interacción da publicación"
 
 #: src/components/dialogs/nuxs/GroupChatsAnnouncement.tsx:193
-msgid "Post it to Bluesky or share anywhere."
+msgid "Post it to Orbis or share anywhere."
 msgstr ""
 
 #. Accessibility label for button that opens dialog to choose post language settings
@@ -11576,7 +11576,7 @@ msgid "Share this Starter Pack"
 msgstr ""
 
 #: src/components/StarterPack/ShareDialog.tsx:87
-msgid "Share this Starter Pack and help people join your community on Bluesky."
+msgid "Share this Starter Pack and help people join your community on Orbis."
 msgstr ""
 
 #: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:130
@@ -11801,8 +11801,8 @@ msgid "Sign in to account that is not listed"
 msgstr "Acceder a unha conta que non está na listaxe"
 
 #: src/components/dialogs/Signin.tsx:47
-msgid "Sign in to Bluesky or create a new account"
-msgstr "Inicia sesión en Bluesky ou crea unha nova conta"
+msgid "Sign in to Orbis or create a new account"
+msgstr "Inicia sesión en Orbis ou crea unha nova conta"
 
 #: src/screens/Messages/JoinRequest.tsx:223
 msgid "Sign in to request access to this group chat."
@@ -12162,7 +12162,7 @@ msgid "Storybook"
 msgstr "Libro de contos"
 
 #: src/components/dialogs/nuxs/LiveNowBetaDialog.tsx:182
-msgid "Streaming on Twitch? Set your live status on Bluesky to add a badge to your avatar. Tapping it takes people straight to your stream."
+msgid "Streaming on Twitch? Set your live status on Orbis to add a badge to your avatar. Tapping it takes people straight to your stream."
 msgstr ""
 
 #: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:123
@@ -12359,7 +12359,7 @@ msgid "Take the conversation private."
 msgstr ""
 
 #: src/components/dialogs/DeviceLocationRequestDialog.tsx:110
-msgid "Tap below to allow Bluesky to access your GPS location. We will then use that data to more accurately determine the content and features available in your region."
+msgid "Tap below to allow Orbis to access your GPS location. We will then use that data to more accurately determine the content and features available in your region."
 msgstr ""
 
 #: src/components/dms/MessageItem.tsx:697
@@ -12380,7 +12380,7 @@ msgid "Tap here to update your location with GPS."
 msgstr ""
 
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:165
-msgid "Tap to acknowledge that you understand and agree to these updates and continue using Bluesky"
+msgid "Tap to acknowledge that you understand and agree to these updates and continue using Orbis"
 msgstr ""
 
 #: src/components/ContextMenu/Backdrop.ios.tsx:54
@@ -12553,8 +12553,8 @@ msgid "The birthdate you've entered means you are under 18 years old. Certain co
 msgstr ""
 
 #: src/screens/Moderation/index.tsx:474
-msgid "The Bluesky web application"
-msgstr "A aplicación web de Bluesky"
+msgid "The Orbis web application"
+msgstr "A aplicación web de Orbis"
 
 #: src/view/screens/CommunityGuidelines.tsx:32
 msgid "The Community Guidelines have been moved to <0/>"
@@ -12573,8 +12573,8 @@ msgid "The Discover feed now knows what you like"
 msgstr "A canle Discover agora sabe o que che gusta"
 
 #: src/screens/StarterPack/StarterPackLandingScreen.tsx:324
-msgid "The experience is better in the app. Download Bluesky now and we'll pick back up where you left off."
-msgstr "A experiencia é mellor na aplicación. Descarga Bluesky agora e retomarémolo onde o deixaches."
+msgid "The experience is better in the app. Download Orbis now and we'll pick back up where you left off."
+msgstr "A experiencia é mellor na aplicación. Descarga Orbis agora e retomarémolo onde o deixaches."
 
 #: src/view/com/posts/FeedShutdownMsg.tsx:70
 msgid "The feed has been replaced with Discover."
@@ -12879,8 +12879,8 @@ msgid "This appeal will be sent to <0>{sourceName}</0>."
 msgstr "Esta apelación enviarase a <0>{sourceName}</0>."
 
 #: src/features/liveNow/components/GoLiveDisabledDialog.tsx:112
-msgid "This appeal will be sent to Bluesky's moderation service."
-msgstr "Esta apelación enviarase ao servizo de moderación de Bluesky."
+msgid "This appeal will be sent to Orbis's moderation service."
+msgstr "Esta apelación enviarase ao servizo de moderación de Orbis."
 
 #: src/screens/Messages/components/ChatDisabled.tsx:135
 msgid "This appeal will be sent to ORBIS's moderation service."
@@ -12892,7 +12892,7 @@ msgid "This author has chosen to make their posts visible only to people who are
 msgstr ""
 
 #: src/screens/Profile/components/GermButton.tsx:249
-msgid "This button lets others open the Germ DM app to send you a message. You can manage its visibility from the Germ DM app, or you can disconnect your Bluesky account from Germ DM altogether by clicking the button below."
+msgid "This button lets others open the Germ DM app to send you a message. You can manage its visibility from the Germ DM app, or you can disconnect your Orbis account from Germ DM altogether by clicking the button below."
 msgstr ""
 
 #: src/screens/Messages/components/ChatEnded.tsx:48
@@ -13103,8 +13103,8 @@ msgstr ""
 #. placeholder {0}: niceDate(i18n, createdAt)
 #. placeholder {1}: niceDate(i18n, indexedAt)
 #: src/screens/PostThread/components/ThreadItemAnchor.tsx:639
-msgid "This post claims to have been created on <0>{0}</0>, but was first seen by Bluesky on <1>{1}</1>."
-msgstr "Esta publicación declara que foi feita en <0>{0}</0>, pero foi vista por primeira vez por Bluesky en <1>{1}</1>."
+msgid "This post claims to have been created on <0>{0}</0>, but was first seen by Orbis on <1>{1}</1>."
+msgstr "Esta publicación declara que foi feita en <0>{0}</0>, pero foi vista por primeira vez por Orbis en <1>{1}</1>."
 
 #: src/components/WhoCanReply.tsx:256
 msgid "This post has an unknown type of threadgate on it. Your app may be out of date."
@@ -13442,7 +13442,7 @@ msgid "Type:"
 msgstr "Tipo:"
 
 #: src/components/dialogs/DeviceLocationRequestDialog.tsx:87
-msgid "Unable to access location. You'll need to visit your system settings to enable location services for Bluesky."
+msgid "Unable to access location. You'll need to visit your system settings to enable location services for Orbis."
 msgstr ""
 
 #: src/lib/hooks/useCleanError.ts:32
@@ -13617,11 +13617,11 @@ msgid "Unfortunately, none of your subscribed labelers supports this report type
 msgstr ""
 
 #: src/ageAssurance/components/NoAccessScreen.tsx:266
-msgid "Unfortunately, the birthdate you have saved to your profile makes you too young to access Bluesky."
+msgid "Unfortunately, the birthdate you have saved to your profile makes you too young to access Orbis."
 msgstr ""
 
 #: src/ageAssurance/components/NoAccessScreen.tsx:250
-msgid "Unfortunately, your declared age indicates that you are not old enough to access Bluesky in your region."
+msgid "Unfortunately, your declared age indicates that you are not old enough to access Orbis in your region."
 msgstr ""
 
 #: src/components/verification/VerificationsDialog.tsx:210
@@ -13914,7 +13914,7 @@ msgid "Use this to sign in to the other app along with your handle."
 msgstr "Úsao para iniciar sesión noutra aplicación xunto co teu identificador."
 
 #: src/components/ageAssurance/AgeAssuranceInitDialog.tsx:287
-msgid "Use your account email address, or another real email address you control, in case KWS or Bluesky needs to contact you."
+msgid "Use your account email address, or another real email address you control, in case KWS or Orbis needs to contact you."
 msgstr ""
 
 #: src/view/screens/Profile.tsx:395
@@ -14025,7 +14025,7 @@ msgid "Verification Settings"
 msgstr ""
 
 #: src/screens/Moderation/VerificationSettings.tsx:43
-msgid "Verifications on Bluesky work differently than on other platforms. <0>Learn more here.</0>"
+msgid "Verifications on Orbis work differently than on other platforms. <0>Learn more here.</0>"
 msgstr ""
 
 #: src/components/verification/VerificationsDialog.tsx:106
@@ -14482,7 +14482,7 @@ msgid "We estimate {estimatedTime} until your account is ready."
 msgstr "Estimamos o {estimatedTime} ata que a túa conta estea lista."
 
 #: src/components/ageAssurance/AgeAssuranceInitDialog.tsx:206
-msgid "We have partnered with <0>KWS</0> to handle age verification. When you click \"Begin\" below, KWS will email you instructions to complete the verification process. If your email address has already been used to verify your age for another game or service that uses KWS, you won’t need to do it again. When you’re done, you'll be brought back to continue using Bluesky."
+msgid "We have partnered with <0>KWS</0> to handle age verification. When you click \"Begin\" below, KWS will email you instructions to complete the verification process. If your email address has already been used to verify your age for another game or service that uses KWS, you won’t need to do it again. When you’re done, you'll be brought back to continue using Orbis."
 msgstr ""
 
 #. placeholder {0}: currentAccount?.email
@@ -14585,7 +14585,7 @@ msgid "We’re having network issues, try again"
 msgstr ""
 
 #: src/components/dialogs/nuxs/InitialVerificationAnnouncement.tsx:98
-msgid "We’re introducing a new layer of verification on Bluesky — an easy-to-see checkmark."
+msgid "We’re introducing a new layer of verification on Orbis — an easy-to-see checkmark."
 msgstr ""
 
 #: src/screens/Signup/index.tsx:140
@@ -14593,7 +14593,7 @@ msgid "We’re so excited to have you join us!"
 msgstr ""
 
 #: src/ageAssurance/useVerificationFlow.ts:117
-msgid "We're sorry, but based on the data shared by your device, you are not old enough to access Bluesky."
+msgid "We're sorry, but based on the data shared by your device, you are not old enough to access Orbis."
 msgstr ""
 
 #: src/ageAssurance/components/NoAccessScreen.tsx:230
@@ -14848,7 +14848,7 @@ msgid "You are a trusted verifier"
 msgstr ""
 
 #: src/ageAssurance/components/NoAccessScreen.tsx:177
-msgid "You are accessing Bluesky from a region that legally requires us to verify your age before allowing you to access the app."
+msgid "You are accessing Orbis from a region that legally requires us to verify your age before allowing you to access the app."
 msgstr ""
 
 #. placeholder {0}: sanitizeHandle(profile.handle, '@')
@@ -14874,7 +14874,7 @@ msgstr ""
 
 #: src/ageAssurance/components/NoAccessScreen.tsx:403
 #: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:125
-msgid "You are currently unable to access Bluesky's Age Assurance flow. Please <0>contact our moderation team</0> if you believe this is an error."
+msgid "You are currently unable to access Orbis's Age Assurance flow. Please <0>contact our moderation team</0> if you believe this is an error."
 msgstr ""
 
 #: src/screens/SignupQueued.tsx:166
@@ -14949,7 +14949,7 @@ msgid "You can now choose to be notified when specific people post. If there’s
 msgstr ""
 
 #: src/components/dialogs/nuxs/InviteFriendsAnnouncement.tsx:154
-msgid "You can now invite friends with a link or QR code. Share the link anywhere, or let them scan the code to join you on Bluesky."
+msgid "You can now invite friends with a link or QR code. Share the link anywhere, or let them scan the code to join you on Orbis."
 msgstr ""
 
 #: src/screens/Login/index.tsx:207
@@ -15044,7 +15044,7 @@ msgid "You have blocked this user. You cannot view their content."
 msgstr "Bloqueaches a esta persoa. Non podes ver o seu contido."
 
 #: src/components/ageAssurance/useAgeAssuranceCopy.ts:17
-msgid "You have completed the Age Assurance process, but based on the results, we cannot be sure that you are 18 years of age or older. Due to laws in your region, certain features on Bluesky must remain restricted until you're able to verify you're an adult."
+msgid "You have completed the Age Assurance process, but based on the results, we cannot be sure that you are 18 years of age or older. Due to laws in your region, certain features on Orbis must remain restricted until you're able to verify you're an adult."
 msgstr ""
 
 #: src/view/screens/Notifications.tsx:291
@@ -15142,19 +15142,19 @@ msgid "You initiated this flow already, {0} ago. It may take up to 5 minutes for
 msgstr ""
 
 #: src/components/dialogs/NewskieDialog/utils.ts:42
-msgid "You joined Bluesky {timeAgoString} ago"
+msgid "You joined Orbis {timeAgoString} ago"
 msgstr ""
 
 #: src/components/dialogs/NewskieDialog/utils.ts:27
-msgid "You joined Bluesky just now"
+msgid "You joined Orbis just now"
 msgstr ""
 
 #: src/components/dialogs/NewskieDialog/utils.ts:40
-msgid "You joined Bluesky using a Starter Pack {timeAgoString} ago"
+msgid "You joined Orbis using a Starter Pack {timeAgoString} ago"
 msgstr ""
 
 #: src/components/dialogs/NewskieDialog/utils.ts:26
-msgid "You joined Bluesky using a Starter Pack just now"
+msgid "You joined Orbis using a Starter Pack just now"
 msgstr ""
 
 #: src/components/moderation/LabelsOnMeDialog.tsx:83
@@ -15181,7 +15181,7 @@ msgid "You must be a chat owner to remove a member."
 msgstr ""
 
 #: src/components/dialogs/BirthDateSettings.tsx:177
-msgid "You must be at least 13 years old to use Bluesky. Read our <0>Terms of Service</0> for more information."
+msgid "You must be at least 13 years old to use Orbis. Read our <0>Terms of Service</0> for more information."
 msgstr ""
 
 #: src/components/StarterPack/ProfileStarterPacks.tsx:362
@@ -15305,7 +15305,7 @@ msgid "You'll follow these people right away"
 msgstr "Seguirás a estas contas de inmediato"
 
 #: src/components/contacts/screens/GetContacts.tsx:316
-msgid "You'll need to go to the System Settings for Bluesky and give permission if you want to use this feature."
+msgid "You'll need to go to the System Settings for Orbis and give permission if you want to use this feature."
 msgstr ""
 
 #. placeholder {0}: sanitizeHandle(profile.handle, '@')
@@ -15501,7 +15501,7 @@ msgid "Your email appears to be invalid."
 msgstr "O teu enderezo electrónico parece non ser válido."
 
 #: src/components/dialogs/EmailDialog/screens/VerificationReminder.tsx:62
-msgid "Your email has not yet been verified. Please verify your email in order to enjoy all the features of Bluesky."
+msgid "Your email has not yet been verified. Please verify your email in order to enjoy all the features of Orbis."
 msgstr ""
 
 #: src/state/shell/progress-guide.tsx:214

@@ -215,10 +215,10 @@ msgstr ""
 msgid "{0, plural, one {post} other {posts}}"
 msgstr "{0, plural, one {則貼文} other {則貼文}}"
 
-#. Number of users (always at least 25) who have joined Bluesky using a specific Starter Pack
+#. Number of users (always at least 25) who have joined Orbis using a specific Starter Pack
 #. placeholder {0}: starterPack.joinedAllTimeCount || 0
 #: src/screens/StarterPack/StarterPackScreen.tsx:492
-msgid "{0, plural, other {# people have}} joined Bluesky via this Starter Pack!"
+msgid "{0, plural, other {# people have}} joined Orbis via this Starter Pack!"
 msgstr ""
 
 #. placeholder {0}: starterPack.list.listItemCount - 4
@@ -731,7 +731,7 @@ msgctxt "Displayed when there are more than 20 requests to join a group chat"
 msgid "{JOIN_REQUESTS_THRESHOLD}+ new join requests"
 msgstr "超過 {JOIN_REQUESTS_THRESHOLD} 個加入申請"
 
-#. Number of users (always at least 50) who have joined Bluesky using a specific Starter Pack
+#. Number of users (always at least 50) who have joined Orbis using a specific Starter Pack
 #: src/components/StarterPack/StarterPackCard.tsx:97
 msgid "{joinedAllTimeCount, plural, other {# users have}} joined!"
 msgstr "已有 {joinedAllTimeCount, plural, other {# 個使用者}}加入！"
@@ -788,19 +788,19 @@ msgid "{numMatches, plural, one {# contact found} other {# contacts found}}"
 msgstr "{numMatches, plural, other {找到了 # 位聯絡人}}"
 
 #: src/components/dialogs/NewskieDialog/utils.ts:49
-msgid "{profileName} joined Bluesky {timeAgoString} ago"
-msgstr "「{profileName}」在 {timeAgoString}前加入了 Bluesky"
+msgid "{profileName} joined Orbis {timeAgoString} ago"
+msgstr "「{profileName}」在 {timeAgoString}前加入了 Orbis"
 
 #: src/components/dialogs/NewskieDialog/utils.ts:32
-msgid "{profileName} joined Bluesky just now"
+msgid "{profileName} joined Orbis just now"
 msgstr ""
 
 #: src/components/dialogs/NewskieDialog/utils.ts:47
-msgid "{profileName} joined Bluesky using a Starter Pack {timeAgoString} ago"
+msgid "{profileName} joined Orbis using a Starter Pack {timeAgoString} ago"
 msgstr ""
 
 #: src/components/dialogs/NewskieDialog/utils.ts:31
-msgid "{profileName} joined Bluesky using a Starter Pack just now"
+msgid "{profileName} joined Orbis using a Starter Pack just now"
 msgstr ""
 
 #. The trending topic rank, i.e. "1. March Madness", "2. The Bachelor"
@@ -949,8 +949,8 @@ msgid "<0>Community Guidelines: Harassment</0>"
 msgstr ""
 
 #: src/screens/Search/SearchResults.tsx:398
-msgid "<0>Sign in</0><1> or </1><2>create an account</2><3> </3><4>to search for news, sports, politics, and everything else happening on Bluesky.</4>"
-msgstr "<0>登入</0><1>或</1><2>建立帳號</2><3></3><4>即可在 Bluesky 上搜尋有關新聞、體育、政治等新鮮事。</4>"
+msgid "<0>Sign in</0><1> or </1><2>create an account</2><3> </3><4>to search for news, sports, politics, and everything else happening on Orbis.</4>"
+msgstr "<0>登入</0><1>或</1><2>建立帳號</2><3></3><4>即可在 Orbis 上搜尋有關新聞、體育、政治等新鮮事。</4>"
 
 #: src/screens/Hashtag.tsx:232
 msgid "<0>Sign in</0><1> or </1><2>create an account</2><3> </3><4>to search for news, sports, politics, and everything else happening on ORBIS.</4>"
@@ -997,8 +997,8 @@ msgid "7 days"
 msgstr "7 天"
 
 #: src/screens/Onboarding/StepFinished/ValuePropositionPager.shared.tsx:27
-msgid "A collection of popular feeds you can find on Bluesky, including News, Booksky, Game Dev, Blacksky, and Fountain Pens"
-msgstr "您可以在 Bluesky 上找到一系列熱門動態源，包括 News、Booksky、Game Dev、Blacksky，以及 ​​Fountain Pens"
+msgid "A collection of popular feeds you can find on Orbis, including News, Booksky, Game Dev, Blacksky, and Fountain Pens"
+msgstr "您可以在 Orbis 上找到一系列熱門動態源，包括 News、Booksky、Game Dev、Blacksky，以及 ​​Fountain Pens"
 
 #: src/screens/ModerationInbox/index.tsx:204
 msgctxt "moderation-report-action"
@@ -1046,8 +1046,8 @@ msgstr "對您加入之前傳送的訊息的回覆"
 
 #. Contains a post that originally appeared in English. Consider translating the post text if it makes sense in your language, and noting that the post was translated from English.
 #: src/components/dialogs/nuxs/LiveNowBetaDialog.tsx:147
-msgid "A screenshot of a post from @esb.lol, showing the user is currently livestreaming content on Twitch. The post reads: \"Hello! I'm live on Twitch, and I'm testing Bluesky's latest feature too!\""
-msgstr "一張來自 @esb.lol 的貼文截圖，顯示該使用者正在 Twitch 上直播。貼文內容：「大家好！我正在 Twitch 上直播，同時測試 Bluesky 的新功能！」"
+msgid "A screenshot of a post from @esb.lol, showing the user is currently livestreaming content on Twitch. The post reads: \"Hello! I'm live on Twitch, and I'm testing Orbis's latest feature too!\""
+msgstr "一張來自 @esb.lol 的貼文截圖，顯示該使用者正在 Twitch 上直播。貼文內容：「大家好！我正在 Twitch 上直播，同時測試 Orbis 的新功能！」"
 
 #. Contains a post that originally appeared in English. Consider translating the post text if it makes sense in your language, and noting that the post was translated from English.
 #: src/components/dialogs/nuxs/BookmarksAnnouncement.tsx:121
@@ -1060,8 +1060,8 @@ msgstr "一張個人檔案頁面的截圖，顯示跟隨按鈕旁邊新增的鈴
 
 #. Contains a post that originally appeared in English. Consider translating the post text if it makes sense in your language, and noting that the post was translated from English.
 #: src/components/dialogs/nuxs/DraftsAnnouncement.tsx:98
-msgid "A screenshot of the post composer with a new button next to the post button that says \"Drafts\", with a rainbow firework effect. Below, the text in the composer reads \"Hey, did you hear the news? Bluesky has drafts now!!!\"."
-msgstr "一張貼文編輯器的螢幕截圖。在發布按鈕旁有一個標示為草稿的新按鈕，並帶有彩虹煙火特效。下方的編輯器文字顯示：「嘿，你聽說了嗎？ Bluesky 現在有草稿功能了！！！」。"
+msgid "A screenshot of the post composer with a new button next to the post button that says \"Drafts\", with a rainbow firework effect. Below, the text in the composer reads \"Hey, did you hear the news? Orbis has drafts now!!!\"."
+msgstr "一張貼文編輯器的螢幕截圖。在發布按鈕旁有一個標示為草稿的新按鈕，並帶有彩虹煙火特效。下方的編輯器文字顯示：「嘿，你聽說了嗎？ Orbis 現在有草稿功能了！！！」。"
 
 #: src/components/dms/dialogs/NewChatDialog.tsx:102
 #: src/components/dms/dialogs/ShareViaChatDialog.tsx:118
@@ -1201,8 +1201,8 @@ msgid "Account unmuted"
 msgstr "成功取消靜音帳號"
 
 #: src/components/verification/VerifierDialog.tsx:101
-msgid "Accounts with a scalloped blue check mark <0><1/></0> can verify others. These trusted verifiers are selected by Bluesky."
-msgstr "帶有扇形藍色勾號徽章的帳號<0><1/></0>可以對其他帳號授予驗證。這些可靠的驗證者由 Bluesky 官方親自挑選。"
+msgid "Accounts with a scalloped blue check mark <0><1/></0> can verify others. These trusted verifiers are selected by Orbis."
+msgstr "帶有扇形藍色勾號徽章的帳號<0><1/></0>可以對其他帳號授予驗證。這些可靠的驗證者由 Orbis 官方親自挑選。"
 
 #: src/lib/hooks/useNotificationHandler.ts:214
 #: src/screens/Settings/NotificationSettings/ActivityNotificationSettings.tsx:105
@@ -1727,21 +1727,21 @@ msgstr "發生錯誤。{0}"
 
 #: src/components/contacts/components/HeroImage.tsx:28
 #: src/components/dialogs/nuxs/FindContactsAnnouncement.tsx:79
-msgid "An illustration depicting user avatars flowing from a contact book into the Bluesky app"
-msgstr "一張插圖，展示使用者大頭貼照從聯絡人流向 Bluesky 應用程式"
+msgid "An illustration depicting user avatars flowing from a contact book into the Orbis app"
+msgstr "一張插圖，展示使用者大頭貼照從聯絡人流向 Orbis 應用程式"
 
 #: src/screens/Onboarding/StepFinished/ValuePropositionPager.shared.tsx:45
-msgid "An illustration of several Bluesky posts alongside repost, like, and comment icons"
-msgstr "Bluesky 的幾則貼文插圖，旁邊還有轉發、喜歡和留言圖示"
+msgid "An illustration of several Orbis posts alongside repost, like, and comment icons"
+msgstr "Orbis 的幾則貼文插圖，旁邊還有轉發、喜歡和留言圖示"
 
 #: src/components/dialogs/nuxs/InviteFriendsAnnouncement.tsx:111
-msgid "An illustration of the Bluesky app with a paper airplane flying out of it, representing inviting friends"
-msgstr "一張 Bluesky 應用程式的插圖，有一架紙飛機從中飛出，象徵著邀請朋友"
+msgid "An illustration of the Orbis app with a paper airplane flying out of it, representing inviting friends"
+msgstr "一張 Orbis 應用程式的插圖，有一架紙飛機從中飛出，象徵著邀請朋友"
 
 #: src/components/dialogs/nuxs/InitialVerificationAnnouncement.tsx:87
 #: src/components/verification/VerifierDialog.tsx:89
-msgid "An illustration showing that Bluesky selects trusted verifiers, and trusted verifiers in turn verify individual user accounts."
-msgstr "這張插圖說明 Bluesky 官方負責挑選可靠的驗證者，而這些驗證者則進一步為個別帳號授予驗證。"
+msgid "An illustration showing that Orbis selects trusted verifiers, and trusted verifiers in turn verify individual user accounts."
+msgstr "這張插圖說明 Orbis 官方負責挑選可靠的驗證者，而這些驗證者則進一步為個別帳號授予驗證。"
 
 #: src/screens/Messages/components/InviteLinkDialog.tsx:196
 msgid "An invite link lets people join this group chat without being added directly. You control who can join the chat. You can disable the link at any time."
@@ -1771,8 +1771,8 @@ msgid "An issue occurred, please try again."
 msgstr "發生問題，請再試一次。"
 
 #: src/components/dialogs/nuxs/InitialVerificationAnnouncement.tsx:122
-msgid "An mockup of a iPhone showing the Bluesky app open to the profile of a verified user with a blue checkmark next to their display name."
-msgstr "一張使用 iPhone 示範的圖片，顯示 Bluesky 應用程式中已驗證使用者的個人檔案，其名稱旁邊有一個藍色勾號標記。"
+msgid "An mockup of a iPhone showing the Orbis app open to the profile of a verified user with a blue checkmark next to their display name."
+msgstr "一張使用 iPhone 示範的圖片，顯示 Orbis 應用程式中已驗證使用者的個人檔案，其名稱旁邊有一個藍色勾號標記。"
 
 #: src/components/moderation/ModerationDetailsDialog.tsx:154
 #: src/lib/moderation/useModerationCauseDescription.ts:142
@@ -1800,8 +1800,8 @@ msgid "Announcement"
 msgstr "公告"
 
 #: src/components/dialogs/nuxs/InitialVerificationAnnouncement.tsx:39
-msgid "Announcing verification on Bluesky"
-msgstr "為您介紹 Bluesky 上的驗證機制"
+msgid "Announcing verification on Orbis"
+msgstr "為您介紹 Orbis 上的驗證機制"
 
 #. Placeholder text for a date picker
 #: src/screens/Search/components/AdvancedSearchDialog/ClearableDateField.tsx:43
@@ -2392,61 +2392,61 @@ msgstr "bloomscrolling booksky"
 
 #: src/components/dialogs/ServerInput.tsx:144
 #: src/components/dialogs/ServerInput.tsx:146
-msgid "Bluesky"
-msgstr "Bluesky"
+msgid "Orbis"
+msgstr "Orbis"
 
 #: src/screens/PostThread/components/ThreadItemAnchor.tsx:652
-msgid "Bluesky cannot confirm the authenticity of the claimed date."
-msgstr "Bluesky 無法確認貼文發布日期的真實性。"
+msgid "Orbis cannot confirm the authenticity of the claimed date."
+msgstr "Orbis 無法確認貼文發布日期的真實性。"
 
 #: src/screens/ModerationInbox/components/AccountStatus.tsx:36
-msgid "Bluesky has taken action on your account or content for violating our community guidelines. Further violations will lead to stronger enforcement, including suspension."
+msgid "Orbis has taken action on your account or content for violating our community guidelines. Further violations will lead to stronger enforcement, including suspension."
 msgstr ""
 
 #: src/components/contacts/screens/GetContacts.tsx:237
-msgid "Bluesky helps friends find each other by creating an encoded digital fingerprint, called a \"hash\", and then looking for matching hashes."
-msgstr "Bluesky 透過產生並比對一組稱為「雜湊值」的數位指紋，來幫助朋友相互找到彼此。"
+msgid "Orbis helps friends find each other by creating an encoded digital fingerprint, called a \"hash\", and then looking for matching hashes."
+msgstr "Orbis 透過產生並比對一組稱為「雜湊值」的數位指紋，來幫助朋友相互找到彼此。"
 
 #: src/components/dialogs/ServerInput.tsx:214
-msgid "Bluesky is an open network where you can choose your hosting provider. If you're a developer, you can host your own server."
-msgstr "Bluesky 是一個開放的網路，您可以自行挑選託管服務提供者。如果您是開發人員，也可以託管自己的伺服器。"
+msgid "Orbis is an open network where you can choose your hosting provider. If you're a developer, you can host your own server."
+msgstr "Orbis 是一個開放的網路，您可以自行挑選託管服務提供者。如果您是開發人員，也可以託管自己的伺服器。"
 
 #: src/components/dialogs/ServerInput.tsx:162
-msgid "Bluesky is an open network where you can choose your own provider. If you're new here, we recommend sticking with the default Bluesky Social option."
-msgstr "Bluesky 是一個開放的網路，您可以自行挑選託管服務提供者。但如果您是新使用者，我們建議使用預設的 Bluesky Social 選項。"
+msgid "Orbis is an open network where you can choose your own provider. If you're new here, we recommend sticking with the default Orbis Social option."
+msgstr "Orbis 是一個開放的網路，您可以自行挑選託管服務提供者。但如果您是新使用者，我們建議使用預設的 Orbis Social 選項。"
 
 #: src/components/ProgressGuide/List.tsx:115
-msgid "Bluesky is better with friends!"
-msgstr "Bluesky 因朋友而更好！"
+msgid "Orbis is better with friends!"
+msgstr "Orbis 因朋友而更好！"
 
 #: src/screens/Onboarding/StepFindContactsIntro/index.tsx:43
-msgid "Bluesky is more fun with friends"
-msgstr "與朋友一起使用 Bluesky 更有趣"
+msgid "Orbis is more fun with friends"
+msgstr "與朋友一起使用 Orbis 更有趣"
 
 #: src/components/dialogs/nuxs/FindContactsAnnouncement.tsx:108
-msgid "Bluesky is more fun with friends! Import your contacts to see who’s already here."
-msgstr "與朋友一起使用 Bluesky 更有趣！匯入聯絡人來看看誰也在使用吧。"
+msgid "Orbis is more fun with friends! Import your contacts to see who’s already here."
+msgstr "與朋友一起使用 Orbis 更有趣！匯入聯絡人來看看誰也在使用吧。"
 
 #: src/components/contacts/screens/ViewMatches.tsx:323
-msgid "Bluesky is more fun with friends. Do you want to invite some of yours? <0/>"
-msgstr "與朋友一起使用 Bluesky 更有趣。想邀請一些朋友加入嗎？<0/>"
+msgid "Orbis is more fun with friends. Do you want to invite some of yours? <0/>"
+msgstr "與朋友一起使用 Orbis 更有趣。想邀請一些朋友加入嗎？<0/>"
 
 #: src/screens/ModerationInbox/Report.tsx:38
 #: src/screens/ModerationInbox/Subject.tsx:38
-msgid "Bluesky Moderation Service"
+msgid "Orbis Moderation Service"
 msgstr ""
 
 #: src/features/inviteFriends/InviteScannerScreen.tsx:105
-msgid "Bluesky needs camera access to scan QR codes from other profiles."
-msgstr "Bluesky 需要相機存取權限，以掃描其他個人檔案的 QR Code。"
+msgid "Orbis needs camera access to scan QR codes from other profiles."
+msgstr "Orbis 需要相機存取權限，以掃描其他個人檔案的 QR Code。"
 
 #: src/components/StarterPack/ProfileStarterPacks.tsx:338
-msgid "Bluesky will choose a set of recommended accounts from people in your network."
-msgstr "Bluesky 將從您的個人社群網路中選擇一組推薦的帳號。"
+msgid "Orbis will choose a set of recommended accounts from people in your network."
+msgstr "Orbis 將從您的個人社群網路中選擇一組推薦的帳號。"
 
 #: src/components/dialogs/nuxs/InitialVerificationAnnouncement.tsx:137
-msgid "Bluesky will proactively verify notable and authentic accounts."
-msgstr "Bluesky 官方會主動確認部分知名帳號的真實性並授予驗證。"
+msgid "Orbis will proactively verify notable and authentic accounts."
+msgstr "Orbis 官方會主動確認部分知名帳號的真實性並授予驗證。"
 
 #: src/lib/moderation/useLabelBehaviorDescription.ts:56
 msgid "Blur images"
@@ -3844,8 +3844,8 @@ msgid "Customization options"
 msgstr "自訂選項"
 
 #: src/screens/Onboarding/Layout.tsx:126
-msgid "Customizes your Bluesky experience"
-msgstr "自訂您的 Bluesky 體驗"
+msgid "Customizes your Orbis experience"
+msgstr "自訂您的 Orbis 體驗"
 
 #: src/components/moderation/ReportDialog/utils/useReportOptions.ts:202
 msgid "Dangerous challenges or activities"
@@ -4327,8 +4327,8 @@ msgid "Download"
 msgstr "下載"
 
 #: src/screens/StarterPack/StarterPackLandingScreen.tsx:321
-msgid "Download Bluesky"
-msgstr "下載 Bluesky"
+msgid "Download Orbis"
+msgstr "下載 Orbis"
 
 #: src/screens/Settings/components/ExportCarDialog.tsx:153
 msgid "Download chat data"
@@ -4373,8 +4373,8 @@ msgid "Drop to add images"
 msgstr "拖放即可新增圖片"
 
 #: src/components/ageAssurance/useAgeAssuranceCopy.ts:20
-msgid "Due to laws in your region, certain features on Bluesky are currently restricted until you're able to verify you're an adult."
-msgstr "受限於當地法律規定，我們必須先確認您已成年，才能提供 Bluesky 的部分功能。"
+msgid "Due to laws in your region, certain features on Orbis are currently restricted until you're able to verify you're an adult."
+msgstr "受限於當地法律規定，我們必須先確認您已成年，才能提供 Orbis 的部分功能。"
 
 #: src/components/dialogs/MutedWords.tsx:164
 msgid "Duration:"
@@ -5463,16 +5463,16 @@ msgid "Find people you know"
 msgstr "尋找您認識的人"
 
 #: src/screens/Search/Shell.tsx:765
-msgid "Find posts, users, and feeds on Bluesky"
-msgstr "在 Bluesky 上尋找貼文、使用者和動態源"
+msgid "Find posts, users, and feeds on Orbis"
+msgstr "在 Orbis 上尋找貼文、使用者和動態源"
 
 #: src/components/dialogs/nuxs/FindContactsAnnouncement.tsx:98
 msgid "Find your friends"
 msgstr "尋找您的朋友"
 
 #: src/screens/Onboarding/StepFindContactsIntro/index.tsx:46
-msgid "Find your friends on Bluesky by verifying your phone number and matching with your contacts. We protect your information and you control what happens next. <0>Learn more</0>"
-msgstr "驗證您的電話號碼並匹配聯絡人，即可尋找也在使用 Bluesky 的朋友。我們會嚴格保護您的資訊，而您掌控後續操作。<0>瞭解更多</0>"
+msgid "Find your friends on Orbis by verifying your phone number and matching with your contacts. We protect your information and you control what happens next. <0>Learn more</0>"
+msgstr "驗證您的電話號碼並匹配聯絡人，即可尋找也在使用 Orbis 的朋友。我們會嚴格保護您的資訊，而您掌控後續操作。<0>瞭解更多</0>"
 
 #: src/screens/Settings/FindContactsSettings.tsx:136
 msgid "Find your friends on ORBIS by verifying your phone number and matching with your contacts. We protect your information and you control what happens next. <0>Learn more</0>"
@@ -5732,8 +5732,8 @@ msgstr "忘記密碼？"
 
 #. This is alt text for a marketing image which transcribes English text that appears in the image
 #: src/components/dialogs/nuxs/GroupChatsAnnouncement.tsx:153
-msgid "Four message bubbles representing a group chat. First message: \"Did you hear the news? Bluesky has group chats now!\" Second message: \"omg, no way\" Third message: \"Wow, 50 people in one chat!\" Fourth message: \"You can send invite links too!\""
-msgstr "四個群組對話中的訊息泡泡。第一則寫著：「你聽說了嗎？Bluesky 現在有群組對話了！」第二則訊息：「真的假的」第三則訊息：「群組最多可以加入 50 個人！」第四則訊息：「還可以傳送邀請連結！」"
+msgid "Four message bubbles representing a group chat. First message: \"Did you hear the news? Orbis has group chats now!\" Second message: \"omg, no way\" Third message: \"Wow, 50 people in one chat!\" Fourth message: \"You can send invite links too!\""
+msgstr "四個群組對話中的訊息泡泡。第一則寫著：「你聽說了嗎？Orbis 現在有群組對話了！」第二則訊息：「真的假的」第三則訊息：「群組最多可以加入 50 個人！」第四則訊息：「還可以傳送邀請連結！」"
 
 #: src/screens/Onboarding/StepFinished/ValuePropositionPager.shared.tsx:22
 msgid "Free your feed"
@@ -6221,8 +6221,8 @@ msgid "Having trouble?"
 msgstr "遇到問題？"
 
 #: src/components/contacts/screens/PhoneInput.tsx:290
-msgid "Held by Bluesky for 7 days to prevent abuse, then deleted"
-msgstr "由 Bluesky 保留 7 天以防止濫用，並在之後刪除"
+msgid "Held by Orbis for 7 days to prevent abuse, then deleted"
+msgstr "由 Orbis 保留 7 天以防止濫用，並在之後刪除"
 
 #: src/screens/Settings/Settings.tsx:259
 #: src/screens/Settings/Settings.tsx:263
@@ -6444,8 +6444,8 @@ msgid "Human trafficking"
 msgstr "人口販賣"
 
 #: src/components/contacts/screens/GetContacts.tsx:269
-msgid "I consent to Bluesky using my contacts for mutual friend discovery and to retain hashed data for matching until I opt out."
-msgstr "我同意 Bluesky 使用我的聯絡人尋找朋友，並保留雜湊值，直到我選擇退出。"
+msgid "I consent to Orbis using my contacts for mutual friend discovery and to retain hashed data for matching until I opt out."
+msgstr "我同意 Orbis 使用我的聯絡人尋找朋友，並保留雜湊值，直到我選擇退出。"
 
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:140
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:143
@@ -6463,8 +6463,8 @@ msgstr "我瞭解"
 
 #. placeholder {0}: currentAccount.handle
 #: src/components/contacts/screens/ViewMatches.tsx:586
-msgid "I'm on Bluesky as {0} - come find me! https://bsky.app/download"
-msgstr "我在 Bluesky 上的帳號是 {0} - 快來加入我的行列吧! https://bsky.app/download"
+msgid "I'm on Orbis as {0} - come find me! https://bsky.app/download"
+msgstr "我在 Orbis 上的帳號是 {0} - 快來加入我的行列吧! https://bsky.app/download"
 
 #: src/components/Lightbox/Lightbox.web.tsx:247
 msgid "If alt text is long, toggles alt text expanded state"
@@ -6778,8 +6778,8 @@ msgid "Invite"
 msgstr "邀請"
 
 #: src/components/contacts/screens/ViewMatches.tsx:575
-msgid "Invite {name} to join Bluesky"
-msgstr "邀請 {name} 加入 Bluesky"
+msgid "Invite {name} to join Orbis"
+msgstr "邀請 {name} 加入 Orbis"
 
 #: src/screens/Signup/StepInfo/index.tsx:211
 msgid "Invite code"
@@ -6887,8 +6887,8 @@ msgstr "加入"
 #: src/screens/StarterPack/StarterPackLandingScreen.tsx:207
 #: src/screens/StarterPack/StarterPackScreen.tsx:466
 #: src/screens/StarterPack/StarterPackScreen.tsx:476
-msgid "Join Bluesky"
-msgstr "加入 Bluesky"
+msgid "Join Orbis"
+msgstr "加入 Orbis"
 
 #: src/components/intents/GroupChatJoinDialog.tsx:70
 #: src/components/intents/GroupChatJoinDialog.tsx:469
@@ -7048,8 +7048,8 @@ msgstr "深入瞭解這個警告"
 #: src/components/verification/VerificationsDialog.tsx:154
 #: src/components/verification/VerifierDialog.tsx:123
 msgctxt "english-only-resource"
-msgid "Learn more about verification on Bluesky"
-msgstr "深入瞭解 Bluesky 的驗證機制（英文）"
+msgid "Learn more about verification on Orbis"
+msgstr "深入瞭解 Orbis 的驗證機制（英文）"
 
 #: src/screens/Settings/PrivacyAndSecuritySettings.tsx:129
 #: src/screens/Settings/PrivacyAndSecuritySettings.tsx:131
@@ -7117,8 +7117,8 @@ msgstr "離開此群組對話"
 
 #: src/components/dialogs/LinkWarning.tsx:83
 #: src/components/dialogs/LinkWarning.tsx:91
-msgid "Leaving Bluesky"
-msgstr "離開 Bluesky"
+msgid "Leaving Orbis"
+msgstr "離開 Orbis"
 
 #: src/screens/Messages/ConversationSettings/prompts.tsx:153
 msgid "Leaving this chat will lock it permanently and you won’t be able to rejoin."
@@ -8211,8 +8211,8 @@ msgid "No action taken"
 msgstr ""
 
 #: src/screens/Onboarding/StepFinished/ValuePropositionPager.shared.tsx:42
-msgid "No ads, no invasive tracking, no engagement traps. Bluesky respects your time and attention."
-msgstr "無廣告、無侵入式追蹤，更沒有成癮性設計。Bluesky 尊重您寶貴的時間與注意力。"
+msgid "No ads, no invasive tracking, no engagement traps. Orbis respects your time and attention."
+msgstr "無廣告、無侵入式追蹤，更沒有成癮性設計。Orbis 尊重您寶貴的時間與注意力。"
 
 #: src/screens/Settings/AppPasswords.tsx:109
 msgid "No app passwords yet"
@@ -8930,8 +8930,8 @@ msgid "Opens flow to create a new account"
 msgstr ""
 
 #: src/screens/Messages/JoinRequest.tsx:313
-msgid "Opens flow to create a new Bluesky account"
-msgstr "開啟建立新的 Bluesky 帳號的流程"
+msgid "Opens flow to create a new Orbis account"
+msgstr "開啟建立新的 Orbis 帳號的流程"
 
 #: src/view/com/auth/SplashScreen.tsx:90
 msgid "Opens flow to create a new ORBIS account"
@@ -8942,8 +8942,8 @@ msgid "Opens flow to sign in to your existing account"
 msgstr ""
 
 #: src/screens/Messages/JoinRequest.tsx:299
-msgid "Opens flow to sign in to your existing Bluesky account"
-msgstr "開啟登入現有 Bluesky 帳號的流程"
+msgid "Opens flow to sign in to your existing Orbis account"
+msgstr "開啟登入現有 Orbis 帳號的流程"
 
 #: src/view/com/auth/SplashScreen.tsx:118
 msgid "Opens flow to sign in to your existing ORBIS account"
@@ -9410,8 +9410,8 @@ msgid "Please choose your password."
 msgstr "請設定您的密碼。"
 
 #: src/components/dialogs/EmailDialog/screens/Update.tsx:286
-msgid "Please click on the link in the email we just sent you to verify your new email address. This is an important step to allow you to continue enjoying all the features of Bluesky."
-msgstr "請檢視我們剛剛傳送的郵件，並打開其中包含的連結來驗證您的新電子郵件地址。您需要先完成此步驟才能繼續使用 Bluesky 的所有功能。"
+msgid "Please click on the link in the email we just sent you to verify your new email address. This is an important step to allow you to continue enjoying all the features of Orbis."
+msgstr "請檢視我們剛剛傳送的郵件，並打開其中包含的連結來驗證您的新電子郵件地址。您需要先完成此步驟才能繼續使用 Orbis 的所有功能。"
 
 #: src/screens/Signup/state.ts:325
 msgid "Please complete the verification captcha."
@@ -9542,8 +9542,8 @@ msgid "Please submit your report through the Report non-consensual intimate imag
 msgstr "請透過「檢舉非自願親密影像 (NCII)」表單提交您的檢舉。"
 
 #: src/features/inviteFriends/InviteScannerScreen.web.tsx:40
-msgid "Please use the Bluesky mobile app to scan a QR code."
-msgstr "請使用 Bluesky 行動裝置應用程式掃描 QR Code。"
+msgid "Please use the Orbis mobile app to scan a QR code."
+msgstr "請使用 Orbis 行動裝置應用程式掃描 QR Code。"
 
 #: src/screens/Settings/FindContactsSettings.tsx:110
 msgid "Please use the native app to import your contacts."
@@ -9661,8 +9661,8 @@ msgid "Post Interaction Settings"
 msgstr "貼文互動設定"
 
 #: src/components/dialogs/nuxs/GroupChatsAnnouncement.tsx:193
-msgid "Post it to Bluesky or share anywhere."
-msgstr "發佈到 Bluesky 或分享到任何地方。"
+msgid "Post it to Orbis or share anywhere."
+msgstr "發佈到 Orbis 或分享到任何地方。"
 
 #. Accessibility label for button that opens dialog to choose post language settings
 #: src/view/com/composer/select-language/PostLanguageSelect.tsx:193
@@ -11576,7 +11576,7 @@ msgid "Share this Starter Pack"
 msgstr ""
 
 #: src/components/StarterPack/ShareDialog.tsx:87
-msgid "Share this Starter Pack and help people join your community on Bluesky."
+msgid "Share this Starter Pack and help people join your community on Orbis."
 msgstr ""
 
 #: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:130
@@ -11801,8 +11801,8 @@ msgid "Sign in to account that is not listed"
 msgstr "登入未列出的帳號"
 
 #: src/components/dialogs/Signin.tsx:47
-msgid "Sign in to Bluesky or create a new account"
-msgstr "登入 Bluesky 或建立新的帳號"
+msgid "Sign in to Orbis or create a new account"
+msgstr "登入 Orbis 或建立新的帳號"
 
 #: src/screens/Messages/JoinRequest.tsx:223
 msgid "Sign in to request access to this group chat."
@@ -12162,8 +12162,8 @@ msgid "Storybook"
 msgstr "故事書"
 
 #: src/components/dialogs/nuxs/LiveNowBetaDialog.tsx:182
-msgid "Streaming on Twitch? Set your live status on Bluesky to add a badge to your avatar. Tapping it takes people straight to your stream."
-msgstr "正在 Twitch 上開台嗎？在 Bluesky 設定直播狀態，您的大頭貼上就會顯示直播徽章。點擊徽章即可直接前往您的直播頁面。"
+msgid "Streaming on Twitch? Set your live status on Orbis to add a badge to your avatar. Tapping it takes people straight to your stream."
+msgstr "正在 Twitch 上開台嗎？在 Orbis 設定直播狀態，您的大頭貼上就會顯示直播徽章。點擊徽章即可直接前往您的直播頁面。"
 
 #: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:123
 #: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:129
@@ -12359,8 +12359,8 @@ msgid "Take the conversation private."
 msgstr "私下討論。"
 
 #: src/components/dialogs/DeviceLocationRequestDialog.tsx:110
-msgid "Tap below to allow Bluesky to access your GPS location. We will then use that data to more accurately determine the content and features available in your region."
-msgstr "輕觸下方的「允許」按鈕來讓 Bluesky 存取您的所在位置。我們會利用該資訊來更精確地判斷您所在區域可用的內容和功能。"
+msgid "Tap below to allow Orbis to access your GPS location. We will then use that data to more accurately determine the content and features available in your region."
+msgstr "輕觸下方的「允許」按鈕來讓 Orbis 存取您的所在位置。我們會利用該資訊來更精確地判斷您所在區域可用的內容和功能。"
 
 #: src/components/dms/MessageItem.tsx:697
 msgid "Tap for details"
@@ -12380,8 +12380,8 @@ msgid "Tap here to update your location with GPS."
 msgstr "點一下這裡以使用 GPS 確認您的位置。"
 
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:165
-msgid "Tap to acknowledge that you understand and agree to these updates and continue using Bluesky"
-msgstr "點此以表示您瞭解且同意這些更新，並繼續使用 Bluesky"
+msgid "Tap to acknowledge that you understand and agree to these updates and continue using Orbis"
+msgstr "點此以表示您瞭解且同意這些更新，並繼續使用 Orbis"
 
 #: src/components/ContextMenu/Backdrop.ios.tsx:54
 #: src/components/ContextMenu/Backdrop.ios.tsx:80
@@ -12553,8 +12553,8 @@ msgid "The birthdate you've entered means you are under 18 years old. Certain co
 msgstr "您輸入的出生日期表示您未滿 18 歲，可能無法使用一些功能或檢視某些內容。"
 
 #: src/screens/Moderation/index.tsx:474
-msgid "The Bluesky web application"
-msgstr "Bluesky 網頁應用程式"
+msgid "The Orbis web application"
+msgstr "Orbis 網頁應用程式"
 
 #: src/view/screens/CommunityGuidelines.tsx:32
 msgid "The Community Guidelines have been moved to <0/>"
@@ -12573,8 +12573,8 @@ msgid "The Discover feed now knows what you like"
 msgstr "現在「Discover」動態源瞭解您喜歡的內容了"
 
 #: src/screens/StarterPack/StarterPackLandingScreen.tsx:324
-msgid "The experience is better in the app. Download Bluesky now and we'll pick back up where you left off."
-msgstr "使用應用程式的體驗會更好。現在就下載 Bluesky，我們將從您離開的地方繼續。"
+msgid "The experience is better in the app. Download Orbis now and we'll pick back up where you left off."
+msgstr "使用應用程式的體驗會更好。現在就下載 Orbis，我們將從您離開的地方繼續。"
 
 #: src/view/com/posts/FeedShutdownMsg.tsx:70
 msgid "The feed has been replaced with Discover."
@@ -12879,8 +12879,8 @@ msgid "This appeal will be sent to <0>{sourceName}</0>."
 msgstr "這份申訴將被提交至 <0>{sourceName}</0>。"
 
 #: src/features/liveNow/components/GoLiveDisabledDialog.tsx:112
-msgid "This appeal will be sent to Bluesky's moderation service."
-msgstr "這份申訴將被提交至 Bluesky 的內容管理服務。"
+msgid "This appeal will be sent to Orbis's moderation service."
+msgstr "這份申訴將被提交至 Orbis 的內容管理服務。"
 
 #: src/screens/Messages/components/ChatDisabled.tsx:135
 msgid "This appeal will be sent to ORBIS's moderation service."
@@ -12892,8 +12892,8 @@ msgid "This author has chosen to make their posts visible only to people who are
 msgstr "該作者已限制僅限已登入使用者可以檢視其貼文。"
 
 #: src/screens/Profile/components/GermButton.tsx:249
-msgid "This button lets others open the Germ DM app to send you a message. You can manage its visibility from the Germ DM app, or you can disconnect your Bluesky account from Germ DM altogether by clicking the button below."
-msgstr "這個按鈕可讓其他人開啟 Germ DM 應用程式傳送訊息給您。您可以透過 Germ DM 應用程式管理此按鈕的顯示狀態，或者點選下方按鈕以解除您的 Bluesky 帳號與 Germ DM 之間的連結。"
+msgid "This button lets others open the Germ DM app to send you a message. You can manage its visibility from the Germ DM app, or you can disconnect your Orbis account from Germ DM altogether by clicking the button below."
+msgstr "這個按鈕可讓其他人開啟 Germ DM 應用程式傳送訊息給您。您可以透過 Germ DM 應用程式管理此按鈕的顯示狀態，或者點選下方按鈕以解除您的 Orbis 帳號與 Germ DM 之間的連結。"
 
 #: src/screens/Messages/components/ChatEnded.tsx:48
 msgid "This chat has ended"
@@ -13103,8 +13103,8 @@ msgstr "這個使用者封鎖了您"
 #. placeholder {0}: niceDate(i18n, createdAt)
 #. placeholder {1}: niceDate(i18n, indexedAt)
 #: src/screens/PostThread/components/ThreadItemAnchor.tsx:639
-msgid "This post claims to have been created on <0>{0}</0>, but was first seen by Bluesky on <1>{1}</1>."
-msgstr "這則貼文宣告的發布時間為 <0>{0}</0>，但首次出現在 Bluesky 的時間是 <1>{1}</1>。"
+msgid "This post claims to have been created on <0>{0}</0>, but was first seen by Orbis on <1>{1}</1>."
+msgstr "這則貼文宣告的發布時間為 <0>{0}</0>，但首次出現在 Orbis 的時間是 <1>{1}</1>。"
 
 #: src/components/WhoCanReply.tsx:256
 msgid "This post has an unknown type of threadgate on it. Your app may be out of date."
@@ -13194,7 +13194,7 @@ msgstr "這個使用者包含在您已靜音的 <0>{0}</0> 列表中。"
 
 #: src/components/dialogs/NewskieDialog/index.tsx:50
 msgid "This user is new here. Press for more info about when they joined."
-msgstr "這個使用者在近期加入了 Bluesky。按一下這裡以瞭解其加入的時間。"
+msgstr "這個使用者在近期加入了 Orbis。按一下這裡以瞭解其加入的時間。"
 
 #: src/view/com/profile/ProfileFollows.tsx:196
 msgid "This user isn't following anyone."
@@ -13442,8 +13442,8 @@ msgid "Type:"
 msgstr "類型："
 
 #: src/components/dialogs/DeviceLocationRequestDialog.tsx:87
-msgid "Unable to access location. You'll need to visit your system settings to enable location services for Bluesky."
-msgstr "無法存取位置資訊，您需要進入系統設定來允許 Bluesky 存取您的位置資訊。"
+msgid "Unable to access location. You'll need to visit your system settings to enable location services for Orbis."
+msgstr "無法存取位置資訊，您需要進入系統設定來允許 Orbis 存取您的位置資訊。"
 
 #: src/lib/hooks/useCleanError.ts:32
 #: src/lib/strings/errors.ts:44
@@ -13617,12 +13617,12 @@ msgid "Unfortunately, none of your subscribed labelers supports this report type
 msgstr "抱歉，您訂閱的內容管理服務皆不支援此檢舉類型。"
 
 #: src/ageAssurance/components/NoAccessScreen.tsx:266
-msgid "Unfortunately, the birthdate you have saved to your profile makes you too young to access Bluesky."
-msgstr "很遺憾，您個人資料中儲存的出生日期顯示您的年齡太小，暫時無法使用 Bluesky。"
+msgid "Unfortunately, the birthdate you have saved to your profile makes you too young to access Orbis."
+msgstr "很遺憾，您個人資料中儲存的出生日期顯示您的年齡太小，暫時無法使用 Orbis。"
 
 #: src/ageAssurance/components/NoAccessScreen.tsx:250
-msgid "Unfortunately, your declared age indicates that you are not old enough to access Bluesky in your region."
-msgstr "抱歉，您設定的年齡無法於您的所在地區使用 Bluesky。"
+msgid "Unfortunately, your declared age indicates that you are not old enough to access Orbis in your region."
+msgstr "抱歉，您設定的年齡無法於您的所在地區使用 Orbis。"
 
 #: src/components/verification/VerificationsDialog.tsx:210
 msgid "Unknown verifier"
@@ -13914,8 +13914,8 @@ msgid "Use this to sign in to the other app along with your handle."
 msgstr "使用這個和您的帳號代碼一起登入其他應用程式。"
 
 #: src/components/ageAssurance/AgeAssuranceInitDialog.tsx:287
-msgid "Use your account email address, or another real email address you control, in case KWS or Bluesky needs to contact you."
-msgstr "使用您帳號的電子郵件地址，或另外一個您擁有的電子郵件地址，以防 KWS 或 Bluesky 需要與您聯絡。"
+msgid "Use your account email address, or another real email address you control, in case KWS or Orbis needs to contact you."
+msgstr "使用您帳號的電子郵件地址，或另外一個您擁有的電子郵件地址，以防 KWS 或 Orbis 需要與您聯絡。"
 
 #: src/view/screens/Profile.tsx:395
 msgid "user"
@@ -14025,8 +14025,8 @@ msgid "Verification Settings"
 msgstr "驗證設定"
 
 #: src/screens/Moderation/VerificationSettings.tsx:43
-msgid "Verifications on Bluesky work differently than on other platforms. <0>Learn more here.</0>"
-msgstr "Bluesky 的驗證機制與其他平台不同。<0>在此瞭解詳情。</0>"
+msgid "Verifications on Orbis work differently than on other platforms. <0>Learn more here.</0>"
+msgstr "Orbis 的驗證機制與其他平台不同。<0>在此瞭解詳情。</0>"
 
 #: src/components/verification/VerificationsDialog.tsx:106
 msgid "Verified by:"
@@ -14482,8 +14482,8 @@ msgid "We estimate {estimatedTime} until your account is ready."
 msgstr "我們預計還需要 {estimatedTime} 才能把您的帳號準備好。"
 
 #: src/components/ageAssurance/AgeAssuranceInitDialog.tsx:206
-msgid "We have partnered with <0>KWS</0> to handle age verification. When you click \"Begin\" below, KWS will email you instructions to complete the verification process. If your email address has already been used to verify your age for another game or service that uses KWS, you won’t need to do it again. When you’re done, you'll be brought back to continue using Bluesky."
-msgstr "我們已與 <0>KWS</0> 合作來處理年齡驗證程序。當您按下「開始」後，KWS 會向您的電子信箱傳送一封郵件指引您完成驗證步驟。若您已在其他使用 KWS 技術的遊戲或服務使用您的電子郵件地址確認過年齡，則無需再次驗證。在完成驗證後，您會被引導回來以繼續使用 Bluesky。"
+msgid "We have partnered with <0>KWS</0> to handle age verification. When you click \"Begin\" below, KWS will email you instructions to complete the verification process. If your email address has already been used to verify your age for another game or service that uses KWS, you won’t need to do it again. When you’re done, you'll be brought back to continue using Orbis."
+msgstr "我們已與 <0>KWS</0> 合作來處理年齡驗證程序。當您按下「開始」後，KWS 會向您的電子信箱傳送一封郵件指引您完成驗證步驟。若您已在其他使用 KWS 技術的遊戲或服務使用您的電子郵件地址確認過年齡，則無需再次驗證。在完成驗證後，您會被引導回來以繼續使用 Orbis。"
 
 #. placeholder {0}: currentAccount?.email
 #: src/components/intents/VerifyEmailIntentDialog.tsx:104
@@ -14585,16 +14585,16 @@ msgid "We’re having network issues, try again"
 msgstr "我們遇到了網路問題，請再試一次"
 
 #: src/components/dialogs/nuxs/InitialVerificationAnnouncement.tsx:98
-msgid "We’re introducing a new layer of verification on Bluesky — an easy-to-see checkmark."
-msgstr "為您介紹 Bluesky 的全新驗證機制 —— 驗證標記。"
+msgid "We’re introducing a new layer of verification on Orbis — an easy-to-see checkmark."
+msgstr "為您介紹 Orbis 的全新驗證機制 —— 驗證標記。"
 
 #: src/screens/Signup/index.tsx:140
 msgid "We’re so excited to have you join us!"
 msgstr "我們非常高興看到您加入我們！"
 
 #: src/ageAssurance/useVerificationFlow.ts:117
-msgid "We're sorry, but based on the data shared by your device, you are not old enough to access Bluesky."
-msgstr "很抱歉，根據裝置所分享的資訊，您尚未達到使用 Bluesky 的年齡。"
+msgid "We're sorry, but based on the data shared by your device, you are not old enough to access Orbis."
+msgstr "很抱歉，根據裝置所分享的資訊，您尚未達到使用 Orbis 的年齡。"
 
 #: src/ageAssurance/components/NoAccessScreen.tsx:230
 #: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:219
@@ -14848,8 +14848,8 @@ msgid "You are a trusted verifier"
 msgstr "您是可靠的驗證者"
 
 #: src/ageAssurance/components/NoAccessScreen.tsx:177
-msgid "You are accessing Bluesky from a region that legally requires us to verify your age before allowing you to access the app."
-msgstr "您所在的地區依法要求我們在允許您使用 Bluesky 應用程式之前驗證您的年齡。"
+msgid "You are accessing Orbis from a region that legally requires us to verify your age before allowing you to access the app."
+msgstr "您所在的地區依法要求我們在允許您使用 Orbis 應用程式之前驗證您的年齡。"
 
 #. placeholder {0}: sanitizeHandle(profile.handle, '@')
 #: src/components/dms/MessageItem.tsx:735
@@ -14874,8 +14874,8 @@ msgstr "您目前已被禁止使用直播功能。若要對此處分提出申訴
 
 #: src/ageAssurance/components/NoAccessScreen.tsx:403
 #: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:125
-msgid "You are currently unable to access Bluesky's Age Assurance flow. Please <0>contact our moderation team</0> if you believe this is an error."
-msgstr "您目前無法存取 Bluesky 的年齡驗證程序。如果您認為這是系統誤判，請<0>聯絡我們的支援團隊</0>。"
+msgid "You are currently unable to access Orbis's Age Assurance flow. Please <0>contact our moderation team</0> if you believe this is an error."
+msgstr "您目前無法存取 Orbis 的年齡驗證程序。如果您認為這是系統誤判，請<0>聯絡我們的支援團隊</0>。"
 
 #: src/screens/SignupQueued.tsx:166
 msgid "You are in line."
@@ -14949,8 +14949,8 @@ msgid "You can now choose to be notified when specific people post. If there’s
 msgstr "您現在可以選擇在其他人發布貼文時收到通知了。如果您不想錯過某人的最新動態，只需前往他們的個人檔案，點一下跟隨按鈕旁的鈴鐺即可開始接收通知。"
 
 #: src/components/dialogs/nuxs/InviteFriendsAnnouncement.tsx:154
-msgid "You can now invite friends with a link or QR code. Share the link anywhere, or let them scan the code to join you on Bluesky."
-msgstr "您現在可以透過連結或 QR Code 邀請朋友。在其他地方分享連結，或讓他們掃描 QR Code 以加入您在 Bluesky 的行列。"
+msgid "You can now invite friends with a link or QR code. Share the link anywhere, or let them scan the code to join you on Orbis."
+msgstr "您現在可以透過連結或 QR Code 邀請朋友。在其他地方分享連結，或讓他們掃描 QR Code 以加入您在 Orbis 的行列。"
 
 #: src/screens/Login/index.tsx:207
 #: src/screens/Login/PasswordUpdatedForm.tsx:25
@@ -15044,8 +15044,8 @@ msgid "You have blocked this user. You cannot view their content."
 msgstr "您封鎖了此使用者，因此無法檢視他們發布的內容。"
 
 #: src/components/ageAssurance/useAgeAssuranceCopy.ts:17
-msgid "You have completed the Age Assurance process, but based on the results, we cannot be sure that you are 18 years of age or older. Due to laws in your region, certain features on Bluesky must remain restricted until you're able to verify you're an adult."
-msgstr "您已完成年齡驗證程序，但根據結果，我們無法確認您是否已年滿 18 歲。受限於當地法律規定，我們必須限制您存取 Bluesky 的部分功能，直到可以確認您已成年。"
+msgid "You have completed the Age Assurance process, but based on the results, we cannot be sure that you are 18 years of age or older. Due to laws in your region, certain features on Orbis must remain restricted until you're able to verify you're an adult."
+msgstr "您已完成年齡驗證程序，但根據結果，我們無法確認您是否已年滿 18 歲。受限於當地法律規定，我們必須限制您存取 Orbis 的部分功能，直到可以確認您已成年。"
 
 #: src/view/screens/Notifications.tsx:291
 msgid "You have completely disabled reply, quote, and mention notifications, so this tab will no longer update. To adjust this, visit your <0>notification settings</0>."
@@ -15142,19 +15142,19 @@ msgid "You initiated this flow already, {0} ago. It may take up to 5 minutes for
 msgstr "您已在 {0}前要求開始進行這項程序。電子郵件應該會在 5 分鐘內傳送至您的信箱。請考慮稍後幾分鐘再試一次。"
 
 #: src/components/dialogs/NewskieDialog/utils.ts:42
-msgid "You joined Bluesky {timeAgoString} ago"
-msgstr "您在 {timeAgoString}前加入了 Bluesky"
+msgid "You joined Orbis {timeAgoString} ago"
+msgstr "您在 {timeAgoString}前加入了 Orbis"
 
 #: src/components/dialogs/NewskieDialog/utils.ts:27
-msgid "You joined Bluesky just now"
+msgid "You joined Orbis just now"
 msgstr ""
 
 #: src/components/dialogs/NewskieDialog/utils.ts:40
-msgid "You joined Bluesky using a Starter Pack {timeAgoString} ago"
+msgid "You joined Orbis using a Starter Pack {timeAgoString} ago"
 msgstr ""
 
 #: src/components/dialogs/NewskieDialog/utils.ts:26
-msgid "You joined Bluesky using a Starter Pack just now"
+msgid "You joined Orbis using a Starter Pack just now"
 msgstr ""
 
 #: src/components/moderation/LabelsOnMeDialog.tsx:83
@@ -15181,8 +15181,8 @@ msgid "You must be a chat owner to remove a member."
 msgstr "您必須是對話的擁有者才能移除成員。"
 
 #: src/components/dialogs/BirthDateSettings.tsx:177
-msgid "You must be at least 13 years old to use Bluesky. Read our <0>Terms of Service</0> for more information."
-msgstr "您必須年滿 13 歲才能使用 Bluesky。請閱讀我們的<0>服務條款</0>以瞭解更多資訊。"
+msgid "You must be at least 13 years old to use Orbis. Read our <0>Terms of Service</0> for more information."
+msgstr "您必須年滿 13 歲才能使用 Orbis。請閱讀我們的<0>服務條款</0>以瞭解更多資訊。"
 
 #: src/components/StarterPack/ProfileStarterPacks.tsx:362
 msgid "You must be following at least seven other people to generate a Starter Pack."
@@ -15305,8 +15305,8 @@ msgid "You'll follow these people right away"
 msgstr "您將立即跟隨這些人物"
 
 #: src/components/contacts/screens/GetContacts.tsx:316
-msgid "You'll need to go to the System Settings for Bluesky and give permission if you want to use this feature."
-msgstr "如果您想使用此功能，請前往系統設定並授予 Bluesky 相關權限。"
+msgid "You'll need to go to the System Settings for Orbis and give permission if you want to use this feature."
+msgstr "如果您想使用此功能，請前往系統設定並授予 Orbis 相關權限。"
 
 #. placeholder {0}: sanitizeHandle(profile.handle, '@')
 #: src/components/activity-notifications/SubscribeProfileDialog.tsx:169
@@ -15501,8 +15501,8 @@ msgid "Your email appears to be invalid."
 msgstr "您的電子郵件地址似乎無效。"
 
 #: src/components/dialogs/EmailDialog/screens/VerificationReminder.tsx:62
-msgid "Your email has not yet been verified. Please verify your email in order to enjoy all the features of Bluesky."
-msgstr "您的電子信箱尚未驗證。請驗證您的電子信箱以便享有使用所有 Bluesky 功能的權益。"
+msgid "Your email has not yet been verified. Please verify your email in order to enjoy all the features of Orbis."
+msgstr "您的電子信箱尚未驗證。請驗證您的電子信箱以便享有使用所有 Orbis 功能的權益。"
 
 #: src/state/shell/progress-guide.tsx:214
 msgid "Your first like!"

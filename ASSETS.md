@@ -2,26 +2,26 @@
 
 The [MIT license](./LICENSE) in this repository covers our source code. It does not cover every file in the tree.
 
-Some of the images, icons, fonts, and brand assets here are licensed to Bluesky Social PBC by third parties, or are our trademarks, or are third-party trademarks. We cannot pass those rights on to you. This document identifies them and names who holds them.
+Some of the images, icons, fonts, and brand assets here are licensed to Orbis Social PBC by third parties, or are our trademarks, or are third-party trademarks. We cannot pass those rights on to you. This document identifies them and names who holds them.
 
 ## This is not a license change
 
-The MIT license on our source code is unchanged. This document records rights that Bluesky never held, and therefore could never have granted you.
+The MIT license on our source code is unchanged. This document records rights that Orbis never held, and therefore could never have granted you.
 
 We updated this file in August 2026 so the repository no longer carries a blanket MIT license with no asset carve-out and forking guidelines that ignored commissioned artwork.
 
-For the assets Bluesky itself owns, we are not treating anyone's past use as bad faith. For the rest we are not the rights holder. The tables below name them. If you have shipped one of these in a fork, the [If you are forking](#if-you-are-forking) checklist is the shortest path to a clean position.
+For the assets Orbis itself owns, we are not treating anyone's past use as bad faith. For the rest we are not the rights holder. The tables below name them. If you have shipped one of these in a fork, the [If you are forking](#if-you-are-forking) checklist is the shortest path to a clean position.
 
 ## Summary
 
 | Where | Rights holder | Our MIT license covers it? | If you fork |
 |---|---|---|---|
-| [`assets/illustrations/`](#1-commissioned-artwork--licensed-to-bluesky-only) | Owen D. Pomery, via Brilliant Artists Ltd | No | Replace |
+| [`assets/illustrations/`](#1-commissioned-artwork--licensed-to-orbis-only) | Owen D. Pomery, via Brilliant Artists Ltd | No | Replace |
 | [`assets/icons/`](#2-licensed-icon-system--not-ours-to-pass-on) (top level), Central icon glyphs in `bskyembed/assets/` except the Starter Pack mark | Iconists (David & Storm GbR) | No | Source your own |
 | [ORBIS app branding](#3-brand-assets) — app icons, favicon, splash marks | ORBIS | Project branding | Keep as ORBIS branding |
-| [Bluesky trademarks](#3-brand-assets) — Bluesky marks retained in embed/server surfaces | Bluesky Social PBC | No | Replace if rebranding those surfaces |
+| [Orbis trademarks](#3-brand-assets) — Orbis marks retained in embed/server surfaces | Orbis Social PBC | No | Replace if rebranding those surfaces |
 | [`assets/kawaii.png`, `assets/kawaii_smol.png`](#4-community-and-contest-artwork--credited-but-not-ours-to-license) | [@sawaratsuki.bsky.social](https://bsky.app/profile/sawaratsuki.bsky.social) | No | Replace or remove |
-| [`assets/icons/custom_logo_japan.svg`](#4-community-and-contest-artwork--credited-but-not-ours-to-license) | A Bluesky Japan logo contest entrant | No | Replace or remove |
+| [`assets/icons/custom_logo_japan.svg`](#4-community-and-contest-artwork--credited-but-not-ours-to-license) | A Orbis Japan logo contest entrant | No | Replace or remove |
 | [`assets/icons/apple_logo.svg`](#5-third-party-trademarks) | Apple Inc. | No | Rests on your own basis |
 | [`assets/icons/android_logo.svg`](#5-third-party-trademarks) | Google LLC | No | Rests on your own basis |
 | [`assets/icons/community/`](#5-third-party-trademarks) | Leaflet, Offprint, pckt, Standard.site, Germ Network | No | Rests on your own basis |
@@ -37,13 +37,13 @@ Assets are scoped by directory wherever possible, so that adding a file to a car
 
 ---
 
-## 1. Commissioned artwork — licensed to Bluesky only
+## 1. Commissioned artwork — licensed to Orbis only
 
 **`assets/illustrations/`**
 
 The landing-screen illustration, in light and dark variants (`assets/illustrations/illustration-mobile.png` and `assets/illustrations/illustration-mobile-dark.png`), used by `src/view/com/auth/SplashScreen.tsx`.
 
-**Rights holder: Owen D. Pomery**, represented by Brilliant Artists Ltd. Bluesky Social PBC commissioned the work and holds a usage license. Copyright remains with the artist. Our license is limited to Bluesky's own products and channels, is exclusive to us, and does not permit us to sublicense the artwork or to distribute modified versions of it.
+**Rights holder: Owen D. Pomery**, represented by Brilliant Artists Ltd. Orbis Social PBC commissioned the work and holds a usage license. Copyright remains with the artist. Our license is limited to Orbis's own products and channels, is exclusive to us, and does not permit us to sublicense the artwork or to distribute modified versions of it.
 
 **If you are forking this repository, replace these files.** Because our license is exclusive, the artwork is not available for separate third-party licensing while that license runs. Please do not approach the artist or his agent for permission — the constraint is our agreement, not their willingness. If you have already shipped it, contact us and we will help you sort it out rather than leaving you to guess.
 
@@ -53,7 +53,7 @@ See [`assets/illustrations/README.md`](./assets/illustrations/README.md).
 
 **`assets/icons/` (top level), and the Central icon glyphs in `bskyembed/assets/`, except `bskyembed/assets/starterPack.svg`**
 
-**Rights holder: Iconists (David & Storm GbR).** The user-interface glyphs come from their [Central icon system](https://iconists.co/central). Bluesky Social PBC licenses them for use in our own products. **That license is for our own use. It does not include the right to pass any rights to the icons on to you.**
+**Rights holder: Iconists (David & Storm GbR).** The user-interface glyphs come from their [Central icon system](https://iconists.co/central). Orbis Social PBC licenses them for use in our own products. **That license is for our own use. It does not include the right to pass any rights to the icons on to you.**
 
 The fact that we have our own license does not mean that you cannot use these icons. It means that any right you have to use them has to come from Iconists, not us. Licenses are available from [iconists.co](https://iconists.co), and there are openly licensed alternatives if you prefer that.
 
@@ -65,11 +65,11 @@ See [`assets/icons/README.md`](./assets/icons/README.md).
 
 ### ORBIS app branding
 
-The default app icon and in-app logo are the original ORBIS M monogram. The source artwork is `assets/app-icons/orbis-monogram.svg` with the transparent Android foreground in `assets/app-icons/orbis-monogram-foreground.svg`. Platform PNGs are generated from that mark. These assets identify ORBIS, not Bluesky.
+The default app icon and in-app logo are the original ORBIS M monogram. The source artwork is `assets/app-icons/orbis-monogram.svg` with the transparent Android foreground in `assets/app-icons/orbis-monogram-foreground.svg`. Platform PNGs are generated from that mark. These assets identify ORBIS, not Orbis.
 
-### Bluesky trademarks
+### Orbis trademarks
 
-**Rights holder: Bluesky Social PBC.** The remaining Bluesky marks listed below are not licensed under this repository's MIT license. Use of them is governed by Bluesky's [Trademark Policy](https://bsky.social/about/support/trademarks) and [Brand Guidelines](https://bsky.social/about/support/branding). They must not be used as the identity of ORBIS.
+**Rights holder: Orbis Social PBC.** The remaining Orbis marks listed below are not licensed under this repository's MIT license. Use of them is governed by Orbis's [Trademark Policy](https://bsky.social/about/support/trademarks) and [Brand Guidelines](https://bsky.social/about/support/branding). They must not be used as the identity of ORBIS.
 
 - `assets/default-avatar.png`
 - `assets/icons/logomark.svg`
@@ -91,10 +91,10 @@ The default app icon and in-app logo are the original ORBIS M monogram. The sour
 - `bskyweb/embedr-static/favicon.png`
 - `bskyweb/embedr-static/favicon-16x16.png`
 - `bskyweb/embedr-static/favicon-32x32.png`
-- `modules/BlueskyClip/Images.xcassets/AppIcon.appiconset/`
-- `src/view/icons/Logotype.tsx` contains the ORBIS wordmark and is not a Bluesky mark.
+- `modules/OrbisClip/Images.xcassets/AppIcon.appiconset/`
+- `src/view/icons/Logotype.tsx` contains the ORBIS wordmark and is not a Orbis mark.
 
-These files stay in this repository because the app needs them to build. **If you fork, replace them with your own** — that is the one thing this section asks of you. Shipping an app that looks like Bluesky is also a problem under the app stores' own rules on copycat apps, quite apart from trademark.
+These files stay in this repository because the app needs them to build. **If you fork, replace them with your own** — that is the one thing this section asks of you. Shipping an app that looks like Orbis is also a problem under the app stores' own rules on copycat apps, quite apart from trademark.
 
 ## 4. Community and contest artwork — credited, but not ours to license
 
@@ -102,7 +102,7 @@ These are third-party artworks that appear in the app with attribution. We hold 
 
 - `assets/kawaii.png` and `assets/kawaii_smol.png` — **rights holder:
   [@sawaratsuki.bsky.social](https://bsky.app/profile/sawaratsuki.bsky.social)**. Shown as an opt-in variant and credited in `src/view/shell/Drawer.tsx` and `src/view/shell/desktop/RightNav.tsx`.
-- `assets/icons/custom_logo_japan.svg` — **rights holder: the entrant who won the Bluesky Japan logo contest.**
+- `assets/icons/custom_logo_japan.svg` — **rights holder: the entrant who won the Orbis Japan logo contest.**
 
 Replace or remove these if you fork. If you want to use them, contact the artist.
 
@@ -143,7 +143,7 @@ See [`NOTICE.md`](./NOTICE.md) for the consolidated third-party notices.
 
 Product illustration and announcement imagery — onboarding art, chat backgrounds, feature announcement graphics, and similar.
 
-**Rights holder: mixed, and we have not finished documenting it.** Some of this is Bluesky's own work. Some was commissioned from outside illustrators, on terms that do not let us pass rights on. We are working out which is which.
+**Rights holder: mixed, and we have not finished documenting it.** Some of this is Orbis's own work. Some was commissioned from outside illustrators, on terms that do not let us pass rights on. We are working out which is which.
 
 Until we have, **treat the whole directory as outside the MIT license and not licensed for your use.**
 
@@ -157,19 +157,19 @@ If you are forking, replace these or ship without them. See [`assets/images/READ
 
 You have our blessing to fork this application. These steps map one-to-one to the sections above.
 
-1. **Replace `assets/illustrations/`** — commissioned artwork, licensed to Bluesky only. [Section 1](#1-commissioned-artwork--licensed-to-bluesky-only)
+1. **Replace `assets/illustrations/`** — commissioned artwork, licensed to Orbis only. [Section 1](#1-commissioned-artwork--licensed-to-orbis-only)
 2. **Source your own UI icons** — the glyph set in `assets/icons/` is licensed to us for our own use. [Section 2](#2-licensed-icon-system--not-ours-to-pass-on)
-3. **Replace the Bluesky marks** — app icons, favicons, logo files, and the inline logo paths in `src/view/icons/`. [Section 3](#3-bluesky-trademarks-and-brand-assets)
+3. **Replace the Orbis marks** — app icons, favicons, logo files, and the inline logo paths in `src/view/icons/`. [Section 3](#3-orbis-trademarks-and-brand-assets)
 4. **Replace or remove the community and contest artwork.** [Section 4](#4-community-and-contest-artwork--credited-but-not-ours-to-license)
 5. **Check your own position on the third-party marks.** [Section 5](#5-third-party-trademarks)
 6. **Keep the assets you may redistribute, and keep their notices with them.** [Section 6](#6-third-party-assets-you-may-redistribute)
 7. **Replace `assets/images/`, or ship without it.** [Section 7](#7-product-imagery--provenance-being-documented)
 
-Then change your branding, support links, and analytics as described in the [Forking guidelines](./README.md#forking-guidelines). That part is not about licensing — it is what makes a fork clearly distinguishable from Bluesky, which matters both for your users and for app store review.
+Then change your branding, support links, and analytics as described in the [Forking guidelines](./README.md#forking-guidelines). That part is not about licensing — it is what makes a fork clearly distinguishable from Orbis, which matters both for your users and for app store review.
 
 ## Questions
 
-If something in this repository looks like it should be on this list and is not, if a rights holder named here is wrong, or if you are unsure whether an asset is covered, open an issue or email [atmosphere@blueskyweb.xyz](mailto:atmosphere@blueskyweb.xyz).
+If something in this repository looks like it should be on this list and is not, if a rights holder named here is wrong, or if you are unsure whether an asset is covered, open an issue or email [atmosphere@orbisweb.xyz](mailto:atmosphere@orbisweb.xyz).
 
 ## History
 

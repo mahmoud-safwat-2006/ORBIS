@@ -1,10 +1,10 @@
-# Share-with-Bluesky
+# Share-with-Orbis
 
-iOS Share Extension for the Bluesky Social app that enables users to share content from other apps directly to Bluesky.
+iOS Share Extension for the Orbis Social app that enables users to share content from other apps directly to Orbis.
 
 ## Overview
 
-This module implements an iOS Share Extension (Action Extension) that appears in the system share sheet when users tap the share button in other iOS apps. It allows sharing text, URLs, images, and videos to create a new Bluesky post.
+This module implements an iOS Share Extension (Action Extension) that appears in the system share sheet when users tap the share button in other iOS apps. It allows sharing text, URLs, images, and videos to create a new Orbis post.
 
 ## Features
 
@@ -27,17 +27,17 @@ The extension is implemented as a native iOS Share Extension using Swift. When a
 3. Media files are copied to a shared App Group container (`group.app.bsky`) for access by the main app
 4. Image and video dimensions are extracted and encoded into the URI
 5. The extension constructs a deep link URL with the content encoded in query parameters
-6. The main Bluesky app is opened with the deep link
+6. The main Orbis app is opened with the deep link
 7. The extension completes and dismisses
 
 ### Deep Link Format
 
-The extension communicates with the main app using deep links with the `bluesky://` scheme:
+The extension communicates with the main app using deep links with the `orbis://` scheme:
 
 ```
-bluesky://intent/compose?text=<encoded-text>
-bluesky://intent/compose?imageUris=<uri1>|<width>|<height>,<uri2>|<width>|<height>
-bluesky://intent/compose?videoUri=<uri>|<width>|<height>
+orbis://intent/compose?text=<encoded-text>
+orbis://intent/compose?imageUris=<uri1>|<width>|<height>,<uri2>|<width>|<height>
+orbis://intent/compose?videoUri=<uri>|<width>|<height>
 ```
 
 The scheme can be customized by setting the `MainAppScheme` key in `Info.plist` to support forks.
@@ -57,7 +57,7 @@ The main app handles these deep links in `src/lib/hooks/useIntentHandler.ts`:
 
 - `ShareViewController.swift` - Main view controller that handles share requests and processes content
 - `Info.plist` - Extension configuration (activation rules, supported content types)
-- `Share-with-Bluesky.entitlements` - App group entitlements for shared file access
+- `Share-with-Orbis.entitlements` - App group entitlements for shared file access
 
 ### App Integration
 
@@ -79,12 +79,12 @@ Defined in `Info.plist` under `NSExtensionActivationRule`:
 
 The extension uses the `group.app.bsky` App Group identifier to share files with the main app. This is configured in:
 
-- `Share-with-Bluesky.entitlements`
+- `Share-with-Orbis.entitlements`
 - Main app's entitlements file
 
 ### Custom Scheme
 
-The `MainAppScheme` in `Info.plist` defaults to `bluesky` but can be changed for forks to use a custom URL scheme.
+The `MainAppScheme` in `Info.plist` defaults to `orbis` but can be changed for forks to use a custom URL scheme.
 
 ## Platform Support
 
@@ -126,7 +126,7 @@ This module is built as part of the main Xcode project. The extension target is 
 To modify the extension:
 
 1. Open the Xcode project in `/ios`
-2. Navigate to the Share-with-Bluesky target
+2. Navigate to the Share-with-Orbis target
 3. Edit `ShareViewController.swift` for logic changes
 4. Edit `Info.plist` for configuration changes
 5. Rebuild the iOS app

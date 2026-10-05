@@ -1,6 +1,6 @@
 **Rights holder: mixed, and we have not finished documenting it.**
 
-This directory holds product imagery — onboarding art, chat backgrounds, feature announcement graphics, and similar. Some of it is Bluesky's own work. Some was commissioned from outside illustrators, on terms that do not let us pass rights on. We are working out which is which.
+This directory holds product imagery — onboarding art, chat backgrounds, feature announcement graphics, and similar. Some of it is Orbis's own work. Some was commissioned from outside illustrators, on terms that do not let us pass rights on. We are working out which is which.
 
 Until we have, **treat the whole directory as outside the [MIT license](../../LICENSE) and not licensed for your use.**
 

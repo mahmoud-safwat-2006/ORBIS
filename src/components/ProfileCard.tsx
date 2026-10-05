@@ -1,3 +1,4 @@
+import {OrbisVerifiedBadge} from '#/view/com/util/verified/OrbisVerifiedBadge'
 ﻿import {useMemo} from 'react'
 import {
   type GestureResponderEvent,
@@ -263,6 +264,7 @@ function InlineNameAndHandle({
         numberOfLines={1}>
         {forceLTR(name)}
       </Text>
+      <OrbisVerifiedBadge did={profile.did} handle={profile.handle} displayName={profile.displayName} size={15} />
       <ProfileBadges
         profile={profile}
         size="md"

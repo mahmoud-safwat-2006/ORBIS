@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useRef, useState} from 'react'
 import {View} from 'react-native'
 import {useSift} from '@bsky.app/sift'
 import {StackActions, useNavigation} from '@react-navigation/native'
@@ -14,6 +14,7 @@ import {SearchInput} from '#/components/forms/SearchInput'
 
 export function DesktopSearch() {
   const navigation = useNavigation<NavigationProp>()
+  const blurTimeoutRef = useRef<any>(null)
   const [active, setActive] = useState(false)
   const [query, setQuery] = useState<string>('')
   const showResults = active && !!query.length
@@ -24,11 +25,12 @@ export function DesktopSearch() {
   })
 
   const onFocus = () => {
+    if (blurTimeoutRef.current) clearTimeout(blurTimeoutRef.current)
     if (query.length) setActive(true)
   }
 
   const onBlur = () => {
-    setActive(false)
+    blurTimeoutRef.current = setTimeout(() => { setActive(false) }, 250)
   }
 
   const onChangeText = (text: string) => {

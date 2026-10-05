@@ -1,10 +1,10 @@
-# AGENTS.md – Bluesky Social App Development Guide
+# AGENTS.md – Orbis Social App Development Guide
 
-This document provides guidance for working effectively in the Bluesky Social app codebase.
+This document provides guidance for working effectively in the Orbis Social app codebase.
 
 ## Project Overview
 
-Bluesky Social is a cross-platform social media application built with React Native and Expo. It runs on iOS, Android, and Web, connecting to the AT Protocol (atproto) decentralized social network.
+Orbis Social is a cross-platform social media application built with React Native and Expo. It runs on iOS, Android, and Web, connecting to the AT Protocol (atproto) decentralized social network.
 
 **Tech Stack:**
 
@@ -334,7 +334,7 @@ function MyComponent() {
   return (
     <Text>
       <Trans>
-        Welcome to <Text style={a.font_bold}>Bluesky</Text>, {name}!
+        Welcome to <Text style={a.font_bold}>Orbis</Text>, {name}!
       </Trans>
     </Text>
   )

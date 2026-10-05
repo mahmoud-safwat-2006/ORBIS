@@ -22,7 +22,7 @@ window.bluesky = window.bluesky || {
 }
 
 /**
- * Listen for messages from the Bluesky embed iframe and adjust the height of
+ * Listen for messages from the Orbis embed iframe and adjust the height of
  * the iframe accordingly.
  */
 window.addEventListener('message', event => {
@@ -52,8 +52,8 @@ window.addEventListener('message', event => {
 })
 
 /**
- * Scan the document for all elements with the data-bluesky-aturi attribute,
- * and initialize them as Bluesky embeds.
+ * Scan the document for all elements with the data-orbis-aturi attribute,
+ * and initialize them as Orbis embeds.
  *
  * @param element Only scan this specific element @default document @optional
  * @returns

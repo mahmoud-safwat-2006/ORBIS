@@ -1,4 +1,4 @@
-import {useMemo} from 'react'
+﻿import {useMemo} from 'react'
 import {
   type GestureResponderEvent,
   type StyleProp,
@@ -185,7 +185,7 @@ export function Avatar({
       live={liveOverride ?? live}
     />
   ) : (
-    <PreviewableUserAvatar
+    <UserAvatar avatar={profile.avatar} type={profile.associated?.labeler ? 'labeler' : 'user'} moderation={moderation.ui('avatar')}
       size={size}
       profile={profile}
       moderation={moderation.ui('avatar')}

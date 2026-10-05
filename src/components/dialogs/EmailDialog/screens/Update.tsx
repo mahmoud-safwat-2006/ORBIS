@@ -1,4 +1,4 @@
-import {useReducer} from 'react'
+﻿import {useReducer} from 'react'
 import {View} from 'react-native'
 import {Trans, useLingui} from '@lingui/react/macro'
 import {validate as validateEmail} from 'email-validator'
@@ -197,8 +197,7 @@ export function Update(_props: ScreenProps<ScreenID.Update>) {
   }
 
   return (
-    <View style={[a.gap_lg]}>
-      <Text style={[a.text_xl, a.font_bold]}>
+    <View style={[a.gap_lg]}><Text style={[a.text_xl, a.font_bold]}>
         <Trans>Update your email</Trans>
       </Text>
       {currentAccount?.emailAuthFactor && (
@@ -208,14 +207,9 @@ export function Update(_props: ScreenProps<ScreenID.Update>) {
           </Trans>
         </Admonition>
       )}
-      <View style={[a.gap_md]}>
-        <View>
-          <Text style={[a.pb_sm, a.leading_snug, t.atoms.text_contrast_medium]}>
+      <View style={[a.gap_md]}><View><Text style={[a.pb_sm, a.leading_snug, t.atoms.text_contrast_medium]}>
             <Trans>Please enter your new email address.</Trans>
-          </Text>
-          <TextField.Root>
-            <TextField.Icon icon={Envelope} />
-            <TextField.Input
+          </Text><TextField.Root><TextField.Icon icon={Envelope} /><TextField.Input
               label={l`New email address`}
               placeholder={l`alice@example.com`}
               defaultValue={state.email}
@@ -234,12 +228,9 @@ export function Update(_props: ScreenProps<ScreenID.Update>) {
 
         {state.step === 'token' && (
           <>
-            <Divider />
-            <View>
-              <Text style={[a.text_md, a.pb_sm, a.font_semi_bold]}>
+            <Divider /><View><Text style={[a.text_md, a.pb_sm, a.font_semi_bold]}>
                 <Trans>Security step required</Trans>
-              </Text>
-              <Text
+              </Text><Text
                 style={[a.pb_sm, a.leading_snug, t.atoms.text_contrast_medium]}>
                 <Trans>
                   Please enter the security code we sent to your previous email
@@ -274,15 +265,11 @@ export function Update(_props: ScreenProps<ScreenID.Update>) {
       </View>
       {state.mutationStatus === 'success' ? (
         <>
-          <Divider />
-          <View style={[a.gap_sm]}>
-            <View style={[a.flex_row, a.gap_sm, a.align_center]}>
-              <Check fill={t.palette.positive_500} size="xs" />
-              <Text style={[a.text_md, a.font_bold]}>
+          <Divider /><View style={[a.gap_sm]}><View style={[a.flex_row, a.gap_sm, a.align_center]}>
+              <Check fill={t.palette.positive_500} size="xs" /><Text style={[a.text_md, a.font_bold]}>
                 <Trans>Success!</Trans>
               </Text>
-            </View>
-            <Text style={[a.leading_snug]}>
+            </View><Text style={[a.leading_snug]}>
               <Trans>
                 Please click on the link in the email we just sent you to verify
                 your new email address. This is an important step to allow you

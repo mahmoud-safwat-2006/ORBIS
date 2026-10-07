@@ -1,29 +1,37 @@
-﻿{
-    "cli":  {
-                "version":  "\u003e= 14.0.0",
-                "appVersionSource":  "remote"
-            },
-    "build":  {
-                  "development":  {
-                                      "developmentClient":  true,
-                                      "distribution":  "internal"
-                                  },
-                  "preview":  {
-                                  "distribution":  "internal",
-                                  "android":  {
-                                                  "buildType":  "apk"
-                                              },
-                                  "env":  {
-                                              "PNPM_FLAGS":  "--no-frozen-lockfile"
-                                          }
-                              },
-                  "production":  {
-                                     "autoIncrement":  true
-                                 }
-              },
-    "submit":  {
-                   "production":  {
-
-                                  }
-               }
+{
+  "cli": {
+    "version": ">= 14.0.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease -PreactNativeArchitectures=arm64-v8a"
+      },
+      "env": {
+        "EXPO_PUBLIC_ENV": "production",
+        "PNPM_FLAGS": "--no-frozen-lockfile"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease -PreactNativeArchitectures=arm64-v8a"
+      },
+      "env": {
+        "EXPO_PUBLIC_ENV": "production",
+        "PNPM_FLAGS": "--no-frozen-lockfile"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
 }

@@ -119,14 +119,7 @@ export function Controls({
   const isWithinMessage = useIsWithinMessage()
   const autoplayDisabled = useAutoplayDisabled() || isWithinMessage
   useEffect(() => {
-    if (active) {
-      // GIFs play immediately, videos wait until onScreen
-      if (onScreen || isGif) {
-        if (!autoplayDisabled) play()
-      } else {
-        pause()
-      }
-    }
+    if (onScreen || isGif) { if (!autoplayDisabled) play() } else { pause() }
   }, [onScreen, pause, active, play, autoplayDisabled, isGif])
 
   // use minimal quality when not focused
@@ -158,14 +151,7 @@ export function Controls({
     setFocused(true)
   }, [active, setActive, setFocused])
 
-  const onPressEmptySpace = useCallback(() => {
-    if (!focused) {
-      drawFocus()
-      if (autoplayDisabled) play()
-    } else {
-      togglePlayPause()
-    }
-  }, [togglePlayPause, drawFocus, focused, autoplayDisabled, play])
+  const onPressEmptySpace = useCallback(() => { drawFocus(); togglePlayPause(); }, [togglePlayPause, drawFocus])
 
   const onPressPlayPause = useCallback(() => {
     drawFocus()
@@ -251,9 +237,7 @@ export function Controls({
 
   const onPointerDown = useCallback(
     (evt: React.PointerEvent<HTMLDivElement>) => {
-      if (evt.pointerType !== 'mouse' && !hovered) {
-        evt.preventDefault()
-      }
+      
       clearTimeout(timeoutRef.current)
     },
     [hovered],

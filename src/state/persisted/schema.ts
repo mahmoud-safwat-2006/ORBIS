@@ -183,7 +183,7 @@ export const defaults: Schema = {
   lastSelectedHomeFeed: undefined,
   pdsAddressHistory: [],
   disableHaptics: false,
-  disableAutoplay: PlatformInfo.getIsReducedMotionEnabled(),
+  disableAutoplay: false,
   kawaii: false,
   hasCheckedForStarterPack: false,
   subtitlesEnabled: true,

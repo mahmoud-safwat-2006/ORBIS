@@ -557,7 +557,7 @@ let NotificationFeedItem = ({
   } else {
     return null
   }
-  a11yLabel += ` · ${niceTimestamp}`
+  a11yLabel += ` Â· ${niceTimestamp}`
 
   return (
     <Link

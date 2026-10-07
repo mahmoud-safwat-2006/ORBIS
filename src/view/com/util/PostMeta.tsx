@@ -1,6 +1,5 @@
-﻿import {OrbisVerifiedBadge} from '#/view/com/util/verified/OrbisVerifiedBadge'
 import {memo, useCallback} from 'react'
-import {type StyleProp, View, type ViewStyle} from 'react-native'
+import {Pressable, type StyleProp, View, type ViewStyle} from 'react-native'
 import {type ModerationDecision} from '@bsky/sdk/moderation'
 import {msg} from '@lingui/core/macro'
 import {useLingui} from '@lingui/react'
@@ -8,12 +7,15 @@ import {useQueryClient} from '@tanstack/react-query'
 
 import {makeProfileLink} from '#/lib/routes/links'
 import {forceLTR} from '#/lib/strings/bidi'
-import {NON_BREAKING_SPACE} from '#/lib/strings/constants'
 import {sanitizeDisplayName} from '#/lib/strings/display-names'
-import {sanitizeHandle} from '#/lib/strings/handles'
 import {niceDate} from '#/lib/strings/time'
 import {useProfileShadow} from '#/state/cache/profile-shadow'
-import {unstableCacheProfileView} from '#/state/queries/profile'
+import {
+  unstableCacheProfileView,
+  useProfileFollowMutationQueue,
+} from '#/state/queries/profile'
+import {useRequireAuth, useSession} from '#/state/session'
+import {OrbisVerifiedBadge} from '#/view/com/util/verified/OrbisVerifiedBadge'
 import {atoms as a, useTheme, web} from '#/alf'
 import {WebOnlyInlineLinkText} from '#/components/Link'
 import {ProfileBadges} from '#/components/ProfileBadges'
@@ -43,9 +45,30 @@ let PostMeta = (opts: PostMetaOpts): React.ReactNode => {
 
   const author = useProfileShadow(opts.author)
   const displayName = author.displayName || author.handle
-  const handle = author.handle
   const profileLink = makeProfileLink(author)
   const queryClient = useQueryClient()
+  const {currentAccount} = useSession()
+  const requireAuth = useRequireAuth()
+  const [queueFollow, queueUnfollow] = useProfileFollowMutationQueue(
+    author,
+    'PostMeta',
+  )
+
+  const isMe = currentAccount?.did === author.did
+  const isFollowing = Boolean(author.viewer?.following)
+
+  const onToggleFollow = useCallback(() => {
+    requireAuth(async () => {
+      try {
+        if (isFollowing) {
+          await queueUnfollow()
+        } else {
+          await queueFollow()
+        }
+      } catch {}
+    })
+  }, [requireAuth, isFollowing, queueUnfollow, queueFollow])
+
   const onOpenAuthor = opts.onOpenAuthor
   const onBeforePressAuthor = useCallback(() => {
     unstableCacheProfileView(queryClient, author)
@@ -84,9 +107,9 @@ let PostMeta = (opts: PostMetaOpts): React.ReactNode => {
           />
         </View>
       )}
-      <View style={[a.flex_row, a.align_end, a.flex_shrink]}>
+      <View style={[a.flex_row, a.align_center, a.flex_shrink, a.gap_2xs]}>
         <ProfileHoverCard did={author.did}>
-          <View style={[a.flex_row, a.align_end, a.flex_shrink]}>
+          <View style={[a.flex_row, a.align_center, a.flex_shrink]}>
             <MaybeLinkText
               emoji
               numberOfLines={1}
@@ -96,11 +119,10 @@ let PostMeta = (opts: PostMetaOpts): React.ReactNode => {
               onPress={opts.linkDisabled ? undefined : onBeforePressAuthor}
               style={[
                 a.text_md,
-                a.font_semi_bold,
+                a.font_bold,
                 t.atoms.text,
                 a.leading_tight,
-                a.flex_shrink_0,
-                {maxWidth: '70%'},
+                {maxWidth: 165, flexShrink: 1},
                 web({direction: 'ltr', unicodeBidi: 'isolate'}),
               ]}>
               {forceLTR(
@@ -110,30 +132,54 @@ let PostMeta = (opts: PostMetaOpts): React.ReactNode => {
                 ),
               )}
             </MaybeLinkText>
-            
+
+            <OrbisVerifiedBadge
+              size={18}
+              did={author.did}
+              handle={author.handle}
+              displayName={author.displayName}
+            />
+
             <ProfileBadges
               profile={author}
               size="sm"
               style={[a.pl_2xs, a.self_center]}
             />
-            <MaybeLinkText
-              emoji
-              numberOfLines={1}
-              to={profileLink}
-              label={_(msg`View profile`)}
-              disableMismatchWarning
-              disableUnderline
-              onPress={opts.linkDisabled ? undefined : onBeforePressAuthor}
-              style={[
-                a.text_md,
-                t.atoms.text_contrast_medium,
-                a.leading_tight,
-                {flexShrink: 10},
-              ]}>
-              {NON_BREAKING_SPACE + sanitizeHandle(handle, '@')}
-            </MaybeLinkText>
           </View>
         </ProfileHoverCard>
+
+        {!isMe && (
+          <View style={[a.flex_row, a.align_center, a.gap_2xs]}>
+            <Text
+              style={[a.text_sm, t.atoms.text_contrast_medium]}
+              accessible={false}>
+              &middot;
+            </Text>
+            <Pressable
+              accessibilityRole="button"
+              onPress={e => {
+                e.stopPropagation?.()
+                onToggleFollow()
+              }}
+              style={{
+                paddingHorizontal: 8,
+                paddingVertical: 2,
+                borderRadius: 6,
+                backgroundColor: isFollowing
+                  ? 'rgba(148, 163, 184, 0.16)'
+                  : 'rgba(24, 119, 242, 0.15)',
+              }}>
+              <Text
+                style={{
+                  fontSize: 12,
+                  fontWeight: '700',
+                  color: isFollowing ? '#94A3B8' : '#1877F2',
+                }}>
+                {isFollowing ? 'أتابعه ✓' : '+ متابعة'}
+              </Text>
+            </Pressable>
+          </View>
+        )}
 
         <TimeElapsed timestamp={opts.timestamp}>
           {({timeElapsed}) => (
@@ -145,8 +191,8 @@ let PostMeta = (opts: PostMetaOpts): React.ReactNode => {
               disableUnderline
               onPress={opts.linkDisabled ? undefined : onBeforePressPost}
               style={[
-                a.pl_xs,
-                a.text_md,
+                a.pl_2xs,
+                a.text_sm,
                 a.leading_tight,
                 IS_ANDROID && a.flex_grow,
                 a.text_right,
@@ -155,18 +201,7 @@ let PostMeta = (opts: PostMetaOpts): React.ReactNode => {
                   whiteSpace: 'nowrap',
                 }),
               ]}>
-              {!IS_ANDROID && (
-                <Text
-                  style={[
-                    a.text_md,
-                    a.leading_tight,
-                    t.atoms.text_contrast_medium,
-                  ]}
-                  accessible={false}>
-                  &middot;{' '}
-                </Text>
-              )}
-              {timeElapsed}
+              &middot; {timeElapsed}
             </MaybeLinkText>
           )}
         </TimeElapsed>

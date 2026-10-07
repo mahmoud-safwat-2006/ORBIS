@@ -37,7 +37,7 @@ export function ProfileHeaderDisplayName({
           moderation.ui('displayName'),
         )}
         <View style={[a.pl_xs, {marginTop: platform({ios: 2})}]}>
-          <ProfileBadges profile={profile} size="lg" interactive />
+          <OrbisVerifiedBadge size={22} did={profile.did} handle={profile.handle} displayName={profile.displayName} /><ProfileBadges profile={profile} size="lg" interactive />
         </View>
         {/*
          * TODO: Workaround for a rounding bug in Android RN.

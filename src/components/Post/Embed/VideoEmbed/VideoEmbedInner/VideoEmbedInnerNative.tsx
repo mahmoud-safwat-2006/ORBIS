@@ -66,7 +66,7 @@ export function VideoEmbedInnerNative({
   }
 
   const isGif = embed.presentation === 'gif'
-  const autoplay = !autoplayDisabled && !isWithinMessage
+  const autoplay = !isWithinMessage
 
   return (
     <View style={[a.flex_1, a.relative]}>
@@ -184,7 +184,7 @@ function VideoPresentationControls({
   return (
     <View style={[a.absolute, a.inset_0]}>
       <Pressable
-        onPress={enterFullscreen}
+        onPress={togglePlayback}
         style={a.flex_1}
         accessibilityLabel={l`Video`}
         accessibilityHint={l`Enters full screen`}

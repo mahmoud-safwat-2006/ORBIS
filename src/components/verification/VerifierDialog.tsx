@@ -1,155 +1,160 @@
-import {Text as RNText, View} from 'react-native'
-import {Image} from 'expo-image'
-import {msg} from '@lingui/core/macro'
-import {useLingui} from '@lingui/react'
-import {Trans} from '@lingui/react/macro'
-
-import {urls} from '#/lib/constants'
-import {getUserDisplayName} from '#/lib/getUserDisplayName'
-import {useSession} from '#/state/session'
-import {atoms as a, useBreakpoints, useTheme, web} from '#/alf'
-import {Button, ButtonText} from '#/components/Button'
+import React from 'react'
+import {StyleSheet, Text, View} from 'react-native'
 import * as Dialog from '#/components/Dialog'
-import {VerifierCheck} from '#/components/icons/VerifierCheck'
-import {Link} from '#/components/Link'
-import {Text} from '#/components/Typography'
-import {type FullVerificationState} from '#/components/verification'
-import {useAnalytics} from '#/analytics'
+import {Button, ButtonText} from '#/components/Button'
 import type * as bsky from '#/types/bsky'
 
-export {useDialogControl} from '#/components/Dialog'
-
-export function VerifierDialog({
+export function VerificationsDialog({
   control,
   profile,
-  verificationState,
 }: {
   control: Dialog.DialogControlProps
   profile: bsky.profile.AnyProfileView
-  verificationState: FullVerificationState
 }) {
+  const isFounder = Boolean(
+    profile.handle?.includes('mahmoud-safwat') ||
+    profile.displayName?.includes('Mahmoud Safwat') ||
+    profile.handle === 'orbis.tech' ||
+    profile.handle === 'orbis.app'
+  )
+
   return (
-    <Dialog.Outer control={control} nativeOptions={{preventExpansion: true}}>
+    <Dialog.Outer control={control}>
       <Dialog.Handle />
-      <Inner
-        control={control}
-        profile={profile}
-        verificationState={verificationState}
-      />
-      <Dialog.Close />
+      <Dialog.ScrollableInner
+        label={isFounder ? 'مؤسس ومالك منصة ORBIS' : 'حساب موثق'}
+        style={styles.inner}>
+        {isFounder ? (
+          <View style={styles.content}>
+            <View style={styles.founderIconWrapper}>
+              <Text style={{fontSize: 40}}>👑</Text>
+            </View>
+
+            <Text style={styles.title}>مؤسس ومالك منصة ORBIS</Text>
+            
+            <View style={styles.founderTag}>
+              <Text style={styles.founderTagText}>✔ الحساب الإداري الرسمي الأعلى</Text>
+            </View>
+
+            <Text style={styles.description}>
+              هذا الحساب هو الحساب الشخصي الرسمي لمؤسس ومالك منصة ORBIS. يمتلك كافة الصلاحيات الحصرية لتوثيق الحسابات وإدارة المنصة بالكامل.
+            </Text>
+
+            <Button
+              variant="solid"
+              color="primary"
+              size="large"
+              label="تم"
+              onPress={() => control.close()}
+              style={{marginTop: 22, width: '100%'}}>
+              <ButtonText>تم</ButtonText>
+            </Button>
+          </View>
+        ) : (
+          <View style={styles.content}>
+            <View style={styles.verifiedIconWrapper}>
+              <Text style={{fontSize: 34, color: '#ffffff'}}>✔</Text>
+            </View>
+
+            <Text style={styles.title}>
+              {profile.displayName || profile.handle}
+            </Text>
+
+            <View style={styles.verifiedTag}>
+              <Text style={styles.verifiedTagText}>✔ حساب موثق رسمياً</Text>
+            </View>
+
+            <Text style={styles.description}>
+              تم توثيق هذا الحساب رسمياً واعتماده بالشارة الزرقاء من قِبل مؤسس ومالك منصة ORBIS.
+            </Text>
+
+            <Button
+              variant="solid"
+              color="primary"
+              size="large"
+              label="إغلاق"
+              onPress={() => control.close()}
+              style={{marginTop: 22, width: '100%'}}>
+              <ButtonText>إغلاق</ButtonText>
+            </Button>
+          </View>
+        )}
+      </Dialog.ScrollableInner>
     </Dialog.Outer>
   )
 }
 
-function Inner({
-  profile,
-  control,
-}: {
-  control: Dialog.DialogControlProps
-  profile: bsky.profile.AnyProfileView
-  verificationState: FullVerificationState
-}) {
-  const t = useTheme()
-  const ax = useAnalytics()
-  const {_} = useLingui()
-  const {gtMobile} = useBreakpoints()
-  const {currentAccount} = useSession()
+export const VerifierDialog = VerificationsDialog
+export default VerificationsDialog
 
-  const isSelf = profile.did === currentAccount?.did
-  const userName = getUserDisplayName(profile)
-  const label = isSelf
-    ? _(msg`You are a trusted verifier`)
-    : _(msg`${userName} is a trusted verifier`)
-
-  return (
-    <Dialog.ScrollableInner
-      label={label}
-      style={[
-        a.w_full,
-        gtMobile && web({width: 'auto', maxWidth: 400, minWidth: 200}),
-      ]}>
-      <View style={[a.gap_lg]}>
-        <View
-          style={[
-            a.w_full,
-            a.rounded_md,
-            a.overflow_hidden,
-            t.atoms.bg_contrast_25,
-            {minHeight: 100},
-          ]}>
-          <Image
-            accessibilityIgnoresInvertColors
-            source={require('../../../assets/images/initial_verification_announcement_1.png')}
-            style={[
-              {
-                aspectRatio: 353 / 160,
-              },
-            ]}
-            alt={_(
-              msg`An illustration showing that Bluesky selects trusted verifiers, and trusted verifiers in turn verify individual user accounts.`,
-            )}
-            useAppleWebpCodec
-          />
-        </View>
-
-        <View style={[a.gap_sm]}>
-          <Text
-            style={[a.text_2xl, a.font_semi_bold, a.pr_4xl, a.leading_tight]}>
-            {label}
-          </Text>
-          <Text style={[a.text_md, a.leading_snug]}>
-            <Trans>
-              Accounts with a scalloped blue check mark{' '}
-              <RNText>
-                <VerifierCheck width={14} />
-              </RNText>{' '}
-              can verify others. These trusted verifiers are selected by
-              Bluesky.
-            </Trans>
-          </Text>
-        </View>
-
-        <View
-          style={[
-            a.w_full,
-            a.gap_sm,
-            a.justify_end,
-            gtMobile ? [a.flex_row, a.justify_end] : [a.flex_col],
-          ]}>
-          <Link
-            overridePresentation
-            to={urls.website.blog.initialVerificationAnnouncement}
-            label={_(
-              msg({
-                message: `Learn more about verification on Bluesky`,
-                context: `english-only-resource`,
-              }),
-            )}
-            size="small"
-            color="primary"
-            style={[a.justify_center]}
-            onPress={() => {
-              ax.metric('verification:learn-more', {
-                location: 'verifierDialog',
-              })
-            }}>
-            <ButtonText>
-              <Trans context="english-only-resource">Learn more</Trans>
-            </ButtonText>
-          </Link>
-          <Button
-            label={_(msg`Close dialog`)}
-            size="small"
-            color="secondary"
-            onPress={() => {
-              control.close()
-            }}>
-            <ButtonText>
-              <Trans>Close</Trans>
-            </ButtonText>
-          </Button>
-        </View>
-      </View>
-    </Dialog.ScrollableInner>
-  )
-}
+const styles = StyleSheet.create({
+  inner: {
+    maxWidth: 440,
+    width: '100%',
+  },
+  content: {
+    alignItems: 'center',
+    paddingVertical: 16,
+    paddingHorizontal: 12,
+  },
+  founderIconWrapper: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    backgroundColor: '#0284c7',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 16,
+  },
+  verifiedIconWrapper: {
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+    backgroundColor: '#0284c7',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 16,
+  },
+  title: {
+    fontSize: 22,
+    fontWeight: '800',
+    color: '#0f172a',
+    textAlign: 'center',
+    marginBottom: 6,
+  },
+  founderTag: {
+    backgroundColor: '#fef3c7',
+    borderColor: '#f59e0b',
+    borderWidth: 1,
+    borderRadius: 12,
+    paddingHorizontal: 14,
+    paddingVertical: 4,
+    marginBottom: 14,
+  },
+  founderTagText: {
+    fontSize: 13,
+    fontWeight: '800',
+    color: '#b45309',
+  },
+  verifiedTag: {
+    backgroundColor: '#f0fdf4',
+    borderColor: '#86efac',
+    borderWidth: 1,
+    borderRadius: 12,
+    paddingHorizontal: 14,
+    paddingVertical: 4,
+    marginBottom: 14,
+  },
+  verifiedTagText: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: '#15803d',
+  },
+  description: {
+    fontSize: 15,
+    color: '#475569',
+    textAlign: 'center',
+    lineHeight: 24,
+    paddingHorizontal: 8,
+  },
+});

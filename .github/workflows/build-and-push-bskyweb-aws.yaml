@@ -19,7 +19,7 @@ env:
 
 jobs:
   bskyweb-container-aws:
-    if: github.repository == 'bluesky-social/social-app'
+    if: github.repository == 'orbis-social/social-app'
     runs-on: ubuntu-latest
     outputs:
       source-sha: ${{ steps.source.outputs.sha }}

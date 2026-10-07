@@ -2,7 +2,7 @@ import {useRef} from 'react'
 import {View} from 'react-native'
 import {Image} from 'expo-image'
 import {type ImagePickerAsset} from 'expo-image-picker'
-import {BlueskyVideoView} from '@bsky.app/video'
+import {ORBISVideoView} from '@bsky.app/video'
 
 import {type CompressedVideo} from '#/lib/media/video/types'
 import {useAutoplayDisabled} from '#/state/preferences'
@@ -23,7 +23,7 @@ export function VideoPreview({
   isActivePost: boolean
   clear: () => void
 }) {
-  const playerRef = useRef<BlueskyVideoView>(null)
+  const playerRef = useRef<ORBISVideoView>(null)
   const autoplayDisabled = useAutoplayDisabled()
 
   let aspectRatio: number | undefined
@@ -61,7 +61,7 @@ export function VideoPreview({
                   contentFit="contain"
                 />
               ) : (
-                <BlueskyVideoView
+                <ORBISVideoView
                   url={video.uri}
                   autoplay={!autoplayDisabled}
                   beginMuted={true}

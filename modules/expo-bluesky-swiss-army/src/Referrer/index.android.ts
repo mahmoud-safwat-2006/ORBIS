@@ -2,7 +2,7 @@ import {requireNativeModule} from 'expo'
 
 import {type GooglePlayReferrerInfo, type ReferrerInfo} from './types'
 
-export const NativeModule = requireNativeModule('ExpoBlueskyReferrer')
+export const NativeModule = requireNativeModule('ExpoORBISReferrer')
 
 export function getGooglePlayReferrerInfoAsync(): Promise<GooglePlayReferrerInfo | null> {
   return NativeModule.getGooglePlayReferrerInfoAsync()

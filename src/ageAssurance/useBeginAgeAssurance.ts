@@ -13,11 +13,11 @@ import {usePdsClient} from '#/state/session'
 import {usePatchAgeAssuranceServerState} from '#/ageAssurance'
 import {logger} from '#/ageAssurance/logger'
 import {useAnalytics} from '#/analytics'
-import {BLUESKY_PROXY_DID} from '#/env'
+import {ORBIS_PROXY_DID} from '#/env'
 import {useGeolocation} from '#/geolocation'
 import {app, com} from '#/lexicons'
 
-const IS_DEV_ENV = BLUESKY_PROXY_DID !== PUBLIC_APPVIEW_DID
+const IS_DEV_ENV = ORBIS_PROXY_DID !== PUBLIC_APPVIEW_DID
 const APPVIEW = IS_DEV_ENV ? DEV_ENV_APPVIEW : PUBLIC_APPVIEW
 
 export function useBeginAgeAssurance() {
@@ -40,7 +40,7 @@ export function useBeginAgeAssurance() {
       }
 
       const {token} = await pdsClient.call(com.atproto.server.getServiceAuth, {
-        aud: BLUESKY_PROXY_DID,
+        aud: ORBIS_PROXY_DID,
         lxm: `app.bsky.ageassurance.begin`,
       })
 

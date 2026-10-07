@@ -1,6 +1,6 @@
 import {useImperativeHandle, useRef, useState} from 'react'
 import {Pressable, type StyleProp, View, type ViewStyle} from 'react-native'
-import {BlueskyVideoView} from '@bsky.app/video'
+import {ORBISVideoView} from '@bsky.app/video'
 import {useLingui} from '@lingui/react/macro'
 
 import {HITSLOP_30} from '#/lib/constants'
@@ -43,7 +43,7 @@ export function VideoEmbedInnerNative({
   onError?: (error: string) => void
 }) {
   const {t: l} = useLingui()
-  const videoRef = useRef<BlueskyVideoView>(null)
+  const videoRef = useRef<ORBISVideoView>(null)
   const autoplayDisabled = useAutoplayDisabled()
   const isWithinMessage = useIsWithinMessage()
   const [muted, setMuted] = useVideoMuteState()
@@ -70,7 +70,7 @@ export function VideoEmbedInnerNative({
 
   return (
     <View style={[a.flex_1, a.relative]}>
-      <BlueskyVideoView
+      <ORBISVideoView
         url={embed.playlist}
         autoplay={autoplay}
         beginMuted={isGif || (autoplayDisabled ? false : muted)}

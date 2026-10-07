@@ -1,6 +1,6 @@
 ﻿import {useCallback, useMemo, useState} from 'react'
 import {Pressable, StyleSheet, View} from 'react-native'
-import {PlatformInfo} from '@bsky.app/expo-bluesky-swiss-army'
+import {PlatformInfo} from '@bsky.app/expo-orbis-swiss-army'
 import {plural} from '@lingui/core/macro'
 import {Trans, useLingui} from '@lingui/react/macro'
 import {useNavigation, useNavigationState} from '@react-navigation/native'

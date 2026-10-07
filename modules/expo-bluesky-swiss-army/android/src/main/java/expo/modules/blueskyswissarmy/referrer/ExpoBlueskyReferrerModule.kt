@@ -1,4 +1,4 @@
-package expo.modules.blueskyswissarmy.referrer
+package expo.modules.orbisswissarmy.referrer
 
 import android.content.Intent
 import android.net.Uri
@@ -10,13 +10,13 @@ import expo.modules.kotlin.Promise
 import expo.modules.kotlin.modules.Module
 import expo.modules.kotlin.modules.ModuleDefinition
 
-class ExpoBlueskyReferrerModule : Module() {
+class ExpoORBISReferrerModule : Module() {
   private var intent: Intent? = null
   private var activityReferrer: Uri? = null
 
   override fun definition() =
     ModuleDefinition {
-      Name("ExpoBlueskyReferrer")
+      Name("ExpoORBISReferrer")
 
       OnNewIntent {
         intent = it

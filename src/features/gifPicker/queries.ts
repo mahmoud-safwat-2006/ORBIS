@@ -51,9 +51,9 @@ function createKlipyApi<Input extends object>(
     params.set(
       'client_key',
       Platform.select({
-        ios: 'bluesky-ios',
-        android: 'bluesky-android',
-        default: 'bluesky-web',
+        ios: 'orbis-ios',
+        android: 'orbis-android',
+        default: 'orbis-web',
       }),
     )
 

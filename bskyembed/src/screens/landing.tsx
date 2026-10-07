@@ -86,7 +86,7 @@ function LandingPage() {
               atUri = `at://${did}/app.bsky.feed.post/${rkey}`
             } catch (err) {
               console.log(err)
-              throw new Error('Invalid Bluesky URL')
+              throw new Error('Invalid ORBIS URL')
             }
           }
         }
@@ -111,7 +111,7 @@ function LandingPage() {
         setThread(data.thread)
       } catch (err) {
         console.error(err)
-        setError(err instanceof Error ? err.message : 'Invalid Bluesky URL')
+        setError(err instanceof Error ? err.message : 'Invalid ORBIS URL')
       } finally {
         setLoading(false)
       }
@@ -126,7 +126,7 @@ function LandingPage() {
         <img src={logo} className="h-10" />
       </Link>
 
-      <h1 className="text-4xl font-bold text-center">Embed a Bluesky Post</h1>
+      <h1 className="text-4xl font-bold text-center">Embed a ORBIS Post</h1>
 
       <div className="flex flex-col w-full max-w-[600px] gap-6">
         <input
@@ -247,11 +247,11 @@ function Snippet({
     // DO NOT ADD ANY NEW INTERPOLATIONS BELOW WITHOUT ESCAPING THEM!
     // Also, keep this code synced with the app code in Embed.tsx.
     // x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
-    return `<blockquote class="bluesky-embed" data-bluesky-uri="${escapeHtml(
+    return `<blockquote class="orbis-embed" data-orbis-uri="${escapeHtml(
       thread.post.uri,
-    )}" data-bluesky-cid="${escapeHtml(
+    )}" data-orbis-cid="${escapeHtml(
       thread.post.cid,
-    )}" data-bluesky-embed-color-mode="${escapeHtml(
+    )}" data-orbis-embed-color-mode="${escapeHtml(
       colorMode,
     )}"><p lang="${escapeHtml(lang)}">${escapeHtml(record.text)}${
       record.embed

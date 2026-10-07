@@ -107,12 +107,12 @@ function DialogInner({profile}: {profile: bsky.profile.AnyProfileView}) {
 
   return (
     <Dialog.ScrollableInner
-      label={_(msg`Go Live`)}
+      label={_(msg`بث مباشر`)}
       style={web({maxWidth: 420})}>
       <View style={[a.gap_xl]}>
         <View style={[a.gap_sm]}>
           <Text style={[a.font_semi_bold, a.text_2xl]}>
-            <Trans>Go Live</Trans>
+            <Trans>بث مباشر</Trans>
           </Text>
           <Text style={[a.text_md, a.leading_snug, t.atoms.text_contrast_high]}>
             <Trans>
@@ -138,11 +138,11 @@ function DialogInner({profile}: {profile: bsky.profile.AnyProfileView}) {
         <View style={[a.gap_sm]}>
           <View>
             <TextField.LabelText>
-              <Trans>Live link</Trans>
+              <Trans>رابط البث المباشر</Trans>
             </TextField.LabelText>
             <TextField.Root isInvalid={isSourceInvalid}>
               <TextField.Input
-                label={_(msg`Live link`)}
+                label={_(msg`رابط البث المباشر`)}
                 placeholder={_(msg`www.mylivestream.tv`)}
                 value={liveLink}
                 onChangeText={setLiveLink}
@@ -240,7 +240,7 @@ function DialogInner({profile}: {profile: bsky.profile.AnyProfileView}) {
           })}>
           {hasLink && (
             <Button
-              label={_(msg`Go Live`)}
+              label={_(msg`بث مباشر`)}
               size={platform({native: 'large', web: 'small'})}
               color="primary"
               variant="solid"
@@ -249,7 +249,7 @@ function DialogInner({profile}: {profile: bsky.profile.AnyProfileView}) {
                 isGoingLive || !hasValidLinkMeta || debouncedUrl !== liveLinkUrl
               }>
               <ButtonText>
-                <Trans>Go Live</Trans>
+                <Trans>بث مباشر</Trans>
               </ButtonText>
               {isGoingLive && <ButtonIcon icon={Loader} />}
             </Button>

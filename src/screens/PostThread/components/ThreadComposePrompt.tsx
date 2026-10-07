@@ -88,7 +88,7 @@ export function ThreadComposePrompt({
           type={profile?.associated?.labeler ? 'labeler' : 'user'}
         />
         <Text style={[a.text_md, t.atoms.text_contrast_medium]}>
-          <Trans>Write your reply</Trans>
+          <Text style={[a.text_md, t.atoms.text_contrast_medium]}>اكتب ردك...</Text>
         </Text>
       </PressableScale>
     </View>

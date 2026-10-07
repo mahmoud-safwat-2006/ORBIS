@@ -2,7 +2,7 @@ import {type Agent, type Client} from '@atproto/lex'
 import {type PasswordSession} from '@atproto/lex-password-session'
 
 import {
-  BLUESKY_PROXY_HEADER,
+  ORBIS_PROXY_HEADER,
   CHAT_PROXY_SERVICE,
   PUBLIC_BSKY_SERVICE,
 } from '#/lib/constants'
@@ -12,7 +12,7 @@ import {networkAwareFetch} from './network'
 /**
  * Build the signed-in appview {@link Client}.
  *
- * {@link BLUESKY_PROXY_HEADER} is passed as the client's `service`, so lex sets
+ * {@link ORBIS_PROXY_HEADER} is passed as the client's `service`, so lex sets
  * `atproto-proxy: <that value>` on every request and raw calls are proxied to
  * the appview. Record helpers force `service: null`, so they still target the
  * account host.
@@ -21,7 +21,7 @@ import {networkAwareFetch} from './network'
  * here: this client is the only producer of `atproto-accept-labelers` on an
  * appview request now that no agent sits underneath it. The account's own
  * subscriptions arrive separately, through `applyLabelersToClient` on the
- * instance, and that function filters out the Bluesky moderation DID so the
+ * instance, and that function filters out the ORBIS moderation DID so the
  * globally redacted authority is not also listed unredacted.
  *
  * No `fetch` option: a client built over a session uses that session's own
@@ -29,7 +29,7 @@ import {networkAwareFetch} from './network'
  */
 export function buildAppviewClient(agent: Agent): Client {
   return createLexClient(agent, {
-    service: BLUESKY_PROXY_HEADER.get(),
+    service: ORBIS_PROXY_HEADER.get(),
     includeDeviceSessionHeaders: false,
   })
 }

@@ -23,12 +23,12 @@ import (
 	"syscall"
 	"time"
 
-	appbsky "github.com/bluesky-social/indigo/api/bsky"
-	chat "github.com/bluesky-social/indigo/api/chat"
-	"github.com/bluesky-social/indigo/atproto/syntax"
-	"github.com/bluesky-social/indigo/util/cliutil"
-	"github.com/bluesky-social/indigo/xrpc"
-	"github.com/bluesky-social/social-app/bskyweb"
+	appbsky "github.com/orbis-social/indigo/api/bsky"
+	chat "github.com/orbis-social/indigo/api/chat"
+	"github.com/orbis-social/indigo/atproto/syntax"
+	"github.com/orbis-social/indigo/util/cliutil"
+	"github.com/orbis-social/indigo/xrpc"
+	"github.com/orbis-social/social-app/bskyweb"
 
 	"github.com/flosch/pongo2/v6"
 	"github.com/klauspost/compress/gzhttp"
@@ -512,11 +512,11 @@ func (srv *Server) errorHandler(err error, c echo.Context) {
 func (srv *Server) Download(c echo.Context) error {
 	ua := c.Request().UserAgent()
 	if strings.Contains(ua, "Android") {
-		return c.Redirect(http.StatusFound, "https://play.google.com/store/apps/details?id=xyz.blueskyweb.app")
+		return c.Redirect(http.StatusFound, "https://play.google.com/store/apps/details?id=xyz.orbisweb.app")
 	}
 
 	if strings.Contains(ua, "iPhone") || strings.Contains(ua, "iPad") || strings.Contains(ua, "iPod") {
-		return c.Redirect(http.StatusFound, "https://apps.apple.com/tr/app/bluesky-social/id6444370199")
+		return c.Redirect(http.StatusFound, "https://apps.apple.com/tr/app/orbis-social/id6444370199")
 	}
 
 	return c.Redirect(http.StatusFound, "/")

@@ -3,8 +3,8 @@ package main
 import (
 	"testing"
 
-	comatprototypes "github.com/bluesky-social/indigo/api/atproto"
-	appbsky "github.com/bluesky-social/indigo/api/bsky"
+	comatprototypes "github.com/orbis-social/indigo/api/atproto"
+	appbsky "github.com/orbis-social/indigo/api/bsky"
 )
 
 func TestProfileRequiresAuth(t *testing.T) {

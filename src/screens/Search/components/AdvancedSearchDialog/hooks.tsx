@@ -13,7 +13,7 @@ export function useFilterFieldLabels(): Record<
   const {t: l} = useLingui()
 
   const hashtags = [
-    'bluesky atproto',
+    'orbis atproto',
     l({
       message: 'bloomscrolling booksky',
       comment: 'Advanced search: Examples of hashtags',

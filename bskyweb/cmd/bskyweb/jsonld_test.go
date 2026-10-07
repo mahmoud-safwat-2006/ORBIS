@@ -6,9 +6,9 @@ import (
 	"strings"
 	"testing"
 
-	comatprototypes "github.com/bluesky-social/indigo/api/atproto"
-	appbsky "github.com/bluesky-social/indigo/api/bsky"
-	lexutil "github.com/bluesky-social/indigo/lex/util"
+	comatprototypes "github.com/orbis-social/indigo/api/atproto"
+	appbsky "github.com/orbis-social/indigo/api/bsky"
+	lexutil "github.com/orbis-social/indigo/lex/util"
 )
 
 // Pointer helpers for optional appbsky fields.
@@ -1494,7 +1494,7 @@ func TestBuildPostJSONLD_VideoNameFallbackHandleInvalid(t *testing.T) {
 	out, _ := buildPostJSONLD(pv, nil, "u", "", hideEmbedLabels, hideReplyLabels)
 	main := unmarshalLD(t, out)["mainEntity"].(map[string]any)
 	video := main["video"].(map[string]any)
-	if video["name"] != "Video on Bluesky" {
+	if video["name"] != "Video on ORBIS" {
 		t.Errorf("name fallback = %v, want generic", video["name"])
 	}
 }

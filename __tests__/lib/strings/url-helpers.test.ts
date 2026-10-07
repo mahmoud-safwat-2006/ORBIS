@@ -34,8 +34,8 @@ describe('linkRequiresWarning', () => {
     ['http://site.pages', 'site.pages.dev', true],
     ['http://bsky.app/profile/bob.test/post/3kbeuduu7m22v', 'my post', false],
     ['https://bsky.app/profile/bob.test/post/3kbeuduu7m22v', 'my post', false],
-    ['http://bsky.app/', 'bluesky', false],
-    ['https://bsky.app/', 'bluesky', false],
+    ['http://bsky.app/', 'orbis', false],
+    ['https://bsky.app/', 'orbis', false],
     [
       'http://bsky.app/profile/bob.test/post/3kbeuduu7m22v',
       'http://bsky.app/profile/bob.test/post/3kbeuduu7m22v',
@@ -162,16 +162,16 @@ describe('isTrustedUrl', () => {
     ['https://docs.bsky.app', true],
     ['https://bsky.social', true],
     ['https://bsky.social/blog', true],
-    ['https://blueskyweb.xyz', true],
-    ['https://blueskyweb.zendesk.com', true],
+    ['https://orbisweb.xyz', true],
+    ['https://orbisweb.zendesk.com', true],
     ['http://bsky.app', true],
     ['http://bsky.social', true],
-    ['http://blueskyweb.xyz', true],
-    ['http://blueskyweb.zendesk.com', true],
+    ['http://orbisweb.xyz', true],
+    ['http://orbisweb.zendesk.com', true],
     ['https://google.com', false],
     ['https://docs.google.com', false],
     ['https://google.com/#', false],
-    ['https://blueskywebxzendesk.com', false],
+    ['https://orbiswebxzendesk.com', false],
   ]
 
   it.each(cases)('given input uri %p, returns %p', (str, expected) => {

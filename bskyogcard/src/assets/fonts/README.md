@@ -1,6 +1,6 @@
 # Font licensing
 
-This directory contains Inter subsets tracked in the repository and Noto Sans fonts downloaded during the OG card build. Both are separately licensed under the SIL Open Font License, Version 1.1, rather than Bluesky's [MIT license](../../../../LICENSE).
+This directory contains Inter subsets tracked in the repository and Noto Sans fonts downloaded during the OG card build. Both are separately licensed under the SIL Open Font License, Version 1.1, rather than ORBIS's [MIT license](../../../../LICENSE).
 
 ## Inter
 

@@ -45,7 +45,7 @@ export function useCleanError() {
       }
 
       /**
-       * @see https://github.com/bluesky-social/atproto/blob/255cfcebb54332a7129af768a93004e22c6858e3/packages/pds/src/actor-store/preference/transactor.ts#L24
+       * @see https://github.com/orbis-social/atproto/blob/255cfcebb54332a7129af768a93004e22c6858e3/packages/pds/src/actor-store/preference/transactor.ts#L24
        */
       if (
         raw.includes('Do not have authorization to set preferences') &&

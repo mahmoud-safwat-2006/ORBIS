@@ -167,7 +167,7 @@ function Empty() {
         <Text style={[a.text_sm, a.text_center, t.atoms.text_contrast_high]}>
           <Trans>
             You have not muted any accounts yet. To mute an account, go to their
-            profile and select "Mute account" from the menu on their account.
+            profile and select "كتم الحساب" from the menu on their account.
           </Trans>
         </Text>
       </View>

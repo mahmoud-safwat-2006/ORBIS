@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"strings"
 
-	appbsky "github.com/bluesky-social/indigo/api/bsky"
-	"github.com/bluesky-social/indigo/atproto/syntax"
+	appbsky "github.com/orbis-social/indigo/api/bsky"
+	"github.com/orbis-social/indigo/atproto/syntax"
 
 	"github.com/labstack/echo/v4"
 )

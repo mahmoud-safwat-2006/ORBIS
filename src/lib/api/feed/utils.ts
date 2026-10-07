@@ -26,7 +26,7 @@ export function aggregateUserInterests(
   return updatedAt ? `${interests};${updatedAt}` : interests
 }
 
-export function isBlueskyOwnedFeed(feedUri: string) {
+export function isORBISOwnedFeed(feedUri: string) {
   const uri = new AtUri(feedUri)
   return BSKY_FEED_OWNER_DIDS.includes(uri.host)
 }

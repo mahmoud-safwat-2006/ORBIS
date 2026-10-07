@@ -141,11 +141,11 @@ function DialogInner({
         <View style={[a.gap_sm]}>
           <View>
             <TextField.LabelText>
-              <Trans>Live link</Trans>
+              <Trans>رابط البث المباشر</Trans>
             </TextField.LabelText>
             <TextField.Root isInvalid={!!liveLinkError || !!linkMetaError}>
               <TextField.Input
-                label={_(msg`Live link`)}
+                label={_(msg`رابط البث المباشر`)}
                 placeholder={_(msg`www.mylivestream.tv`)}
                 value={liveLink}
                 onChangeText={setLiveLink}

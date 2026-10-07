@@ -34,7 +34,7 @@ export type TemporaryPushClient = {
 
 /**
  * @private
- * Registers the device's push notification token with the Bluesky server.
+ * Registers the device's push notification token with the ORBIS server.
  */
 async function _registerPushToken({
   client,
@@ -81,7 +81,7 @@ async function _registerPushToken({
 const _registerPushTokenDebounced = debounce(_registerPushToken, 100)
 
 /**
- * Hook to register the device's push notification token with the Bluesky. If
+ * Hook to register the device's push notification token with the ORBIS. If
  * the user is not logged in, this will do nothing.
  *
  * Use this instead of using `_registerPushToken` or
@@ -129,7 +129,7 @@ async function getPushToken() {
 }
 
 /**
- * Hook to get the device push token and register it with the Bluesky server.
+ * Hook to get the device push token and register it with the ORBIS server.
  * Should only be called after a user has logged-in, since registration is an
  * authed endpoint.
  *
@@ -146,7 +146,7 @@ async function getPushToken() {
  *
  * @see https://github.com/expo/expo/issues/28656
  * @see https://github.com/expo/expo/issues/29909
- * @see https://github.com/bluesky-social/social-app/pull/4467
+ * @see https://github.com/orbis-social/social-app/pull/4467
  */
 export function useGetAndRegisterPushToken() {
   const aa = useAgeAssurance()
@@ -188,7 +188,7 @@ export function useGetAndRegisterPushToken() {
 }
 
 /**
- * Hook to register the device's push notification token with the Bluesky
+ * Hook to register the device's push notification token with the ORBIS
  * server, as well as listen for push token updates, should they occurr.
  *
  * Registered via the shell, which wraps the navigation stack, meaning if we
@@ -231,7 +231,7 @@ export function useNotificationsRegistration() {
     getAndRegisterPushToken()
 
     /**
-     * Register the push token with the Bluesky server, whenever it changes.
+     * Register the push token with the ORBIS server, whenever it changes.
      * This is also fired any time `getDevicePushTokenAsync` is called.
      *
      * Since this is registered immediately after `getAndRegisterPushToken`, it
@@ -307,9 +307,9 @@ export function useRequestNotificationsPermission() {
         allowSound: true,
         /*
          * Adds an in-app notification settings button to the system Settings
-         * screen for Bluesky. When tapped, iOS calls back into the app, which
+         * screen for ORBIS. When tapped, iOS calls back into the app, which
          * we route to the in-app notification settings (see the
-         * NotificationSettings module in expo-bluesky-swiss-army).
+         * NotificationSettings module in expo-orbis-swiss-army).
          */
         provideAppNotificationSettings: true,
       },
@@ -332,7 +332,7 @@ export function useRequestNotificationsPermission() {
          * Right after login, `currentAccount` in this scope will be undefined,
          * but calling `getPushToken` will result in `addPushTokenListener`
          * listeners being called, which will handle the registration with the
-         * Bluesky server.
+         * ORBIS server.
          */
         getPushToken()
       }

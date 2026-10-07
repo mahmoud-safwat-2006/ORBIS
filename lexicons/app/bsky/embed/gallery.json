@@ -95,5 +95,5 @@
   },
   "$type": "com.atproto.lexicon.schema",
   "lexicon": 1,
-  "description": "An assortment of media embedded in a Bluesky record (eg, a post)."
+  "description": "An assortment of media embedded in a ORBIS record (eg, a post)."
 }

@@ -1,281 +1,160 @@
-import {View} from 'react-native'
-import {msg} from '@lingui/core/macro'
-import {useLingui} from '@lingui/react'
-import {Trans} from '@lingui/react/macro'
-
-import {urls} from '#/lib/constants'
-import {getUserDisplayName} from '#/lib/getUserDisplayName'
-import {useModerationOpts} from '#/state/preferences/moderation-opts'
-import {useProfileQuery} from '#/state/queries/profile'
-import {useSession} from '#/state/session'
-import {atoms as a, useBreakpoints, useTheme, web} from '#/alf'
-import {Admonition} from '#/components/Admonition'
-import {Button, ButtonIcon, ButtonText} from '#/components/Button'
+import React from 'react'
+import {StyleSheet, Text, View} from 'react-native'
 import * as Dialog from '#/components/Dialog'
-import {useDialogControl} from '#/components/Dialog'
-import {Trash_Stroke2_Corner0_Rounded as TrashIcon} from '#/components/icons/Trash'
-import {Link} from '#/components/Link'
-import * as ProfileCard from '#/components/ProfileCard'
-import {Text} from '#/components/Typography'
-import {type FullVerificationState} from '#/components/verification'
-import {VerificationRemovePrompt} from '#/components/verification/VerificationRemovePrompt'
-import {useAnalytics} from '#/analytics'
-import {type app} from '#/lexicons'
+import {Button, ButtonText} from '#/components/Button'
 import type * as bsky from '#/types/bsky'
-
-export {useDialogControl} from '#/components/Dialog'
 
 export function VerificationsDialog({
   control,
   profile,
-  verificationState,
 }: {
   control: Dialog.DialogControlProps
   profile: bsky.profile.AnyProfileView
-  verificationState: FullVerificationState
 }) {
+  const isFounder = Boolean(
+    profile.handle?.includes('mahmoud-safwat') ||
+    profile.displayName?.includes('Mahmoud Safwat') ||
+    profile.handle === 'orbis.tech' ||
+    profile.handle === 'orbis.app'
+  )
+
   return (
-    <Dialog.Outer control={control} nativeOptions={{preventExpansion: true}}>
+    <Dialog.Outer control={control}>
       <Dialog.Handle />
-      <Inner
-        control={control}
-        profile={profile}
-        verificationState={verificationState}
-      />
+      <Dialog.ScrollableInner
+        label={isFounder ? 'مؤسس ومالك منصة ORBIS' : 'حساب موثق'}
+        style={styles.inner}>
+        {isFounder ? (
+          <View style={styles.content}>
+            <View style={styles.founderIconWrapper}>
+              <Text style={{fontSize: 40}}>👑</Text>
+            </View>
+
+            <Text style={styles.title}>مؤسس ومالك منصة ORBIS</Text>
+            
+            <View style={styles.founderTag}>
+              <Text style={styles.founderTagText}>✔ الحساب الإداري الرسمي الأعلى</Text>
+            </View>
+
+            <Text style={styles.description}>
+              هذا الحساب هو الحساب الشخصي الرسمي لمؤسس ومالك منصة ORBIS. يمتلك كافة الصلاحيات الحصرية لتوثيق الحسابات وإدارة المنصة بالكامل.
+            </Text>
+
+            <Button
+              variant="solid"
+              color="primary"
+              size="large"
+              label="تم"
+              onPress={() => control.close()}
+              style={{marginTop: 22, width: '100%'}}>
+              <ButtonText>تم</ButtonText>
+            </Button>
+          </View>
+        ) : (
+          <View style={styles.content}>
+            <View style={styles.verifiedIconWrapper}>
+              <Text style={{fontSize: 34, color: '#ffffff'}}>✔</Text>
+            </View>
+
+            <Text style={styles.title}>
+              {profile.displayName || profile.handle}
+            </Text>
+
+            <View style={styles.verifiedTag}>
+              <Text style={styles.verifiedTagText}>✔ حساب موثق رسمياً</Text>
+            </View>
+
+            <Text style={styles.description}>
+              تم توثيق هذا الحساب رسمياً واعتماده بالشارة الزرقاء من قِبل مؤسس ومالك منصة ORBIS.
+            </Text>
+
+            <Button
+              variant="solid"
+              color="primary"
+              size="large"
+              label="إغلاق"
+              onPress={() => control.close()}
+              style={{marginTop: 22, width: '100%'}}>
+              <ButtonText>إغلاق</ButtonText>
+            </Button>
+          </View>
+        )}
+      </Dialog.ScrollableInner>
     </Dialog.Outer>
   )
 }
 
-function Inner({
-  profile,
-  control,
-  verificationState: state,
-}: {
-  control: Dialog.DialogControlProps
-  profile: bsky.profile.AnyProfileView
-  verificationState: FullVerificationState
-}) {
-  const t = useTheme()
-  const ax = useAnalytics()
-  const {_} = useLingui()
-  const {gtMobile} = useBreakpoints()
+export const VerifierDialog = VerificationsDialog
+export default VerificationsDialog
 
-  const userName = getUserDisplayName(profile)
-  const label = state.profile.isViewer
-    ? state.profile.isVerified
-      ? _(msg`You are verified`)
-      : _(msg`Your verifications`)
-    : state.profile.isVerified
-      ? _(msg`${userName} is verified`)
-      : _(
-          msg({
-            message: `${userName}'s verifications`,
-            comment: `Possessive, meaning "the verifications of {userName}"`,
-          }),
-        )
-
-  return (
-    <Dialog.ScrollableInner
-      label={label}
-      style={[
-        a.w_full,
-        gtMobile && web({width: 'auto', maxWidth: 400, minWidth: 200}),
-      ]}>
-      <View style={[a.gap_sm, a.pb_lg]}>
-        <Text style={[a.text_2xl, a.font_semi_bold, a.pr_4xl, a.leading_tight]}>
-          {label}
-        </Text>
-        <Text style={[a.text_md, a.leading_snug]}>
-          {state.profile.isVerified ? (
-            <Trans>
-              This account has a checkmark because it's been verified by trusted
-              sources.
-            </Trans>
-          ) : (
-            <Trans>
-              This account has one or more attempted verifications, but it is
-              not currently verified.
-            </Trans>
-          )}
-        </Text>
-      </View>
-
-      {profile.verification ? (
-        <View style={[a.pb_xl, a.gap_md]}>
-          <Text style={[a.text_sm, t.atoms.text_contrast_medium]}>
-            <Trans>Verified by:</Trans>
-          </Text>
-
-          <View style={[a.gap_lg]}>
-            {profile.verification.verifications.map(v => (
-              <VerifierCard
-                key={v.uri}
-                verification={v}
-                subject={profile}
-                outerDialogControl={control}
-              />
-            ))}
-          </View>
-
-          {profile.verification.verifications.some(v => !v.isValid) &&
-            state.profile.isViewer && (
-              <Admonition type="warning" style={[a.mt_xs]}>
-                <Trans>Some of your verifications are invalid.</Trans>
-              </Admonition>
-            )}
-        </View>
-      ) : null}
-
-      <View
-        style={[
-          a.w_full,
-          a.gap_sm,
-          a.justify_end,
-          gtMobile
-            ? [a.flex_row, a.flex_row_reverse, a.justify_start]
-            : [a.flex_col],
-        ]}>
-        <Button
-          label={_(msg`Close dialog`)}
-          size="small"
-          variant="solid"
-          color="primary"
-          onPress={() => {
-            control.close()
-          }}>
-          <ButtonText>
-            <Trans>Close</Trans>
-          </ButtonText>
-        </Button>
-        <Link
-          overridePresentation
-          to={urls.website.blog.initialVerificationAnnouncement}
-          label={_(
-            msg({
-              message: `Learn more about verification on Bluesky`,
-              context: `english-only-resource`,
-            }),
-          )}
-          size="small"
-          variant="solid"
-          color="secondary"
-          style={[a.justify_center]}
-          onPress={() => {
-            ax.metric('verification:learn-more', {
-              location: 'verificationsDialog',
-            })
-          }}>
-          <ButtonText>
-            <Trans context="english-only-resource">Learn more</Trans>
-          </ButtonText>
-        </Link>
-      </View>
-
-      <Dialog.Close />
-    </Dialog.ScrollableInner>
-  )
-}
-
-function VerifierCard({
-  verification,
-  subject,
-  outerDialogControl,
-}: {
-  verification: app.bsky.actor.defs.VerificationView
-  subject: bsky.profile.AnyProfileView
-  outerDialogControl: Dialog.DialogControlProps
-}) {
-  const t = useTheme()
-  const {_, i18n} = useLingui()
-  const {currentAccount} = useSession()
-  const moderationOpts = useModerationOpts()
-  const {data: profile, error} = useProfileQuery({did: verification.issuer})
-  const verificationRemovePromptControl = useDialogControl()
-  const canAdminister = verification.issuer === currentAccount?.did
-
-  return (
-    <View
-      style={{
-        opacity: verification.isValid ? 1 : 0.5,
-      }}>
-      <ProfileCard.Outer>
-        <ProfileCard.Header>
-          {error ? (
-            <>
-              <ProfileCard.AvatarPlaceholder />
-              <View style={[a.flex_1]}>
-                <Text
-                  style={[a.text_md, a.font_semi_bold, a.leading_snug]}
-                  numberOfLines={1}>
-                  <Trans>Unknown verifier</Trans>
-                </Text>
-                <Text
-                  emoji
-                  style={[a.leading_snug, t.atoms.text_contrast_medium]}
-                  numberOfLines={1}>
-                  {verification.issuer}
-                </Text>
-              </View>
-            </>
-          ) : profile && moderationOpts ? (
-            <>
-              <ProfileCard.Link
-                profile={profile}
-                style={[a.flex_row, a.align_center, a.gap_sm, a.flex_1]}
-                onPress={() => {
-                  outerDialogControl.close()
-                }}>
-                <ProfileCard.Avatar
-                  profile={profile}
-                  moderationOpts={moderationOpts}
-                  disabledPreview
-                />
-                <View style={[a.flex_1]}>
-                  <ProfileCard.Name
-                    profile={profile}
-                    moderationOpts={moderationOpts}
-                  />
-                  <Text
-                    emoji
-                    style={[a.leading_snug, t.atoms.text_contrast_medium]}
-                    numberOfLines={1}>
-                    {i18n.date(new Date(verification.createdAt), {
-                      dateStyle: 'long',
-                    })}
-                  </Text>
-                </View>
-              </ProfileCard.Link>
-              {canAdminister && (
-                <View>
-                  <Button
-                    label={_(msg`Remove verification`)}
-                    size="small"
-                    variant="outline"
-                    color="negative"
-                    shape="round"
-                    onPress={() => {
-                      verificationRemovePromptControl.open()
-                    }}>
-                    <ButtonIcon icon={TrashIcon} />
-                  </Button>
-                </View>
-              )}
-            </>
-          ) : (
-            <>
-              <ProfileCard.AvatarPlaceholder />
-              <ProfileCard.NameAndHandlePlaceholder />
-            </>
-          )}
-        </ProfileCard.Header>
-      </ProfileCard.Outer>
-
-      <VerificationRemovePrompt
-        control={verificationRemovePromptControl}
-        profile={subject}
-        verifications={[verification]}
-        onConfirm={() => outerDialogControl.close()}
-      />
-    </View>
-  )
-}
+const styles = StyleSheet.create({
+  inner: {
+    maxWidth: 440,
+    width: '100%',
+  },
+  content: {
+    alignItems: 'center',
+    paddingVertical: 16,
+    paddingHorizontal: 12,
+  },
+  founderIconWrapper: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    backgroundColor: '#0284c7',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 16,
+  },
+  verifiedIconWrapper: {
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+    backgroundColor: '#0284c7',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 16,
+  },
+  title: {
+    fontSize: 22,
+    fontWeight: '800',
+    color: '#0f172a',
+    textAlign: 'center',
+    marginBottom: 6,
+  },
+  founderTag: {
+    backgroundColor: '#fef3c7',
+    borderColor: '#f59e0b',
+    borderWidth: 1,
+    borderRadius: 12,
+    paddingHorizontal: 14,
+    paddingVertical: 4,
+    marginBottom: 14,
+  },
+  founderTagText: {
+    fontSize: 13,
+    fontWeight: '800',
+    color: '#b45309',
+  },
+  verifiedTag: {
+    backgroundColor: '#f0fdf4',
+    borderColor: '#86efac',
+    borderWidth: 1,
+    borderRadius: 12,
+    paddingHorizontal: 14,
+    paddingVertical: 4,
+    marginBottom: 14,
+  },
+  verifiedTagText: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: '#15803d',
+  },
+  description: {
+    fontSize: 15,
+    color: '#475569',
+    textAlign: 'center',
+    lineHeight: 24,
+    paddingHorizontal: 8,
+  },
+});

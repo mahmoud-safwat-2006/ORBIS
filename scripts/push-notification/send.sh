@@ -2,21 +2,21 @@
 set -euo pipefail
 
 # Sends a sample APNS payload to a booted iOS simulator. Useful for testing
-# BlueskyNSE and useNotificationsHandler without a real APNS round-trip.
+# ORBISNSE and useNotificationsHandler without a real APNS round-trip.
 #
 # Usage:
 #   scripts/push-test/send.sh <payload-name> [--did <did>] [--device <udid>] [--bundle <id>]
 #
 # Examples:
 #   scripts/push-test/send.sh like --did did:plc:abc123
-#   BLUESKY_TEST_DID=did:plc:abc123 scripts/push-test/send.sh chat-message
+#   ORBIS_TEST_DID=did:plc:abc123 scripts/push-test/send.sh chat-message
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PAYLOAD_DIR="$SCRIPT_DIR/payloads"
 
 device="booted"
-bundle="xyz.blueskyweb.app"
-did="${BLUESKY_TEST_DID:-}"
+bundle="app.orbis.social"
+did="${ORBIS_TEST_DID:-}"
 name=""
 
 while [[ $# -gt 0 ]]; do
@@ -31,7 +31,7 @@ Usage: $0 <payload-name> [--did <did>] [--device <udid>] [--bundle <id>]
 Available payloads:
 $(ls "$PAYLOAD_DIR" 2>/dev/null | sed 's/\.apns$//' | sed 's/^/  /')
 
-Pass --did or set BLUESKY_TEST_DID to substitute the recipient DID. The DID
+Pass --did or set ORBIS_TEST_DID to substitute the recipient DID. The DID
 must match the account currently signed in to the app, otherwise chat
 notifications will trigger an account-switch flow and other reasons will be
 silently dropped by the handler.
@@ -64,12 +64,12 @@ if [[ ! -f "$src" ]]; then
 fi
 
 if [[ -z "$did" ]]; then
-  echo "Error: missing recipient DID. Pass --did or set BLUESKY_TEST_DID." >&2
+  echo "Error: missing recipient DID. Pass --did or set ORBIS_TEST_DID." >&2
   echo "       The DID must match the account currently signed in to the app." >&2
   exit 1
 fi
 
-tmp="$(mktemp -t bluesky-push.XXXXXX).apns"
+tmp="$(mktemp -t orbis-push.XXXXXX).apns"
 trap 'rm -f "$tmp"' EXIT
 sed "s|__RECIPIENT_DID__|$did|g" "$src" > "$tmp"
 

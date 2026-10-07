@@ -69,7 +69,7 @@ export function WhoCanReply({post, isThreadAuthor, style}: WhoCanReplyProps) {
     settings.length === 1 && settings[0].type === 'everybody'
   const noOneCanReply = settings.length === 1 && settings[0].type === 'nobody'
   const description = anyoneCanReply
-    ? _(msg`Everybody can reply`)
+    ? 'يمكن للجميع الرد'
     : noOneCanReply
       ? _(msg`Replies disabled`)
       : _(msg`Some people can reply`)
@@ -258,7 +258,7 @@ function Rules({
             out of date.
           </Trans>
         ) : settings[0].type === 'everybody' ? (
-          <Trans>Everybody can reply to this post.</Trans>
+          <Text>يمكن للجميع الرد على هذا المنشور.</Text>
         ) : settings[0].type === 'nobody' ? (
           <Trans>Replies to this post are disabled.</Trans>
         ) : (

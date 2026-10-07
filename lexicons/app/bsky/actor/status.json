@@ -40,7 +40,7 @@
           }
         }
       },
-      "description": "A declaration of a Bluesky account status."
+      "description": "A declaration of a ORBIS account status."
     }
   },
   "$type": "com.atproto.lexicon.schema",

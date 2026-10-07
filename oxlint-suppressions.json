@@ -438,7 +438,7 @@
       "count": 4
     }
   },
-  "modules/expo-bluesky-swiss-army/src/PlatformInfo/index.native.ts": {
+  "modules/expo-orbis-swiss-army/src/PlatformInfo/index.native.ts": {
     "typescript/no-unsafe-call": {
       "count": 3
     },
@@ -446,7 +446,7 @@
       "count": 3
     }
   },
-  "modules/expo-bluesky-swiss-army/src/Referrer/index.android.ts": {
+  "modules/expo-orbis-swiss-army/src/Referrer/index.android.ts": {
     "typescript/no-unsafe-call": {
       "count": 2
     },
@@ -454,7 +454,7 @@
       "count": 2
     }
   },
-  "modules/expo-bluesky-swiss-army/src/SharedPrefs/index.native.ts": {
+  "modules/expo-orbis-swiss-army/src/SharedPrefs/index.native.ts": {
     "typescript/no-explicit-any": {
       "count": 1
     },
@@ -465,7 +465,7 @@
       "count": 9
     }
   },
-  "modules/expo-bluesky-swiss-army/src/VisibilityView/index.native.tsx": {
+  "modules/expo-orbis-swiss-army/src/VisibilityView/index.native.tsx": {
     "typescript/no-unsafe-call": {
       "count": 1
     },
@@ -473,7 +473,7 @@
       "count": 1
     }
   },
-  "modules/expo-bluesky-swiss-army/src/VisibilityView/index.tsx": {
+  "modules/expo-orbis-swiss-army/src/VisibilityView/index.tsx": {
     "typescript/require-await": {
       "count": 1
     }

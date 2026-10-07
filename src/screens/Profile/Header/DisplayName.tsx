@@ -44,7 +44,7 @@ export function ProfileHeaderDisplayName({
          * Fixed upstream in RN main (facebook/react-native#56651); remove this
          *  once we are on a release that contains it (0.86.0 should be good).
          */}{' '}
-      </Text><OrbisVerifiedBadge size={22} displayName={profile?.displayName} handle={profile?.handle} did={profile?.did} /></View>
+      </Text></View>
     </View>
   )
 }

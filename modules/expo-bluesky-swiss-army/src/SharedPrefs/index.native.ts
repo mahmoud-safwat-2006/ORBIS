@@ -1,6 +1,6 @@
 import {requireNativeModule} from 'expo-modules-core'
 
-const NativeModule = requireNativeModule('ExpoBlueskySharedPrefs')
+const NativeModule = requireNativeModule('ExpoORBISSharedPrefs')
 
 export function setValue(
   key: string,

@@ -48,5 +48,5 @@
   },
   "$type": "com.atproto.lexicon.schema",
   "lexicon": 1,
-  "description": "A representation of a record embedded in a Bluesky record (eg, a post), alongside other compatible embeds. For example, a quote post and image, or a quote post and external URL card."
+  "description": "A representation of a record embedded in a ORBIS record (eg, a post), alongside other compatible embeds. For example, a quote post and image, or a quote post and external URL card."
 }

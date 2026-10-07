@@ -1,6 +1,6 @@
-# expo-bluesky-swiss-army
+# expo-orbis-swiss-army
 
-A collection of native utilities for the Bluesky Social app. This Expo module provides platform-specific functionality that is not available through standard React Native APIs.
+A collection of native utilities for the ORBIS Social app. This Expo module provides platform-specific functionality that is not available through standard React Native APIs.
 
 ## Overview
 
@@ -82,7 +82,7 @@ The Android implementation initializes certain keys with default values on first
 
 **Implementation Notes:**
 - iOS uses App Group suite `group.app.bsky` to share preferences with app extensions
-- Android stores preferences in `xyz.blueskyweb.app`
+- Android stores preferences in `app.orbis.social`
 - Both platforms work around a bug where `JavaScriptValue.isString()` can cause crashes, so there's a separate `setString` function internally
 
 ### VisibilityView
@@ -131,11 +131,11 @@ at app launch.
 
 When push permissions are requested with `provideAppNotificationSettings: true`,
 iOS adds an in-app notification settings button to the system Settings screen for
-Bluesky. Tapping it launches the app and triggers
+ORBIS. Tapping it launches the app and triggers
 `userNotificationCenter(_:openSettingsFor:)`. expo-notifications owns the
 `UNUserNotificationCenter` delegate and fans this callback out to registered
 `NotificationDelegate`s. This module registers one and converts the callback into
-a `bluesky://settings/notifications` deep link, which the app's existing linking
+a `orbis://settings/notifications` deep link, which the app's existing linking
 config routes to the notification settings screen.
 
 **Platform Support:**
@@ -159,7 +159,7 @@ The module uses platform-specific file extensions to provide appropriate impleme
 
 **Android:**
 - Kotlin implementation using Expo Modules Core
-- Package structure: `expo.modules.blueskyswissarmy.[feature]`
+- Package structure: `expo.modules.orbisswissarmy.[feature]`
 - Uses standard Android APIs: Settings.Global, InstallReferrerClient, SharedPreferences, View
 
 ## Key Files
@@ -171,16 +171,16 @@ The module uses platform-specific file extensions to provide appropriate impleme
 - `src/[Feature]/index.*.ts` - Platform-specific implementations
 
 ### iOS
-- `ios/ExpoBlueskySwissArmy.podspec` - CocoaPods specification
+- `ios/ExpoORBISSwissArmy.podspec` - CocoaPods specification
 - `ios/[Feature]/Expo*Module.swift` - Expo module definitions
 - `ios/SharedPrefs/SharedPrefs.swift` - Shared preference manager (usable from other native code)
 - `ios/Visibility/VisibilityViewManager.swift` - Global view tracking manager
 
 ### Android
 - `android/build.gradle` - Gradle build configuration (includes installreferrer dependency)
-- `android/src/main/java/expo/modules/blueskyswissarmy/[feature]/Expo*Module.kt` - Expo module definitions
-- `android/src/main/java/expo/modules/blueskyswissarmy/sharedprefs/SharedPrefs.kt` - Shared preference manager
-- `android/src/main/java/expo/modules/blueskyswissarmy/visibilityview/VisibilityViewManager.kt` - Global view tracking manager
+- `android/src/main/java/expo/modules/orbisswissarmy/[feature]/Expo*Module.kt` - Expo module definitions
+- `android/src/main/java/expo/modules/orbisswissarmy/sharedprefs/SharedPrefs.kt` - Shared preference manager
+- `android/src/main/java/expo/modules/orbisswissarmy/visibilityview/VisibilityViewManager.kt` - Global view tracking manager
 
 ## Configuration
 
@@ -209,7 +209,7 @@ import {
   Referrer,
   SharedPrefs,
   VisibilityView
-} from 'expo-bluesky-swiss-army'
+} from 'expo-orbis-swiss-army'
 
 // Check for reduced motion
 const isReducedMotion = PlatformInfo.getIsReducedMotionEnabled()

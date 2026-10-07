@@ -29,7 +29,7 @@
           }
         }
       },
-      "description": "A declaration of a Bluesky chat account."
+      "description": "A declaration of a ORBIS chat account."
     }
   },
   "$type": "com.atproto.lexicon.schema",

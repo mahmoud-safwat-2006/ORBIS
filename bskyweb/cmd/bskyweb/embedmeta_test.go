@@ -3,7 +3,7 @@ package main
 import (
 	"testing"
 
-	appbsky "github.com/bluesky-social/indigo/api/bsky"
+	appbsky "github.com/orbis-social/indigo/api/bsky"
 )
 
 func TestExtractVideoMeta(t *testing.T) {

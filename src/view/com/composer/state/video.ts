@@ -508,7 +508,7 @@ function getUploadErrorMessage(e: unknown, i18n: I18n): string | null {
     return null
   }
   if (e instanceof MultipartUploadError || e instanceof UploadLimitError) {
-    // https://github.com/bluesky-social/tango/blob/lumi/lumi/worker/permissions.go#L77
+    // https://github.com/orbis-social/tango/blob/lumi/lumi/worker/permissions.go#L77
     switch (e.message) {
       case 'User is not allowed to upload videos':
         return i18n._(msg`You are not allowed to upload videos.`)

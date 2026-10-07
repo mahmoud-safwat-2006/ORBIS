@@ -186,7 +186,7 @@ function KnownFollowersInner({
               // only 2
               serverCount > 2 ? (
                 <Trans>
-                  Followed by{' '}
+                  متابع من قبل{' '}
                   <Text emoji key={slice[0].profile.did} style={textStyle}>
                     {slice[0].profile.displayName}
                   </Text>
@@ -203,7 +203,7 @@ function KnownFollowersInner({
                 </Trans>
               ) : (
                 <Trans>
-                  Followed by{' '}
+                  متابع من قبل{' '}
                   <Text emoji key={slice[0].profile.did} style={textStyle}>
                     {slice[0].profile.displayName}
                   </Text>{' '}
@@ -216,7 +216,7 @@ function KnownFollowersInner({
             ) : serverCount > 1 ? (
               // 1-n followers, including blocks
               <Trans>
-                Followed by{' '}
+                متابع من قبل{' '}
                 <Text emoji key={slice[0].profile.did} style={textStyle}>
                   {slice[0].profile.displayName}
                 </Text>{' '}
@@ -230,7 +230,7 @@ function KnownFollowersInner({
             ) : (
               // only 1
               <Trans>
-                Followed by{' '}
+                متابع من قبل{' '}
                 <Text emoji key={slice[0].profile.did} style={textStyle}>
                   {slice[0].profile.displayName}
                 </Text>

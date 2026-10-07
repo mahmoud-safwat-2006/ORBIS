@@ -30,7 +30,7 @@
               "com.atproto.label.defs#selfLabels"
             ],
             "type": "union",
-            "description": "Self-label values, specific to the Bluesky application, on the overall account."
+            "description": "Self-label values, specific to the ORBIS application, on the overall account."
           },
           "website": {
             "type": "string",
@@ -67,7 +67,7 @@
           }
         }
       },
-      "description": "A declaration of a Bluesky account profile."
+      "description": "A declaration of a ORBIS account profile."
     }
   },
   "$type": "com.atproto.lexicon.schema",

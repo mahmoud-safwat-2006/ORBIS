@@ -27,7 +27,7 @@ describe(`AdvancedSearchDialog serialize/parse`, () => {
     const state = parseAdvancedSearch('hello "exact phrase" -spam', {
       author: 'alice',
       domain: 'bsky.app',
-      tag: 'atproto bluesky',
+      tag: 'atproto orbis',
       lang: 'en',
       since: '2024-01-01',
       media: 'true',
@@ -48,7 +48,7 @@ describe(`AdvancedSearchDialog serialize/parse`, () => {
       'bsky.app',
     )
     expect(state.filters.find(f => f.field === 'tags')?.value).toBe(
-      'atproto bluesky',
+      'atproto orbis',
     )
   })
 
@@ -150,7 +150,7 @@ describe(`AdvancedSearchDialog serialize/parse`, () => {
       author: 'alice',
       domain: 'bsky.app',
       url: 'bsky.app/post',
-      tag: 'atproto bluesky',
+      tag: 'atproto orbis',
       lang: 'en',
       since: '2024-01-01',
       until: '2024-02-01',

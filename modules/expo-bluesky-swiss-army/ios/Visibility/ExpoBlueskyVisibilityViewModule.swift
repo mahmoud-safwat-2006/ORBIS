@@ -1,8 +1,8 @@
 import ExpoModulesCore
 
-public class ExpoBlueskyVisibilityViewModule: Module {
+public class ExpoORBISVisibilityViewModule: Module {
   public func definition() -> ModuleDefinition {
-    Name("ExpoBlueskyVisibilityView")
+    Name("ExpoORBISVisibilityView")
 
     AsyncFunction("updateActiveViewAsync") {
       VisibilityViewManager.shared.updateActiveView()

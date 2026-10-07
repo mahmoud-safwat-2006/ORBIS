@@ -66,7 +66,7 @@ export function Label({
   const control = useModerationDetailsDialogControl()
   const desc = useModerationCauseDescription(cause)
   const isLabeler = Boolean(desc.sourceType && desc.sourceDid)
-  const isBlueskyLabel =
+  const isORBISLabel =
     desc.sourceType === 'labeler' && desc.sourceDid === api.moderation.did
   const avi = size === 'lg' ? 16 : 12
 
@@ -79,7 +79,7 @@ export function Label({
         disabled={disableDetailsDialog}
         onPress={() => control.open()}
         icon={
-          isBlueskyLabel || !isLabeler ? (
+          isORBISLabel || !isLabeler ? (
             <desc.icon width={avi} fill={t.atoms.text_contrast_medium.color} />
           ) : (
             <UserAvatar avatar={desc.sourceAvi} type="user" size={avi} />

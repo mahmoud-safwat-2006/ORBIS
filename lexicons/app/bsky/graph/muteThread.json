@@ -18,7 +18,7 @@
         },
         "encoding": "application/json"
       },
-      "description": "Mutes a thread preventing notifications from the thread and any of its children. Mutes are private in Bluesky. Requires auth."
+      "description": "Mutes a thread preventing notifications from the thread and any of its children. Mutes are private in ORBIS. Requires auth."
     }
   },
   "$type": "com.atproto.lexicon.schema",

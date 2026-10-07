@@ -195,7 +195,7 @@ if (
     'sourcemaps',
     'upload',
     '--org',
-    'blueskyweb',
+    'orbisweb',
     '--project',
     'app',
     '--release',

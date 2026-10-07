@@ -80,18 +80,18 @@ export function SubscribeMenu({list}: {list: app.bsky.graph.defs.ListView}) {
         <Menu.Outer showCancel>
           <Menu.Group>
             <Menu.Item
-              label={_(msg`Mute accounts`)}
+              label={_(msg`كتم الحسابs`)}
               onPress={subscribeMutePromptControl.open}>
               <Menu.ItemText>
-                <Trans>Mute accounts</Trans>
+                <Trans>كتم الحسابs</Trans>
               </Menu.ItemText>
               <Menu.ItemIcon position="right" icon={MuteIcon} />
             </Menu.Item>
             <Menu.Item
-              label={_(msg`Block accounts`)}
+              label={_(msg`حظر الحسابs`)}
               onPress={subscribeBlockPromptControl.open}>
               <Menu.ItemText>
-                <Trans>Block accounts</Trans>
+                <Trans>حظر الحسابs</Trans>
               </Menu.ItemText>
               <Menu.ItemIcon position="right" icon={PersonXIcon} />
             </Menu.Item>

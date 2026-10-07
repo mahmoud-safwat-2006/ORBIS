@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/bluesky-social/social-app/bskyweb"
+	"github.com/orbis-social/social-app/bskyweb"
 	"github.com/flosch/pongo2/v6"
 )
 

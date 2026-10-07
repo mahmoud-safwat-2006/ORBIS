@@ -1,7 +1,7 @@
 import {useRef, useState} from 'react'
 import {View} from 'react-native'
-import {GifView} from '@bsky.app/expo-bluesky-gif-view'
-import {type GifViewStateChangeEvent} from '@bsky.app/expo-bluesky-gif-view/src/GifView.types'
+import {GifView} from '@bsky.app/expo-orbis-gif-view'
+import {type GifViewStateChangeEvent} from '@bsky.app/expo-orbis-gif-view/src/GifView.types'
 import {msg} from '@lingui/core/macro'
 import {useLingui} from '@lingui/react'
 

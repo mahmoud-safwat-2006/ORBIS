@@ -35,7 +35,7 @@ export function ModerationInboxReportDetailsScreen() {
             <Trans>Your report</Trans>
           </Layout.Header.TitleText>
           <Layout.Header.SubtitleText>
-            <Trans>Bluesky Moderation Service</Trans>
+            <Trans>ORBIS Moderation Service</Trans>
           </Layout.Header.SubtitleText>
         </Layout.Header.Content>
         <Layout.Header.Slot />

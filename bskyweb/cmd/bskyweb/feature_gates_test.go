@@ -13,7 +13,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/bluesky-social/social-app/bskyweb"
+	"github.com/orbis-social/social-app/bskyweb"
 	"github.com/flosch/pongo2/v6"
 	"github.com/labstack/echo/v4"
 )

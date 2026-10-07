@@ -163,7 +163,7 @@ export function reducer(state: ReportState, action: ReportAction): ReportState {
         selectedLabeler: action.labeler,
         /*
          * Labelers may be auto-selected (e.g. chat reports only go to
-         * Bluesky), so don't advance past pending NCII qualifying questions.
+         * ORBIS), so don't advance past pending NCII qualifying questions.
          */
         activeStepIndex1:
           getNciiQualificationOutcome(state.ncii) === 'inApp' || !state.ncii
@@ -174,7 +174,7 @@ export function reducer(state: ReportState, action: ReportAction): ReportState {
           : false,
         /*
          * Picking a service is a fresh consent decision - the opt-in is scoped
-         * to Bluesky, so it must not survive a switch to another labeler.
+         * to ORBIS, so it must not survive a switch to another labeler.
          */
         includeVideoTimestamp: false,
       }

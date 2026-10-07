@@ -1,3 +1,20 @@
+
+// orbis_url_cleaner: تنظيف الرابط وعنوان الصفحة من .bsky.social
+if (typeof window !== 'undefined') {
+  const cleanUrl = () => {
+    if (window.location.href.includes('.bsky.social')) {
+      const cleanHref = window.location.href.replace(/\.bsky\.social/g, '');
+      window.history.replaceState(null, '', cleanHref);
+    }
+    if (document.title && document.title.includes('.bsky.social')) {
+      document.title = document.title.replace(/\.bsky\.social/g, '');
+    }
+  };
+  cleanUrl();
+  window.addEventListener('popstate', cleanUrl);
+  setInterval(cleanUrl, 500);
+}
+
 ﻿import {AutoFollowFounder} from '#/components/AutoFollowFounder'
 import '#/logger/sentry/setup' // must be near top
 import './style.css'

@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"strings"
 
-	appbsky "github.com/bluesky-social/indigo/api/bsky"
-	"github.com/bluesky-social/indigo/atproto/syntax"
+	appbsky "github.com/orbis-social/indigo/api/bsky"
+	"github.com/orbis-social/indigo/atproto/syntax"
 
 	"github.com/labstack/echo/v4"
 )
@@ -18,7 +18,7 @@ import (
 var ErrPostNotFound = errors.New("post not found")
 var ErrPostNotPublic = errors.New("post is not publicly accessible")
 
-func (srv *Server) getBlueskyPost(ctx context.Context, did syntax.DID, rkey syntax.RecordKey) (*appbsky.FeedDefs_PostView, error) {
+func (srv *Server) getORBISPost(ctx context.Context, did syntax.DID, rkey syntax.RecordKey) (*appbsky.FeedDefs_PostView, error) {
 
 	// fetch the post post (with extra context)
 	uri := fmt.Sprintf("at://%s/app.bsky.feed.post/%s", did, rkey)
@@ -61,7 +61,7 @@ type OEmbedResponse struct {
 	HTML         string `json:"html,omitempty"`
 }
 
-func (srv *Server) parseBlueskyURL(ctx context.Context, raw string) (*syntax.ATURI, error) {
+func (srv *Server) parseORBISURL(ctx context.Context, raw string) (*syntax.ATURI, error) {
 
 	if raw == "" {
 		return nil, fmt.Errorf("empty url")
@@ -140,7 +140,7 @@ func (srv *Server) WebOEmbed(c echo.Context) error {
 	}
 	// NOTE: maxheight ignored
 
-	aturi, err := srv.parseBlueskyURL(c.Request().Context(), c.QueryParam("url"))
+	aturi, err := srv.parseORBISURL(c.Request().Context(), c.QueryParam("url"))
 	if err != nil {
 		return c.String(http.StatusBadRequest, fmt.Sprintf("Expected 'url' to be bsky.app URL or AT-URI: %v", err))
 	}
@@ -152,7 +152,7 @@ func (srv *Server) WebOEmbed(c echo.Context) error {
 		return err
 	}
 
-	post, err := srv.getBlueskyPost(c.Request().Context(), did, aturi.RecordKey())
+	post, err := srv.getORBISPost(c.Request().Context(), did, aturi.RecordKey())
 	if err == ErrPostNotFound {
 		return c.String(http.StatusNotFound, fmt.Sprintf("%v", err))
 	} else if err == ErrPostNotPublic {
@@ -170,7 +170,7 @@ func (srv *Server) WebOEmbed(c echo.Context) error {
 		Version:      "1.0",
 		AuthorName:   "@" + post.Author.Handle,
 		AuthorURL:    fmt.Sprintf("https://bsky.app/profile/%s", post.Author.Handle),
-		ProviderName: "Bluesky Social",
+		ProviderName: "ORBIS Social",
 		ProviderURL:  "https://bsky.app",
 		CacheAge:     86400,
 		Width:        &width,
@@ -201,7 +201,7 @@ func (srv *Server) WebPostEmbed(c echo.Context) error {
 
 	// NOTE: this request was't really necessary; the JS will do the same fetch
 	/*
-		postView, err := srv.getBlueskyPost(ctx, did, rkey)
+		postView, err := srv.getORBISPost(ctx, did, rkey)
 		if err == ErrPostNotFound {
 			return c.String(http.StatusNotFound, fmt.Sprintf("%v", err))
 		} else if err == ErrPostNotPublic {

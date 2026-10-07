@@ -104,13 +104,13 @@ export function DialogInner({
           </Text>
           <Text style={[a.text_md, a.leading_snug]}>
             <Trans>
-              You are currently blocked from using the Go Live feature. To
+              You are currently blocked from using the بث مباشر feature. To
               appeal this moderation decision, please submit the form below.
             </Trans>
           </Text>
           <Text style={[a.text_md, a.leading_snug]}>
             <Trans>
-              This appeal will be sent to Bluesky's moderation service.
+              This appeal will be sent to ORBIS's moderation service.
             </Trans>
           </Text>
         </View>
@@ -119,7 +119,7 @@ export function DialogInner({
           <Dialog.Input
             label={_(msg`Text input field`)}
             placeholder={_(
-              msg`Please explain why you think your Go Live access was incorrectly disabled.`,
+              msg`Please explain why you think your بث مباشر access was incorrectly disabled.`,
             )}
             value={details}
             onChangeText={setDetails}

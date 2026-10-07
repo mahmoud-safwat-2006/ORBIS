@@ -288,7 +288,7 @@ let PagerTabBar = ({
           // where .measure() can fail to return a height. in general though,
           // we should prefer using .measure() when possible as this can
           // fire too early and cause layout thrashing.
-          // ref: https://github.com/bluesky-social/social-app/pull/9964 -sfp
+          // ref: https://github.com/orbis-social/social-app/pull/9964 -sfp
           if (isHeaderReady) {
             fallbackHeaderOnlyHeight.current = e.nativeEvent.layout.height
           }

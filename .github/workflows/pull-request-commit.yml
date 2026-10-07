@@ -18,7 +18,7 @@ concurrency:
 # bundle-size and fingerprint diffs and the PR OTA install link
 permissions: {}
 
-# denis release tag in bluesky-social/tango whose linux-amd64 binary the PR OTA
+# denis release tag in orbis-social/tango whose linux-amd64 binary the PR OTA
 # job downloads. Bump this one line to roll denis.
 env:
   DENIS_RELEASE_TAG: denis-v0.1.1
@@ -226,7 +226,7 @@ jobs:
       - name: 📷 Check fingerprint and install dependencies
         id: fingerprint
         timeout-minutes: 5
-        uses: bluesky-social/github-actions/fingerprint-native@2287aefd4ddca2914fd85715cbe47124b7d9f360 # v0.4.0
+        uses: orbis-social/github-actions/fingerprint-native@2287aefd4ddca2914fd85715cbe47124b7d9f360 # v0.4.0
         with:
           profile: pull-request
 
@@ -409,4 +409,4 @@ jobs:
 
             <img src="https://bsky-qr.vercel.app?channel=pull-request-${{ github.event.pull_request.number }}&releaseVersion=${{ needs.publish-pr-ota.outputs.release-version }}&iosBuildNumber=${{ needs.publish-pr-ota.outputs.ios-build-number }}&androidBuildNumber=${{ needs.publish-pr-ota.outputs.android-build-number }}" width="300" height="300" alt="QR code for the PR OTA deployment">
 
-            `bluesky://intent/apply-ota?channel=pull-request-${{ github.event.pull_request.number }}&releaseVersion=${{ needs.publish-pr-ota.outputs.release-version }}&iosBuildNumber=${{ needs.publish-pr-ota.outputs.ios-build-number }}&androidBuildNumber=${{ needs.publish-pr-ota.outputs.android-build-number }}`
+            `orbis://intent/apply-ota?channel=pull-request-${{ github.event.pull_request.number }}&releaseVersion=${{ needs.publish-pr-ota.outputs.release-version }}&iosBuildNumber=${{ needs.publish-pr-ota.outputs.ios-build-number }}&androidBuildNumber=${{ needs.publish-pr-ota.outputs.android-build-number }}`

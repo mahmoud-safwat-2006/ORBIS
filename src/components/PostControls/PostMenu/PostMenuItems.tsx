@@ -744,14 +744,14 @@ let PostMenuItems = ({
                     testID="postDropdownMuteBtn"
                     label={
                       postAuthor.viewer?.muted
-                        ? l`Unmute account`
-                        : l`Mute account`
+                        ? l`إلغاء كتم الحساب`
+                        : l`كتم الحساب`
                     }
                     onPress={() => void onMuteAuthor()}>
                     <Menu.ItemText>
                       {postAuthor.viewer?.muted
-                        ? l`Unmute account`
-                        : l`Mute account`}
+                        ? l`إلغاء كتم الحساب`
+                        : l`كتم الحساب`}
                     </Menu.ItemText>
                     <Menu.ItemIcon
                       icon={postAuthor.viewer?.muted ? UnmuteIcon : MuteIcon}
@@ -762,9 +762,9 @@ let PostMenuItems = ({
                   {!postAuthor.viewer?.blocking && (
                     <Menu.Item
                       testID="postDropdownBlockBtn"
-                      label={l`Block account`}
+                      label={l`حظر الحساب`}
                       onPress={() => blockPromptControl.open()}>
-                      <Menu.ItemText>{l`Block account`}</Menu.ItemText>
+                      <Menu.ItemText>{l`حظر الحساب`}</Menu.ItemText>
                       <Menu.ItemIcon icon={PersonX} position="right" />
                     </Menu.Item>
                   )}

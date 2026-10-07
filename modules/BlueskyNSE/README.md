@@ -1,6 +1,6 @@
-# BlueskyNSE
+# ORBISNSE
 
-BlueskyNSE is an iOS Notification Service Extension that processes push notifications before they are displayed to the user. NSE stands for "Notification Service Extension", a native iOS app extension type.
+ORBISNSE is an iOS Notification Service Extension that processes push notifications before they are displayed to the user. NSE stands for "Notification Service Extension", a native iOS app extension type.
 
 ## What It Does
 
@@ -52,7 +52,7 @@ DM sound only plays if the user has enabled the `playSoundChat` preference in th
 | File | Purpose |
 |------|---------|
 | `NotificationService.swift` | Main service extension implementation |
-| `BlueskyNSE.entitlements` | iOS entitlements configuration for App Group access |
+| `ORBISNSE.entitlements` | iOS entitlements configuration for App Group access |
 | `Info.plist` | Extension metadata and configuration |
 
 ### NotificationService.swift
@@ -75,7 +75,7 @@ Contains two main classes:
 
 The extension requires the `group.app.bsky` App Group to be configured in:
 1. Main app target capabilities
-2. Extension target capabilities (defined in `BlueskyNSE.entitlements`)
+2. Extension target capabilities (defined in `ORBISNSE.entitlements`)
 
 ### Shared Preferences
 

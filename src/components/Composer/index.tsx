@@ -259,7 +259,7 @@ export function Composer({
      * On Safari, the final keydown to dismiss an IME is also "Enter" with
      * keyCode 229. Chrome/Firefox don't have this problem.
      *
-     * @see https://github.com/bluesky-social/social-app/issues/4178
+     * @see https://github.com/orbis-social/social-app/issues/4178
      */
     if (e.key === 'Enter' && e.keyCode === 229) return
 

@@ -90,7 +90,7 @@ describe(`searchParams`, () => {
         filtersToApiParams({
           author: 'alice bob',
           domain: 'bsky.app',
-          tag: 'atproto bluesky',
+          tag: 'atproto orbis',
           lang: 'en',
           media: 'true',
           replies: 'none',
@@ -98,7 +98,7 @@ describe(`searchParams`, () => {
       ).toEqual({
         authors: ['alice', 'bob'],
         domains: ['bsky.app'],
-        hashtags: ['atproto', 'bluesky'],
+        hashtags: ['atproto', 'orbis'],
         language: 'en',
         hasMedia: true,
         excludeReplies: true,

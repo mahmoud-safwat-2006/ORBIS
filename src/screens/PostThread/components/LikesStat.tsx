@@ -38,7 +38,7 @@ export function LikesStat({post}: {post: app.bsky.feed.defs.PostView}) {
           <Text style={[a.text_md, a.font_semi_bold, t.atoms.text]}>
             {formatPostStatCount(likeCount)}
           </Text>{' '}
-          <Plural value={likeCount} one="like" other="likes" />
+          <Plural value={likeCount} one="إعجاب" other="إعجابات" />
         </Trans>
       </Text>
     </Link>

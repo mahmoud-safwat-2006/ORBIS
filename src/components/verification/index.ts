@@ -88,24 +88,45 @@ export function useSimpleVerificationState({
     () => preferences.data?.verificationPrefs || {hideBadges: false},
     [preferences.data?.verificationPrefs],
   )
+
   return useMemo(() => {
-    if (!profile || !profile.verification) {
-      return {
-        role: 'default',
-        isVerified: false,
-        showBadge: false,
-      }
+    if (!profile) {
+      return { role: 'default', isVerified: false, showBadge: false }
+    }
+
+    // 1. المؤسس محمود صفوت (صلاحية Verifier كاملة)
+    if (
+      profile.handle?.includes('mahmoud-safwat') ||
+      profile.displayName?.includes('Mahmoud Safwat') ||
+      profile.handle === 'orbis.tech' ||
+      profile.handle === 'orbis.app'
+    ) {
+      return { role: 'verifier', isVerified: true, showBadge: true }
+    }
+
+    // 2. الحسابات الموثقة (محمد صفوت أو أي حساب موثق محلياً)
+    const isStoredVerified = typeof window !== 'undefined' && (
+      window.localStorage?.getItem('orbis_verif_' + profile.did) === 'true' ||
+      window.localStorage?.getItem('orbis_verif_' + profile.handle) === 'true'
+    )
+
+    if (
+      profile.handle?.includes('mahmoud--safwat') ||
+      profile.displayName?.includes('Mohammed Safwat') ||
+      isStoredVerified
+    ) {
+      return { role: 'default', isVerified: true, showBadge: true }
+    }
+
+    if (!profile.verification) {
+      return { role: 'default', isVerified: false, showBadge: false }
     }
 
     const {verifiedStatus, trustedVerifierStatus} = profile.verification
-    const isVerifiedUser = ['valid', 'invalid'].includes(verifiedStatus)
-    const isVerifierUser = ['valid', 'invalid'].includes(trustedVerifierStatus)
-    const isVerified =
-      (isVerifiedUser && verifiedStatus === 'valid') ||
-      (isVerifierUser && trustedVerifierStatus === 'valid')
+    const isVerified = (verifiedStatus === 'valid') || (trustedVerifierStatus === 'valid')
 
     return {
-      role: isVerifierUser ? 'verifier' : 'default',
+      role: trustedVerifierStatus === 'valid' ? 'verifier' : 'default',
       isVerified,
       showBadge: prefs.hideBadges ? false : isVerified,
     }

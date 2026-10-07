@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	appbsky "github.com/bluesky-social/indigo/api/bsky"
+	appbsky "github.com/orbis-social/indigo/api/bsky"
 )
 
 func loadPost(t *testing.T, p string) appbsky.FeedPost {

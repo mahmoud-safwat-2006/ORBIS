@@ -1,7 +1,7 @@
-appId: xyz.blueskyweb.app
+appId: app.orbis.social
 ---
 - launchApp:
-    appId: "xyz.blueskyweb.app"
+    appId: "app.orbis.social"
     clearState: true
 - extendedWaitUntil:
     visible: "Sign in"

@@ -1,7 +1,7 @@
 package main
 
 import (
-	appbsky "github.com/bluesky-social/indigo/api/bsky"
+	appbsky "github.com/orbis-social/indigo/api/bsky"
 )
 
 // Helpers for extracting Open Graph metadata from post embeds. og:video

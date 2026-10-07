@@ -37,7 +37,7 @@ const patchesDir = path.join(root, 'patches')
 //   react-native+0.81.5+002+ScrollForwarder.patch -> react-native
 //   @discord+bottom-sheet+4.6.1.patch             -> @discord/bottom-sheet
 //
-// patch-package also supports nested (parent++child) patches, but Bluesky
+// patch-package also supports nested (parent++child) patches, but ORBIS
 // doesn't use them, so we bail loudly rather than guessing.
 function parsePackageName(filename) {
   const base = filename.replace(/\.patch$/, '')

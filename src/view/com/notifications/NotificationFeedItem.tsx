@@ -1,4 +1,4 @@
-﻿import {memo, useCallback, useEffect, useMemo, useState} from 'react'
+import {memo, useCallback, useEffect, useMemo, useState} from 'react'
 import {
   Animated,
   type GestureResponderEvent,
@@ -557,7 +557,7 @@ let NotificationFeedItem = ({
   } else {
     return null
   }
-  a11yLabel += ` · ${niceTimestamp}`
+  a11yLabel += ` � ${niceTimestamp}`
 
   return (
     <Link
@@ -985,7 +985,7 @@ function CondensedAuthorsList({
   if (authors.length === 1) {
     return (
       <View style={[a.flex_row, a.align_center]}>
-        <PreviewableUserAvatar
+        <PreviewableUserAvatar disableLink={true}
           size={35}
           profile={authors[0].profile}
           moderation={authors[0].moderation.ui('avatar')}
@@ -1002,7 +1002,7 @@ function CondensedAuthorsList({
       <View style={[a.flex_row, a.align_center]}>
         {authors.slice(0, MAX_AUTHORS).map(author => (
           <View key={author.href} style={{marginRight: 5}}>
-            <PreviewableUserAvatar
+            <PreviewableUserAvatar disableLink={true}
               size={35}
               profile={author.profile}
               moderation={author.moderation.ui('avatar')}

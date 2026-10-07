@@ -12,7 +12,7 @@ import {
 } from '#/state/preferences/languages'
 import {app} from '#/lexicons'
 import {type FeedAPI, type FeedAPIResponse} from './types'
-import {createBskyTopicsHeader, isBlueskyOwnedFeed} from './utils'
+import {createBskyTopicsHeader, isORBISOwnedFeed} from './utils'
 
 type GetCustomFeedParams = XrpcRequestParams<typeof app.bsky.feed.getFeed.main>
 
@@ -58,7 +58,7 @@ export class CustomFeedAPI implements FeedAPI {
     signal?: AbortSignal
   }): Promise<FeedAPIResponse> {
     const contentLangs = getContentLanguages().join(',')
-    const isBlueskyOwned = isBlueskyOwnedFeed(this.params.feed)
+    const isORBISOwned = isORBISOwnedFeed(this.params.feed)
 
     let data: app.bsky.feed.getFeed.$OutputBody | null = null
 
@@ -74,7 +74,7 @@ export class CustomFeedAPI implements FeedAPI {
             {
               signal,
               headers: {
-                ...(isBlueskyOwned
+                ...(isORBISOwned
                   ? createBskyTopicsHeader(this.userInterests)
                   : {}),
                 'Accept-Language': contentLangs,

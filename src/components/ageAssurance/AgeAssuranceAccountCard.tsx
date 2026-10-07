@@ -123,7 +123,7 @@ function Inner({style}: ViewStyleProp & {}) {
           {isBlocked ? (
             <Admonition type="warning">
               <Trans>
-                You are currently unable to access Bluesky's Age Assurance flow.
+                You are currently unable to access ORBIS's Age Assurance flow.
                 Please{' '}
                 <InlineLinkText
                   label={l`Contact our moderation team`}

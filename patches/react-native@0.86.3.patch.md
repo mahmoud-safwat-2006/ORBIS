@@ -192,7 +192,7 @@ https://github.com/react/react-native/issues/58517
 
 ## RCTModalHostViewComponentView.mm Patch - Blank sheet when dismissing a modal with a child controller
 
-Fixes https://github.com/bluesky-social/social-app/issues/11393: showing the iOS
+Fixes https://github.com/orbis-social/social-app/issues/11393: showing the iOS
 Undo Typing alert while submitting a post or reply can leave an empty composer
 sheet that cannot be dismissed. UIKit dismisses only the child controller when
 the modal itself receives `dismissViewControllerAnimated:completion:`.

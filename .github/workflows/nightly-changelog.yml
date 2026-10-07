@@ -13,7 +13,7 @@ permissions:
 jobs:
   changelog:
     name: Post changelog to QA team
-    if: github.repository == 'bluesky-social/social-app'
+    if: github.repository == 'orbis-social/social-app'
     runs-on: ubuntu-latest
     permissions:
       contents: read

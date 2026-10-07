@@ -3,7 +3,7 @@ name: claude-review
 # Automatic Claude review on PR creation/update, via Agent Gateway.
 # Self-contained: this intentionally uses upstream
 # claude-code-action defaults rather than the org reusable workflows in
-# bluesky-social/.github (which a public repo cannot call, and whose
+# orbis-social/.github (which a public repo cannot call, and whose
 # customizations added no value over upstream).
 #
 # Review guidance lives in .github/claude-review-prompt.md.

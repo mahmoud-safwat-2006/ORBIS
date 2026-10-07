@@ -129,8 +129,8 @@ const mapping = {
   '\"v4fBNH\":[\"New\"]': '\"v4fBNH\":[\"جديد\"]',
   '\"Atg3C1\":[\"Your interests help us find what you like!\"]': '\"Atg3C1\":[\"اهتماماتك تساعدنا في اقتراح ما يناسب ذوقك!\"]',
   '\"piQi2r\":[\"ORBIS Moderation Service\"]': '\"piQi2r\":[\"خدمة إشراف ORBIS\"]',
-  '\"Official Bluesky moderation service\"': '\"خدمة إشراف ORBIS الرسمية\"',
-  '\"Bluesky Moderation Service\"': '\"خدمة إشراف ORBIS\"'
+  '\"Official ORBIS moderation service\"': '\"خدمة إشراف ORBIS الرسمية\"',
+  '\"ORBIS Moderation Service\"': '\"خدمة إشراف ORBIS\"'
 };
 
 for (const [key, val] of Object.entries(mapping)) {

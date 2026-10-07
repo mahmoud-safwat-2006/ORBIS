@@ -81,7 +81,7 @@ permissions:
 
 jobs:
   build:
-    if: github.repository == 'bluesky-social/social-app'
+    if: github.repository == 'orbis-social/social-app'
     name: Build Android
     runs-on: ${{ inputs.runner || 'Linux-x64-32core' }}
     concurrency:
@@ -282,7 +282,7 @@ jobs:
     name: Attach APK to GitHub Release
     runs-on: ubuntu-latest
     needs: [build, universalApk]
-    if: ${{ inputs.profile == 'production' && github.ref_type == 'tag' && github.repository == 'bluesky-social/social-app' }}
+    if: ${{ inputs.profile == 'production' && github.ref_type == 'tag' && github.repository == 'orbis-social/social-app' }}
     permissions:
       contents: write
     steps:
@@ -313,7 +313,7 @@ jobs:
 
       - name: 🏷️ Rename APK for release
         if: ${{ steps.release-check.outputs.exists == 'true' }}
-        run: cp build.apk "Bluesky-${{ needs.build.outputs.package-version }}.apk"
+        run: cp build.apk "ORBIS-${{ needs.build.outputs.package-version }}.apk"
 
       - name: 📎 Attach APK to GitHub Release
         id: attach
@@ -322,7 +322,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           TAG: ${{ github.ref_name }}
-          APK: Bluesky-${{ needs.build.outputs.package-version }}.apk
+          APK: ORBIS-${{ needs.build.outputs.package-version }}.apk
         run: |
           gh release upload "$TAG" "$APK" --clobber
           url=$(gh release view "$TAG" --json url --jq .url)
@@ -336,4 +336,4 @@ jobs:
           webhook-type: incoming-webhook
           payload-templated: true
           payload: |
-            {"text": "Android APK attached to GitHub Release ${{ github.ref_name }}!\n```Asset: Bluesky-${{ needs.build.outputs.package-version }}.apk\nRelease: ${{ steps.attach.outputs.url }}```"}
+            {"text": "Android APK attached to GitHub Release ${{ github.ref_name }}!\n```Asset: ORBIS-${{ needs.build.outputs.package-version }}.apk\nRelease: ${{ steps.attach.outputs.url }}```"}

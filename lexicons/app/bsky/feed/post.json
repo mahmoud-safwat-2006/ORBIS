@@ -81,7 +81,7 @@
           }
         }
       },
-      "description": "Record containing a Bluesky post."
+      "description": "Record containing a ORBIS post."
     },
     "entity": {
       "type": "object",

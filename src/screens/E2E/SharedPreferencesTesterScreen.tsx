@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import {View} from 'react-native'
-import {SharedPrefs} from '@bsky.app/expo-bluesky-swiss-army'
+import {SharedPrefs} from '@bsky.app/expo-orbis-swiss-army'
 
 import {ScrollView} from '#/view/com/util/Views'
 import {atoms as a} from '#/alf'

@@ -25,7 +25,7 @@ export const NEW_TO_OLD_REASON_MAPPING: Record<string, string> = {}
  * Mapping of new (Ozone namespace) reason types to old reason types.
  *
  * Matches the mapping defined in the Ozone codebase:
- * @see https://github.com/bluesky-social/atproto/blob/4c15fb47cec26060bff2e710e95869a90c9d7fdd/packages/ozone/src/mod-service/profile.ts#L16-L64
+ * @see https://github.com/orbis-social/atproto/blob/4c15fb47cec26060bff2e710e95869a90c9d7fdd/packages/ozone/src/mod-service/profile.ts#L16-L64
  */
 export const NEW_TO_OLD_REASONS_MAP: Record<
   tools.ozone.report.defs.ReasonType,
@@ -122,7 +122,7 @@ export const NEW_TO_OLD_REASONS_MAP: Record<
 
 /**
  * Mapping of old reason types to new (Ozone namespace) reason types.
- * @see https://github.com/bluesky-social/proposals/tree/main/0009-mod-report-granularity#backwards-compatibility
+ * @see https://github.com/orbis-social/proposals/tree/main/0009-mod-report-granularity#backwards-compatibility
  */
 export const OLD_TO_NEW_REASONS_MAP: Record<
   Exclude<
@@ -171,7 +171,7 @@ export const OTHER_REPORT_REASONS: Set<tools.ozone.report.defs.ReasonType> =
   ])
 
 /**
- * Set of report reasons that should only be sent to Bluesky's moderation service.
+ * Set of report reasons that should only be sent to ORBIS's moderation service.
  */
 export const BSKY_LABELER_ONLY_REPORT_REASONS: Set<tools.ozone.report.defs.ReasonType> =
   new Set([
@@ -182,7 +182,7 @@ export const BSKY_LABELER_ONLY_REPORT_REASONS: Set<tools.ozone.report.defs.Reaso
   ])
 
 /**
- * Set of _parsed_ subject types that should only be sent to Bluesky's
+ * Set of _parsed_ subject types that should only be sent to ORBIS's
  * moderation service.
  */
 export const BSKY_LABELER_ONLY_SUBJECT_TYPES: Set<ParsedReportSubject['type']> =

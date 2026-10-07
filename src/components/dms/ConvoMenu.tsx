@@ -281,11 +281,11 @@ function MenuContent({
         {isGroupConvo ? null : (
           <Menu.Item
             destructive
-            label={isBlocking ? l`Unblock account` : l`Block account`}
+            label={isBlocking ? l`إلغاء حظر الحساب` : l`حظر الحساب`}
             onPress={toggleBlock}>
             <Menu.ItemIcon icon={isBlocking ? PersonCheck : PersonX} />
             <Menu.ItemText>
-              {isBlocking ? l`Unblock account` : l`Block account`}
+              {isBlocking ? l`إلغاء حظر الحساب` : l`حظر الحساب`}
             </Menu.ItemText>
           </Menu.Item>
         )}

@@ -1,7 +1,7 @@
 import ExpoModulesCore
 
-public class ExpoBlueskyReferrerModule: Module {
+public class ExpoORBISReferrerModule: Module {
   public func definition() -> ModuleDefinition {
-    Name("ExpoBlueskyReferrer")
+    Name("ExpoORBISReferrer")
   }
 }

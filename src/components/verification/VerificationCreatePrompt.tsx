@@ -49,11 +49,11 @@ export function VerificationCreatePrompt({
       <View style={[a.flex_row, a.align_center, a.gap_sm, a.pb_sm]}>
         <VerifiedCheck width={18} />
         <Prompt.TitleText style={[a.pb_0]}>
-          {_(msg`Verify this account?`)}
+          {_(msg`توثيق هذا الحساب؟`)}
         </Prompt.TitleText>
       </View>
       <Prompt.DescriptionText>
-        {_(msg`This action can be undone at any time.`)}
+        {_(msg`يمكنك التراجع عن هذا الإجراء في أي وقت.`)}
       </Prompt.DescriptionText>
 
       {moderationOpts ? (
@@ -82,9 +82,9 @@ export function VerificationCreatePrompt({
               variant="solid"
               color="primary"
               size={gtMobile ? 'small' : 'large'}
-              label={_(msg`Verify account`)}
+              label={_(msg`توثيق الحساب`)}
               onPress={onConfirm}>
-              <ButtonText>{_(msg`Verify account`)}</ButtonText>
+              <ButtonText>{_(msg`توثيق الحساب`)}</ButtonText>
               {isPending && <ButtonIcon icon={Loader} />}
             </Button>
             <Prompt.Cancel />

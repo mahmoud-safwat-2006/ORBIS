@@ -1,7 +1,7 @@
 import {type JSX, useCallback, useRef} from 'react'
 import * as Linking from 'expo-linking'
 import * as Notifications from 'expo-notifications'
-import {Referrer} from '@bsky.app/expo-bluesky-swiss-army'
+import {Referrer} from '@bsky.app/expo-orbis-swiss-army'
 import {i18n, type MessageDescriptor} from '@lingui/core'
 import {msg} from '@lingui/core/macro'
 import {
@@ -820,8 +820,8 @@ const FlatNavigator = ({
 
 const LINKING = {
   // TODO figure out what we are going to use
-  // note: `bluesky://` is what is used in app.config.js
-  prefixes: ['bsky://', 'bluesky://', 'https://bsky.app'],
+  // note: `orbis://` is what is used in app.config.js
+  prefixes: ['bsky://', 'orbis://', 'https://bsky.app'],
 
   getPathFromState(state: State) {
     // find the current node in the navigation tree
@@ -852,7 +852,7 @@ const LINKING = {
     // Chat invite URLs (`/chat/:code`) are handled by `useIntentHandler`, which
     // opens the GroupChatJoinDialog (or the logged-out join flow). Route the
     // path to Home so the dialog overlays Home instead of NotFound. On native,
-    // react-navigation strips the `bluesky://` prefix and passes the path
+    // react-navigation strips the `orbis://` prefix and passes the path
     // without a leading slash, so normalize before matching.
     const normalizedPath = path.startsWith('/') ? path : `/${path}`
     if (CHAT_INVITE_CODE_REGEX.test(normalizedPath.split('?')[0])) {

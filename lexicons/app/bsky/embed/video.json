@@ -100,5 +100,5 @@
   },
   "$type": "com.atproto.lexicon.schema",
   "lexicon": 1,
-  "description": "A video embedded in a Bluesky record (eg, a post)."
+  "description": "A video embedded in a ORBIS record (eg, a post)."
 }

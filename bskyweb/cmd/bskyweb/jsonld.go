@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	comatproto "github.com/bluesky-social/indigo/api/atproto"
-	appbsky "github.com/bluesky-social/indigo/api/bsky"
-	"github.com/bluesky-social/indigo/atproto/syntax"
+	comatproto "github.com/orbis-social/indigo/api/atproto"
+	appbsky "github.com/orbis-social/indigo/api/bsky"
+	"github.com/orbis-social/indigo/atproto/syntax"
 )
 
 // schema.org structured-data types emitted on post and profile pages.
@@ -321,7 +321,7 @@ func buildVideoObject(pv *appbsky.FeedDefs_PostView, embedURL, postText string, 
 	case pv.Author != nil && pv.Author.Handle != "" && pv.Author.Handle != "handle.invalid":
 		vo.Name = "Video by @" + pv.Author.Handle
 	default:
-		vo.Name = "Video on Bluesky"
+		vo.Name = "Video on ORBIS"
 	}
 	if postText != "" {
 		vo.Description = postText

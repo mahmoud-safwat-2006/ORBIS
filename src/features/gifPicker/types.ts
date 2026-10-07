@@ -1,5 +1,5 @@
 /**
- * GIF shape returned by the Bluesky GIF proxy. The field names follow the
+ * GIF shape returned by the ORBIS GIF proxy. The field names follow the
  * Tenor schema; Klipy responses are normalized to the same shape by the
  * proxy so downstream code can be provider-agnostic.
  */

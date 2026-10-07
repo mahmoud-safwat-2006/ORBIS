@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"html/template"
 
-	appbsky "github.com/bluesky-social/indigo/api/bsky"
-	"github.com/bluesky-social/indigo/atproto/syntax"
+	appbsky "github.com/orbis-social/indigo/api/bsky"
+	"github.com/orbis-social/indigo/atproto/syntax"
 )
 
 func (srv *Server) postEmbedHTML(postView *appbsky.FeedDefs_PostView) (string, error) {
@@ -23,7 +23,7 @@ func (srv *Server) postEmbedHTML(postView *appbsky.FeedDefs_PostView) (string, e
 		return "", err
 	}
 
-	const tpl = `<blockquote class="bluesky-embed" data-bluesky-uri="{{ .PostURI }}" data-bluesky-cid="{{ .PostCID }}"><p{{ if .PostLang }} lang="{{ .PostLang }}"{{ end }}>{{ .PostText }}</p>&mdash; <a href="{{ .ProfileURL }}">{{ .PostAuthor }}</a> <a href="{{ .PostURL }}">{{ .PostIndexedAt }}</a></blockquote><script async src="{{ .WidgetURL }}" charset="utf-8"></script>`
+	const tpl = `<blockquote class="orbis-embed" data-orbis-uri="{{ .PostURI }}" data-orbis-cid="{{ .PostCID }}"><p{{ if .PostLang }} lang="{{ .PostLang }}"{{ end }}>{{ .PostText }}</p>&mdash; <a href="{{ .ProfileURL }}">{{ .PostAuthor }}</a> <a href="{{ .PostURL }}">{{ .PostIndexedAt }}</a></blockquote><script async src="{{ .WidgetURL }}" charset="utf-8"></script>`
 
 	t, err := template.New("snippet").Parse(tpl)
 	if err != nil {

@@ -151,9 +151,9 @@ export function RejectMenu({
                 <Menu.ItemIcon icon={CircleX_Stroke2_Corner0_Rounded} />
               </Menu.Item>
             )}
-            <Menu.Item label={l`Block account`} onPress={onPressBlock}>
+            <Menu.Item label={l`حظر الحساب`} onPress={onPressBlock}>
               <Menu.ItemText>
-                <Trans>Block account</Trans>
+                <Trans>حظر الحساب</Trans>
               </Menu.ItemText>
               <Menu.ItemIcon icon={PersonXIcon} />
             </Menu.Item>

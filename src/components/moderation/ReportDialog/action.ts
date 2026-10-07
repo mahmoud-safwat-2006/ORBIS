@@ -141,7 +141,7 @@ export function useSubmitReportMutation() {
         })
       } else {
         /*
-         * Reports go to the labeler the user selected rather than Bluesky's, so
+         * Reports go to the labeler the user selected rather than ORBIS's, so
          * the proxy target is built per call from that labeler's creator did.
          */
         await client.call(com.atproto.moderation.createReport, report, {

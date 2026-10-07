@@ -25,7 +25,7 @@ export function gifPreviewUrl(gifUrl: string) {
 /**
  * Rewrites a KLIPY static CDN URL through the bsky proxy
  * (k.gifs.bsky.app) so downstream consumers can route requests
- * through Bluesky-owned infrastructure.
+ * through ORBIS-owned infrastructure.
  */
 export function klipyUrlToBskyGifUrl(klipyUrl: string) {
   let url

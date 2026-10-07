@@ -1,14 +1,14 @@
-package expo.modules.blueskygifview
+package expo.modules.orbisgifview
 
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import expo.modules.kotlin.modules.Module
 import expo.modules.kotlin.modules.ModuleDefinition
 
-class ExpoBlueskyGifViewModule : Module() {
+class ExpoORBISGifViewModule : Module() {
   override fun definition() =
     ModuleDefinition {
-      Name("ExpoBlueskyGifView")
+      Name("ExpoORBISGifView")
 
       AsyncFunction("prefetchAsync") { sources: List<String> ->
         val activity = appContext.currentActivity ?: return@AsyncFunction

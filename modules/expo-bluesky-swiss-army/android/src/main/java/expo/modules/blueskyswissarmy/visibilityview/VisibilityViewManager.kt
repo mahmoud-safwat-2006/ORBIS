@@ -1,4 +1,4 @@
-package expo.modules.blueskyswissarmy.visibilityview
+package expo.modules.orbisswissarmy.visibilityview
 
 import android.graphics.Rect
 

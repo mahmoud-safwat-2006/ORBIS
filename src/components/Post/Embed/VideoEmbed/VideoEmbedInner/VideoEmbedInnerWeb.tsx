@@ -136,7 +136,7 @@ export function VideoEmbedInnerWeb({
   )
 }
 
-// Bluesky serves HLS as MPEG-TS with H.264 + AAC. `Hls.isSupported()` is loose
+// ORBIS serves HLS as MPEG-TS with H.264 + AAC. `Hls.isSupported()` is loose
 // (true if MSE supports *any* of {H.264, AV1, VP9} OR *any* of {AAC, FLAC}),
 // so on Linux boxes missing H.264 (e.g. no ubuntu-restricted-extras, sandboxed
 // Firefox snap) it returns true and playback fails later on segment append.

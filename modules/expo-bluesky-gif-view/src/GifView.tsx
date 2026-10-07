@@ -12,10 +12,10 @@ interface GifViewNativeRef {
 
 const NativeModule: {
   prefetchAsync: (sources: string[]) => Promise<void>
-} = requireNativeModule('ExpoBlueskyGifView')
+} = requireNativeModule('ExpoORBISGifView')
 const NativeView: React.ComponentType<
   GifViewProps & {ref: React.RefObject<GifViewNativeRef | null>}
-> = requireNativeViewManager('ExpoBlueskyGifView')
+> = requireNativeViewManager('ExpoORBISGifView')
 
 export class GifView extends PureComponent<GifViewProps> {
   private nativeRef: React.RefObject<GifViewNativeRef | null> = createRef()

@@ -137,7 +137,7 @@ export function useModerationCauseDescription(
       if (!source) {
         if (cause.label.src === api.moderation.did) {
           source = 'moderation.bsky.app'
-          sourceDisplayName = 'Bluesky Moderation Service'
+          sourceDisplayName = 'ORBIS Moderation Service'
         } else {
           source = _(msg`an unknown labeler`)
         }

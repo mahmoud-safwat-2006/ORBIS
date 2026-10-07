@@ -5,7 +5,7 @@ import {SystemBars} from 'react-native-edge-to-edge'
 import {Gesture} from 'react-native-gesture-handler'
 import {useSafeAreaInsets} from 'react-native-safe-area-context'
 import {BottomSheetOutlet} from '@bsky.app/bottom-sheet'
-import {updateActiveViewAsync} from '@bsky.app/expo-bluesky-swiss-army/src/VisibilityView'
+import {updateActiveViewAsync} from '@bsky.app/expo-orbis-swiss-army/src/VisibilityView'
 import {useNavigation, useNavigationState} from '@react-navigation/native'
 
 import {useDedupe} from '#/lib/hooks/useDedupe'

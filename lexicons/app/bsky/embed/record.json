@@ -158,5 +158,5 @@
   },
   "$type": "com.atproto.lexicon.schema",
   "lexicon": 1,
-  "description": "A representation of a record embedded in a Bluesky record (eg, a post). For example, a quote-post, or sharing a feed generator record."
+  "description": "A representation of a record embedded in a ORBIS record (eg, a post). For example, a quote-post, or sharing a feed generator record."
 }

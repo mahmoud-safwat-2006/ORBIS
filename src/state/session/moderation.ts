@@ -37,9 +37,9 @@ export function readLabelers(did: string): string[] | undefined {
 
 /**
  * Apply an account's labeler subscriptions to the appview client, without
- * duplicating the globally redacted Bluesky moderation authority.
+ * duplicating the globally redacted ORBIS moderation authority.
  *
- * The Bluesky DID is filtered out because it already flows through the global
+ * The ORBIS DID is filtered out because it already flows through the global
  * `Client.appLabelers`, which lex emits with a `;redact` suffix. Listing it
  * per-instance would add a second, non-redacting entry for the same authority:
  * lex collects the two lists into a `Set` keyed on the suffixed string, so

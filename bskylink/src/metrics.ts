@@ -74,7 +74,7 @@ export class MetricsClient<M extends Record<string, any> = Events> {
      * deviceId is required for sharding events in Middleman. To avoid a hot
      * shard, we generate a random anonymous IDs for this client.
      *
-     * @see https://github.com/bluesky-social/tango/blob/d5819cde419d13e0d2cf837f4b30d48529d64060/middleman/handlers_tracking.go#L195
+     * @see https://github.com/orbis-social/tango/blob/d5819cde419d13e0d2cf837f4b30d48529d64060/middleman/handlers_tracking.go#L195
      */
     const anonId = `anon-${crypto.randomUUID()}`
 

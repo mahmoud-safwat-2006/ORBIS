@@ -1,12 +1,12 @@
-package expo.modules.blueskyswissarmy.visibilityview
+package expo.modules.orbisswissarmy.visibilityview
 
 import expo.modules.kotlin.modules.Module
 import expo.modules.kotlin.modules.ModuleDefinition
 
-class ExpoBlueskyVisibilityViewModule : Module() {
+class ExpoORBISVisibilityViewModule : Module() {
   override fun definition() =
     ModuleDefinition {
-      Name("ExpoBlueskyVisibilityView")
+      Name("ExpoORBISVisibilityView")
 
       AsyncFunction("updateActiveViewAsync") {
         VisibilityViewManager.updateActiveView()

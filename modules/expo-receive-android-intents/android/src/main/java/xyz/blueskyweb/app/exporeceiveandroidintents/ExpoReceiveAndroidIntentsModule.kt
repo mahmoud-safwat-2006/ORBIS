@@ -1,4 +1,4 @@
-package xyz.blueskyweb.app.exporeceiveandroidintents
+package xyz.orbisweb.app.exporeceiveandroidintents
 
 import android.content.Intent
 import android.graphics.Bitmap
@@ -64,7 +64,7 @@ class ExpoReceiveAndroidIntentsModule : Module() {
   private fun handleTextIntent(intent: Intent) {
     intent.getStringExtra(Intent.EXTRA_TEXT)?.let {
       val encoded = URLEncoder.encode(it, "UTF-8")
-      "bluesky://intent/compose?text=$encoded".toUri().let { uri ->
+      "orbis://intent/compose?text=$encoded".toUri().let { uri ->
         val newIntent = Intent(Intent.ACTION_VIEW, uri)
         appContext.currentActivity?.startActivity(newIntent)
       }
@@ -136,7 +136,7 @@ class ExpoReceiveAndroidIntentsModule : Module() {
     val encodedUris = URLEncoder.encode(allParams, "UTF-8")
     val encodedText = text?.let { URLEncoder.encode(it, "UTF-8") }
 
-    var composeIntent = "bluesky://intent/compose?imageUris=$encodedUris"
+    var composeIntent = "orbis://intent/compose?imageUris=$encodedUris"
     encodedText?.let { composeIntent += "&text=$it" }
 
     composeIntent.toUri().let {
@@ -187,7 +187,7 @@ class ExpoReceiveAndroidIntentsModule : Module() {
 
     val encodedText = text?.let { URLEncoder.encode(it, "UTF-8") }
 
-    var composeIntent = "bluesky://intent/compose?videoUri=${URLEncoder.encode(file.path, "UTF-8")}|${info["width"]}|${info["height"]}"
+    var composeIntent = "orbis://intent/compose?videoUri=${URLEncoder.encode(file.path, "UTF-8")}|${info["width"]}|${info["height"]}"
     encodedText?.let { composeIntent += "&text=$it" }
 
     composeIntent.toUri().let {

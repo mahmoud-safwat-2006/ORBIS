@@ -1,4 +1,4 @@
-package expo.modules.blueskygifview
+package expo.modules.orbisgifview
 
 import android.content.Context
 import android.graphics.Canvas

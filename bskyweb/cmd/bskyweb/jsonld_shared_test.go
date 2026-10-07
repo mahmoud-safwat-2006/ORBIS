@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"testing"
 
-	comatprototypes "github.com/bluesky-social/indigo/api/atproto"
-	appbsky "github.com/bluesky-social/indigo/api/bsky"
-	lexutil "github.com/bluesky-social/indigo/lex/util"
+	comatprototypes "github.com/orbis-social/indigo/api/atproto"
+	appbsky "github.com/orbis-social/indigo/api/bsky"
+	lexutil "github.com/orbis-social/indigo/lex/util"
 )
 
 // Tests for sharedContent (quote posts, link cards) and the parentItem

@@ -180,11 +180,11 @@ function Inner(
 
   const {videoTimestampSeconds} = props
 
-  // some reasons ONLY go to Bluesky
+  // some reasons ONLY go to ORBIS
   const isBskyOnlyReason = state?.selectedOption?.reason
     ? BSKY_LABELER_ONLY_REPORT_REASONS.has(state.selectedOption.reason)
     : false
-  // some subjects ONLY go to Bluesky
+  // some subjects ONLY go to ORBIS
   const isBskyOnlySubject = BSKY_LABELER_ONLY_SUBJECT_TYPES.has(
     props.subject.type,
   )
@@ -212,7 +212,7 @@ function Inner(
       .filter(l => {
         const collections: string[] | undefined = l.subjectCollections
         if (collections === undefined) return true
-        // all chat collections accepted, since only Bluesky handles chats
+        // all chat collections accepted, since only ORBIS handles chats
         if (
           props.subject.type === 'convoMessage' ||
           props.subject.type === 'convo'
@@ -248,7 +248,7 @@ function Inner(
 
   /**
    * We skip the select labeler step if there's only one possible labeler, and
-   * that labeler is Bluesky (which is the case for chat reports and certain
+   * that labeler is ORBIS (which is the case for chat reports and certain
    * reason types). We'll use this below to adjust the indexing and skip the
    * step in the UI.
    */
@@ -685,7 +685,7 @@ function Inner(
 
 /**
  * Opt-in for attaching how far the viewer had watched to a video report. Only
- * rendered once we have a position and the report is going to Bluesky.
+ * rendered once we have a position and the report is going to ORBIS.
  */
 function IncludeVideoTimestampToggle({
   seconds,

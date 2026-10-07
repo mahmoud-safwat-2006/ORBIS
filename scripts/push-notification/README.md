@@ -14,7 +14,7 @@ and notification-driven navigation.
 - Account-switch flow when `recipientDid` differs from the signed-in account
 - Navigation routing for each `reason` (post threads, profiles, conversations)
 
-**Does not cover** — `BlueskyNSE` (the iOS Notification Service Extension):
+**Does not cover** — `ORBISNSE` (the iOS Notification Service Extension):
 
 - Communication Notification styling for chat messages
 - Badge increment via `mutateWithBadge`
@@ -48,14 +48,14 @@ directly in Xcode.
 Pass the DID once via env var to avoid repeating it:
 
 ```
-export BLUESKY_TEST_DID=did:plc:yourdidhere
+export ORBIS_TEST_DID=did:plc:yourdidhere
 
 ./send.sh like
 ./send.sh chat-message
 ./send.sh follow
 ```
 
-Defaults: `--device booted`, `--bundle xyz.blueskyweb.app`. Run `./send.sh --help`
+Defaults: `--device booted`, `--bundle app.orbis.social`. Run `./send.sh --help`
 for the full list of available payloads.
 
 ## Foreground vs background

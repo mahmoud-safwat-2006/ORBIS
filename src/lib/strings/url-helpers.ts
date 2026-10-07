@@ -88,13 +88,21 @@ export function toShortUrl(url: string): string {
   }
 }
 
+export const ORBIS_LIVE_HOST = "https://orbis-app-gray.vercel.app"
+
 export function toShareUrl(url: string): string {
-  if (!url.startsWith('https')) {
-    const urlp = new URL('https://bsky.app')
-    urlp.pathname = url
-    url = urlp.toString()
-  }
-  return url
+  try {
+    if (url.startsWith("http://") || url.startsWith("https://")) {
+      const parsed = new URL(url)
+      if (parsed.host === "bsky.app" || parsed.host.includes("localhost")) {
+        return `${ORBIS_LIVE_HOST}${parsed.pathname}${parsed.search}`
+      }
+      return url
+    }
+  } catch {}
+
+  const path = url.startsWith("/") ? url : `/${url}`
+  return `${ORBIS_LIVE_HOST}${path}`
 }
 
 export function toBskyAppUrl(url: string): string {
@@ -118,7 +126,6 @@ export function toNiceHostingUrl(url: string): string {
  * host is `bsky.social` (the {@link BSKY_SERVICE} host) or ends with
  * `.host.bsky.network`. Returns false if the URL can't be parsed.
  */
-export const isBlueskyHostedUrl = isORBISHostedUrl
 export function isORBISHostedUrl(url: string): boolean {
   try {
     const {host} = new URL(url)

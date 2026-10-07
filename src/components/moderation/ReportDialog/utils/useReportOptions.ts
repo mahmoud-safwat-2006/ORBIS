@@ -33,8 +33,8 @@ export function useReportOptions() {
     const categories: Record<ReportCategory, ReportCategoryConfig> = {
       misleading: {
         key: 'misleading',
-        title: _(msg`Misleading`),
-        description: _(msg`Spam or other inauthentic behavior or deception`),
+        title: _(msg`محتوى مضلل أو احتيالي`),
+        description: _(msg`رسائل غير مرغوب فيها أو سلوك احتيالي`),
         options: [
           {
             title: _(msg`Spam`),
@@ -64,9 +64,9 @@ export function useReportOptions() {
       },
       sexualAdultContent: {
         key: 'sexualAdultContent',
-        title: _(msg`Adult content`),
+        title: _(msg`محتوى للبالغين`),
         description: _(
-          msg`Unlabeled, abusive, or non-consensual adult content`,
+          msg`محتوى إباحي أو غير مصرح به`,
         ),
         options: [
           {
@@ -97,8 +97,8 @@ export function useReportOptions() {
       },
       harassmentHate: {
         key: 'harassmentHate',
-        title: _(msg`Harassment or hate`),
-        description: _(msg`Abusive or discriminatory behavior`),
+        title: _(msg`مضايقة أو خطاب كراهية`),
+        description: _(msg`سلوك مسيء أو تمييزي`),
         options: [
           {
             title: _(msg`Trolling`),
@@ -124,8 +124,8 @@ export function useReportOptions() {
       },
       violencePhysicalHarm: {
         key: 'violencePhysicalHarm',
-        title: _(msg`Violence`),
-        description: _(msg`Violent or threatening content`),
+        title: _(msg`عنف أو تهديد`),
+        description: _(msg`محتوى عنيف أو ينطوي على تهديد`),
         options: [
           {
             title: _(msg`Animal welfare`),
@@ -160,8 +160,8 @@ export function useReportOptions() {
       },
       childSafety: {
         key: 'childSafety',
-        title: _(msg`Child safety`),
-        description: _(msg`Harming or endangering minors`),
+        title: _(msg`سلامة وحماية الأطفال`),
+        description: _(msg`إيذاء القاصرين أو تعريضهم للخطر`),
         options: [
           {
             title: _(msg`Child Sexual Abuse Material (CSAM)`),
@@ -187,8 +187,8 @@ export function useReportOptions() {
       },
       selfHarm: {
         key: 'selfHarm',
-        title: _(msg`Self-harm or dangerous behaviors`),
-        description: _(msg`Harmful or high-risk activities`),
+        title: _(msg`إيذاء النفس أو سلوكيات خطيرة`),
+        description: _(msg`أنشطة ضارة أو عالية الخطورة`),
         options: [
           {
             title: _(msg`Content promoting or depicting self-harm`),
@@ -214,8 +214,8 @@ export function useReportOptions() {
       },
       ruleBreaking: {
         key: 'ruleBreaking',
-        title: _(msg`Breaking site rules`),
-        description: _(msg`Banned activities or security violations`),
+        title: _(msg`مخالفة قواعد المنصة`),
+        description: _(msg`أنشطة محظورة أو انتهاكات أمنية`),
         options: [
           {
             title: _(msg`Hacking or system attacks`),
@@ -237,11 +237,11 @@ export function useReportOptions() {
       },
       other: {
         key: 'other',
-        title: _(msg`Other`),
-        description: _(msg`An issue not included in these options`),
+        title: _(msg`أسباب أخرى`),
+        description: _(msg`مشكلة غير مدرجة في هذه الخيارات`),
         options: [
           {
-            title: _(msg`Other`),
+            title: _(msg`أسباب أخرى`),
             reason: tools.ozone.report.defs.reasonOther.value,
           },
         ],

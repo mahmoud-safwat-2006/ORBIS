@@ -17,11 +17,11 @@
       </dict>
     </dict>
     <key>MainAppScheme</key>
-    <string>bluesky</string>
+    <string>orbis</string>
     <key>CFBundleName</key>
     <string>$(PRODUCT_NAME)</string>
     <key>CFBundleDisplayName</key>
-    <string>Bluesky Notifications</string>
+    <string>ORBIS Notifications</string>
     <key>CFBundleIdentifier</key>
     <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
     <key>CFBundleVersion</key>

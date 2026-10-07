@@ -154,7 +154,7 @@ function Empty() {
         <Text style={[a.text_sm, a.text_center, t.atoms.text_contrast_high]}>
           <Trans>
             You have not blocked any accounts yet. To block an account, go to
-            their profile and select "Block account" from the menu on their
+            their profile and select "حظر الحساب" from the menu on their
             account.
           </Trans>
         </Text>

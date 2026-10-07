@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface Window {
-  bluesky: {
+  orbis: {
     scan: (element?: Pick<Element, 'querySelectorAll'>) => void
   }
   BSKY_DEV_EMBED_URL?: string
@@ -17,7 +17,7 @@ const EMBED_URL =
     ? window.BSKY_DEV_EMBED_URL
     : 'https://embed.bsky.app'
 
-window.bluesky = window.bluesky || {
+window.orbis = window.orbis || {
   scan,
 }
 
@@ -37,7 +37,7 @@ window.addEventListener('message', event => {
   }
 
   const embed = document.querySelector<HTMLIFrameElement>(
-    `[data-bluesky-id="${id}"]`,
+    `[data-orbis-id="${id}"]`,
   )
 
   if (!embed) {
@@ -59,13 +59,13 @@ window.addEventListener('message', event => {
  * @returns
  */
 function scan(node = document) {
-  const embeds = node.querySelectorAll<HTMLIFrameElement>('[data-bluesky-uri]')
+  const embeds = node.querySelectorAll<HTMLIFrameElement>('[data-orbis-uri]')
 
   for (let i = 0; i < embeds.length; i++) {
     const id = String(Math.random()).slice(2)
 
     const embed = embeds[i]
-    const aturi = embed.getAttribute('data-bluesky-uri')
+    const aturi = embed.getAttribute('data-orbis-uri')
 
     if (!aturi) {
       continue
@@ -78,12 +78,12 @@ function scan(node = document) {
     if (ref_url.startsWith('http')) {
       searchParams.set('ref_url', encodeURIComponent(ref_url))
     }
-    if (embed.dataset.blueskyEmbedColorMode) {
-      searchParams.set('colorMode', embed.dataset.blueskyEmbedColorMode)
+    if (embed.dataset.orbisEmbedColorMode) {
+      searchParams.set('colorMode', embed.dataset.orbisEmbedColorMode)
     }
 
     const iframe = document.createElement('iframe')
-    iframe.setAttribute('data-bluesky-id', id)
+    iframe.setAttribute('data-orbis-id', id)
     iframe.src = `${EMBED_URL}/embed/${aturi.slice(
       'at://'.length,
     )}?${searchParams.toString()}`
@@ -100,7 +100,7 @@ function scan(node = document) {
     container.style.marginTop = '10px'
     container.style.marginBottom = '10px'
     container.style.display = 'flex'
-    container.className = 'bluesky-embed'
+    container.className = 'orbis-embed'
 
     container.appendChild(iframe)
 

@@ -1,10 +1,10 @@
-# BlueskyClip
+# ORBISClip
 
-An iOS App Clip implementation for Bluesky starter packs. App Clips are lightweight app experiences that allow users to preview and join Bluesky through starter packs without installing the full app.
+An iOS App Clip implementation for ORBIS starter packs. App Clips are lightweight app experiences that allow users to preview and join ORBIS through starter packs without installing the full app.
 
 ## What It Does
 
-BlueskyClip provides a minimal, on-demand iOS app experience for viewing and joining Bluesky starter packs. When a user encounters a starter pack link (e.g., `bsky.app/start/...` or `go.bsky.app/...`), iOS can present the App Clip instead of requiring a full app install. The App Clip:
+ORBISClip provides a minimal, on-demand iOS app experience for viewing and joining ORBIS starter packs. When a user encounters a starter pack link (e.g., `bsky.app/start/...` or `go.bsky.app/...`), iOS can present the App Clip instead of requiring a full app install. The App Clip:
 
 1. Loads the starter pack web page in a WKWebView
 2. Allows users to browse the starter pack content
@@ -25,7 +25,7 @@ The App Clip is a standalone iOS target with its own minimal Swift implementatio
 ```
 User taps starter pack link
         ↓
-iOS presents BlueskyClip App Clip
+iOS presents ORBISClip App Clip
         ↓
 WKWebView loads bsky.app with ?clip=true parameter
         ↓
@@ -70,7 +70,7 @@ The App Clip target is automatically configured via Expo config plugins located 
 - **withAppEntitlements.js**: Configures main app entitlements for App Clip association
 - **withClipEntitlements.js**: Sets up App Clip entitlements (App Groups, parent app identifier, associated domains)
 - **withClipInfoPlist.js**: Generates the Info.plist for the App Clip target
-- **withFiles.js**: Copies Swift source files and assets from `modules/BlueskyClip/` to the iOS build directory
+- **withFiles.js**: Copies Swift source files and assets from `modules/ORBISClip/` to the iOS build directory
 
 ### Entitlements
 
@@ -78,7 +78,7 @@ The App Clip target is automatically configured via Expo config plugins located 
 - `com.apple.security.application-groups`: `group.app.bsky`
 - `com.apple.developer.associated-appclip-app-identifiers`: Links to the App Clip bundle ID
 
-**App Clip** (`BlueskyClip.entitlements`):
+**App Clip** (`ORBISClip.entitlements`):
 - `com.apple.security.application-groups`: `group.app.bsky` (for data sharing)
 - `com.apple.developer.parent-application-identifiers`: Links to the main app bundle ID
 - `com.apple.developer.associated-domains`: Inherits from main app config (for universal links)
@@ -114,7 +114,7 @@ The main app detects App Clip-originated starter packs through `useStarterPackEn
 ## Files
 
 ```
-modules/BlueskyClip/
+modules/ORBISClip/
 ├── AppDelegate.swift         # App lifecycle and URL handling
 ├── ViewController.swift      # WebView management and message handling
 └── Images.xcassets/          # App Clip icon assets

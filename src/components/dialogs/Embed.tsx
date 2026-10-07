@@ -83,11 +83,11 @@ function EmbedDialogInner({
     // DO NOT ADD ANY NEW INTERPOLATIONS BELOW WITHOUT ESCAPING THEM!
     // Also, keep this code synced with the bskyembed code in landing.tsx.
     // x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
-    return `<blockquote class="bluesky-embed" data-bluesky-uri="${escapeHtml(
+    return `<blockquote class="orbis-embed" data-orbis-uri="${escapeHtml(
       postUri,
-    )}" data-bluesky-cid="${escapeHtml(
+    )}" data-orbis-cid="${escapeHtml(
       postCid,
-    )}" data-bluesky-embed-color-mode="${escapeHtml(
+    )}" data-orbis-embed-color-mode="${escapeHtml(
       colorMode,
     )}"><p lang="${escapeHtml(lang)}">${escapeHtml(record.text)}${
       record.embed

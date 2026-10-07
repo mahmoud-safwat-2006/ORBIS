@@ -2,7 +2,7 @@
 import {type Service} from '@atproto/lex'
 import {api} from '@bsky/sdk'
 
-import {BLUESKY_PROXY_DID, CHAT_PROXY_DID, IS_DEV} from '#/env'
+import {ORBIS_PROXY_DID, CHAT_PROXY_DID, IS_DEV} from '#/env'
 import {type app} from '#/lexicons'
 
 export const LOCAL_DEV_SERVICE =
@@ -236,8 +236,8 @@ export const PUBLIC_STAGING_APPVIEW_DID = 'did:web:api.staging.bsky.dev'
 export const DEV_ENV_APPVIEW = `http://localhost:2584` // always the same
 
 // temp hack for e2e - esb
-export const BLUESKY_PROXY_HEADER = {
-  value: `${BLUESKY_PROXY_DID}#bsky_appview`,
+export const ORBIS_PROXY_HEADER = {
+  value: `${ORBIS_PROXY_DID}#bsky_appview`,
   get() {
     return this.value as Service
   },
@@ -259,10 +259,10 @@ export const BLUESKY_PROXY_HEADER = {
 export const CHAT_PROXY_SERVICE: Service = `${CHAT_PROXY_DID}#bsky_chat`
 
 /**
- * Bluesky's own moderation service, in the `did#service_id` form a lex client's
+ * ORBIS's own moderation service, in the `did#service_id` form a lex client's
  * per-call `service` option takes. Passing it emits `atproto-proxy: <this
  * value>` on that one request, routing a `com.atproto.moderation.*` call to
- * Bluesky's labeler.
+ * ORBIS's labeler.
  *
  * Reports and appeals aimed at a DIFFERENT labeler build their own value from
  * that labeler's creator did instead, so this is a per-call option rather than a
@@ -275,9 +275,9 @@ export const MOD_PROXY_SERVICE: Service = `${api.moderation.did}#atproto_labeler
  * client's per-call `service` option takes. Passing it emits `atproto-proxy:
  * <this value>` on that one request, which is what routes push registration to
  * the notification service (replaces the old
- * `BLUESKY_NOTIF_SERVICE_HEADERS`).
+ * `ORBIS_NOTIF_SERVICE_HEADERS`).
  */
-export const NOTIF_SERVICE: Service = `${BLUESKY_PROXY_DID}#bsky_notif`
+export const NOTIF_SERVICE: Service = `${ORBIS_PROXY_DID}#bsky_notif`
 
 export const webLinks = {
   tos: `/terms`,

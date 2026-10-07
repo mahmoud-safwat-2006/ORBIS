@@ -1,4 +1,4 @@
-# expo-bluesky-gif-view
+# expo-orbis-gif-view
 
 An Expo module for displaying animated GIFs and WebP images with optimized performance and playback controls.
 
@@ -28,7 +28,7 @@ The module uses native platform libraries for optimal GIF rendering performance:
 - **Library**: SDWebImage with SDWebImageWebPCoder
 - **Key Files**:
   - `ios/GifView.swift` - Main view implementation using `SDAnimatedImageView`
-  - `ios/ExpoBlueskyGifViewModule.swift` - Module definition and prop bindings
+  - `ios/ExpoORBISGifViewModule.swift` - Module definition and prop bindings
   - `ios/Util.swift` - Cache configuration utilities
 
 **Approach**: Uses `SDAnimatedImageView` for hardware-accelerated GIF rendering. Images are cached to disk only (not memory) to avoid performance issues with `SDAnimatedImage` when loaded from memory. The view automatically cancels pending requests when scrolled off-screen and resumes loading when visible.
@@ -37,9 +37,9 @@ The module uses native platform libraries for optimal GIF rendering performance:
 
 - **Library**: Glide
 - **Key Files**:
-  - `android/src/main/java/expo/modules/blueskygifview/GifView.kt` - Main view implementation
-  - `android/src/main/java/expo/modules/blueskygifview/ExpoBlueskyGifViewModule.kt` - Module definition
-  - `android/src/main/java/expo/modules/blueskygifview/AppCompatImageViewExtended.kt` - Custom ImageView with playback control
+  - `android/src/main/java/expo/modules/orbisgifview/GifView.kt` - Main view implementation
+  - `android/src/main/java/expo/modules/orbisgifview/ExpoORBISGifViewModule.kt` - Module definition
+  - `android/src/main/java/expo/modules/orbisgifview/AppCompatImageViewExtended.kt` - Custom ImageView with playback control
 
 **Approach**: Uses Glide's disk cache strategy for loading animated GIFs. Placeholders are loaded with `skipMemoryCache(true)` to avoid cache bloat. The custom `AppCompatImageViewExtended` detects when animations are loaded via `onDraw` and manages the `Animatable` drawable lifecycle.
 
@@ -53,7 +53,7 @@ The module uses native platform libraries for optimal GIF rendering performance:
 ## Usage
 
 ```tsx
-import {GifView} from 'expo-bluesky-gif-view'
+import {GifView} from 'expo-orbis-gif-view'
 
 function MyComponent() {
   const gifRef = React.useRef<GifView>(null)
@@ -109,7 +109,7 @@ await GifView.prefetchAsync([
 The module requires SDWebImage and SDWebImageWebPCoder:
 
 ```ruby
-# ios/ExpoBlueskyGifView.podspec
+# ios/ExpoORBISGifView.podspec
 s.dependency 'SDWebImage', '~> 5.21.0'
 s.dependency 'SDWebImageWebPCoder', '~> 0.14.6'
 ```
@@ -146,7 +146,7 @@ implementation 'com.github.bumptech.glide:glide:4.13.2'
 ## Files Overview
 
 ```
-expo-bluesky-gif-view/
+expo-orbis-gif-view/
 ├── index.ts                              # Module entry point
 ├── expo-module.config.json               # Expo module configuration
 ├── src/
@@ -154,14 +154,14 @@ expo-bluesky-gif-view/
 │   ├── GifView.tsx                       # Native implementation (iOS/Android)
 │   └── GifView.web.tsx                   # Web implementation
 ├── ios/
-│   ├── ExpoBlueskyGifView.podspec        # CocoaPods spec
-│   ├── ExpoBlueskyGifViewModule.swift    # Module and prop definitions
+│   ├── ExpoORBISGifView.podspec        # CocoaPods spec
+│   ├── ExpoORBISGifViewModule.swift    # Module and prop definitions
 │   ├── GifView.swift                     # iOS view implementation
 │   └── Util.swift                        # Cache configuration
 └── android/
     ├── build.gradle                      # Gradle build configuration
-    └── src/main/java/expo/modules/blueskygifview/
-        ├── ExpoBlueskyGifViewModule.kt   # Module and prop definitions
+    └── src/main/java/expo/modules/orbisgifview/
+        ├── ExpoORBISGifViewModule.kt   # Module and prop definitions
         ├── GifView.kt                    # Android view implementation
         └── AppCompatImageViewExtended.kt # Custom ImageView for playback
 ```

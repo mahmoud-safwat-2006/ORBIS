@@ -89,5 +89,5 @@
   },
   "$type": "com.atproto.lexicon.schema",
   "lexicon": 1,
-  "description": "A set of images embedded in a Bluesky record (eg, a post)."
+  "description": "A set of images embedded in a ORBIS record (eg, a post)."
 }

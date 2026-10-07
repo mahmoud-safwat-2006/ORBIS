@@ -26,7 +26,7 @@ const basicView = {
     createdAt: '2024-09-22T03:52:03.686Z',
     feeds: [],
     list: 'at://did:plc:qrllvid7s54k4hnwtqxwetrf/app.bsky.graph.list/3l4posztwzy2e',
-    name: 'Bluesky for Art History',
+    name: 'ORBIS for Art History',
   },
   creator,
   indexedAt: now(),

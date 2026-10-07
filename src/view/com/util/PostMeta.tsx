@@ -110,7 +110,7 @@ let PostMeta = (opts: PostMetaOpts): React.ReactNode => {
                 ),
               )}
             </MaybeLinkText>
-            <OrbisVerifiedBadge size={16} displayName={displayName} handle={handle} did={author.did} />
+            
             <ProfileBadges
               profile={author}
               size="sm"

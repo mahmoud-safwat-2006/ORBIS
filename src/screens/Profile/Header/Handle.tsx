@@ -30,7 +30,7 @@ export function ProfileHeaderHandle({
       {profile.viewer?.followedBy && !blockHide ? (
         <View style={[t.atoms.bg_contrast_50, a.rounded_xs, a.px_sm, a.py_xs]}>
           <Text style={[t.atoms.text, a.text_sm]}>
-            <Trans>Follows you</Trans>
+            <Text style={[t.atoms.text, a.text_sm]}>يتابعك</Text>
           </Text>
         </View>
       ) : undefined}

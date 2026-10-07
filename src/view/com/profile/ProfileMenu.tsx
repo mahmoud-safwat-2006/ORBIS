@@ -425,10 +425,10 @@ let ProfileMenu = ({
                   ) : (
                     <Menu.Item
                       testID="profileHeaderDropdownVerificationCreateButton"
-                      label={l`Verify account`}
+                      label={l`توثيق الحساب`}
                       onPress={() => verificationCreatePromptControl.open()}>
                       <Menu.ItemText>
-                        <Trans>Verify account</Trans>
+                        <Trans>توثيق الحساب</Trans>
                       </Menu.ItemText>
                       <Menu.ItemIcon icon={CircleCheckIcon} />
                     </Menu.Item>
@@ -443,15 +443,15 @@ let ProfileMenu = ({
                               testID="profileHeaderDropdownMuteRepostsBtn"
                               label={
                                 profile.viewer?.mutedOnlyReposts
-                                  ? l`Show reposts in feeds`
-                                  : l`Hide reposts in feeds`
+                                  ? l`إظهار المنشورات المعاد نشرها`
+                                  : l`إخفاء المنشورات المعاد نشرها`
                               }
                               onPress={() => void onPressMuteReposts()}>
                               <Menu.ItemText>
                                 {profile.viewer?.mutedOnlyReposts ? (
-                                  <Trans>Show reposts in feeds</Trans>
+                                  <Trans>إظهار المنشورات المعاد نشرها</Trans>
                                 ) : (
-                                  <Trans>Hide reposts in feeds</Trans>
+                                  <Trans>إخفاء المنشورات المعاد نشرها</Trans>
                                 )}
                               </Menu.ItemText>
                               <Menu.ItemIcon
@@ -467,15 +467,15 @@ let ProfileMenu = ({
                             testID="profileHeaderDropdownMuteBtn"
                             label={
                               profile.viewer?.muted
-                                ? l`Unmute account`
-                                : l`Mute account`
+                                ? l`إلغاء كتم الحساب`
+                                : l`كتم الحساب`
                             }
                             onPress={() => void onPressMuteAccount()}>
                             <Menu.ItemText>
                               {profile.viewer?.muted ? (
-                                <Trans>Unmute account</Trans>
+                                <Trans>إلغاء كتم الحساب</Trans>
                               ) : (
-                                <Trans>Mute account</Trans>
+                                <Trans>كتم الحساب</Trans>
                               )}
                             </Menu.ItemText>
                             <Menu.ItemIcon
@@ -491,15 +491,15 @@ let ProfileMenu = ({
                         testID="profileHeaderDropdownBlockBtn"
                         label={
                           profile.viewer?.blocking
-                            ? l`Unblock account`
-                            : l`Block account`
+                            ? l`إلغاء حظر الحساب`
+                            : l`حظر الحساب`
                         }
                         onPress={() => blockPromptControl.open()}>
                         <Menu.ItemText>
                           {profile.viewer?.blocking ? (
-                            <Trans>Unblock account</Trans>
+                            <Trans>إلغاء حظر الحساب</Trans>
                           ) : (
-                            <Trans>Block account</Trans>
+                            <Trans>حظر الحساب</Trans>
                           )}
                         </Menu.ItemText>
                         <Menu.ItemIcon
@@ -513,10 +513,10 @@ let ProfileMenu = ({
                     )}
                     <Menu.Item
                       testID="profileHeaderDropdownReportBtn"
-                      label={l`Report account`}
+                      label={l`إبلاغ عن الحساب`}
                       onPress={onPressReportAccount}>
                       <Menu.ItemText>
-                        <Trans>Report account</Trans>
+                        <Trans>إبلاغ عن الحساب</Trans>
                       </Menu.ItemText>
                       <Menu.ItemIcon icon={FlagIcon} />
                     </Menu.Item>

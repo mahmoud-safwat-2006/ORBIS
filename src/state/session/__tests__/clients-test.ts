@@ -18,7 +18,7 @@ jest.mock('jwt-decode', () => ({
   },
 }))
 
-import {BLUESKY_PROXY_HEADER, CHAT_PROXY_SERVICE} from '#/lib/constants'
+import {ORBIS_PROXY_HEADER, CHAT_PROXY_SERVICE} from '#/lib/constants'
 import {app, chat, com} from '#/lexicons'
 import {configureGlobalAppLabelers} from '../additional-moderation-authorities'
 import {
@@ -113,7 +113,7 @@ describe('buildAppviewClient', () => {
 
     expect(
       headersFor(fetchMock, 'app.bsky.actor.getProfile').get('atproto-proxy'),
-    ).toBe(BLUESKY_PROXY_HEADER.get())
+    ).toBe(ORBIS_PROXY_HEADER.get())
   })
 
   it('omits the device and session headers', async () => {

@@ -15,10 +15,10 @@ import (
 
 	_ "net/http/pprof"
 
-	"github.com/bluesky-social/indigo/atproto/identity"
-	"github.com/bluesky-social/indigo/util/cliutil"
-	"github.com/bluesky-social/indigo/xrpc"
-	"github.com/bluesky-social/social-app/bskyweb"
+	"github.com/orbis-social/indigo/atproto/identity"
+	"github.com/orbis-social/indigo/util/cliutil"
+	"github.com/orbis-social/indigo/xrpc"
+	"github.com/orbis-social/social-app/bskyweb"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
 	"github.com/labstack/echo-contrib/echoprometheus"

@@ -18,6 +18,10 @@ if (process.env.BSKY_PROFILE) {
 }
 
 const resolver: CustomResolver = (context, moduleName, platform) => {
+  if (moduleName.startsWith('@bsky.app/expo-orbis-')) {
+    const mapped = moduleName.replace('@bsky.app/expo-orbis-', '@bsky.app/expo-orbis-');
+    return context.resolveRequest(context, mapped, platform);
+  }
   if (
     platform === 'web' &&
     /^react-native-gesture-handler(\/|$)/.test(moduleName)

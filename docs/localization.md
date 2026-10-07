@@ -1,11 +1,11 @@
 # Internationalization
 
-We want the official Bluesky app to be supported in as many languages as possible. If you want to help us translate the app, please get involved on [Crowdin](https://bluesky.crowdin.com/bluesky-social) or open an issue on the [Bluesky app repo on GitHub](https://github.com/bluesky-social/social-app).
+We want the official ORBIS app to be supported in as many languages as possible. If you want to help us translate the app, please get involved on [Crowdin](https://orbis.crowdin.com/orbis-social) or open an issue on the [ORBIS app repo on GitHub](https://github.com/orbis-social/social-app).
 
 ## Tools
 
 - We use Crowdin to manage translations.
-  - Bluesky Crowdin: https://bluesky.crowdin.com/bluesky-social
+  - ORBIS Crowdin: https://orbis.crowdin.com/orbis-social
   - Introduction to Crowdin: https://support.crowdin.com/for-translators/
 - We use Lingui to implement translations. You can find the documentation [here](https://lingui.dev/).
 
@@ -15,7 +15,7 @@ Much of the app is translated by community contributions. (We <3 our translators
 
 ### Using Crowdin
 
-[Crowdin](https://bluesky.crowdin.com/bluesky-social) is our primary tool for managing translations. There are two roles:
+[Crowdin](https://orbis.crowdin.com/orbis-social) is our primary tool for managing translations. There are two roles:
 
 - **Proof-readers**. Can create new translations and approve submitted translations.
 - **Translators**. Can create new translations.
@@ -32,7 +32,7 @@ Please treat everyone with respect. Proof-readers are given final say on transla
 
 ### Adding a new language
 
-You can request a new language be added to the project by clicking **Request New Language** on [Crowdin](https://bluesky.crowdin.com/bluesky-social) or you can create a [GitHub issue](https://github.com/bluesky-social/social-app/issues).
+You can request a new language be added to the project by clicking **Request New Language** on [Crowdin](https://orbis.crowdin.com/orbis-social) or you can create a [GitHub issue](https://github.com/orbis-social/social-app/issues).
 
 Please only request a new language when you are certain you will be able to contribute a substantive portion of translations for the language.
 
@@ -65,7 +65,7 @@ If necessary, you can also push translations to Crowdin manually using `pnpm int
 
 When a new language is added to Crowdin, it gets synced down the next time `pnpm intl:pull` is run. You then need to add the language in a few places - the AppLanguages array, `date-fns`, Intl polyfills etc.
 
-Importantly, we use a two-letter language code (e.g. `en`, `fr`). Crowdin uses a full locale (e.g. `pt-BR`) and maps them to the two-letter code. This can become ambiguous if we have multiple languages that share a two-letter code (e.g. `fr-FR` and `fr-CA`), so we need to manually override the two-letter code into an unambiguous locale. This is done in the Crowdin language settings (*not* the `crowdin.yml` file!). When a new ambiguous language is added, go to https://bluesky.crowdin.com/u/projects/1/languages and map the language's two-letter code to it's locale. If not, the two languages may silently overwrite each other.
+Importantly, we use a two-letter language code (e.g. `en`, `fr`). Crowdin uses a full locale (e.g. `pt-BR`) and maps them to the two-letter code. This can become ambiguous if we have multiple languages that share a two-letter code (e.g. `fr-FR` and `fr-CA`), so we need to manually override the two-letter code into an unambiguous locale. This is done in the Crowdin language settings (*not* the `crowdin.yml` file!). When a new ambiguous language is added, go to https://orbis.crowdin.com/u/projects/1/languages and map the language's two-letter code to it's locale. If not, the two languages may silently overwrite each other.
 
 ![crowdin language mapping config](./img/language-mapping.png)
 

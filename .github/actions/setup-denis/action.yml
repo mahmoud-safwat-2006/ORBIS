@@ -2,13 +2,13 @@
 name: Setup denis CLI
 description: >
   Download and verify the denis OTA publish binary from the (private)
-  bluesky-social/tango releases and put it on PATH. Uses a short-lived GitHub
+  orbis-social/tango releases and put it on PATH. Uses a short-lived GitHub
   App token scoped to contents:read on tango, since the default GITHUB_TOKEN
   cannot read a private repo's releases.
 
 inputs:
   release-tag:
-    description: denis release tag in bluesky-social/tango to download
+    description: denis release tag in orbis-social/tango to download
     required: true
   app-id:
     description: GitHub App ID for the token used to read tango releases
@@ -39,7 +39,7 @@ runs:
         mkdir -p "$BIN_DIR"
         cd "$BIN_DIR"
         gh release download "$RELEASE_TAG" \
-          --repo bluesky-social/tango \
+          --repo orbis-social/tango \
           --pattern denis-linux-amd64 \
           --pattern denis-linux-amd64.sha256 \
           --clobber

@@ -23,13 +23,13 @@ export function getJoinMessage({
   if (diff.unit === 'now') {
     if (isMe) {
       return joinedViaStarterPack
-        ? i18n._(msg`You joined Bluesky using a Starter Pack just now`)
-        : i18n._(msg`You joined Bluesky just now`)
+        ? i18n._(msg`You joined ORBIS using a Starter Pack just now`)
+        : i18n._(msg`You joined ORBIS just now`)
     }
 
     return joinedViaStarterPack
-      ? i18n._(msg`${profileName} joined Bluesky using a Starter Pack just now`)
-      : i18n._(msg`${profileName} joined Bluesky just now`)
+      ? i18n._(msg`${profileName} joined ORBIS using a Starter Pack just now`)
+      : i18n._(msg`${profileName} joined ORBIS just now`)
   }
 
   const timeAgoString = formatDateDiff({diff, i18n, format: 'long'})
@@ -37,14 +37,14 @@ export function getJoinMessage({
   if (isMe) {
     return joinedViaStarterPack
       ? i18n._(
-          msg`You joined Bluesky using a Starter Pack ${timeAgoString} ago`,
+          msg`You joined ORBIS using a Starter Pack ${timeAgoString} ago`,
         )
-      : i18n._(msg`You joined Bluesky ${timeAgoString} ago`)
+      : i18n._(msg`You joined ORBIS ${timeAgoString} ago`)
   }
 
   return joinedViaStarterPack
     ? i18n._(
-        msg`${profileName} joined Bluesky using a Starter Pack ${timeAgoString} ago`,
+        msg`${profileName} joined ORBIS using a Starter Pack ${timeAgoString} ago`,
       )
-    : i18n._(msg`${profileName} joined Bluesky ${timeAgoString} ago`)
+    : i18n._(msg`${profileName} joined ORBIS ${timeAgoString} ago`)
 }

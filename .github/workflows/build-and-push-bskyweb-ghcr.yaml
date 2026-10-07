@@ -53,7 +53,7 @@ jobs:
           cache-to: type=gha,mode=max,scope=${{ matrix.image }}
 
   bskyweb-container-ghcr:
-    if: github.event_name == 'push' && github.repository == 'bluesky-social/social-app'
+    if: github.event_name == 'push' && github.repository == 'orbis-social/social-app'
     runs-on: ubuntu-latest
     permissions:
       contents: read

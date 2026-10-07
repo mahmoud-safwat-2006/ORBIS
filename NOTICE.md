@@ -59,4 +59,4 @@ Copyright (c) 2020 @catamphetamine <purecatamphetamine@gmail.com>
 
 ---
 
-For the licensing position of assets that are **not** covered by our MIT license — commissioned artwork, the licensed icon system, Bluesky trademarks, third-party marks, and the product imagery in `assets/images/` — see [`ASSETS.md`](./ASSETS.md), which names known rights holders and identifies the product imagery whose provenance is still being documented.
+For the licensing position of assets that are **not** covered by our MIT license — commissioned artwork, the licensed icon system, ORBIS trademarks, third-party marks, and the product imagery in `assets/images/` — see [`ASSETS.md`](./ASSETS.md), which names known rights holders and identifies the product imagery whose provenance is still being documented.

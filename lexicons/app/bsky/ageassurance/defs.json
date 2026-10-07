@@ -177,7 +177,7 @@
         },
         "minAccessAge": {
           "type": "integer",
-          "description": "The minimum age (as a whole integer) required to use Bluesky in this region."
+          "description": "The minimum age (as a whole integer) required to use ORBIS in this region."
         },
         "additionalVerificationMethods": {
           "type": "array",

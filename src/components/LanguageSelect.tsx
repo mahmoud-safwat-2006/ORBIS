@@ -15,24 +15,24 @@ export function LanguageSelect({
   onChange,
   items = DEFAULT_ITEMS,
   label,
-  disabledBlueskySupportedLanguageSanitization = false,
+  disabledORBISSupportedLanguageSanitization = false,
 }: {
   value?: string
   onChange: (value: string) => void
   items?: {label: string; value: string}[]
   label?: string
-  disabledBlueskySupportedLanguageSanitization?: boolean
+  disabledORBISSupportedLanguageSanitization?: boolean
 }) {
   const {_} = useLingui()
   const selectValue =
-    value && !disabledBlueskySupportedLanguageSanitization
+    value && !disabledORBISSupportedLanguageSanitization
       ? sanitizeAppLanguageSetting(value)
       : value
 
   const handleOnChange = (value: string) => {
     if (!value) return
     onChange(
-      disabledBlueskySupportedLanguageSanitization
+      disabledORBISSupportedLanguageSanitization
         ? value
         : sanitizeAppLanguageSetting(value),
     )

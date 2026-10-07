@@ -228,7 +228,7 @@ function SavedFeedsInner({
               Feeds are custom algorithms that users build with a little coding
               expertise.{' '}
               <InlineLinkText
-                to="https://github.com/bluesky-social/feed-generator"
+                to="https://github.com/orbis-social/feed-generator"
                 label={_(msg`See this guide`)}
                 disableMismatchWarning
                 style={[a.leading_snug]}>
@@ -399,7 +399,7 @@ function SavedFeedsA11y({
               Feeds are custom algorithms that users build with a little coding
               expertise.{' '}
               <InlineLinkText
-                to="https://github.com/bluesky-social/feed-generator"
+                to="https://github.com/orbis-social/feed-generator"
                 label={_(msg`See this guide`)}
                 disableMismatchWarning
                 style={[a.leading_snug]}>

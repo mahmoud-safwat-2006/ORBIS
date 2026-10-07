@@ -2,9 +2,9 @@ import ExpoModulesCore
 import SDWebImage
 import SDWebImageWebPCoder
 
-public class ExpoBlueskyGifViewModule: Module {
+public class ExpoORBISGifViewModule: Module {
   public func definition() -> ModuleDefinition {
-    Name("ExpoBlueskyGifView")
+    Name("ExpoORBISGifView")
 
     OnCreate {
       SDImageCodersManager.shared.addCoder(SDImageGIFCoder.shared)

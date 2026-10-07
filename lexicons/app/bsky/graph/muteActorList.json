@@ -18,7 +18,7 @@
         },
         "encoding": "application/json"
       },
-      "description": "Creates a mute relationship for the specified list of accounts. Mutes are private in Bluesky. Requires auth."
+      "description": "Creates a mute relationship for the specified list of accounts. Mutes are private in ORBIS. Requires auth."
     }
   },
   "$type": "com.atproto.lexicon.schema",

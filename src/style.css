@@ -376,3 +376,22 @@ input[type='range'][orient='vertical']::-moz-range-thumb {
     opacity: 0;
   }
 }
+
+/* Hide Center Play Button */
+div[role="button"][style*="center"]:has(svg),
+.video-center-button,
+[aria-label="Play video"][style*="absolute"] {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* إخفاء زر الإيقاف والتشغيل الكبير في وسط الفيديوهات */
+div[role="button"][style*="center"]:has(svg),
+div[style*="justify-content: center"][style*="align-items: center"][style*="position: absolute"]:has(svg),
+[data-testid*="play-btn"],
+[aria-label="Pause video"][style*="absolute"],
+[aria-label="Play video"][style*="absolute"] {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

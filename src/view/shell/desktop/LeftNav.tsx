@@ -182,7 +182,7 @@ function ProfileCard({minimal}: {minimal: boolean}) {
                           numberOfLines={1}>
                           {sanitizeDisplayName(
                             profile.displayName || profile.handle,
-                          )}
+                          )} <OrbisVerifiedBadge size={15} did={profile.did} handle={profile.handle} displayName={profile.displayName} />
                         </Text>
                         <Text
                           style={[

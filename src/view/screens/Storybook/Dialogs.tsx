@@ -1,6 +1,6 @@
 import {useRef, useState} from 'react'
 import {View} from 'react-native'
-import {PlatformInfo} from '@bsky.app/expo-orbis-swiss-army'
+import {PlatformInfo} from '@bsky.app/expo-bluesky-swiss-army'
 
 import {useDialogStateControlContext} from '#/state/dialogs'
 import {atoms as a} from '#/alf'
@@ -385,3 +385,4 @@ export function Dialogs() {
     </View>
   )
 }
+

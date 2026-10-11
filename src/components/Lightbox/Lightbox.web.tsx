@@ -447,8 +447,8 @@ function LightboxGalleryItem({
 
 const styles = StyleSheet.create({
   avi: {
-    maxWidth: `calc(min(400px, 100vw))`,
-    maxHeight: `calc(min(400px, 100vh))`,
+    maxWidth: (`calc(min(400px, 100vw))` as any),
+    maxHeight: (`calc(min(400px, 100vh))` as any),
     padding: 16,
     boxSizing: 'border-box',
   },
@@ -457,7 +457,7 @@ const styles = StyleSheet.create({
     // column via ScrollView's default flexGrow.
     flexGrow: 0,
     flexShrink: 0,
-    maxHeight: '50vh',
+    maxHeight: ("50vh" as any),
   },
   menuBtn: {
     top: 20,

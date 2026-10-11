@@ -1,4 +1,4 @@
-﻿import {type ComponentProps, type JSX, memo, useCallback, useState} from 'react'
+import {type ComponentProps, type JSX, memo, useCallback, useState} from 'react'
 import {
   Linking,
   Pressable,

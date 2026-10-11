@@ -145,13 +145,15 @@ function Badge({
       <VerificationsDialog
         control={verificationsDialogControl}
         profile={profile}
-        verificationState={state}
       />
       <VerifierDialog
         control={verifierDialogControl}
         profile={profile}
-        verificationState={state}
       />
     </>
   )
 }
+
+
+
+

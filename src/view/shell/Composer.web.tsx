@@ -90,12 +90,12 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginBottom: 0,
     borderWidth: 1,
-    maxHeight: 'calc(100% - (40px * 2))',
+    maxHeight: ('calc(100% - (40px * 2))' as any),
     overflow: 'hidden',
   },
   containerMobile: {
     borderRadius: 0,
     marginBottom: BOTTOM_BAR_HEIGHT,
-    maxHeight: `calc(100% - ${BOTTOM_BAR_HEIGHT}px)`,
+    maxHeight: (`calc(100% - ${BOTTOM_BAR_HEIGHT}px)` as any),
   },
 })

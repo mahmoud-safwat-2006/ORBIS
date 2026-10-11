@@ -1,5 +1,5 @@
 import {useCallback, useEffect, useState} from 'react'
-import {MMKV} from 'react-native-mmkv'
+import {MMKV} from '#/storage/mmkv'
 
 import {type Account, type Device} from '#/storage/schema'
 

@@ -1,4 +1,4 @@
-import {MMKV} from 'react-native-mmkv'
+import {MMKV} from '#/storage/mmkv'
 import {setPolyfills} from '@growthbook/growthbook'
 import {type I18n} from '@lingui/core'
 import {msg} from '@lingui/core/macro'

@@ -1,6 +1,6 @@
 import {useImperativeHandle, useRef, useState} from 'react'
 import {Pressable, type StyleProp, View, type ViewStyle} from 'react-native'
-import {ORBISVideoView} from '@bsky.app/video'
+import {BlueskyVideoView as ORBISVideoView} from '@bsky.app/video'
 import {useLingui} from '@lingui/react/macro'
 
 import {HITSLOP_30} from '#/lib/constants'
@@ -262,3 +262,5 @@ function ControlButton({
     </View>
   )
 }
+
+

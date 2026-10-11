@@ -177,8 +177,10 @@ export function TextInput({
      * Android impl of `PasteInput` doesn't support the array syntax for `fontVariant`
      */
     if (IS_ANDROID) {
+      // @ts-ignore
       style.fontVariant =
-        typeof style.fontVariant === 'string'
+        typeof // @ts-ignore
+      style.fontVariant === 'string'
           ? style.fontVariant
           : style.fontVariant?.join(' ')
     }

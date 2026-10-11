@@ -2,7 +2,7 @@ import {useCallback, useEffect} from 'react'
 import {Alert} from 'react-native'
 import * as Linking from 'expo-linking'
 import * as WebBrowser from 'expo-web-browser'
-import {Referrer} from '@bsky.app/expo-orbis-swiss-army'
+import {Referrer} from '@bsky.app/expo-bluesky-swiss-army'
 
 import {useOpenComposer} from '#/lib/hooks/useOpenComposer'
 import {parseLinkingUrl} from '#/lib/parseLinkingUrl'
@@ -249,3 +249,4 @@ function useVerifyEmailIntent() {
     [closeAllActiveElements, control, setState],
   )
 }
+

@@ -1,4 +1,4 @@
-﻿import {useCallback, useRef, useState} from 'react'
+import {useCallback, useRef, useState} from 'react'
 import {type TextInput, View} from 'react-native'
 import {msg} from '@lingui/core/macro'
 import {useLingui} from '@lingui/react'

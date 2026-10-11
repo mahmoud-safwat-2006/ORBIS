@@ -1,5 +1,5 @@
 import {isDidString} from '@atproto/lex'
-import {PlatformInfo} from '@bsky.app/expo-orbis-swiss-army'
+import {PlatformInfo} from '@bsky.app/expo-bluesky-swiss-army'
 import {z} from 'zod'
 
 import {deviceLanguageCodes, deviceLocales} from '#/locale/deviceLocales'
@@ -230,3 +230,4 @@ export function tryStringify(value: Schema): string | undefined {
     return undefined
   }
 }
+

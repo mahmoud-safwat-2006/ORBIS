@@ -1,4 +1,4 @@
-﻿import {useCallback, useContext, useEffect, useMemo, useState} from 'react'
+import {useCallback, useContext, useEffect, useMemo, useState} from 'react'
 import {LayoutAnimation, Platform} from 'react-native'
 import {getLocales} from 'expo-localization'
 import {onTranslateTask} from '@bsky.app/expo-translate-text'

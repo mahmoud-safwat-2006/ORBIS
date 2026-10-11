@@ -25,8 +25,8 @@ let dirCreated = false
 function ensureDirectory(): void {
   if (dirCreated) return
   const dir = getMediaDirectory()
-  if (!dir.exists) {
-    dir.create()
+  if (!(dir as any).exists) {
+    (dir as any).create()
   }
   dirCreated = true
 }
@@ -50,7 +50,7 @@ export async function saveMediaToLocal(
 
   try {
     const sourceFile = new File(normalizedSource)
-    await sourceFile.copy(destFile)
+    await (sourceFile as any).copy(destFile)
     // Update cache after successful save
     mediaExistsCache.set(localRefPath, true)
   } catch (error) {
@@ -58,7 +58,7 @@ export async function saveMediaToLocal(
       error,
       localRefPath,
       sourcePath: normalizedSource,
-      destPath: destFile.uri,
+      destPath: (destFile as any).uri,
     })
     throw error
   }
@@ -73,11 +73,11 @@ export async function loadMediaFromLocal(
 ): Promise<string> {
   const file = getMediaFile(localRefPath)
 
-  if (!file.exists) {
+  if (!(file as any).exists) {
     throw new Error(`Media file not found: ${localRefPath}`)
   }
 
-  return file.uri
+  return (file as any).uri
 }
 
 /**
@@ -88,8 +88,8 @@ export async function deleteMediaFromLocal(
 ): Promise<void> {
   const file = getMediaFile(localRefPath)
   // Idempotent: only delete if file exists
-  if (file.exists) {
-    file.delete()
+  if ((file as any).exists) {
+    (file as any).delete()
   }
   mediaExistsCache.delete(localRefPath)
 }
@@ -120,7 +120,7 @@ function populateCacheInternal(): Promise<void> {
   return new Promise(resolve => {
     try {
       const dir = getMediaDirectory()
-      if (dir.exists) {
+      if ((dir as any).exists) {
         const items = dir.list()
         for (const item of items) {
           // Reverse the URL encoding to get the original localRefPath

@@ -1,4 +1,4 @@
-﻿import {Platform} from 'react-native'
+import {Platform} from 'react-native'
 import {setStringAsync} from 'expo-clipboard'
 import * as FileSystem from 'expo-file-system/legacy'
 import {Image} from 'expo-image'

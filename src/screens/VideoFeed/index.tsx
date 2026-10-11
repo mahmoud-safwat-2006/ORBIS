@@ -1,4 +1,4 @@
-﻿import {memo, useCallback, useEffect, useMemo, useRef, useState} from 'react'
+import {memo, useCallback, useEffect, useMemo, useRef, useState} from 'react'
 import {
   LayoutAnimation,
   type ListRenderItem,
@@ -27,8 +27,9 @@ import {AtUri} from '@atproto/syntax'
 import {type ModerationDecision} from '@bsky/sdk/moderation'
 import {RichText as RichTextAPI} from '@bsky/sdk/richtext'
 import {Trans, useLingui} from '@lingui/react/macro'
+import Svg, {Path} from 'react-native-svg'
 import {
-  type ListViewToken as ViewToken,
+  type ViewToken,
   type ViewabilityConfig,
 } from '@react-native/virtualized-lists'
 import {
@@ -108,10 +109,44 @@ import {Scrubber, VIDEO_PLAYER_BOTTOM_INSET} from './components/Scrubber'
 import {VideoCommentsDialog} from './components/VideoCommentsDialog'
 import {VideoSideActions} from './components/VideoSideActions'
 
+// ???? ????? ??????? ????? ??????? ???
+function getCleanShortDisplayName(displayName?: string, handle?: string) {
+  if (!displayName || !displayName.trim()) {
+    return handle ? sanitizeHandle(handle, '') : ''
+  }
+  let clean = displayName.trim()
+  if (clean.includes('(')) {
+    clean = clean.split('(')[0].trim()
+  }
+  return clean || displayName
+}
+
+// ???? ????? ORBIS ???????
+function VerifiedBadgeIcon({size = 15}: {size?: number}) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+      <Path
+        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+        stroke="#00D2FF"
+        strokeWidth={2.5}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="#0085FF"
+      />
+      <Path
+        d="M9 12l2 2 4-4"
+        stroke="#FFFFFF"
+        strokeWidth={2.5}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  )
+}
+
 function createThreeVideoPlayers(
   sources?: [string, string, string],
 ): [VideoPlayer, VideoPlayer, VideoPlayer] {
-  // android is typically slower and can't keep up with a 0.1 interval
   const eventInterval = platform({
     ios: 0.2,
     android: 0.5,
@@ -213,7 +248,7 @@ function Feed() {
 
   const videos = useMemo(() => {
     let vids =
-      data?.pages.flatMap(page => {
+      data?.pages.flatMap((page: any) => {
         const items: {
           _reactKey: string
           moderation: ModerationDecision
@@ -224,7 +259,7 @@ function Feed() {
         }[] = []
         for (const slice of page.slices) {
           const feedPost = slice.items.find(
-            item => item.uri === slice.feedPostUri,
+            (item: any) => item.uri === slice.feedPostUri,
           )
           if (
             feedPost &&
@@ -242,7 +277,7 @@ function Feed() {
         }
         return items
       }) ?? []
-    const startingVideoIndex = vids?.findIndex(video => {
+    const startingVideoIndex = vids?.findIndex((video: any) => {
       return video.post.uri === params.initialPostUri
     })
     if (vids && startingVideoIndex && startingVideoIndex > -1) {
@@ -403,12 +438,10 @@ function Feed() {
   useFocusEffect(
     useCallback(() => {
       if (!players) {
-        // create players, set sources, start playing
         updateVideoStateInitially()
       }
       return () => {
         if (players) {
-          // manually release players when offscreen
           players.forEach(p => p.release())
           setPlayers(null)
         }
@@ -516,7 +549,6 @@ let VideoItem = ({
         reqId,
       })
 
-      // Track post:view event
       if (!hasTrackedView.current) {
         hasTrackedView.current = true
         ax.metric('post:view', {
@@ -540,9 +572,6 @@ let VideoItem = ({
     feedDescriptor,
   ])
 
-  // TODO: high-performance android phones should also
-  // be capable of rendering 3 video players, but currently
-  // we can't distinguish between them
   const shouldRenderVideo = active || ios(adjacent)
 
   const content = (
@@ -628,10 +657,6 @@ function VideoItemInner({
     if (IS_ANDROID && !isReady && evt.currentTime >= 0.05) {
       setIsReady(true)
     }
-    /*
-     * Players are pooled and reassigned as the user swipes. Only trust the item
-     * that's actually on screen.
-     */
     if (
       active &&
       embed.presentation !== 'gif' &&
@@ -678,11 +703,6 @@ function VideoItemInner({
   )
 }
 
-/**
- * Opens a Sentry playback span while this item is the active video. Adjacent
- * players are preloaded by updateVideoState, so record whether the player was
- * already ready at activation to separate load time from swipe latency.
- */
 function usePlaybackTelemetry({
   player,
   active,
@@ -720,10 +740,6 @@ function usePlaybackTelemetry({
     } else if (evt.status === 'error') {
       const message = evt.error?.message ?? 'unknown'
       telemetryRef.current?.error(message)
-      /*
-       * Adjacent players are preloaded and can error before the user ever
-       * swipes to them - only count failures the user actually sees.
-       */
       if (active) {
         ax.metric('video:playback:failed', {
           surface: 'immersiveFeed',
@@ -867,7 +883,6 @@ function Overlay({
     'ImmersiveVideo',
   )
 
-  const rkey = new AtUri(post.uri).rkey
   const record = bsky.isType(app.bsky.feed.post, post.record)
     ? post.record
     : undefined
@@ -875,7 +890,6 @@ function Overlay({
     text: record?.text || '',
     facets: record?.facets,
   })
-  const handle = sanitizeHandle(post.author.handle, '@')
 
   const animatedStyle = useAnimatedStyle(() => ({
     opacity: 1 - seekingAnimationSV.get(),
@@ -916,6 +930,7 @@ function Overlay({
       </Hider.Mask>
       <Hider.Content>
         <View style={[a.absolute, a.inset_0, a.z_20]}>
+          {/* ????? ????? ?????? ??????? ???????? ???? ????? */}
           <View style={[a.flex_1]}>
             {player && (
               <PlayPauseTapArea
@@ -927,82 +942,106 @@ function Overlay({
             )}
           </View>
 
-            <VideoSideActions post={post} onOpenComments={() => commentsControl.open()} />
-            <VideoCommentsDialog control={commentsControl} postUri={post.uri} replyCount={post.replyCount} />
+          {/* ????? ??????? ???????? (?? ????? ?????? + ????????? + ????????) */}
+          <VideoSideActions post={post} onOpenComments={() => commentsControl.open()} />
+          <VideoCommentsDialog control={commentsControl} postUri={post.uri} replyCount={post.replyCount} />
+
           <LinearGradient
             colors={[
               'rgba(0,0,0,0)',
-              'rgba(0,0,0,0.7)',
+              'rgba(0,0,0,0.65)',
               'rgba(0,0,0,0.95)',
-              'rgba(0,0,0,0.95)',
+              'rgba(0,0,0,0.98)',
             ]}
             style={[a.w_full, a.pt_md]}>
             <Animated.View style={[a.px_md, animatedStyle]}>
-              <View style={[a.w_full, a.flex_row, a.align_center, a.gap_md]}>
+              
+              {/* ?? ??????: ????? ??????? ??? ????? + ?????? + ?? ???????? ????? ?????? ?????? ?????? */}
+              <View style={[a.w_full, a.flex_row, a.align_center, a.gap_xs, {flexWrap: 'nowrap', paddingBottom: 6}]}>
                 <Link
-                  label={l`View ${sanitizeDisplayName(
-                    post.author.displayName || post.author.handle,
-                  )}'s profile`}
+                  label={l`View profile`}
                   to={{
                     screen: 'Profile',
                     params: {name: post.author.did},
                   }}
-                  style={[a.flex_1, a.flex_row, a.gap_md, a.align_center]}>
+                  style={[a.flex_row, a.align_center, a.gap_xs, {flexShrink: 1, minWidth: 0}]}>
                   <UserAvatar
                     type="user"
                     avatar={post.author.avatar}
-                    size={32}
+                    size={34}
                   />
-                  <View style={[a.flex_1]}>
-                    <Text
-                      style={[a.text_md, a.font_bold]}
-                      emoji
-                      numberOfLines={1}>
-                      {sanitizeDisplayName(
-                        post.author.displayName || post.author.handle,
-                      )}
-                    </Text>
-                    <Text
-                      style={[a.text_sm, t.atoms.text_contrast_high]}
-                      numberOfLines={1}>
-                      {handle}
-                    </Text>
+                  {/* ????? ??????? ??? ?????? ?????? ??? ??? ?????? */}
+                  <Text
+                    style={[
+                      a.text_md,
+                      a.font_bold,
+                      {
+                        color: '#FFFFFF',
+                        maxWidth: 125,
+                        flexShrink: 1,
+                      },
+                    ]}
+                    emoji
+                    numberOfLines={1}
+                    ellipsizeMode="tail">
+                    {getCleanShortDisplayName(post.author.displayName, post.author.handle)}
+                  </Text>
+                  
+                  {/* ???? ??????? */}
+                  <View style={{flexShrink: 0, marginHorizontal: 2}}>
+                    <VerifiedBadgeIcon size={15} />
                   </View>
                 </Link>
-                {/* show button based on non-reactive version, so it doesn't hide on press */}
-                {post.author.did !== currentAccount?.did &&
-                  !post.author.viewer?.following && (
-                    <Button
-                      label={
-                        profile.viewer?.following
-                          ? l`Following ${handle}`
-                          : l`Follow ${handle}`
+
+                {/* ???? ????? */}
+                <Text style={{color: '#94A3B8', fontSize: 11, flexShrink: 0}}>•</Text>
+
+                {/* ?? ???????? ????? ?????? ????? ????? ??????? */}
+                {post.author.did !== currentAccount?.did && (
+                  <Pressable
+                    accessibilityRole="button"
+                    onPress={(e) => {
+                      e?.stopPropagation?.()
+                      if (profile.viewer?.following) {
+                        void queueUnfollow()
+                      } else {
+                        void queueFollow()
                       }
-                      accessibilityHint={
-                        profile.viewer?.following ? l`Unfollows the user` : ''
-                      }
-                      size="small"
-                      variant="solid"
-                      color="secondary_inverted"
-                      style={[a.mb_xs]}
-                      onPress={() =>
-                        profile.viewer?.following
-                          ? void queueUnfollow()
-                          : void queueFollow()
-                      }>
-                      {!!profile.viewer?.following && (
-                        <ButtonIcon icon={CheckIcon} />
-                      )}
-                      <ButtonText>
-                        {profile.viewer?.following ? (
-                          <Trans>Following</Trans>
-                        ) : (
-                          <Trans>Follow</Trans>
-                        )}
-                      </ButtonText>
-                    </Button>
-                  )}
+                    }}
+                    style={({pressed}) => [
+                      {
+                        paddingHorizontal: 9,
+                        paddingVertical: 3.5,
+                        borderRadius: 999,
+                        flexShrink: 0,
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        gap: 3,
+                        opacity: pressed ? 0.75 : 1,
+                        backgroundColor: profile.viewer?.following
+                          ? 'rgba(255, 255, 255, 0.16)'
+                          : '#0085FF',
+                        borderWidth: profile.viewer?.following ? 1 : 0,
+                        borderColor: 'rgba(255, 255, 255, 0.3)',
+                      },
+                    ]}>
+                    {profile.viewer?.following ? (
+                      <>
+                        <CheckIcon size="xs" style={{color: '#00D2FF'}} />
+                        <Text style={{color: '#F1F5F9', fontSize: 11, fontWeight: '700'}}>
+                          ?????
+                        </Text>
+                      </>
+                    ) : (
+                      <Text style={{color: '#FFFFFF', fontSize: 11, fontWeight: '700'}}>
+                        + ??????
+                      </Text>
+                    )}
+                  </Pressable>
+                )}
               </View>
+
+              {/* ?? ??????? / ????? */}
               {record?.text?.trim() && (
                 <ExpandableRichTextView
                   value={richText}
@@ -1022,21 +1061,6 @@ function Overlay({
             </Scrubber>
           </LinearGradient>
         </View>
-        {/*
-        {IS_ANDROID && status === 'loading' && (
-          <View
-            style={[
-              a.absolute,
-              a.inset_0,
-              a.align_center,
-              a.justify_center,
-              a.z_10,
-            ]}
-            pointerEvents="none">
-            <Loader size="2xl" />
-          </View>
-        )}
-          */}
       </Hider.Content>
     </Hider.Outer>
   )
@@ -1145,6 +1169,7 @@ function VideoItemPlaceholder({
   ) : null
 }
 
+// ????? ????? ??????: ???? ????? ???? ?? ???? ??????? ????? ???? ?? ?????
 function PlayPauseTapArea({
   player,
   post,
@@ -1157,16 +1182,7 @@ function PlayPauseTapArea({
   reqId: string | undefined
 }) {
   const {t: l} = useLingui()
-  const doubleTapRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const playHaptic = useHaptics()
-  // TODO: implement viaRepost -sfn
-  const [queueLike] = usePostLikeMutationQueue(
-    post,
-    undefined,
-    undefined,
-    'ImmersiveVideo',
-  )
-  const {sendInteraction} = useFeedFeedbackContext()
   const {isPlaying} = useEvent(player, 'playingChange', {
     isPlaying: player.playing,
   })
@@ -1180,9 +1196,7 @@ function PlayPauseTapArea({
   }, [])
 
   const togglePlayPause = useNonReactiveCallback(() => {
-    // gets called after a timeout, so guard against being called after unmount -sfn
     if (!player || !isMounted.current) return
-    doubleTapRef.current = null
     try {
       if (player.playing) {
         player.pause()
@@ -1194,21 +1208,10 @@ function PlayPauseTapArea({
     }
   })
 
+  // ???? ????? ??? ?????? ???? ???????? ?? ??????? ????? ????? ?????
   const onPress = () => {
-    if (doubleTapRef.current) {
-      clearTimeout(doubleTapRef.current)
-      doubleTapRef.current = null
-      playHaptic('Light')
-      void queueLike()
-      sendInteraction({
-        item: post.uri,
-        event: 'app.bsky.feed.defs#interactionLike',
-        feedContext,
-        reqId,
-      })
-    } else {
-      doubleTapRef.current = setTimeout(togglePlayPause, 200)
-    }
+    playHaptic('Light')
+    togglePlayPause()
   }
 
   return (
@@ -1219,7 +1222,7 @@ function PlayPauseTapArea({
         post.author.handle,
         '@',
       )}. Tap to play or pause the video`}
-      accessibilityHint={l`Double tap to like`}
+      accessibilityHint={l`Tap to play or pause`}
       onPress={onPress}
       style={[a.absolute, a.inset_0, a.z_10]}>
       <View />
@@ -1291,9 +1294,6 @@ function EndMessage() {
   )
 }
 
-/*
- * If the video is taller than 9:16
- */
 function isTallAspectRatio(
   aspectRatio: app.bsky.embed.video.View['aspectRatio'],
 ) {
@@ -1301,4 +1301,3 @@ function isTallAspectRatio(
     (aspectRatio?.width ?? 1) / (aspectRatio?.height ?? 1)
   return videoAspectRatio <= 9 / 16
 }
-

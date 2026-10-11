@@ -8,7 +8,7 @@ import {type ChunkReader} from './types'
  * bytes are never all held in JS memory. Call `close` when the upload finishes.
  */
 export function createChunkReader(video: CompressedVideo): ChunkReader {
-  const handle = new File(video.uri).open()
+  const handle = (new File(video.uri) as any).open()
   return {
     read(offset, size) {
       handle.offset = offset

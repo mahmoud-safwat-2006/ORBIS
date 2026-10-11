@@ -1,4 +1,4 @@
-﻿import {useCallback, useMemo, useRef} from 'react'
+import {useCallback, useMemo, useRef} from 'react'
 import {AppState} from 'react-native'
 import {type Client} from '@atproto/lex'
 import {type AtIdentifierString, AtUri, type AtUriString} from '@atproto/syntax'

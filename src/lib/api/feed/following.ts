@@ -1,4 +1,4 @@
-﻿import {type Client} from '@atproto/lex'
+import {type Client} from '@atproto/lex'
 import {isAtIdentifierString} from '@atproto/syntax'
 
 import {app, com} from '#/lexicons'

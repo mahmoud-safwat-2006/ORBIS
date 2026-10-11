@@ -100,7 +100,7 @@ export const SplashScreen = ({
           style={[
             a.h_full,
             a.justify_center,
-            {paddingBottom: '14vh'},
+            {paddingBottom: ("14vh" as any)},
             IS_WEB_MOBILE && a.pb_3xl,
             a.align_center,
             a.gap_4xl,

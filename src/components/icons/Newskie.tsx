@@ -1,1 +1,1 @@
-﻿export function Newskie() { return null; }; export default Newskie;
+export function Newskie() { return null; }; export default Newskie;

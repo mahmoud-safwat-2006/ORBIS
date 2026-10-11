@@ -3,7 +3,7 @@ import {Pressable, type StyleProp, type ViewStyle} from 'react-native'
 import {addStyle} from '#/lib/styles'
 import {useInteractionState} from '#/components/hooks/useInteractionState'
 
-interface PressableWithHoverProps extends React.ComponentPropsWithRef<Pressable> {
+interface PressableWithHoverProps extends React.ComponentPropsWithRef<typeof Pressable> {
   hoverStyle: StyleProp<ViewStyle>
 }
 

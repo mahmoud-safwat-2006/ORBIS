@@ -2,7 +2,7 @@ import {useRef} from 'react'
 import {View} from 'react-native'
 import {Image} from 'expo-image'
 import {type ImagePickerAsset} from 'expo-image-picker'
-import {ORBISVideoView} from '@bsky.app/video'
+import {BlueskyVideoView as ORBISVideoView} from '@bsky.app/video'
 
 import {type CompressedVideo} from '#/lib/media/video/types'
 import {useAutoplayDisabled} from '#/state/preferences'
@@ -83,3 +83,5 @@ export function VideoPreview({
     </View>
   )
 }
+
+

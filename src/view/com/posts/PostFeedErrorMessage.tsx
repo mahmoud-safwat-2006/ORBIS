@@ -1,4 +1,4 @@
-﻿import {useCallback, useMemo} from 'react'
+import {useCallback, useMemo} from 'react'
 import {View} from 'react-native'
 import {AtUri} from '@atproto/syntax'
 import {msg as msgLingui} from '@lingui/core/macro'

@@ -1,5 +1,5 @@
 import {forwardRef, memo, useDeferredValue, useMemo} from 'react'
-import {type ListViewToken as ViewToken, RefreshControl} from 'react-native'
+import {type ViewToken, RefreshControl} from 'react-native'
 import {
   type FlatListPropsWithLayout,
   useAnimatedScrollHandler,

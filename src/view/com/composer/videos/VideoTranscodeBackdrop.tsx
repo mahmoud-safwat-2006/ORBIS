@@ -24,7 +24,7 @@ export function clearThumbnailCache(queryClient: QueryClient) {
 
 function deleteThumbnail(thumbnail: VideoThumbnailsResult) {
   try {
-    new File(thumbnail.uri).delete()
+    (new File(thumbnail.uri) as any).delete()
   } catch {}
 }
 

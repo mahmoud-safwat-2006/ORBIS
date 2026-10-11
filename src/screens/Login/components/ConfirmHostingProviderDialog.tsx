@@ -1,4 +1,4 @@
-﻿import {Fragment} from 'react'
+import {Fragment} from 'react'
 import {View} from 'react-native'
 import {Trans, useLingui} from '@lingui/react/macro'
 

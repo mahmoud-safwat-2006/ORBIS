@@ -1,4 +1,4 @@
-﻿import {useMemo} from 'react'
+import {useMemo} from 'react'
 import {Plural} from '@lingui/react/macro'
 
 import {

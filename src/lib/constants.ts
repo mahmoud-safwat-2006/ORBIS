@@ -1,4 +1,4 @@
-﻿import {type Insets, Platform} from 'react-native'
+import {type Insets, Platform} from 'react-native'
 import {type Service} from '@atproto/lex'
 import {api} from '@bsky/sdk'
 

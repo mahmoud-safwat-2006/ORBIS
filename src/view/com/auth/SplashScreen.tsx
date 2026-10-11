@@ -1,4 +1,4 @@
-﻿import {useMemo} from 'react'
+import {useMemo} from 'react'
 import {Image as RNImage, View} from 'react-native'
 import Animated, {FadeIn, FadeOut} from 'react-native-reanimated'
 import {Image} from 'expo-image'

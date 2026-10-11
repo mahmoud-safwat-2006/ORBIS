@@ -1,6 +1,6 @@
-﻿import {useCallback, useMemo, useState} from 'react'
+import {useCallback, useMemo, useState} from 'react'
 import {Pressable, StyleSheet, View} from 'react-native'
-import {PlatformInfo} from '@bsky.app/expo-orbis-swiss-army'
+import {PlatformInfo} from '@bsky.app/expo-bluesky-swiss-army'
 import {plural} from '@lingui/core/macro'
 import {Trans, useLingui} from '@lingui/react/macro'
 import {useNavigation, useNavigationState} from '@react-navigation/native'
@@ -327,7 +327,7 @@ function SwitcherMenuProfileLink() {
         emitSoftReset()
       } else {
         const [screen, params] = router.matchPath(profileLink)
-        // @ts-expect-error TODO: type matchPath well enough that it can be plugged into navigation.navigate directly
+        // @ts-ignore TODO: type matchPath well enough that it can be plugged into navigation.navigate directly
         navigation.navigate(screen, params, {pop: true})
       }
     },
@@ -336,7 +336,7 @@ function SwitcherMenuProfileLink() {
   return (
     <Menu.Item
       label={l`Go to profile`}
-      // @ts-expect-error The function signature differs on web -inb
+      // @ts-ignore The function signature differs on web -inb
       onPress={onProfilePress}
       href={profileLink}>
       <Menu.ItemIcon icon={UserCircleIcon} />
@@ -436,7 +436,7 @@ function NavItem({
         emitSoftReset()
       } else {
         const [screen, params] = router.matchPath(href)
-        // @ts-expect-error TODO: type matchPath well enough that it can be plugged into navigation.navigate directly
+        // @ts-ignore TODO: type matchPath well enough that it can be plugged into navigation.navigate directly
         navigation.navigate(screen, params, {pop: true})
       }
     },
@@ -457,7 +457,7 @@ function NavItem({
         a.transition_color,
       ]}
       hoverStyle={t.atoms.bg_contrast_25}
-      // @ts-expect-error the function signature differs on web -prf
+      // @ts-ignore the function signature differs on web -prf
       onPress={onPressWrapped}
       href={href}
       dataSet={{noUnderline: 1}}
@@ -780,10 +780,11 @@ const styles = StyleSheet.create({
   leftNav: {
     left: '50%',
     width: LEFT_NAV_STANDARD_WIDTH,
-    maxHeight: '100vh',
-    // @ts-expect-error web only
+    maxHeight: ("100vh" as any),
+    // @ts-ignore web only
     overflowY: 'auto',
     scrollbarWidth: 'thin',
   },
 })
+
 

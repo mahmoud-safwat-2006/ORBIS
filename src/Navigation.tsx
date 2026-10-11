@@ -1,7 +1,7 @@
 import {type JSX, useCallback, useRef} from 'react'
 import * as Linking from 'expo-linking'
 import * as Notifications from 'expo-notifications'
-import {Referrer} from '@bsky.app/expo-orbis-swiss-army'
+import {Referrer} from '@bsky.app/expo-bluesky-swiss-army'
 import {i18n, type MessageDescriptor} from '@lingui/core'
 import {msg} from '@lingui/core/macro'
 import {
@@ -1036,7 +1036,7 @@ function RoutesContainer({children}: React.PropsWithChildren<{}>) {
     })
 
     if (IS_WEB) {
-      void Referrer.getReferrerInfo().then(referrerInfo => {
+      void Referrer.getReferrerInfo().then((referrerInfo: any) => {
         if (referrerInfo && referrerInfo.hostname !== 'bsky.app') {
           ax.metric('deepLink:referrerReceived', {
             to: window.location.href,
@@ -1157,3 +1157,4 @@ export {
   RoutesContainer,
   TabsNavigator,
 }
+

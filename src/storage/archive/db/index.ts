@@ -1,4 +1,4 @@
-import {MMKV} from 'react-native-mmkv'
+import {MMKV} from '#/storage/mmkv'
 
 import {type DB} from '#/storage/archive/db/types'
 

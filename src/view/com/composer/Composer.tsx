@@ -544,12 +544,12 @@ export const ComposePost = ({
               FileSystem.Paths.cache,
               tempFileName,
             )
-            await sourceFile.copy(tempFile)
+            await (sourceFile as any).copy(tempFile)
             logger.debug('restoreVideo: copied to temp file', {
               source: videoInfo.uri,
-              temp: tempFile.uri,
+              temp: (tempFile as any).uri,
             })
-            uri = tempFile.uri
+            uri = (tempFile as any).uri
           }
           asset = await getVideoMetadata(uri, videoInfo.mimeType)
         }

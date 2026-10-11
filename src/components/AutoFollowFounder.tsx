@@ -1,4 +1,4 @@
-﻿import {useEffect, useRef} from 'react'
+import {useEffect, useRef} from 'react'
 import {follow} from '@bsky/sdk'
 import {type DidString} from '@atproto/syntax'
 import {useMaybePdsClient, useSession} from '#/state/session'

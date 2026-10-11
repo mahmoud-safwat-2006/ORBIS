@@ -1,4 +1,4 @@
-﻿import {useCallback} from 'react'
+import {useCallback} from 'react'
 import {View} from 'react-native'
 import {type $Typed} from '@atproto/lex'
 import {msg} from '@lingui/core/macro'

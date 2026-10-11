@@ -1,4 +1,4 @@
-﻿import {View} from 'react-native'
+import {View} from 'react-native'
 import {Trans, useLingui} from '@lingui/react/macro'
 
 import {

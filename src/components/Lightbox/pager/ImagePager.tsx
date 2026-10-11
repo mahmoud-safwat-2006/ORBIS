@@ -36,7 +36,7 @@ import Animated, {
 import {scheduleOnRN, scheduleOnUI} from 'react-native-worklets'
 import {Image} from 'expo-image'
 import * as ScreenOrientation from 'expo-screen-orientation'
-import {PlatformInfo} from '@bsky.app/expo-orbis-swiss-army'
+import {PlatformInfo} from '@bsky.app/expo-bluesky-swiss-army'
 
 import {type Dimensions} from '#/lib/media/types'
 import {useTheme} from '#/alf'
@@ -799,3 +799,4 @@ function rAF_FIXED(callback: () => void) {
     })
   }
 }
+

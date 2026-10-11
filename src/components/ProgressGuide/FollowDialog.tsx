@@ -1,5 +1,5 @@
 import {memo, useCallback, useEffect, useMemo, useRef, useState} from 'react'
-import {type ListViewToken as ViewToken, TextInput, View} from 'react-native'
+import {type ViewToken, TextInput, View} from 'react-native'
 import {type ModerationOpts} from '@bsky/sdk/moderation'
 import {Trans, useLingui} from '@lingui/react/macro'
 
@@ -774,7 +774,7 @@ function Empty({message}: {message: string}) {
         {message}
       </Text>
 
-      <Text style={[a.text_xs, t.atoms.text_contrast_low]}>(╯°□°)╯︵ ┻━┻</Text>
+      <Text style={[a.text_xs, t.atoms.text_contrast_low]}>(â•¯Â°â–¡Â°)â•¯ï¸µ â”»â”â”»</Text>
     </View>
   )
 }

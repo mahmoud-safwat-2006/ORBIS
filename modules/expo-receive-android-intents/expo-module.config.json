@@ -1,6 +1,8 @@
 {
   "platforms": ["android"],
   "android": {
-    "modules": ["app.orbis.social.exporeceiveandroidintents.ExpoReceiveAndroidIntentsModule"]
+    "modules": [
+      "xyz.orbisweb.app.exporeceiveandroidintents.ExpoReceiveAndroidIntentsModule"
+    ]
   }
 }

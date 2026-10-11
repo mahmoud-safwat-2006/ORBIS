@@ -191,7 +191,7 @@ async function classifyImagePickerAsset(asset: ImagePickerAsset): Promise<
       bytes = await asset.file?.arrayBuffer()
     } else {
       const file = new File(asset.uri)
-      if (file.exists) {
+      if ((file as any).exists) {
         bytes = await file.arrayBuffer()
       }
     }

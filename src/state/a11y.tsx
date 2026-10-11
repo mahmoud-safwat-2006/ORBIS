@@ -1,6 +1,6 @@
 import {createContext, useContext, useEffect, useMemo, useState} from 'react'
 import {AccessibilityInfo} from 'react-native'
-import {PlatformInfo} from '@bsky.app/expo-orbis-swiss-army'
+import {PlatformInfo} from '@bsky.app/expo-bluesky-swiss-army'
 
 import {IS_WEB} from '#/env'
 
@@ -64,3 +64,4 @@ export function Provider({children}: React.PropsWithChildren<{}>) {
 
   return <Context.Provider value={ctx}>{children}</Context.Provider>
 }
+

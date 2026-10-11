@@ -1,9 +1,10 @@
-import {useMemo} from 'react'
-import {View} from 'react-native'
+import React, {useMemo, useState} from 'react'
+import {Pressable, View} from 'react-native'
 import {Image} from 'expo-image'
 import {LinearGradient} from 'expo-linear-gradient'
 import {type ModerationDecision} from '@bsky/sdk/moderation'
 import {useLingui} from '@lingui/react/macro'
+import Svg, {Path} from 'react-native-svg'
 
 import {sanitizeHandle} from '#/lib/strings/handles'
 import {formatCount} from '#/view/com/util/numeric/format'
@@ -31,6 +32,41 @@ function getBlackColor(t: ReturnType<typeof useTheme>) {
   })
 }
 
+// دالة تنظيف واقتطاع الاسم المعروض فقط
+function getCleanDisplayName(displayName?: string, handle?: string) {
+  if (!displayName || !displayName.trim()) {
+    return handle ? sanitizeHandle(handle, '') : ''
+  }
+  let clean = displayName.trim()
+  if (clean.includes('(')) {
+    clean = clean.split('(')[0].trim()
+  }
+  return clean || displayName
+}
+
+// شارة التوثيق المدمجة لـ ORBIS
+function VerifiedIcon({size = 14}: {size?: number}) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+      <Path
+        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+        stroke="#00D2FF"
+        strokeWidth={2.5}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="#0085FF"
+      />
+      <Path
+        d="M9 12l2 2 4-4"
+        stroke="#FFFFFF"
+        strokeWidth={2.5}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  )
+}
+
 export function VideoPostCard({
   post,
   sourceContext,
@@ -54,6 +90,11 @@ export function VideoPostCard({
     onOut: onPressOut,
   } = useInteractionState()
 
+  // حالة زر المتابعة
+  const [isFollowing, setIsFollowing] = useState(
+    Boolean(post.author.viewer?.following)
+  )
+
   const listModUi = moderation.ui('contentList')
 
   const mergedModui = useMemo(() => {
@@ -66,10 +107,6 @@ export function VideoPostCard({
     return modui
   }, [moderation])
 
-  /**
-   * Filtering should be done at a higher level, such as `PostFeed` or
-   * `PostFeedVideoGridRow`, but we need to protect here as well.
-   */
   if (!bsky.isType(app.bsky.embed.video.view, embed)) return null
 
   const author = post.author
@@ -81,28 +118,78 @@ export function VideoPostCard({
   const {thumbnail} = embed
   const black = getBlackColor(t)
 
+  const handleToggleFollow = (e: any) => {
+    e?.stopPropagation?.()
+    e?.preventDefault?.()
+    setIsFollowing((prev) => !prev)
+  }
+
+  // صف الناشر: الاسم المعروض فقط مقتطع + الشارة + زر المتابعة بجانبه تماماً
   const textAndAuthor = (
     <View style={[a.pr_xs, {paddingTop: 6, gap: 4}]}>
-      {text && (
+      {text ? (
         <Text style={[a.text_md, a.leading_snug]} numberOfLines={2} emoji>
           {text}
         </Text>
-      )}
-      <View style={[a.flex_row, a.gap_xs, a.align_center]}>
-        <View style={[a.relative, a.rounded_full, {width: 20, height: 20}]}>
+      ) : null}
+
+      <View style={[a.flex_row, a.align_center, a.gap_xs, {flexWrap: 'nowrap', overflow: 'hidden'}]}>
+        {/* الصورة الشخصية */}
+        <View style={[a.relative, a.rounded_full, {width: 20, height: 20, flexShrink: 0}]}>
           <UserAvatar type="user" size={20} avatar={post.author.avatar} />
           <MediaInsetBorder />
         </View>
+
+        {/* الاسم المعروض فقط مقتطع بذكاء حتى لا يزاحم الشارة والزر */}
         <Text
           style={[
-            a.flex_1,
             a.text_sm,
+            a.font_bold,
             a.leading_tight,
-            t.atoms.text_contrast_medium,
+            t.atoms.text_contrast_high,
+            {maxWidth: 105, flexShrink: 1},
           ]}
-          numberOfLines={1}>
-          {sanitizeHandle(post.author.handle, '@')}
+          numberOfLines={1}
+          ellipsizeMode="tail">
+          {getCleanDisplayName(post.author.displayName, post.author.handle)}
         </Text>
+
+        {/* شارة التوثيق */}
+        <View style={{flexShrink: 0, marginHorizontal: 1}}>
+          <VerifiedIcon size={14} />
+        </View>
+
+        {/* نقطة فاصلة */}
+        <Text style={[{color: '#64748B', fontSize: 10, flexShrink: 0}]}>•</Text>
+
+        {/* زر المتابعة بنظام فيسبوك بجوار الاسم مباشرة */}
+        <Pressable
+          onPress={handleToggleFollow}
+          accessibilityRole="button"
+          style={({pressed: btnPressed}) => [
+            {
+              paddingHorizontal: 7,
+              paddingVertical: 2,
+              borderRadius: 999,
+              flexShrink: 0,
+              flexDirection: 'row',
+              alignItems: 'center',
+              gap: 2,
+              opacity: btnPressed ? 0.75 : 1,
+              backgroundColor: isFollowing ? 'rgba(255, 255, 255, 0.12)' : '#0085FF',
+              borderWidth: isFollowing ? 1 : 0,
+              borderColor: 'rgba(255, 255, 255, 0.25)',
+            },
+          ]}>
+          {isFollowing ? (
+            <>
+              <Text style={{color: '#00D2FF', fontSize: 10, fontWeight: '800'}}>✓</Text>
+              <Text style={{color: '#F1F5F9', fontSize: 10, fontWeight: '700'}}>أتابع</Text>
+            </>
+          ) : (
+            <Text style={{color: '#FFFFFF', fontSize: 10, fontWeight: '700'}}>+ متابعة</Text>
+          )}
+        </Pressable>
       </View>
     </View>
   )
@@ -309,7 +396,7 @@ export function VideoPostCardTextPlaceholder({
                 t.atoms.text_contrast_medium,
               ]}
               numberOfLines={1}>
-              {sanitizeHandle(author.handle, '@')}
+              {getCleanDisplayName(author.displayName, author.handle)}
             </Text>
           </View>
         ) : (
@@ -374,10 +461,6 @@ export function CompactVideoPostCard({
     return modui
   }, [moderation])
 
-  /**
-   * Filtering should be done at a higher level, such as `PostFeed` or
-   * `PostFeedVideoGridRow`, but we need to protect here as well.
-   */
   if (!bsky.isType(app.bsky.embed.video.view, embed)) return null
 
   const likeCount = post?.likeCount ?? 0

@@ -1,4 +1,4 @@
-﻿import {useCallback, useEffect, useEffectEvent, useState} from 'react'
+import {useCallback, useEffect, useEffectEvent, useState} from 'react'
 import {type ListRenderItemInfo, View} from 'react-native'
 import * as Contacts from 'expo-contacts/legacy'
 import {type DidString} from '@atproto/syntax'

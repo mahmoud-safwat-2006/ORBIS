@@ -186,12 +186,9 @@ export function Avatar({
       live={liveOverride ?? live}
     />
   ) : (
-    <UserAvatar avatar={profile.avatar} type={profile.associated?.labeler ? 'labeler' : 'user'} moderation={moderation.ui('avatar')}
-      size={size}
-      profile={profile}
-      moderation={moderation.ui('avatar')}
-      onBeforePress={onPress}
-      disableLink={disableLink}
+    <UserAvatar avatar={profile.avatar} type={profile.associated?.labeler ? 'labeler' : 'user'}
+        moderation={moderation.ui('avatar')}
+        size={size}
       live={liveOverride ?? live}
     />
   )
@@ -652,3 +649,5 @@ export function Labels({
     </Pills.Row>
   )
 }
+
+

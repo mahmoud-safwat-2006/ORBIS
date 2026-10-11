@@ -1,4 +1,4 @@
-﻿import {useCallback, useEffect, useState} from 'react'
+import {useCallback, useEffect, useState} from 'react'
 import {Modal, ScrollView, View} from 'react-native'
 import {SystemBars} from 'react-native-edge-to-edge'
 import {useSafeAreaInsets} from 'react-native-safe-area-context'

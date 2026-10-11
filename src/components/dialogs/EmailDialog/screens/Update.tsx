@@ -1,4 +1,4 @@
-﻿import {useReducer} from 'react'
+import {useReducer} from 'react'
 import {View} from 'react-native'
 import {Trans, useLingui} from '@lingui/react/macro'
 import {validate as validateEmail} from 'email-validator'

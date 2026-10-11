@@ -1,4 +1,4 @@
-﻿import {app} from '#/lexicons'
+import {app} from '#/lexicons'
 import * as bsky from '#/types/bsky'
 import {isPostInLanguage} from '../../locale/helpers'
 import {FALLBACK_MARKER_POST} from './feed/home'

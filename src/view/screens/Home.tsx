@@ -106,7 +106,7 @@ export function HomeScreen(props: Props) {
     return (
       <Layout.Screen>
         <Layout.Center style={styles.loading}>
-          <ActivityIndicator size="large" />
+          <ActivityIndicator size="large" color="#0085ff" />
         </Layout.Center>
       </Layout.Screen>
     )

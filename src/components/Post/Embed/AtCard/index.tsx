@@ -65,6 +65,7 @@ export function AtCard({
         playHaptic('Light')
         onEmbedInteractionCallback?.()
       }}
+      // @ts-ignore
       onLongPress={
         IS_NATIVE
           ? () => {

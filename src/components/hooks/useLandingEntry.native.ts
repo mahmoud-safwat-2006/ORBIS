@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import * as Linking from 'expo-linking'
-import {Referrer, SharedPrefs} from '@bsky.app/expo-orbis-swiss-army'
+import {Referrer, SharedPrefs} from '@bsky.app/expo-bluesky-swiss-army'
 
 import {parseLinkingUrl} from '#/lib/parseLinkingUrl'
 import {
@@ -86,3 +86,4 @@ export function useLandingEntry() {
 
   return ready
 }
+

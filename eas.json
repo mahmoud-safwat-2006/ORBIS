@@ -1,4 +1,4 @@
-﻿{
+{
     "cli":  {
                 "version":  "\u003e= 14.0.0",
                 "appVersionSource":  "remote"
@@ -15,7 +15,8 @@
                                               },
                                   "env":  {
                                               "PNPM_FLAGS":  "--no-frozen-lockfile"
-                                          }
+                                          },
+                                  "channel":  "preview"
                               },
                   "production":  {
                                      "autoIncrement":  true

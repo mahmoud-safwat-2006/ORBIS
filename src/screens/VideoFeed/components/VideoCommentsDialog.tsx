@@ -1,4 +1,4 @@
-﻿import {View} from 'react-native'
+import {View} from 'react-native'
 import {Trans} from '@lingui/react/macro'
 
 import {PostThread} from '#/screens/PostThread'

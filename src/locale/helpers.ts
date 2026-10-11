@@ -1,4 +1,4 @@
-﻿import * as bcp47Match from 'bcp-47-match'
+import * as bcp47Match from 'bcp-47-match'
 import lande from 'lande'
 
 import {hasProp} from '#/lib/type-guards'

@@ -1,4 +1,4 @@
-﻿import {type ColorValue, type StyleProp, type ViewStyle} from 'react-native'
+import {type ColorValue, type StyleProp, type ViewStyle} from 'react-native'
 import Svg, {Path, Rect, type SvgProps} from 'react-native-svg'
 
 type LogoProps = Omit<

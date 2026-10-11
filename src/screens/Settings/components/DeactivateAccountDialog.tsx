@@ -1,4 +1,4 @@
-﻿import {useCallback, useState} from 'react'
+import {useCallback, useState} from 'react'
 import {View} from 'react-native'
 import {msg} from '@lingui/core/macro'
 import {useLingui} from '@lingui/react'

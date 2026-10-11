@@ -1,4 +1,4 @@
-﻿import {useState} from 'react'
+import {useState} from 'react'
 import {Alert, View} from 'react-native'
 import * as DynamicAppIcon from '@bsky.app/expo-dynamic-app-icon'
 import {msg} from '@lingui/core/macro'

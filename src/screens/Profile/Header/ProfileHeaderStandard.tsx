@@ -1,4 +1,4 @@
-﻿import {OrbisVerifiedBadge} from '#/view/com/util/verified/OrbisVerifiedBadge'
+import {OrbisVerifiedBadge} from '#/view/com/util/verified/OrbisVerifiedBadge'
 import {memo, useMemo, useState} from 'react'
 import {View} from 'react-native'
 import {

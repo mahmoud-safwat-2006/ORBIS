@@ -151,7 +151,7 @@ export function RedirectOverlay() {
           a.align_center,
           platform({
             web: {
-              paddingTop: '35vh',
+              paddingTop: ("35vh" as any),
             },
             default: {
               paddingTop: Dimensions.get('window').height * 0.35,

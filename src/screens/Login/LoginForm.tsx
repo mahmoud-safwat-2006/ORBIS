@@ -1,4 +1,4 @@
-﻿import {useRef, useState} from 'react'
+import {useRef, useState} from 'react'
 import {Keyboard, Pressable, type TextInput, View} from 'react-native'
 import Svg, {Path} from 'react-native-svg'
 import {LexAuthFactorError} from '@atproto/lex-password-session'

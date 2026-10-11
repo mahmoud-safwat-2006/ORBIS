@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import {Dimensions, type DimensionsPayload} from 'react-native'
+import {Dimensions} from 'react-native'
 
 /**
  * Same as `useWindowDimensions().fontScale`, but avoids rerendering
@@ -11,7 +11,7 @@ export function useNativeFontScale() {
   useEffect(() => {
     const sub = Dimensions.addEventListener(
       'change',
-      (evt: DimensionsPayload) => {
+      (evt: any) => {
         if (evt.window) setFontScale(evt.window.fontScale)
       },
     )

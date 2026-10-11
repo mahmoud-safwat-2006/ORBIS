@@ -90,7 +90,7 @@ import {Splash} from '#/Splash'
 
 void identifyDevice(getDeviceId(), setupDeviceId)
 
-void SplashScreen.preventAutoHideAsync()
+// // void SplashScreen.preventAutoHideAsync()
 if (IS_IOS) {
   void SystemUI.setBackgroundColorAsync('black')
 }
@@ -126,15 +126,22 @@ function InnerApp() {
         if (account) {
           await resumeSession(account)
         } else {
-          await features.init
+          await Promise.race([
+            features.init,
+            new Promise(resolve => setTimeout(resolve, 300)),
+          ])
         }
       } catch (e) {
         logger.warn(`session: resume failed`, {message: e})
+      } finally {
+        setIsReady(true)
       }
-      setIsReady(true)
     }
     const account = readLastActiveAccount()
     void onLaunch(account)
+
+    const timer = setTimeout(() => setIsReady(true), 500)
+    return () => clearTimeout(timer)
   }, [resumeSession])
 
   useEffect(() => {
@@ -221,9 +228,19 @@ function App() {
   const [isReady, setIsReady] = useState(false)
 
   useEffect(() => {
-    void Promise.all([initPersistedState(), Geo.resolve(), setupDeviceId]).then(
-      () => setIsReady(true),
-    )
+    const safetyTimer = setTimeout(() => {
+      setIsReady(true)
+    }, 150)
+
+    void Promise.all([
+      initPersistedState().catch(() => {}),
+      Geo.resolve().catch(() => {}),
+      setupDeviceId,
+    ])
+      .then(() => setIsReady(true))
+      .catch(() => setIsReady(true))
+
+    return () => clearTimeout(safetyTimer)
   }, [])
 
   if (!isReady) {

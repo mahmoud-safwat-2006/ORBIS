@@ -1,4 +1,4 @@
-﻿import {useEffect} from 'react'
+import {useEffect} from 'react'
 import {Linking, View} from 'react-native'
 import * as Notification from 'expo-notifications'
 import {Trans, useLingui} from '@lingui/react/macro'

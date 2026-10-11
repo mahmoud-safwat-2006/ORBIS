@@ -119,7 +119,7 @@ function ListImpl<ItemT>(
     if (isValidElement(ListHeaderComponent)) {
       headerComponent = ListHeaderComponent
     } else {
-      // @ts-expect-error Nah it's fine.
+      // @ts-ignore Nah it's fine.
       headerComponent = <ListHeaderComponent />
     }
   }
@@ -129,7 +129,7 @@ function ListImpl<ItemT>(
     if (isValidElement(ListFooterComponent)) {
       footerComponent = ListFooterComponent
     } else {
-      // @ts-expect-error Nah it's fine.
+      // @ts-ignore Nah it's fine.
       footerComponent = <ListFooterComponent />
     }
   }
@@ -139,7 +139,7 @@ function ListImpl<ItemT>(
     if (isValidElement(ListEmptyComponent)) {
       emptyComponent = ListEmptyComponent
     } else {
-      // @ts-expect-error Nah it's fine.
+      // @ts-ignore Nah it's fine.
       emptyComponent = <ListEmptyComponent />
     }
   }
@@ -791,10 +791,10 @@ export const List = memo(forwardRef(ListImpl)) as <ItemT>(
 
 const styles = StyleSheet.create({
   minHeightViewport: {
-    minHeight: '100vh',
+    minHeight: ("100vh" as any),
   },
   parentTreeVisibilityDetector: {
-    // @ts-expect-error web only
+    // @ts-ignore web only
     position: 'fixed',
     top: 0,
     left: 0,

@@ -1,4 +1,4 @@
-﻿import {useCallback, useState} from 'react'
+import {useCallback, useState} from 'react'
 import {type StyleProp, View, type ViewStyle} from 'react-native'
 import {Trans, useLingui} from '@lingui/react/macro'
 import {useMutation} from '@tanstack/react-query'

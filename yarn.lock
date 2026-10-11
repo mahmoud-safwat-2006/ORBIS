@@ -1356,11 +1356,9 @@
 
 "@bsky.app/bottom-sheet@link:./modules/bottom-sheet":
   version "0.0.0"
-  uid ""
 
 "@bsky.app/expo-background-notification-handler@link:./modules/expo-background-notification-handler":
   version "0.0.0"
-  uid ""
 
 "@bsky.app/expo-dynamic-app-icon@^1.8.5":
   version "1.8.5"
@@ -1372,7 +1370,6 @@
 
 "@bsky.app/expo-emoji-picker@link:./modules/expo-emoji-picker":
   version "0.0.0"
-  uid ""
 
 "@bsky.app/expo-guess-language@^0.2.8":
   version "0.2.8"
@@ -1388,11 +1385,9 @@
 
 "@bsky.app/expo-orbis-gif-view@link:./modules/expo-orbis-gif-view":
   version "0.0.0"
-  uid ""
 
 "@bsky.app/expo-orbis-swiss-army@link:./modules/expo-orbis-swiss-army":
   version "0.0.0"
-  uid ""
 
 "@bsky.app/expo-scroll-edge-effect@^0.1.10":
   version "0.1.10"
@@ -1413,7 +1408,6 @@
 
 "@bsky.app/react-native-scroll-forwarder@link:./modules/react-native-scroll-forwarder":
   version "0.0.0"
-  uid ""
 
 "@bsky.app/react-native-uitextview@^2.7.1":
   version "2.7.1"
@@ -6801,7 +6795,6 @@ escodegen@^2.0.0:
 
 "eslint-plugin-bsky-internal@link:lint-rules":
   version "0.0.0"
-  uid ""
 
 eslint-plugin-react-native-a11y@^3.5.1:
   version "3.5.1"
@@ -8648,14 +8641,14 @@ jest-haste-map@^29.7.0:
   optionalDependencies:
     fsevents "^2.3.2"
 
-jest-junit@^16.0.0:
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/jest-junit/-/jest-junit-16.0.0.tgz#d838e8c561cf9fdd7eb54f63020777eee4136785"
-  integrity sha512-A94mmw6NfJab4Fg/BlvVOUXzXgF0XIH6EmTgJ5NDPp4xoKq0Kr7sErb+4Xs9nZvu58pJojz5RFGpqnZYJTrRfQ==
+jest-junit@^17.0.0:
+  version "17.0.0"
+  resolved "https://registry.yarnpkg.com/jest-junit/-/jest-junit-17.0.0.tgz#df70832d780de9577ba133688da94487f5bbc105"
+  integrity sha512-RYWCkq4j59gUXj5DsgbIE7xFBZzu1gtibPhyjSjMmGaOTLnqlXhg7x9zuGCwgbCuMAyoyvk0Mi8wSrRR5uOeLA==
   dependencies:
     mkdirp "^1.0.4"
     strip-ansi "^6.0.1"
-    uuid "^8.3.2"
+    uuid "^14.0.0"
     xml "^1.0.1"
 
 jest-leak-detector@^29.7.0:
@@ -12590,6 +12583,11 @@ utrie@^1.0.2:
   dependencies:
     base64-arraybuffer "^1.0.2"
 
+uuid@^14.0.0:
+  version "14.0.3"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-14.0.3.tgz#48c9b0dcf5a42d983c23162399eeb9af8b2cc617"
+  integrity sha512-Sc5u1VVln93y1Xnz4R+CunOZc7R9LUcTmhj7Rc7Eg3HVcf7rVn2FOoa812fe0W8p3jD7xeoGSYbfqCGGH2B6xw==
+
 uuid@^3.3.2:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
@@ -12599,11 +12597,6 @@ uuid@^7.0.3:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-7.0.3.tgz#c5c9f2c8cf25dc0a372c4df1441c41f5bd0c680b"
   integrity sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==
-
-uuid@^8.3.2:
-  version "8.3.2"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
-  integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
 
 v8-to-istanbul@^9.0.1:
   version "9.3.0"

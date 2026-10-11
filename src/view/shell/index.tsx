@@ -42,9 +42,6 @@ import {
 } from '#/components/PolicyUpdateOverlay'
 import {Outlet as PortalOutlet} from '#/components/Portal'
 import {useAgeAssurance} from '#/ageAssurance'
-import {DataUnavailableScreen} from '#/ageAssurance/components/DataUnavailableScreen'
-import {NoAccessScreen} from '#/ageAssurance/components/NoAccessScreen'
-import {RedirectOverlay} from '#/ageAssurance/components/RedirectOverlay'
 import {PassiveAnalytics} from '#/analytics/PassiveAnalytics'
 import {IS_ANDROID, IS_IOS, IS_LIQUID_GLASS} from '#/env'
 import {RoutesContainer, TabsNavigator} from '#/Navigation'
@@ -213,7 +210,6 @@ function DrawerLayout({children}: {children: React.ReactNode}) {
 
 export function Shell() {
   const t = useTheme()
-  const aa = useAgeAssurance()
   const {currentAccount} = useSession()
   const fullyExpandedCount = useDialogFullyExpandedCountContext()
 
@@ -244,20 +240,9 @@ export function Shell() {
         <Takendown />
       ) : currentAccount?.status === 'deactivated' ? (
         <Deactivated />
-      ) : (
-        <>
-          {aa.state.error === 'account-data' ? (
-            <DataUnavailableScreen />
-          ) : aa.state.access === aa.Access.None ? (
-            <NoAccessScreen />
-          ) : (
-            <RoutesContainer>
+      ) : (<RoutesContainer>
               <ShellInner />
             </RoutesContainer>
-          )}
-
-          <RedirectOverlay />
-        </>
       )}
 
       <PassiveAnalytics />

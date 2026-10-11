@@ -57,16 +57,16 @@ export function useLandingEntry() {
       let uri: string | null | undefined
 
       if (IS_ANDROID) {
-        const res = await Referrer.getGooglePlayReferrerInfoAsync()
+        const res = await Referrer?.getGooglePlayReferrerInfoAsync()
 
         if (res && res.installReferrer) {
           uri = createStarterPackLinkFromAndroidReferrer(res.installReferrer)
         }
       } else {
-        const starterPackUri = SharedPrefs.getString('starterPackUri')
+        const starterPackUri = SharedPrefs?.getString('starterPackUri')
         if (starterPackUri) {
           uri = httpStarterPackUriToAtUri(starterPackUri)
-          SharedPrefs.setValue('starterPackUri', null)
+          SharedPrefs?.setValue('starterPackUri', null)
         }
       }
 
